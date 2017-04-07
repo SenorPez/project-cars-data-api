@@ -94,7 +94,7 @@ class EventController {
                 roundsStmt.close();
 
                 Statement carsStmt = conn.createStatement();
-                final String carsSql = "SELECT id, manufacturer, model FROM cars WHERE " + carFilter + ";";
+                final String carsSql = "SELECT id, manufacturer, model, class FROM cars WHERE " + carFilter + ";";
                 final List<Car> cars = new ArrayList<>();
 
                 ResultSet carsResults = carsStmt.executeQuery(carsSql);
@@ -102,11 +102,13 @@ class EventController {
                     Integer carID = carsResults.getInt("id");
                     String manufacturer = carsResults.getString("manufacturer");
                     String model = carsResults.getString("model");
+                    String carClass = carsResults.getString("class");
 
                     cars.add(new Car(
                             carID,
                             manufacturer,
-                            model
+                            model,
+                            carClass
                     ));
                 }
 
@@ -220,7 +222,7 @@ class EventController {
                 roundsStmt.close();
 
                 Statement carsStmt = conn.createStatement();
-                final String carsSql = "SELECT id, manufacturer, model FROM cars WHERE " + carFilter + ";";
+                final String carsSql = "SELECT id, manufacturer, model, class FROM cars WHERE " + carFilter + ";";
                 final List<Car> cars = new ArrayList<>();
 
                 ResultSet carsResults = carsStmt.executeQuery(carsSql);
@@ -228,11 +230,13 @@ class EventController {
                     Integer carID = carsResults.getInt("id");
                     String manufacturer = carsResults.getString("manufacturer");
                     String model = carsResults.getString("model");
+                    String carClass = carsResults.getString("class");
 
                     cars.add(new Car(
                             carID,
                             manufacturer,
-                            model
+                            model,
+                            carClass
                     ));
                 }
 
@@ -462,18 +466,20 @@ class EventController {
             while (eventsResults.next()) {
                 String carFilter = eventsResults.getString("carFilter");
                 Statement carsStmt = conn.createStatement();
-                final String carsSql = "SELECT id, manufacturer, model FROM cars WHERE " + carFilter + ";";
+                final String carsSql = "SELECT id, manufacturer, model, class FROM cars WHERE " + carFilter + ";";
 
                 ResultSet carsResults = carsStmt.executeQuery(carsSql);
                 while (carsResults.next()) {
                     Integer carID = carsResults.getInt("id");
                     String manufacturer = carsResults.getString("manufacturer");
                     String model = carsResults.getString("model");
+                    String carClass = carsResults.getString("class");
 
                     cars.add(new Car(
                             carID,
                             manufacturer,
-                            model
+                            model,
+                            carClass
                     ));
                 }
 
@@ -516,15 +522,16 @@ class EventController {
             while (eventsResults.next()) {
                 String carFilter = eventsResults.getString("carFilter");
                 Statement carsStmt = conn.createStatement();
-                final String carsSql = "SELECT manufacturer, model FROM cars " +
+                final String carsSql = "SELECT manufacturer, model, class FROM cars " +
                         "WHERE " + carFilter + " AND id = " + carId + ";";
 
                 ResultSet carsResults = carsStmt.executeQuery(carsSql);
                 while (carsResults.next()) {
                     String manufacturer = carsResults.getString("manufacturer");
                     String model = carsResults.getString("model");
+                    String carClass = carsResults.getString("class");
 
-                    car = new Car(carId, manufacturer, model);
+                    car = new Car(carId, manufacturer, model, carClass);
                 }
 
                 carsResults.close();

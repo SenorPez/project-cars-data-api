@@ -3,11 +3,8 @@ package com.senorpez.projectcars;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URL;
-import java.net.URLDecoder;
 import java.sql.*;
 import java.util.List;
 import java.util.Map;
@@ -71,6 +68,7 @@ public class DatabaseFactory {
                 "(id INTEGER NOT NULL AUTO_INCREMENT, " +
                 " manufacturer VARCHAR(255) NOT NULL, " +
                 " model VARCHAR(255) NOT NULL, " +
+                " class VARCHAR(255) NOT NULL, " +
                 " PRIMARY KEY (id), " +
                 " UNIQUE (manufacturer, model));";
         stmt.executeUpdate(sql);
@@ -119,7 +117,7 @@ public class DatabaseFactory {
 
             System.out.println("Adding Cars data...");
             sql = "INSERT INTO cars " +
-                    "(manufacturer, model) " +
+                    "(manufacturer, model, class) " +
                     "VALUES " + sqlValues + ";";
             stmt.executeUpdate(sql);
         }

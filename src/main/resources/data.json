@@ -1,12 +1,44 @@
 {
   "cars" : [
     {
+      "manufacturer": "BMW",
+      "model" : "M1 Procar",
+      "class" : "Group 4"
+    },
+    {
+      "manufacturer": "Caterham",
+      "model": "Seven Classic",
+      "class": "Road D"
+    },
+    {
+      "manufacturer" : "Ford",
+      "model" : "Focus RS",
+      "class": "Road C2"
+    },
+    {
       "manufacturer" : "McLaren",
-      "model" : "F1"
+      "model" : "F1",
+      "class": "Road B"
     },
     {
       "manufacturer" : "SMS",
-      "model" : "125cc Shifter Kart"
+      "model" : "125cc Shifter Kart",
+      "class": "Kart1"
+    },
+    {
+      "manufacturer": "Scion",
+      "model": "FR-S",
+      "class": "Road D"
+    },
+    {
+      "manufacturer" : "Toyota",
+      "model" : "86",
+      "class" : "Road D"
+    },
+    {
+      "manufacturer": "Toyota",
+      "model": "GT-86",
+      "class": "Road D"
     }
   ],
   "events" : [
@@ -149,26 +181,80 @@
           "laps" : 10
         }
       ]
+    },
+    {
+      "name" : "Historic GT4 M1 Procar Challenge",
+      "carFilter" : "model LIKE 'M1 Procar'",
+      "rounds" : [
+        {
+          "location" : "Circuit de Spa-Francorchamps",
+          "variation" : "",
+          "laps" : 6
+        },
+        {
+          "location" : "Zolder",
+          "variation" : "Grand Prix",
+          "laps": 8
+        },
+        {
+          "location" : "Mazda Raceway",
+          "variation" : "Laguna Seca",
+          "laps": 8
+        },
+        {
+          "location" : "Bathurst",
+          "variation" : "",
+          "laps": 6
+        }
+      ]
+    },
+    {
+      "name" : "Road Entry Club UK Cup",
+      "carFilter" : "class LIKE 'Road D'",
+      "rounds" : [
+        {
+          "location" : "Oulton Park",
+          "variation" : "Fosters",
+          "laps" : 6
+        },
+        {
+          "location" : "Donington Park",
+          "variation" : "National",
+          "laps": 6
+        },
+        {
+          "location" : "Silverstone",
+          "variation" : "National",
+          "laps": 6
+        },
+        {
+          "location" : "Snetterton",
+          "variation" : "200 Circuit",
+          "laps": 6
+        }
+      ]
+    },
+    {
+      "name" : "Lakeville Focus Challenge",
+      "carFilter" : "model LIKE 'Focus RS'",
+      "rounds" : [
+        {
+          "location" : "Sonoma Raceway",
+          "variation" : "Short",
+          "laps" : 6
+        }
+      ]
     }
   ],
   "tracks" : [
     {
-      "location" : "Glencairn",
-      "variation" : "East",
-      "length" : 510.1722,
-      "pitEntryX" : null,
-      "pitEntryZ" : null,
-      "pitExitX" : null,
-      "pitExitZ" : null
-    },
-    {
-      "location" : "Glencairn",
-      "variation" : "West",
-      "length" : 451.7371,
-      "pitEntryX" : null,
-      "pitEntryZ" : null,
-      "pitExitX" : null,
-      "pitExitZ" : null
+      "location" : "Bathurst",
+      "variation" : "",
+      "length" : 6238.0469,
+      "pitEntryX": 80.8500,
+      "pitEntryZ": 7.2141,
+      "pitExitX": -368.7227,
+      "pitExitZ": 12.9354
     },
     {
       "location" : "Chesterfield",
@@ -180,9 +266,36 @@
       "pitExitZ" : null
     },
     {
+      "location" : "Circuit de Spa-Francorchamps",
+      "variation" : "",
+      "length" : 6997.8159,
+      "pitEntryX": -685.1871,
+      "pitEntryZ": 1238.6070,
+      "pitExitX": -952.3125,
+      "pitExitZ": 1656.8100
+    },
+    {
+      "location" : "Donington Park",
+      "variation" : "National",
+      "length" : 3175.8020,
+      "pitEntryX": 200.8843,
+      "pitEntryZ": 144.8465,
+      "pitExitX": 486.4654,
+      "pitExitZ": 119.9713
+    },
+    {
       "location" : "Dubai Autodrome",
       "variation" : "Kartdrome",
       "length" : 1165.7298,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null
+    },
+    {
+      "location" : "Glencairn",
+      "variation" : "East",
+      "length" : 510.1722,
       "pitEntryX" : null,
       "pitEntryZ" : null,
       "pitExitX" : null,
@@ -198,9 +311,9 @@
       "pitExitZ" : null
     },
     {
-      "location" : "Summerton",
-      "variation" : "International",
-      "length" : 996.8077,
+      "location" : "Glencairn",
+      "variation" : "West",
+      "length" : 451.7371,
       "pitEntryX" : null,
       "pitEntryZ" : null,
       "pitExitX" : null,
@@ -210,6 +323,60 @@
       "location" : "Greenwood",
       "variation" : "Karting Circuit",
       "length" : 1073.6631,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null
+    },
+    {
+      "location" : "Mazda Raceway",
+      "variation" : "Laguna Seca",
+      "length" : 3593.5823,
+      "pitEntryX": -70.2240,
+      "pitEntryZ": 432.3777,
+      "pitExitX": -279.2681,
+      "pitExitZ": 228.1650
+    },
+    {
+      "location" : "Oulton Park",
+      "variation" : "Fosters",
+      "length" : 2649.9097,
+      "pitEntryX": 46.9972,
+      "pitEntryZ": 80.4018,
+      "pitExitX": 114.8132,
+      "pitExitZ": -165.5994
+    },
+    {
+      "location" : "Silverstone",
+      "variation" : "National",
+      "length" : 2620.8909,
+      "pitEntryX": -323.1119,
+      "pitEntryZ": -115.6939,
+      "pitExitX": 157.4515,
+      "pitExitZ": 0.4209
+    },
+    {
+      "location" : "Snetterton",
+      "variation" : "200 Circuit",
+      "length" : 3170.3074,
+      "pitEntryX" : 228.4838,
+      "pitEntryZ" : -25.2368,
+      "pitExitX" : -44.5122,
+      "pitExitZ" : -55.8216
+    },
+    {
+      "location" : "Sonoma Raceway",
+      "variation" : "Short",
+      "length" : 3174.8245,
+      "pitEntryX" : -592.7792,
+      "pitEntryZ" : 87.4373,
+      "pitExitX" : -152.6224,
+      "pitExitZ" : -30.7139
+    },
+    {
+      "location" : "Summerton",
+      "variation" : "International",
+      "length" : 996.8077,
       "pitEntryX" : null,
       "pitEntryZ" : null,
       "pitExitX" : null,
