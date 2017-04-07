@@ -1,0 +1,228 @@
+{
+  "cars" : [
+    {
+      "manufacturer" : "McLaren",
+      "model" : "F1"
+    },
+    {
+      "manufacturer" : "SMS",
+      "model" : "125cc Shifter Kart"
+    }
+  ],
+  "events" : [
+    {
+      "name" : "Kart One UK Nationals",
+      "carFilter" : "model LIKE '125cc Shifter Kart'",
+      "rounds" : [
+        {
+          "location" : "Glencairn",
+          "variation" : "East",
+          "laps" : 10
+        },
+        {
+          "location" : "Glencairn",
+          "variation" : "East",
+          "laps" : 15
+        },
+        {
+          "location" : "Glencairn",
+          "variation" : "West",
+          "laps" : 10
+        },
+        {
+          "location" : "Glencairn",
+          "variation" : "West",
+          "laps" : 15
+        },
+        {
+          "location" : "Chesterfield",
+          "variation" : "Grand Prix",
+          "laps" : 10
+        },
+        {
+          "location" : "Chesterfield",
+          "variation" : "Grand Prix",
+          "laps" : 15
+        }
+      ]
+    },
+    {
+      "name" : "Kart One Championship",
+      "carFilter" : "model LIKE '125cc Shifter Kart'",
+      "rounds" : [
+        {
+          "location" : "Dubai Autodrome",
+          "variation" : "Kartdrome",
+          "laps" : 10
+        },
+        {
+          "location" : "Dubai Autodrome",
+          "variation" : "Kartdrome",
+          "laps" : 15
+        },
+        {
+          "location" : "Glencairn",
+          "variation" : "Grand Prix",
+          "laps" : 10
+        },
+        {
+          "location" : "Glencairn",
+          "variation" : "Grand Prix",
+          "laps" : 15
+        },
+        {
+          "location" : "Chesterfield",
+          "variation" : "Grand Prix",
+          "laps" : 10
+        },
+        {
+          "location" : "Chesterfield",
+          "variation" : "Grand Prix",
+          "laps" : 15
+        },
+        {
+          "location" : "Summerton",
+          "variation" : "International",
+          "laps" : 10
+        },
+        {
+          "location" : "Summerton",
+          "variation" : "International",
+          "laps" : 15
+        },
+        {
+          "location" : "Greenwood",
+          "variation" : "Karting Circuit",
+          "laps" : 10
+        },
+        {
+          "location" : "Greenwood",
+          "variation" : "Karting Circuit",
+          "laps" : 15
+        }
+      ]
+    },
+    {
+      "name" : "McLaren F1 Track Masters 3 HR Trophy",
+      "carFilter" : "model LIKE 'F1'",
+      "rounds" : [
+        {
+          "location" : "Zolder",
+          "variation" : "Grand Prix",
+          "laps" : null,
+          "time" : 180
+        }
+      ]
+    },
+    {
+      "name" : "Glencairn Kart Club Trophy",
+      "carFilter" : "model LIKE '125cc Shifter Kart'",
+      "rounds" : [
+        {
+          "location" : "Glencairn",
+          "variation" : "East",
+          "laps" : 6
+        },
+        {
+          "location" : "Glencairn",
+          "variation" : "East",
+          "laps" : 10
+        },
+        {
+          "location" : "Glencairn",
+          "variation" : "West",
+          "laps" : 6
+        },
+        {
+          "location" : "Glencairn",
+          "variation" : "West",
+          "laps" : 10
+        },
+        {
+          "location" : "Glencairn",
+          "variation" : "Grand Prix",
+          "laps" : 6
+        },
+        {
+          "location" : "Glencairn",
+          "variation" : "Grand Prix",
+          "laps" : 10
+        }
+      ]
+    }
+  ],
+  "tracks" : [
+    {
+      "location" : "Glencairn",
+      "variation" : "East",
+      "length" : 510.1722,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null
+    },
+    {
+      "location" : "Glencairn",
+      "variation" : "West",
+      "length" : 451.7371,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null
+    },
+    {
+      "location" : "Chesterfield",
+      "variation" : "Grand Prix",
+      "length" : 871.2593,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null
+    },
+    {
+      "location" : "Dubai Autodrome",
+      "variation" : "Kartdrome",
+      "length" : 1165.7298,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null
+    },
+    {
+      "location" : "Glencairn",
+      "variation" : "Grand Prix",
+      "length" : 921.8007,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null
+    },
+    {
+      "location" : "Summerton",
+      "variation" : "International",
+      "length" : 996.8077,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null
+    },
+    {
+      "location" : "Greenwood",
+      "variation" : "Karting Circuit",
+      "length" : 1073.6631,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null
+    },
+    {
+      "location" : "Zolder",
+      "variation" : "Grand Prix",
+      "length" : 4146.7334,
+      "pitEntryX" : 138.3811,
+      "pitEntryZ" : 132.7747,
+      "pitExitX" : 682.2009,
+      "pitExitZ" : 179.8147
+    }
+  ]
+}
