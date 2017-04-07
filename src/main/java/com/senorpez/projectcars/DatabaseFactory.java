@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.net.URLDecoder;
 import java.sql.*;
@@ -80,21 +81,14 @@ public class DatabaseFactory {
 
         ObjectMapper mapper = new ObjectMapper();
         ClassLoader classLoader = DatabaseFactory.class.getClassLoader();
-        File jsonFile = null;
-        try {
-            URL file = classLoader.getResource("data.json");
-            if (file != null) jsonFile = new File(URLDecoder.decode(file.getFile(), "UTF-8"));
-            else throw new IOException();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
         TypeReference<Map<String, Object>> typeReference = new TypeReference<Map<String, Object>>() {};
         List<Map<String, Object>> cars = null;
         String sqlValues;
 
         try {
-            Map<String, Object> jsonMap = mapper.readValue(jsonFile, typeReference);
+            InputStream inputStream = classLoader.getResourceAsStream("data.json");
+            Map<String, Object> jsonMap = mapper.readValue(inputStream, typeReference);
             cars = (List<Map<String, Object>>) jsonMap.get("cars");
         } catch (IOException e) {
             e.printStackTrace();
@@ -157,21 +151,14 @@ public class DatabaseFactory {
 
         ObjectMapper mapper = new ObjectMapper();
         ClassLoader classLoader = DatabaseFactory.class.getClassLoader();
-        File jsonFile = null;
-        try {
-            URL file = classLoader.getResource("data.json");
-            if (file != null) jsonFile = new File(URLDecoder.decode(file.getFile(), "UTF-8"));
-            else throw new IOException();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
         TypeReference<Map<String, Object>> typeReference = new TypeReference<Map<String, Object>>() {};
         List<Map<String, Object>> tracks = null;
         String sqlValues;
 
         try {
-            Map<String, Object> jsonMap = mapper.readValue(jsonFile, typeReference);
+            InputStream inputStream = classLoader.getResourceAsStream("data.json");
+            Map<String, Object> jsonMap = mapper.readValue(inputStream, typeReference);
             tracks = (List<Map<String, Object>>) jsonMap.get("tracks");
         } catch (IOException e) {
             e.printStackTrace();
@@ -243,20 +230,13 @@ public class DatabaseFactory {
 
         ObjectMapper mapper = new ObjectMapper();
         ClassLoader classLoader = DatabaseFactory.class.getClassLoader();
-        File jsonFile = null;
-        try {
-            URL file = classLoader.getResource("data.json");
-            if (file != null) jsonFile = new File(URLDecoder.decode(file.getFile(), "UTF-8"));
-            else throw new IOException();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
         TypeReference<Map<String, Object>> typeReference = new TypeReference<Map<String, Object>>() {};
         List<Map<String, Object>> events = null;
 
         try {
-            Map<String, Object> jsonMap = mapper.readValue(jsonFile, typeReference);
+            InputStream inputStream = classLoader.getResourceAsStream("data.json");
+            Map<String, Object> jsonMap = mapper.readValue(inputStream, typeReference);
             events = (List<Map<String, Object>>) jsonMap.get("events");
         } catch (IOException e) {
             e.printStackTrace();
