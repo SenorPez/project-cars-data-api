@@ -1,50 +1,282 @@
 {
   "cars" : [
     {
+      "manufacturer": "Ariel",
+      "model" : "Atom 300 Supercharged",
+      "class" : "Road B",
+      "country" : "England"
+    },
+    {
+      "manufacturer": "Ariel",
+      "model" : "Atom Mugen",
+      "class" : "Road B",
+      "country" : "England"
+    },
+    {
+      "manufacturer": "Aston Martin",
+      "model" : "Vantage GT12",
+      "class" : "Road B",
+      "country" : "England"
+    },
+    {
+      "manufacturer": "Audi",
+      "model" : "A1 quattro",
+      "class" : "Road C2",
+      "country" : "Germany"
+    },
+    {
+      "manufacturer": "Audi",
+      "model" : "R8 (LMP900)",
+      "class" : "LMP900",
+      "country" : "Germany"
+    },
+    {
+      "manufacturer": "Audi",
+      "model" : "R8 V10 plus",
+      "class" : "Road B",
+      "country" : "Germany"
+    },
+    {
+      "manufacturer": "BAC",
+      "model" : "Mono",
+      "class" : "Road B",
+      "country" : "England"
+    },
+    {
+      "manufacturer": "Bentley",
+      "model" : "Speed 8",
+      "class" : "LMP900",
+      "country" : "England"
+    },
+    {
+      "manufacturer": "BMW",
+      "model" : "1-Series M Coupe",
+      "class" : "Road C1",
+      "country" : "Germany"
+    },
+    {
+      "manufacturer": "BMW",
+      "model" : "1-Series M Coupe StanceWorks Edition",
+      "class" : "Road B",
+      "country" : "Germany"
+    },
+    {
+      "manufacturer": "BMW",
+      "model" : "320 TC",
+      "class" : "TC2",
+      "country" : "Germany"
+    },
+    {
+      "manufacturer": "BMW",
+      "model" : "320 Turbo Group 5",
+      "class" : "Group 5",
+      "country" : "Germany"
+    },
+    {
       "manufacturer": "BMW",
       "model" : "M1 Procar",
-      "class" : "Group 4"
+      "class" : "Group 4",
+      "country" : "Germany"
+    },
+    {
+      "manufacturer": "BMW",
+      "model" : "M3 E30 Group A",
+      "class" : "Group A",
+      "country" : "Germany"
+    },
+    {
+      "manufacturer": "BMW",
+      "model" : "V12 LMR",
+      "class" : "LMP900",
+      "country" : "Germany"
     },
     {
       "manufacturer": "Caterham",
       "model": "Seven Classic",
-      "class": "Road D"
+      "class": "Road D",
+      "country" : "England"
+    },
+    {
+      "manufacturer": "Caterham",
+      "model": "Superlight R500",
+      "class": "Road B",
+      "country" : "England"
     },
     {
       "manufacturer" : "Ford",
       "model" : "Focus RS",
-      "class": "Road C2"
+      "class": "Road C2",
+      "country": "United States of America"
+    },
+    {
+      "manufacturer" : "Ford",
+      "model" : "Mustang GT",
+      "class": "Road B",
+      "country": "United States of America"
+    },
+    {
+      "manufacturer" : "Ford",
+      "model" : "Sierra RS500 Cosworth Group A",
+      "class": "Group A",
+      "country": "United States of America"
+    },
+    {
+      "manufacturer" : "Ford",
+      "model" : "Zakspeed Capri Group 5",
+      "class": "Group 5",
+      "country": "United States of America"
+    },
+    {
+      "manufacturer" : "KTM",
+      "model" : "X-Bow R",
+      "class": "Road B",
+      "country": "England"
+
+    },
+    {
+      "manufacturer" : "Lotus",
+      "model" : "Type 98T Renault Turbo",
+      "class": "Vintage F1 C",
+      "country": "England"
     },
     {
       "manufacturer" : "McLaren",
       "model" : "F1",
-      "class": "Road B"
+      "class": "Road B",
+      "country": "England"
+    },
+    {
+      "manufacturer" : "Mercedes-Benz",
+      "model" : "190E 2.5-16 Evolution2 DTM",
+      "class": "Group A",
+      "country": "Germany"
+    },
+    {
+      "manufacturer": "Mercedes-Benz",
+      "model": "A45 AMG",
+      "class": "Road C1",
+      "country": "Germany"
+    },
+    {
+      "manufacturer" : "Mercedes-Benz",
+      "model" : "SLS AMG",
+      "class": "Road B",
+      "country": "Germany"
+    },
+    {
+      "manufacturer" : "Mitsubishi",
+      "model" : "Lancer Evolution IX FQ360",
+      "class": "Road C1",
+      "country": "Japan"
+    },
+    {
+      "manufacturer" : "Mitsubishi",
+      "model" : "Lancer Evolution VI TME",
+      "class": "Road C2",
+      "country": "Japan"
+    },
+    {
+      "manufacturer" : "Mitsubishi",
+      "model" : "Lancer Evolution X FQ400",
+      "class": "Road C1",
+      "country": "Japan"
+    },
+    {
+      "manufacturer" : "Pagani",
+      "model" : "Huayra",
+      "class": "Road A",
+      "country": "Italy"
+    },
+    {
+      "manufacturer" : "Pagani",
+      "model" : "Huayra BC",
+      "class": "Road A",
+      "country": "Italy"
+    },
+    {
+      "manufacturer" : "Pagani",
+      "model" : "Zonda Cinque Roadster",
+      "class": "Road A",
+      "country": "Italy"
+    },
+    {
+      "manufacturer" : "Renault",
+      "model" : "Megane R.S. 265",
+      "class": "Road C2",
+      "country" : "France"
+    },
+    {
+      "manufacturer" : "Renault",
+      "model" : "Megane R.S. 275 Trophy-R",
+      "class": "Road C1",
+      "country" : "France"
+    },
+    {
+      "manufacturer" : "Ruf",
+      "model" : "CTR",
+      "class": "Road B",
+      "country": "Germany"
+    },
+    {
+      "manufacturer" : "Ruf",
+      "model" : "CTR3",
+      "class": "Road A",
+      "country": "Germany"
+    },
+    {
+      "manufacturer" : "Ruf",
+      "model" : "RGT-8",
+      "class": "Road B",
+      "country": "Germany"
+    },
+    {
+      "manufacturer" : "Sauber",
+      "model" : "C9 Mercedes-Benz",
+      "class": "Group C1",
+      "country" : "Germany"
     },
     {
       "manufacturer" : "SMS",
       "model" : "125cc Shifter Kart",
-      "class": "Kart1"
+      "class": "Kart1",
+      "country" : "England"
+    },
+    {
+      "manufacturer" : "SMS",
+      "model" : "250cc Superkart",
+      "class": "Kart3",
+      "country" : "England"
     },
     {
       "manufacturer": "Scion",
       "model": "FR-S",
-      "class": "Road D"
+      "class": "Road D",
+      "country": "Japan"
+    },
+    {
+      "manufacturer": "Scion",
+      "model": "FR-S Rocket Bunny Edition",
+      "class": "Road B",
+      "country": "Japan"
     },
     {
       "manufacturer" : "Toyota",
       "model" : "86",
-      "class" : "Road D"
+      "class" : "Road D",
+      "country": "Japan"
     },
     {
       "manufacturer": "Toyota",
       "model": "GT-86",
-      "class": "Road D"
+      "class": "Road D",
+      "country": "Japan"
     }
   ],
   "events" : [
     {
       "name" : "Kart One UK Nationals",
       "carFilter" : "model LIKE '125cc Shifter Kart'",
+      "tier": 8,
       "rounds" : [
         {
           "location" : "Glencairn",
@@ -81,6 +313,7 @@
     {
       "name" : "Kart One Championship",
       "carFilter" : "model LIKE '125cc Shifter Kart'",
+      "tier": 8,
       "rounds" : [
         {
           "location" : "Dubai Autodrome",
@@ -137,6 +370,7 @@
     {
       "name" : "McLaren F1 Track Masters 3 HR Trophy",
       "carFilter" : "model LIKE 'F1'",
+      "tier": null,
       "rounds" : [
         {
           "location" : "Zolder",
@@ -185,6 +419,7 @@
     {
       "name" : "Historic GT4 M1 Procar Challenge",
       "carFilter" : "model LIKE 'M1 Procar'",
+      "tier": null,
       "rounds" : [
         {
           "location" : "Circuit de Spa-Francorchamps",
@@ -211,6 +446,7 @@
     {
       "name" : "Road Entry Club UK Cup",
       "carFilter" : "class LIKE 'Road D'",
+      "tier": null,
       "rounds" : [
         {
           "location" : "Oulton Park",
@@ -237,6 +473,7 @@
     {
       "name" : "Lakeville Focus Challenge",
       "carFilter" : "model LIKE 'Focus RS'",
+      "tier": null,
       "rounds" : [
         {
           "location" : "Sonoma Raceway",
@@ -244,9 +481,506 @@
           "laps" : 6
         }
       ]
+    },
+    {
+      "name" : "BMW 1M Eifelwald Sprint Club",
+      "carFilter" : "model LIKE '1-Series M Coupe'",
+      "tier": null,
+      "rounds" : [
+        {
+          "location" : "Nürburgring",
+          "variation" : "Sprint Short",
+          "laps" : 10
+        }
+      ]
+    },
+    {
+      "name" : "RTC1 UK Cup",
+      "carFilter" : "class LIKE 'Road C1'",
+      "tier": null,
+      "rounds" : [
+        {
+          "location" : "Snetterton",
+          "variation" : "200 Circuit",
+          "laps" : 8
+        },
+        {
+          "location" : "Oulton Park",
+          "variation" : "Fosters",
+          "laps" : 8
+        }
+      ]
+    },
+    {
+      "name" : "Historic GT5 UK Trophy",
+      "carFilter" : "class LIKE 'Group 5'",
+      "tier": null,
+      "rounds" : [
+        {
+          "location" : "Snetterton",
+          "variation" : "300 Circuit",
+          "laps" : 8
+        },
+        {
+          "location" : "Donington Park",
+          "variation" : "Grand Prix",
+          "laps" : 8
+        },
+        {
+          "location" : "Silverstone",
+          "variation" : "International",
+          "laps" : 8
+        },
+        {
+          "location" : "Oulton Park",
+          "variation" : "International",
+          "laps" : 8
+        }
+      ]
+    },
+    {
+      "name" : "Road TC Euro Championship",
+      "carFilter" : "class LIKE 'Road C1' OR class LIKE 'Road C2'",
+      "tier": null,
+      "rounds" : [
+        {
+          "location" : "Oschersleben",
+          "variation" : "National",
+          "laps" : 8
+        },
+        {
+          "location" : "Circuit de Barcelona-Catalunya",
+          "variation" : "National",
+          "laps" : 8
+        },
+        {
+          "location" : "Autodromo Nazionale Monza",
+          "variation" : "Short",
+          "laps" : 8
+        }
+      ]
+    },
+    {
+      "name" : "Road TC Euro Championship",
+      "carFilter" : "class LIKE 'Road B'",
+      "tier": null,
+      "rounds" : [
+        {
+          "location" : "Brands Hatch",
+          "variation" : "Grand Prix",
+          "laps" : 10
+        }
+      ]
+    },
+    {
+      "name" : "Road TC Euro Championship",
+      "carFilter" : "model LIKE 'Type 98T Renault Turbo'",
+      "tier": null,
+      "rounds" : [
+        {
+          "location" : "Donington Park",
+          "variation" : "Grand Prix",
+          "laps" : 10
+        },
+        {
+          "location" : "Zolder",
+          "variation" : "Grand Prix",
+          "laps" : 10
+        },
+        {
+          "location" : "Circuit de Spa-Francorchamps",
+          "variation" : "",
+          "laps" : 10
+        },
+        {
+          "location" : "Oschersleben",
+          "variation" : "Grand Prix",
+          "laps" : 10
+        },
+        {
+          "location" : "Sonoma Raceway",
+          "variation" : "Grand Prix",
+          "laps" : 10
+        },
+        {
+          "location" : "Sakitto",
+          "variation" : "Grand Prix",
+          "laps" : 10
+        },
+        {
+          "location" : "Autodromo Nazionale Monza",
+          "variation" : "Grand Prix",
+          "laps" : 10
+        }
+      ]
+    },
+    {
+      "name" : "Supercar US Clubsport Trophy",
+      "carFilter" : "model LIKE 'CTR3'",
+      "tier": null,
+      "rounds" : [
+        {
+          "location" : "Road America",
+          "variation" : "",
+          "laps" : 6
+        },
+        {
+          "location" : "Mazda Raceway",
+          "variation" : "Laguna Seca",
+          "laps" : 8
+        },
+        {
+          "location" : "Watkins Glen International",
+          "variation" : "Grand Prix",
+          "laps" : 8
+        }
+      ]
+    },
+    {
+      "name" : "Historic GT5 320 Turbo Pan-Euro Cup",
+      "carFilter" : "model LIKE '320 Turbo Group 5'",
+      "tier": null,
+      "rounds" : [
+        {
+          "location" : "Hockenheim",
+          "variation" : "Short",
+          "laps" : 8
+        },
+        {
+          "location" : "Circuit de Barcelona-Catalunya",
+          "variation" : "National",
+          "laps" : 8
+        },
+        {
+          "location" : "Imola",
+          "variation" : "Grand Prix",
+          "laps" : 8
+        }
+      ]
+    },
+    {
+      "name" : "WMD Euro Trackday Trophy",
+      "carFilter" : "class LIKE 'Road B' --Something wrong here, not all Road B are valid",
+      "tier": null,
+      "rounds" : [
+        {
+          "location" : "Zolder",
+          "variation" : "Grand Prix",
+          "laps" : 6
+        },
+        {
+          "location" : "Oulton Park",
+          "variation" : "Island",
+          "laps" : 8
+        }
+      ]
+    },
+    {
+      "name" : "Dubai Kart Masters Cup",
+      "carFilter" : "model LIKE '250cc Superkart'",
+      "tier": null,
+      "rounds" : [
+        {
+          "location" : "Dubai Autodrome",
+          "variation" : "Club",
+          "laps" : 3
+        },
+        {
+          "location" : "Dubai Autodrome",
+          "variation" : "Club",
+          "laps" : 5
+        }
+      ]
+    },
+    {
+      "name" : "Pagani Monza Club Day",
+      "carFilter" : "manufacturer LIKE 'Pagani'",
+      "tier": null,
+      "rounds" : [
+        {
+          "location" : "Autodromo Nazionale Monza",
+          "variation" : "Grand Prix",
+          "laps" : 10
+        }
+      ]
+    },
+    {
+      "name" : "Audi Ruapuna Track Challenge",
+      "carFilter" : "manufacturer LIKE 'Audi'",
+      "tier": null,
+      "rounds" : [
+        {
+          "location" : "Ruapuna Park",
+          "variation" : "A_Circuit",
+          "laps" : 20
+        },
+        {
+          "location" : "Ruapuna Park",
+          "variation" : "Outer_Loop",
+          "laps" : 20
+        }
+      ]
+    },
+    {
+      "name" : "Superkart UK Nationals",
+      "carFilter" : "model LIKE '250cc Superkart'",
+      "tier": 7,
+      "rounds" : [
+        {
+          "location" : "Oulton Park",
+          "variation" : "Fosters",
+          "laps" : 10
+        },
+        {
+          "location" : "Oulton Park",
+          "variation" : "Fosters",
+          "laps" : 15
+        },
+        {
+          "location" : "Donington Park",
+          "variation" : "National",
+          "laps" : 10
+        },
+        {
+          "location" : "Donington Park",
+          "variation" : "National",
+          "laps" : 15
+        },
+        {
+          "location" : "Snetterton",
+          "variation" : "200 Circuit",
+          "laps" : 10
+        },
+        {
+          "location" : "Snetterton",
+          "variation" : "200 Circuit",
+          "laps" : 15
+        }
+      ]
+    },
+    {
+      "name" : "Caterham Academy",
+      "carFilter" : "model LIKE 'Seven Classic'",
+      "tier": null,
+      "rounds" : [
+        {
+          "location" : "Snetterton",
+          "variation" : "200 Circuit",
+          "laps" : 8
+        },
+        {
+          "location" : "Donington Park",
+          "variation" : "National",
+          "laps" : 8
+        },
+        {
+          "location" : "Oulton Park",
+          "variation" : "Fosters",
+          "laps" : 8
+        },
+        {
+          "location" : "Silverstone",
+          "variation" : "National",
+          "laps" : 6
+        }
+      ]
+    },
+    {
+      "name" : "Ruapuna LMP900 Showdown",
+      "carFilter" : "class LIKE 'LMP900'",
+      "tier": null,
+      "rounds" : [
+        {
+          "location" : "Ruapuna Park",
+          "variation" : "Grand Prix",
+          "laps" : 40
+        }
+      ]
+    },
+    {
+      "name" : "320 Touring Challenge",
+      "carFilter" : "model LIKE '320 TC'",
+      "tier": null,
+      "rounds" : [
+        {
+          "location" : "Oulton Park",
+          "variation" : "International",
+          "laps" : 15
+        },
+        {
+          "location" : "Oschersleben",
+          "variation" : "Grand Prix",
+          "laps" : 15
+        },
+        {
+          "location" : "Sakitto",
+          "variation" : "Sprint",
+          "laps" : 15
+        },
+        {
+          "location" : "Imola",
+          "variation" : "Grand Prix",
+          "laps" : 15
+        }
+      ]
+    },
+    {
+      "name" : "Historic TGA Euro Trophy",
+      "carFilter" : "class LIKE 'Group A'",
+      "tier": null,
+      "rounds" : [
+        {
+          "location" : "Zolder",
+          "variation" : "Grand Prix",
+          "laps" : 8
+        },
+        {
+          "location" : "Autodromo Nazionale Monza",
+          "variation" : "Grand Prix",
+          "laps" : 6
+        },
+        {
+          "location" : "Brno",
+          "variation" : "",
+          "laps" : 6
+        },
+        {
+          "location" : "Oschersleben",
+          "variation" : "Grand Prix",
+          "laps" : 8
+        }
+      ]
+    },
+    {
+      "name" : "Superkart Championship",
+      "carFilter" : "model LIKE '250cc Superkart'",
+      "tier": 7,
+      "rounds" : [
+        {
+          "location" : "Hockenheim",
+          "variation" : "Short",
+          "laps" : 10
+        },
+        {
+          "location" : "Hockenheim",
+          "variation" : "Short",
+          "laps" : 15
+        },
+        {
+          "location" : "Snetterton",
+          "variation" : "200 Circuit",
+          "laps" : 10
+        },
+        {
+          "location" : "Snetterton",
+          "variation" : "200 Circuit",
+          "laps" : 15
+        },
+        {
+          "location" : "Sonoma Raceway",
+          "variation" : "Short",
+          "laps" : 10
+        },
+        {
+          "location" : "Sonoma Raceway",
+          "variation" : "Short",
+          "laps" : 15
+        },
+        {
+          "location" : "Silverstone",
+          "variation" : "National",
+          "laps" : 10
+        },
+        {
+          "location" : "Silverstone",
+          "variation" : "National",
+          "laps" : 15
+        },
+        {
+          "location" : "Sakitto",
+          "variation" : "Sprint",
+          "laps" : 10
+        },
+        {
+          "location" : "Sakitto",
+          "variation" : "Sprint",
+          "laps" : 15
+        }
+      ]
+    },
+    {
+      "name" : "Road TD British Track Challenge",
+      "carFilter" : "class LIKE 'Road B' AND country LIKE 'England' AND model NOT LIKE 'F1' --Maybe this is by year?",
+      "tier": null,
+      "rounds" : [
+        {
+          "location" : "Snetterton",
+          "variation" : "200 Circuit",
+          "laps" : 8
+        },
+        {
+          "location" : "Oulton Park",
+          "variation" : "Fosters",
+          "laps" : 8
+        }
+      ]
+    },
+    {
+      "name" : "Historic C1 Euro Cup",
+      "carFilter" : "model LIKE 'C9 Mercedes-Benz'",
+      "tier": null,
+      "rounds" : [
+        {
+          "location" : "Brno",
+          "variation" : "",
+          "laps" : 8
+        },
+        {
+          "location" : "Autodromo Nazionale Monza",
+          "variation" : "Grand Prix",
+          "laps" : 8
+        },
+        {
+          "location" : "Circuit de Spa-Francorchamps",
+          "variation" : "",
+          "laps" : 6
+        },
+        {
+          "location" : "Verify Sarthe Data",
+          "variation" : "",
+          "laps" : 4
+        }
+      ]
     }
   ],
   "tracks" : [
+    {
+      "location" : "Verify Sarthe Data",
+      "variation" : "",
+      "length" : 0.0000,
+      "pitEntryX": -737.9395,
+      "pitEntryZ": 1107.3670,
+      "pitExitX": -721.3452,
+      "pitExitZ": 1582.8730
+    },
+    {
+      "location" : "Autodromo Nazionale Monza",
+      "variation" : "Grand Prix",
+      "length" : 5782.5210,
+      "pitEntryX": 22.2031,
+      "pitEntryZ": -437.1672,
+      "pitExitX": 63.6092,
+      "pitExitZ": -1.1178
+    },
+    {
+      "location" : "Autodromo Nazionale Monza",
+      "variation" : "Short",
+      "length" : 2422.8311,
+      "pitEntryX": 22.2031,
+      "pitEntryZ": -437.1672,
+      "pitExitX": 63.6092,
+      "pitExitZ": -1.1178
+    },
     {
       "location" : "Bathurst",
       "variation" : "",
@@ -257,6 +991,24 @@
       "pitExitZ": 12.9354
     },
     {
+      "location" : "Brands Hatch",
+      "variation" : "Grand Prix",
+      "length" : 3890.4072,
+      "pitEntryX": -329.1295,
+      "pitEntryZ": 165.8752,
+      "pitExitX": -36.6833,
+      "pitExitZ": 355.6110
+    },
+    {
+      "location" : "Brno",
+      "variation" : "",
+      "length" : 5377.7324,
+      "pitEntryX": -194.1228,
+      "pitEntryZ": -11.4185,
+      "pitExitX": 139.6739,
+      "pitExitZ": 0.0617
+    },
+    {
       "location" : "Chesterfield",
       "variation" : "Grand Prix",
       "length" : 871.2593,
@@ -264,6 +1016,15 @@
       "pitEntryZ" : null,
       "pitExitX" : null,
       "pitExitZ" : null
+    },
+    {
+      "location" : "Circuit de Barcelona-Catalunya",
+      "variation" : "National",
+      "length" : 2948.2970,
+      "pitEntryX": 622.7108,
+      "pitEntryZ": -137.3975,
+      "pitExitX": 26.5286,
+      "pitExitZ": -167.9301
     },
     {
       "location" : "Circuit de Spa-Francorchamps",
@@ -276,12 +1037,30 @@
     },
     {
       "location" : "Donington Park",
+      "variation" : "Grand Prix",
+      "length" : 3982.9487,
+      "pitEntryX": 200.8843,
+      "pitEntryZ": 144.8465,
+      "pitExitX": 486.4654,
+      "pitExitZ": 119.9713
+    },
+    {
+      "location" : "Donington Park",
       "variation" : "National",
       "length" : 3175.8020,
       "pitEntryX": 200.8843,
       "pitEntryZ": 144.8465,
       "pitExitX": 486.4654,
       "pitExitZ": 119.9713
+    },
+    {
+      "location" : "Dubai Autodrome",
+      "variation" : "Club",
+      "length" : 2525.3628,
+      "pitEntryX" : 971.8023,
+      "pitEntryZ" : 199.1564,
+      "pitExitX" : 452.5084,
+      "pitExitZ" : 126.7626
     },
     {
       "location" : "Dubai Autodrome",
@@ -329,6 +1108,24 @@
       "pitExitZ" : null
     },
     {
+      "location" : "Hockenheim",
+      "variation" : "Short",
+      "length" : 2593.4663,
+      "pitEntryX" : -483.1076,
+      "pitEntryZ" : -428.4700,
+      "pitExitX" : -704.3397,
+      "pitExitZ" : 11.1541
+    },
+    {
+      "location" : "Imola",
+      "variation" : "Grand Prix",
+      "length" : 4847.8799,
+      "pitEntryX" : 311.2590,
+      "pitEntryZ" : 420.3269,
+      "pitExitX" : -272.6198,
+      "pitExitZ" : 418.3795
+    },
+    {
       "location" : "Mazda Raceway",
       "variation" : "Laguna Seca",
       "length" : 3593.5823,
@@ -338,6 +1135,33 @@
       "pitExitZ": 228.1650
     },
     {
+      "location" : "Nürburgring",
+      "variation" : "Sprint Short",
+      "length" : 3083.5505,
+      "pitEntryX": 443.6332,
+      "pitEntryZ": 527.8024,
+      "pitExitX": 66.8471,
+      "pitExitZ": 96.7378
+    },
+    {
+      "location" : "Oschersleben",
+      "variation" : "Grand Prix",
+      "length" : 3656.8550,
+      "pitEntryX": -350.7033,
+      "pitEntryZ": 31.3908,
+      "pitExitX": 239.3137,
+      "pitExitZ": 91.7386
+    },
+    {
+      "location" : "Oschersleben",
+      "variation" : "National",
+      "length" : 2417.6504,
+      "pitEntryX": -350.7033,
+      "pitEntryZ": 31.3908,
+      "pitExitX": 239.3137,
+      "pitExitZ": 91.7386
+    },
+    {
       "location" : "Oulton Park",
       "variation" : "Fosters",
       "length" : 2649.9097,
@@ -345,6 +1169,87 @@
       "pitEntryZ": 80.4018,
       "pitExitX": 114.8132,
       "pitExitZ": -165.5994
+    },
+    {
+      "location" : "Oulton Park",
+      "variation" : "International",
+      "length" : 4302.7388,
+      "pitEntryX": 46.9972,
+      "pitEntryZ": 80.4018,
+      "pitExitX": 114.8132,
+      "pitExitZ": -165.5994
+    },
+    {
+      "location" : "Oulton Park",
+      "variation" : "Island",
+      "length" : 3547.5857,
+      "pitEntryX": 46.9972,
+      "pitEntryZ": 80.4018,
+      "pitExitX": 114.8132,
+      "pitExitZ": -165.5994
+    },
+    {
+      "location" : "Road America",
+      "variation" : "",
+      "length" : 6482.4893,
+      "pitEntryX": 430.8689,
+      "pitEntryZ": 245.7329,
+      "pitExitX": 451.5659,
+      "pitExitZ": -330.7411
+    },
+    {
+      "location" : "Ruapuna Park",
+      "variation" : "A_Circuit",
+      "length" : 1171.3093,
+      "pitEntryX": 546.2500,
+      "pitEntryZ": 112.5000,
+      "pitExitX": 219.2500,
+      "pitExitZ": 325.5000
+    },
+    {
+      "location" : "Ruapuna Park",
+      "variation" : "Grand Prix",
+      "length" : 3251.9809,
+      "pitEntryX": 546.2500,
+      "pitEntryZ": 112.5000,
+      "pitExitX": 219.2500,
+      "pitExitZ": 325.5000
+    },
+    {
+      "location" : "Ruapuna Park",
+      "variation" : "Outer_Loop",
+      "length" : 2165.7734,
+      "pitEntryX": 546.2500,
+      "pitEntryZ": 112.5000,
+      "pitExitX": 219.2500,
+      "pitExitZ": 325.5000
+    },
+    {
+      "location" : "Sakitto",
+      "variation" : "Grand Prix",
+      "length" : 5383.8838,
+      "pitEntryX": 576.6671,
+      "pitEntryZ": -142.1608,
+      "pitExitX": 607.2910,
+      "pitExitZ": -646.9218
+    },
+    {
+      "location" : "Sakitto",
+      "variation" : "Sprint",
+      "length" : 3539.3838,
+      "pitEntryX": 576.6671,
+      "pitEntryZ": -142.1608,
+      "pitExitX": 607.2910,
+      "pitExitZ": -646.9218
+    },
+    {
+      "location" : "Silverstone",
+      "variation" : "International",
+      "length" : 2978.3494,
+      "pitEntryX": -504.7390,
+      "pitEntryZ": -1274.6860,
+      "pitExitX": -273.1427,
+      "pitExitZ": -861.1436
     },
     {
       "location" : "Silverstone",
@@ -365,6 +1270,24 @@
       "pitExitZ" : -55.8216
     },
     {
+      "location" : "Snetterton",
+      "variation" : "300 Circuit",
+      "length" : 4747.8750,
+      "pitEntryX" : 228.4838,
+      "pitEntryZ" : -25.2368,
+      "pitExitX" : -44.5122,
+      "pitExitZ" : -55.8216
+    },
+    {
+      "location" : "Sonoma Raceway",
+      "variation" : "Grand Prix",
+      "length" : 4025.9775,
+      "pitEntryX" : -592.7792,
+      "pitEntryZ" : 87.4373,
+      "pitExitX" : -152.6224,
+      "pitExitZ" : -30.7139
+    },
+    {
       "location" : "Sonoma Raceway",
       "variation" : "Short",
       "length" : 3174.8245,
@@ -381,6 +1304,15 @@
       "pitEntryZ" : null,
       "pitExitX" : null,
       "pitExitZ" : null
+    },
+    {
+      "location" : "Watkins Glen International",
+      "variation" : "Grand Prix",
+      "length" : 5112.1216,
+      "pitEntryX" : 589.6273,
+      "pitEntryZ" : -928.2814,
+      "pitExitX" : 542.0042,
+      "pitExitZ" : -1410.4640
     },
     {
       "location" : "Zolder",

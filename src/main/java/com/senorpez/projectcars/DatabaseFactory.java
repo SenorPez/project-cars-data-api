@@ -69,6 +69,7 @@ public class DatabaseFactory {
                 " manufacturer VARCHAR(255) NOT NULL, " +
                 " model VARCHAR(255) NOT NULL, " +
                 " class VARCHAR(255) NOT NULL, " +
+                " country VARCHAR(255) NOT NULL, " +
                 " PRIMARY KEY (id), " +
                 " UNIQUE (manufacturer, model));";
         stmt.executeUpdate(sql);
@@ -117,7 +118,7 @@ public class DatabaseFactory {
 
             System.out.println("Adding Cars data...");
             sql = "INSERT INTO cars " +
-                    "(manufacturer, model, class) " +
+                    "(manufacturer, model, class, country) " +
                     "VALUES " + sqlValues + ";";
             stmt.executeUpdate(sql);
         }
@@ -203,6 +204,7 @@ public class DatabaseFactory {
                 "(id INTEGER NOT NULL AUTO_INCREMENT, " +
                 " name VARCHAR(255) NOT NULL, " +
                 " carFilter VARCHAR(255) NOT NULL, " +
+                " tier INTEGER, " +
                 " PRIMARY KEY (id));";
         stmt.executeUpdate(sql);
 
@@ -246,8 +248,9 @@ public class DatabaseFactory {
                         System.out.println("Adding Event data...");
                         String eventName = "'" + event.get("name") + "'";
                         String carFilter = (String) event.get("carFilter");
+                        Integer tier = (event.get("tier") == null) ? null : (Integer) event.get("tier");
                         carFilter = "'" + carFilter.replace("'", "''") + "'";
-                        String eventSql = "INSERT INTO events (name, carFilter) VALUES (" + eventName + ", " + carFilter + ");";
+                        String eventSql = "INSERT INTO events (name, carFilter, tier) VALUES (" + eventName + ", " + carFilter + ", " + tier +");";
                         ResultSet keys;
                         Integer eventID = null;
                         AtomicInteger counter = new AtomicInteger(0);
@@ -288,6 +291,13 @@ public class DatabaseFactory {
                             e.printStackTrace();
                         }
                     });
+
+            ResultSet roundCount = stmt.executeQuery("SELECT COUNT(*) as roundCount FROM rounds;");
+            if (roundCount.next()) {
+                System.out.println("Rounds: " + roundCount.getInt("roundCount"));
+            }
+            roundCount.close();
+
         }
     }
 }

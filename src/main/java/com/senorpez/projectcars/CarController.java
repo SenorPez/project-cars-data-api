@@ -19,7 +19,7 @@ class CarController {
     public List<Car> cars() {
         Connection conn = null;
         Statement stmt = null;
-        String sql = "SELECT id, manufacturer, model, class FROM cars;";
+        String sql = "SELECT id, manufacturer, model, class, country FROM cars;";
         List<Car> cars = new ArrayList<>();
 
         try {
@@ -32,12 +32,14 @@ class CarController {
                 Integer carId = carResults.getInt("id");
                 String manufacturer = carResults.getString("manufacturer");
                 String model = carResults.getString("model");
+                String country = carResults.getString("country");
                 String carClass = carResults.getString("class");
 
                 cars.add(new Car(
                         carId,
                         manufacturer,
                         model,
+                        country,
                         carClass
                 ));
             }
@@ -66,7 +68,7 @@ class CarController {
     public Car cars(@PathVariable Integer carId) {
         Connection conn = null;
         Statement stmt = null;
-        String sql = "SELECT manufacturer, model, class FROM cars WHERE id = " + carId + ";";
+        String sql = "SELECT manufacturer, model, class, country FROM cars WHERE id = " + carId + ";";
         Car car = null;
 
         try {
@@ -78,9 +80,10 @@ class CarController {
             while (carResults.next()) {
                 String manufacturer = carResults.getString("manufacturer");
                 String model = carResults.getString("model");
+                String country = carResults.getString("country");
                 String carClass = carResults.getString("class");
 
-                car = new Car(carId, manufacturer, model, carClass);
+                car = new Car(carId, manufacturer, model, country, carClass);
             }
 
             carResults.close();
