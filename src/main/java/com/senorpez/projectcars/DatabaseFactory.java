@@ -27,23 +27,30 @@ public class DatabaseFactory {
     public static void main(String[] args) {
         Connection conn = null;
         Statement stmt = null;
-        String sql;
+        String sql = null;
+        String databaseType = null;
 
         try {
             try {
                 Class.forName(MYSQL_DRIVER);
                 System.out.println("Connecting to MySQL database.");
                 conn = DriverManager.getConnection(MYSQL_URL, ADMIN_USER, ADMIN_PASS);
+                databaseType = "mysql";
             } catch (ClassNotFoundException | SQLException e) {
                 Class.forName(H2_DRIVER);
                 System.out.println("Connection to MySQL Failed.");
                 System.out.println("Connecting to H2 database.");
                 conn = DriverManager.getConnection(H2_URL, ADMIN_USER, ADMIN_PASS);
+                databaseType = "h2";
             }
 
             stmt = conn.createStatement();
             System.out.println("Nuking existing database from orbit. It's the only way to be sure.");
-            sql = "DROP ALL OBJECTS;";
+            if (databaseType.equals("mysql")) {
+                sql = "DROP DATABASE IF EXISTS projectcarsapi; CREATE DATABASE projectcarsapi; USE projectcarsapi";
+            } else if (databaseType.equals("h2")) {
+                sql = "DROP ALL OBJECTS;";
+            }
             stmt.execute(sql);
 
             System.out.println("Creating access user.");
