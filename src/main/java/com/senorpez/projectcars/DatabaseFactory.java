@@ -12,13 +12,17 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 public class DatabaseFactory {
-    private static final String JDBC_DRIVER = "org.h2.Driver";
-    private static final String DB_URL = "jdbc:h2:~/projectcars;MODE=mysql";
-    private static final String ADMIN_USER = "admin";
-    private static final String ADMIN_PASS = "yE88X5]z9wMQ";
+    private static final String MYSQL_DRIVER = "com.mysql.cj.jdbc.Driver";
+    private static final String MYSQL_URL = "jdbc:mysql://pcarsapi.cbwuidepjacv.us-west-2.rds.amazonaws.com:3306/";
+
+    private static final String H2_DRIVER = "org.h2.Driver";
+    private static final String H2_URL = "jdbc:h2:~/projectcars;MODE=mysql";
+
+    private static final String ADMIN_USER = "root";
+    private static final String ADMIN_PASS = "7,U-~N^EQhau8MAH";
 
     private static final String USER_NAME = "project_cars_api_user";
-    private static final String USER_PASS = "o5RXD}XL!-K2";
+    private static final String USER_PASS = "F=R4tV}p:Jb2>VqJ";
 
     public static void main(String[] args) {
         Connection conn = null;
@@ -26,17 +30,23 @@ public class DatabaseFactory {
         String sql;
 
         try {
-            Class.forName(JDBC_DRIVER);
+            try {
+                Class.forName(MYSQL_DRIVER);
+                System.out.println("Connecting to MySQL database.");
+                conn = DriverManager.getConnection(MYSQL_URL, ADMIN_USER, ADMIN_PASS);
+            } catch (ClassNotFoundException | SQLException e) {
+                Class.forName(H2_DRIVER);
+                System.out.println("Connection to MySQL Failed.");
+                System.out.println("Connecting to H2 database.");
+                conn = DriverManager.getConnection(H2_URL, ADMIN_USER, ADMIN_PASS);
+            }
 
-            System.out.println("Connecting to database...");
-            conn = DriverManager.getConnection(DB_URL, ADMIN_USER, ADMIN_PASS);
             stmt = conn.createStatement();
-
-            System.out.println("Nuking existing database from orbit. It's the only way to be sure...");
+            System.out.println("Nuking existing database from orbit. It's the only way to be sure.");
             sql = "DROP ALL OBJECTS;";
             stmt.execute(sql);
 
-            System.out.println("Creating access user...");
+            System.out.println("Creating access user.");
             sql = "CREATE USER " + USER_NAME + " PASSWORD '" + USER_PASS + "';";
             stmt.execute(sql);
 
@@ -63,7 +73,7 @@ public class DatabaseFactory {
         Statement stmt = conn.createStatement();
         String sql;
 
-        System.out.println("Creating Cars table...");
+        System.out.println("Creating Cars table.");
         sql = "CREATE TABLE cars " +
                 "(id INTEGER NOT NULL AUTO_INCREMENT, " +
                 " manufacturer VARCHAR(255) NOT NULL, " +
@@ -74,7 +84,7 @@ public class DatabaseFactory {
                 " UNIQUE (manufacturer, model));";
         stmt.executeUpdate(sql);
 
-        System.out.println("Granting Cars privileges...");
+        System.out.println("Granting Cars privileges.");
         sql = "GRANT SELECT ON cars to " + USER_NAME + ";";
         stmt.executeUpdate(sql);
 
@@ -116,7 +126,7 @@ public class DatabaseFactory {
                             .collect(Collectors.joining(", ", "(", ")")))
                     .collect(Collectors.joining(", "));
 
-            System.out.println("Adding Cars data...");
+            System.out.println("Adding Cars data.");
             sql = "INSERT INTO cars " +
                     "(manufacturer, model, class, country) " +
                     "VALUES " + sqlValues + ";";
@@ -130,7 +140,7 @@ public class DatabaseFactory {
         Statement stmt = conn.createStatement();
         String sql;
 
-        System.out.println("Creating Tracks table...");
+        System.out.println("Creating Tracks table.");
         sql = "CREATE TABLE tracks " +
                 "(id INTEGER NOT NULL AUTO_INCREMENT, " +
                 " location VARCHAR(255) NOT NULL, " +
@@ -144,7 +154,7 @@ public class DatabaseFactory {
                 " UNIQUE (location, variation));";
         stmt.executeUpdate(sql);
 
-        System.out.println("Granting Tracks privileges...");
+        System.out.println("Granting Tracks privileges.");
         sql = "GRANT SELECT ON tracks TO " + USER_NAME + ";";
         stmt.executeUpdate(sql);
 
@@ -185,7 +195,7 @@ public class DatabaseFactory {
                             .map(o -> o == null ? "NULL" : "'" + o.toString() + "'")
                             .collect(Collectors.joining(", ", "(", ")")))
                     .collect(Collectors.joining(", "));
-            System.out.println("Adding Tracks data...");
+            System.out.println("Adding Tracks data.");
             sql = "INSERT INTO tracks " +
                     "(location, variation, length, pitEntryX, pitEntryZ, pitExitX, pitExitZ) " +
                     "VALUES " + sqlValues + ";";
@@ -199,7 +209,7 @@ public class DatabaseFactory {
         Statement stmt = conn.createStatement();
         String sql;
 
-        System.out.println("Creating Events table...");
+        System.out.println("Creating Events table.");
         sql = "CREATE TABLE events " +
                 "(id INTEGER NOT NULL AUTO_INCREMENT, " +
                 " name VARCHAR(255) NOT NULL, " +
@@ -208,11 +218,11 @@ public class DatabaseFactory {
                 " PRIMARY KEY (id));";
         stmt.executeUpdate(sql);
 
-        System.out.println("Granting Events privileges...");
+        System.out.println("Granting Events privileges.");
         sql = "GRANT SELECT ON events TO " + USER_NAME + ";";
         stmt.executeUpdate(sql);
 
-        System.out.println("Creating Rounds table...");
+        System.out.println("Creating Rounds table.");
         sql = "CREATE TABLE rounds " +
                 "(id INTEGER NOT NULL, " +
                 " eventID INTEGER NOT NULL, " +
@@ -224,7 +234,7 @@ public class DatabaseFactory {
                 " FOREIGN KEY (eventID) REFERENCES events(id) ON DELETE CASCADE);";
         stmt.executeUpdate(sql);
 
-        System.out.println("Granting Rounds privileges...");
+        System.out.println("Granting Rounds privileges.");
         sql = "GRANT SELECT ON rounds TO " + USER_NAME + ";";
         stmt.executeUpdate(sql);
 
@@ -245,7 +255,7 @@ public class DatabaseFactory {
         if (events != null) {
             events
                     .forEach(event -> {
-                        System.out.println("Adding Event data...");
+                        System.out.println("Adding Event data.");
                         String eventName = "'" + event.get("name") + "'";
                         String carFilter = (String) event.get("carFilter");
                         Integer tier = (event.get("tier") == null) ? null : (Integer) event.get("tier");
@@ -281,7 +291,7 @@ public class DatabaseFactory {
                                 })
                                 .collect(Collectors.joining(","));
 
-                        System.out.println("Adding Rounds data...");
+                        System.out.println("Adding Rounds data.");
                         String roundSql = "INSERT INTO rounds " +
                                 "(id, eventID, trackID, laps, time) " +
                                 "VALUES " + roundsSQLValues + ";";
