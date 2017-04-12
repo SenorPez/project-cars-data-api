@@ -21,7 +21,7 @@ public class DatabaseFactory {
     private static final String ADMIN_USER = "root";
     private static final String ADMIN_PASS = "7,U-~N^EQhau8MAH";
 
-    private static final String USER_NAME = "project_cars_api_user";
+    private static final String USER_NAME = "pcarsapi_user";
     private static final String USER_PASS = "F=R4tV}p:Jb2>VqJ";
 
     public static void main(String[] args) {
@@ -47,14 +47,20 @@ public class DatabaseFactory {
             stmt = conn.createStatement();
             System.out.println("Nuking existing database from orbit. It's the only way to be sure.");
             if (databaseType.equals("mysql")) {
-                sql = "DROP DATABASE IF EXISTS projectcarsapi; CREATE DATABASE projectcarsapi; USE projectcarsapi";
+		stmt.executeUpdate("DROP DATABASE IF EXISTS projectcarsapi;");
+		stmt.executeUpdate("CREATE DATABASE projectcarsapi;");
+		stmt.execute("USE projectcarsapi;");
             } else if (databaseType.equals("h2")) {
-                sql = "DROP ALL OBJECTS;";
+		stmt.executeUpdate("DROP ALL OBJECTS;");
             }
-            stmt.execute(sql);
 
             System.out.println("Creating access user.");
-            sql = "CREATE USER " + USER_NAME + " PASSWORD '" + USER_PASS + "';";
+	    try {
+                stmt.executeUpdate("DROP USER " + USER_NAME + ";");
+            } catch (SQLException e) {
+            }
+
+            sql = "CREATE USER " + USER_NAME + " IDENTIFIED BY  '" + USER_PASS + "';";
             stmt.execute(sql);
 
             CreateCarsTable(conn);
@@ -236,7 +242,7 @@ public class DatabaseFactory {
                 " trackID INTEGER NOT NULL, " +
                 " laps INTEGER, " +
                 " time INTEGER, " +
-                " CHECK (laps IS NOT NULL AND time IS NULL) OR (laps IS NULL AND time IS NOT NULL), " +
+                " CHECK ((laps IS NOT NULL AND time IS NULL) OR (laps IS NULL AND time IS NOT NULL)), " + 
                 " PRIMARY KEY (id, eventID), " +
                 " FOREIGN KEY (eventID) REFERENCES events(id) ON DELETE CASCADE);";
         stmt.executeUpdate(sql);
