@@ -577,11 +577,13 @@ class EventController {
             try {
                 Class.forName(MYSQL_DRIVER);
                 conn = DriverManager.getConnection(MYSQL_URL, USER_NAME, USER_PASS);
+                stmt = conn.createStatement();
+                stmt.execute("USE projectcarsapi;");
             } catch (ClassNotFoundException | SQLException e) {
                 Class.forName(H2_DRIVER);
                 conn = DriverManager.getConnection(H2_URL, USER_NAME, USER_PASS);
+                stmt = conn.createStatement();
             }
-            stmt = conn.createStatement();
 
             ResultSet eventsResults = stmt.executeQuery(sql);
             while (eventsResults.next()) {
