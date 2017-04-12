@@ -1454,7 +1454,7 @@
     },
     {
       "name" : "WMD Euro Trackday Trophy",
-      "carFilter" : "class LIKE 'Road B' --Something wrong here, not all Road B are valid",
+      "carFilter" : "class LIKE 'Road B'",
       "tier" : null,
       "rounds" : [
         {
@@ -1704,7 +1704,7 @@
     },
     {
       "name" : "Road TD British Track Challenge",
-      "carFilter" : "class LIKE 'Road B' AND country LIKE 'England' AND model NOT LIKE 'F1' --Maybe this is by year?",
+      "carFilter" : "class LIKE 'Road B' AND country LIKE 'England' AND model NOT LIKE 'F1'",
       "tier" : null,
       "rounds" : [
         {
