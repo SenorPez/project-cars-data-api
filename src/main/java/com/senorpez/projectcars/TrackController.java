@@ -10,27 +10,37 @@ import java.util.List;
 
 @RestController
 class TrackController {
-    private static final String JDBC_DRIVER = "org.h2.Driver";
-    private static final String DB_URL = "jdbc:h2:~/projectcars";
-    private static final String USER_NAME = "project_cars_api_user";
-    private static final String USER_PASS = "o5RXD}XL!-K2";
+    private static final String MYSQL_DRIVER = "com.mysql.cj.jdbc.Driver";
+    private static final String MYSQL_URL = "jdbc:mysql://pcarsapi.cbwuidepjacv.us-west-2.rds.amazonaws.com:3306/";
+
+    private static final String H2_DRIVER = "org.h2.Driver";
+    private static final String H2_URL = "jdbc:h2:~/projectcars;MODE=mysql";
+
+    private static final String USER_NAME = "pcarsapi_user";
+    private static final String USER_PASS = "F=R4tV}p:Jb2>VqJ";
 
     @RequestMapping(value = "/v1/tracks")
     public List<Track> tracks() {
         Connection conn = null;
         Statement stmt = null;
-        String sql = "SELECT id, location, variation, length, pitEntryX, pitEntryZ, pitExitX, pitExitZ " +
+        String sql = "SELECT id, name, location, variation, length, pitEntryX, pitEntryZ, pitExitX, pitExitZ, gridSize " +
                 "FROM tracks;";
         List<Track> tracks = new ArrayList<>();
 
         try {
-            Class.forName(JDBC_DRIVER);
-            conn = DriverManager.getConnection(DB_URL, USER_NAME, USER_PASS);
+            try {
+                Class.forName(MYSQL_DRIVER);
+                conn = DriverManager.getConnection(MYSQL_URL, USER_NAME, USER_PASS);
+            } catch (ClassNotFoundException | SQLException e) {
+                Class.forName(H2_DRIVER);
+                conn = DriverManager.getConnection(H2_URL, USER_NAME, USER_PASS);
+            }
             stmt = conn.createStatement();
 
             ResultSet trackResults = stmt.executeQuery(sql);
             while (trackResults.next()) {
                 Integer trackId = trackResults.getInt("id");
+                String name = trackResults.getString("name");
                 String location = trackResults.getString("location");
                 String variation = trackResults.getString("variation");
                 Float length = trackResults.getFloat("length");
@@ -45,15 +55,19 @@ class TrackController {
                 Float pitExitZ = trackResults.getFloat("pitExitZ");
                 if (trackResults.wasNull()) pitExitZ = null;
 
+                Integer gridSize = trackResults.getInt("gridSize");
+
                 tracks.add(new Track(
                         trackId,
+                        name,
                         location,
                         variation,
                         length,
                         pitEntryX,
                         pitEntryZ,
                         pitExitX,
-                        pitExitZ
+                        pitExitZ,
+                        gridSize
                 ));
             }
 
@@ -81,18 +95,24 @@ class TrackController {
     public Track tracks(@PathVariable Integer id) {
         Connection conn = null;
         Statement stmt = null;
-        String sql = "SELECT id, location, variation, length, pitEntryX, pitEntryZ, pitExitX, pitExitZ " +
+        String sql = "SELECT name, location, variation, length, pitEntryX, pitEntryZ, pitExitX, pitExitZ, gridSize " +
                 "FROM tracks " +
                 "WHERE id = " + id + ";";
         Track track = null;
 
         try {
-            Class.forName(JDBC_DRIVER);
-            conn = DriverManager.getConnection(DB_URL, USER_NAME, USER_PASS);
+            try {
+                Class.forName(MYSQL_DRIVER);
+                conn = DriverManager.getConnection(MYSQL_URL, USER_NAME, USER_PASS);
+            } catch (ClassNotFoundException | SQLException e) {
+                Class.forName(H2_DRIVER);
+                conn = DriverManager.getConnection(H2_URL, USER_NAME, USER_PASS);
+            }
             stmt = conn.createStatement();
 
             ResultSet trackResults = stmt.executeQuery(sql);
             while (trackResults.next()) {
+                String name = trackResults.getString("name");
                 String location = trackResults.getString("location");
                 String variation = trackResults.getString("variation");
                 Float length = trackResults.getFloat("length");
@@ -107,15 +127,19 @@ class TrackController {
                 Float pitExitZ = trackResults.getFloat("pitExitZ");
                 if (trackResults.wasNull()) pitExitZ = null;
 
+                Integer gridSize = trackResults.getInt("gridSize");
+
                 track = new Track(
                         id,
+                        name,
                         location,
                         variation,
                         length,
                         pitEntryX,
                         pitEntryZ,
                         pitExitX,
-                        pitExitZ);
+                        pitExitZ,
+                        gridSize);
             }
 
             trackResults.close();

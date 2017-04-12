@@ -1,282 +1,1076 @@
 {
   "cars" : [
     {
-      "manufacturer": "Ariel",
-      "model" : "Atom 300 Supercharged",
-      "class" : "Road B",
-      "country" : "England"
-    },
-    {
-      "manufacturer": "Ariel",
-      "model" : "Atom Mugen",
-      "class" : "Road B",
-      "country" : "England"
-    },
-    {
-      "manufacturer": "Aston Martin",
-      "model" : "Vantage GT12",
-      "class" : "Road B",
-      "country" : "England"
-    },
-    {
-      "manufacturer": "Audi",
-      "model" : "A1 quattro",
-      "class" : "Road C2",
-      "country" : "Germany"
-    },
-    {
-      "manufacturer": "Audi",
-      "model" : "R8 (LMP900)",
-      "class" : "LMP900",
-      "country" : "Germany"
-    },
-    {
-      "manufacturer": "Audi",
-      "model" : "R8 V10 plus",
-      "class" : "Road B",
-      "country" : "Germany"
-    },
-    {
-      "manufacturer": "BAC",
-      "model" : "Mono",
-      "class" : "Road B",
-      "country" : "England"
-    },
-    {
-      "manufacturer": "Bentley",
-      "model" : "Speed 8",
-      "class" : "LMP900",
-      "country" : "England"
-    },
-    {
-      "manufacturer": "BMW",
-      "model" : "1-Series M Coupe",
-      "class" : "Road C1",
-      "country" : "Germany"
-    },
-    {
-      "manufacturer": "BMW",
-      "model" : "1-Series M Coupe StanceWorks Edition",
-      "class" : "Road B",
-      "country" : "Germany"
-    },
-    {
-      "manufacturer": "BMW",
+      "id" : 9503224,
+      "manufacturer" : "BMW",
       "model" : "320 TC",
       "class" : "TC2",
-      "country" : "Germany"
+      "country" : null
     },
     {
-      "manufacturer": "BMW",
-      "model" : "320 Turbo Group 5",
-      "class" : "Group 5",
-      "country" : "Germany"
-    },
-    {
-      "manufacturer": "BMW",
-      "model" : "M1 Procar",
-      "class" : "Group 4",
-      "country" : "Germany"
-    },
-    {
-      "manufacturer": "BMW",
-      "model" : "M3 E30 Group A",
-      "class" : "Group A",
-      "country" : "Germany"
-    },
-    {
-      "manufacturer": "BMW",
-      "model" : "V12 LMR",
-      "class" : "LMP900",
-      "country" : "Germany"
-    },
-    {
-      "manufacturer": "Caterham",
-      "model": "Seven Classic",
-      "class": "Road D",
-      "country" : "England"
-    },
-    {
-      "manufacturer": "Caterham",
-      "model": "Superlight R500",
-      "class": "Road B",
-      "country" : "England"
-    },
-    {
-      "manufacturer" : "Ford",
-      "model" : "Focus RS",
-      "class": "Road C2",
-      "country": "United States of America"
-    },
-    {
-      "manufacturer" : "Ford",
-      "model" : "Mustang GT",
-      "class": "Road B",
-      "country": "United States of America"
-    },
-    {
-      "manufacturer" : "Ford",
-      "model" : "Sierra RS500 Cosworth Group A",
-      "class": "Group A",
-      "country": "United States of America"
-    },
-    {
-      "manufacturer" : "Ford",
-      "model" : "Zakspeed Capri Group 5",
-      "class": "Group 5",
-      "country": "United States of America"
-    },
-    {
-      "manufacturer" : "KTM",
-      "model" : "X-Bow R",
-      "class": "Road B",
-      "country": "England"
-
-    },
-    {
-      "manufacturer" : "Lotus",
-      "model" : "Type 98T Renault Turbo",
-      "class": "Vintage F1 C",
-      "country": "England"
-    },
-    {
-      "manufacturer" : "McLaren",
-      "model" : "F1",
-      "class": "Road B",
-      "country": "England"
-    },
-    {
-      "manufacturer" : "Mercedes-Benz",
-      "model" : "190E 2.5-16 Evolution2 DTM",
-      "class": "Group A",
-      "country": "Germany"
-    },
-    {
-      "manufacturer": "Mercedes-Benz",
-      "model": "A45 AMG",
-      "class": "Road C1",
-      "country": "Germany"
-    },
-    {
-      "manufacturer" : "Mercedes-Benz",
-      "model" : "SLS AMG",
-      "class": "Road B",
-      "country": "Germany"
-    },
-    {
-      "manufacturer" : "Mitsubishi",
-      "model" : "Lancer Evolution IX FQ360",
-      "class": "Road C1",
-      "country": "Japan"
-    },
-    {
-      "manufacturer" : "Mitsubishi",
-      "model" : "Lancer Evolution VI TME",
-      "class": "Road C2",
-      "country": "Japan"
-    },
-    {
-      "manufacturer" : "Mitsubishi",
-      "model" : "Lancer Evolution X FQ400",
-      "class": "Road C1",
-      "country": "Japan"
-    },
-    {
-      "manufacturer" : "Pagani",
-      "model" : "Huayra",
-      "class": "Road A",
-      "country": "Italy"
-    },
-    {
-      "manufacturer" : "Pagani",
-      "model" : "Huayra BC",
-      "class": "Road A",
-      "country": "Italy"
-    },
-    {
-      "manufacturer" : "Pagani",
-      "model" : "Zonda Cinque Roadster",
-      "class": "Road A",
-      "country": "Italy"
-    },
-    {
-      "manufacturer" : "Renault",
-      "model" : "Megane R.S. 265",
-      "class": "Road C2",
-      "country" : "France"
-    },
-    {
-      "manufacturer" : "Renault",
-      "model" : "Megane R.S. 275 Trophy-R",
-      "class": "Road C1",
-      "country" : "France"
-    },
-    {
-      "manufacturer" : "Ruf",
-      "model" : "CTR",
-      "class": "Road B",
-      "country": "Germany"
-    },
-    {
-      "manufacturer" : "Ruf",
-      "model" : "CTR3",
-      "class": "Road A",
-      "country": "Germany"
-    },
-    {
-      "manufacturer" : "Ruf",
-      "model" : "RGT-8",
-      "class": "Road B",
-      "country": "Germany"
-    },
-    {
+      "id" : 65306143,
       "manufacturer" : "Sauber",
       "model" : "C9 Mercedes-Benz",
-      "class": "Group C1",
-      "country" : "Germany"
+      "class" : "Group C1",
+      "country" : null
     },
     {
+      "id" : 143364290,
+      "manufacturer" : "BMW",
+      "model" : "2002 Turbo",
+      "class" : "Historic Touring 2",
+      "country" : null
+    },
+    {
+      "id" : 146414985,
+      "manufacturer" : "RWD",
+      "model" : "P20 LMP2",
+      "class" : "LMP2",
+      "country" : null
+    },
+    {
+      "id" : 152867459,
+      "manufacturer" : "Radical",
+      "model" : "SR8-RX",
+      "class" : "LMP3",
+      "country" : null
+    },
+    {
+      "id" : 262982797,
+      "manufacturer" : "Mercedes-Benz",
+      "model" : "190E 2.5-16 Evolution2 DTM",
+      "class" : "Group A",
+      "country" : null
+    },
+    {
+      "id" : 274862187,
+      "manufacturer" : "Mercedes-Benz",
+      "model" : "SLS AMG GT3",
+      "class" : "GT3",
+      "country" : null
+    },
+    {
+      "id" : 307010432,
+      "manufacturer" : "McLaren",
+      "model" : "F1",
+      "class" : "Road B",
+      "country" : null
+    },
+    {
+      "id" : 310900789,
+      "manufacturer" : "Ginetta",
+      "model" : "G40 Junior",
+      "class" : "GT5",
+      "country" : null
+    },
+    {
+      "id" : 460478144,
+      "manufacturer" : "Mitsubishi",
+      "model" : "Lancer Evolution VI TME",
+      "class" : "Road C2",
+      "country" : null
+    },
+    {
+      "id" : 462547146,
+      "manufacturer" : "Ruf",
+      "model" : "RGT-8",
+      "class" : "Road B",
+      "country" : null
+    },
+    {
+      "id" : 526708607,
+      "manufacturer" : "Ariel",
+      "model" : "Atom Mugen",
+      "class" : "Road B",
+      "country" : null
+    },
+    {
+      "id" : 558051123,
+      "manufacturer" : "Ruf",
+      "model" : "CTR3",
+      "class" : "Road A",
+      "country" : null
+    },
+    {
+      "id" : 578910088,
+      "manufacturer" : "Caper",
+      "model" : "Monterey Stockcar",
+      "class" : "Vintage Stockcar",
+      "country" : null
+    },
+    {
+      "id" : 578969971,
+      "manufacturer" : "Lotus",
+      "model" : "Type 49 Cosworth",
+      "class" : "Vintage F1 A",
+      "country" : null
+    },
+    {
+      "id" : 607772150,
+      "manufacturer" : "Ariel",
+      "model" : "Atom 500 V8",
+      "class" : "Road A",
+      "country" : null
+    },
+    {
+      "id" : 675194619,
+      "manufacturer" : "Caterham",
+      "model" : "SP/300.R",
+      "class" : "LMP3",
+      "country" : null
+    },
+    {
+      "id" : 704998514,
+      "manufacturer" : "Ruf",
+      "model" : "Rt 12 R",
+      "class" : "Road A",
+      "country" : null
+    },
+    {
+      "id" : 738755746,
+      "manufacturer" : "Aston Martin",
+      "model" : "DBR1-2",
+      "class" : "LMP1",
+      "country" : null
+    },
+    {
+      "id" : 761457895,
+      "manufacturer" : "KTM",
+      "model" : "X-Bow R",
+      "class" : "Road B",
+      "country" : null
+    },
+    {
+      "id" : 779111340,
+      "manufacturer" : "BMW",
+      "model" : "320 Turbo Group 5",
+      "class" : "Group 5",
+      "country" : null
+    },
+    {
+      "id" : 844159614,
       "manufacturer" : "SMS",
       "model" : "125cc Shifter Kart",
-      "class": "Kart1",
-      "country" : "England"
+      "class" : "Kart1",
+      "country" : null
     },
     {
+      "id" : 851491257,
+      "manufacturer" : "Ford",
+      "model" : "Fusion Stockcar",
+      "class" : "Modern Stockcar",
+      "country" : null
+    },
+    {
+      "id" : 975104023,
+      "manufacturer" : "BMW",
+      "model" : "V12 LMR",
+      "class" : "LMP900",
+      "country" : null
+    },
+    {
+      "id" : 987814806,
+      "manufacturer" : "Bentley",
+      "model" : "Continental GT3",
+      "class" : "GT3",
+      "country" : null
+    },
+    {
+      "id" : 998947753,
+      "manufacturer" : "Mitsubishi",
+      "model" : "Lancer Evolution X FQ400",
+      "class" : "Road C1",
+      "country" : null
+    },
+    {
+      "id" : 1023089804,
+      "manufacturer" : "RWD",
+      "model" : "P30 LMP1",
+      "class" : "LMP1",
+      "country" : null
+    },
+    {
+      "id" : 1061494025,
+      "manufacturer" : "Lotus",
+      "model" : "Type 49C Cosworth",
+      "class" : "Vintage F1 A",
+      "country" : null
+    },
+    {
+      "id" : 1111049682,
+      "manufacturer" : "Ford",
+      "model" : "Mustang Boss 302R1",
+      "class" : "GT4",
+      "country" : null
+    },
+    {
+      "id" : 1161219858,
+      "manufacturer" : "BMW",
+      "model" : "Z4 GT3",
+      "class" : "GT3",
+      "country" : null
+    },
+    {
+      "id" : 1162971218,
+      "manufacturer" : "Lotus",
+      "model" : "Type 38 Ford",
+      "class" : "Vintage Indy 65",
+      "country" : null
+    },
+    {
+      "id" : 1219511257,
+      "manufacturer" : "Audi",
+      "model" : "R18 e-tron quattro",
+      "class" : "LMP1",
+      "country" : null
+    },
+    {
+      "id" : 1230061845,
+      "manufacturer" : "Ford",
+      "model" : "Mustang GT",
+      "class" : "Road B",
+      "country" : null
+    },
+    {
+      "id" : 1231996358,
+      "manufacturer" : "Radical",
+      "model" : "SR3-RS",
+      "class" : "LMP3",
+      "country" : null
+    },
+    {
+      "id" : 1268015922,
+      "manufacturer" : "Aston Martin",
+      "model" : "Vantage GT12",
+      "class" : "Road B",
+      "country" : null
+    },
+    {
+      "id" : 1353949246,
+      "manufacturer" : "Mercedes-AMG",
+      "model" : "GT3",
+      "class" : "GT3",
+      "country" : null
+    },
+    {
+      "id" : 1355771595,
+      "manufacturer" : "Marek",
+      "model" : "RP 219D LMP2",
+      "class" : "LMP2",
+      "country" : null
+    },
+    {
+      "id" : 1356687088,
+      "manufacturer" : "Pagani",
+      "model" : "Huayra BC",
+      "class" : "Road A",
+      "country" : null
+    },
+    {
+      "id" : 1357515789,
+      "manufacturer" : "Ford",
+      "model" : "Falcon FG V8 Supercar",
+      "class" : "V8 Supercars",
+      "country" : null
+    },
+    {
+      "id" : 1368036017,
+      "manufacturer" : "BMW",
+      "model" : "M1 Procar",
+      "class" : "Group 4",
+      "country" : null
+    },
+    {
+      "id" : 1397255601,
+      "manufacturer" : "Ford",
+      "model" : "Mustang 2+2 Fastback",
+      "class" : "Historic Touring 2",
+      "country" : null
+    },
+    {
+      "id" : 1400443574,
+      "manufacturer" : "BAC",
+      "model" : "Mono",
+      "class" : "Road B",
+      "country" : null
+    },
+    {
+      "id" : 1401308680,
+      "manufacturer" : "Mercedes-Benz",
+      "model" : "300SL (W194)",
+      "class" : "Vintage GT3",
+      "country" : null
+    },
+    {
+      "id" : 1401532035,
+      "manufacturer" : "Aston Martin",
+      "model" : "V8 Vantage GTE",
+      "class" : "GT3",
+      "country" : null
+    },
+    {
+      "id" : 1452261378,
+      "manufacturer" : "Aston Martin",
+      "model" : "V12 Vantage GT3",
+      "class" : "GT3",
+      "country" : null
+    },
+    {
+      "id" : 1469658023,
+      "manufacturer" : "Audi",
+      "model" : "R8 V10 plus",
+      "class" : "Road B",
+      "country" : null
+    },
+    {
+      "id" : 1470929381,
+      "manufacturer" : "Audi",
+      "model" : "90 quattro IMSA GTO",
+      "class" : "Trans-Am",
+      "country" : null
+    },
+    {
+      "id" : 1626504761,
+      "manufacturer" : "SMS",
+      "model" : "Formula Renault 3.5",
+      "class" : "Formula Renault",
+      "country" : null
+    },
+    {
+      "id" : 1639105598,
+      "manufacturer" : "Ford",
+      "model" : "Escort Mk1 RS1600",
+      "class" : "Historic Touring 2",
+      "country" : null
+    },
+    {
+      "id" : 1694837381,
+      "manufacturer" : "Renault",
+      "model" : "Megane R.S. 265",
+      "class" : "Road C2",
+      "country" : null
+    },
+    {
+      "id" : 1764851930,
+      "manufacturer" : "Toyota",
+      "model" : "GT-86 Rocket Bunny GT Edition",
+      "class" : "GT4",
+      "country" : null
+    },
+    {
+      "id" : 1810453820,
+      "manufacturer" : "Toyota",
+      "model" : "TS040 Hybrid",
+      "class" : "LMP1",
+      "country" : null
+    },
+    {
+      "id" : 1817703058,
+      "manufacturer" : "Ford",
+      "model" : "Zakspeed Capri Group 5",
+      "class" : "Group 5",
+      "country" : null
+    },
+    {
+      "id" : 1884411907,
+      "manufacturer" : "Audi",
+      "model" : "R8 LMS Ultra",
+      "class" : "GT3",
+      "country" : null
+    },
+    {
+      "id" : 1901402958,
+      "manufacturer" : "Dallara",
+      "model" : "DW12 Indycar (Road Course)",
+      "class" : "Indycar",
+      "country" : null
+    },
+    {
+      "id" : 1909945073,
+      "manufacturer" : "SMS",
+      "model" : "Formula A",
+      "class" : "FA",
+      "country" : null
+    },
+    {
+      "id" : 1959097924,
+      "manufacturer" : "Lotus",
+      "model" : "Type 98T Renault Turbo",
+      "class" : "Vintage F1 C",
+      "country" : null
+    },
+    {
+      "id" : 1979398129,
+      "manufacturer" : "Mercedes-Benz",
+      "model" : "CLK-LM",
+      "class" : "GT1",
+      "country" : null
+    },
+    {
+      "id" : 2017392050,
+      "manufacturer" : "Ruf",
+      "model" : "CTR",
+      "class" : "Road B",
+      "country" : null
+    },
+    {
+      "id" : 2022787216,
+      "manufacturer" : "Alpine",
+      "model" : "A450",
+      "class" : "LMP2",
+      "country" : null
+    },
+    {
+      "id" : 2082176226,
+      "manufacturer" : "Audi",
+      "model" : "A1 quattro",
+      "class" : "Road C2",
+      "country" : null
+    },
+    {
+      "id" : 2086246081,
+      "manufacturer" : "Aston Martin",
+      "model" : "V8 Vantage GT4",
+      "class" : "GT4",
+      "country" : null
+    },
+    {
+      "id" : 2091910841,
+      "manufacturer" : "Ginetta",
+      "model" : "G55 GT4",
+      "class" : "GT4",
+      "country" : null
+    },
+    {
+      "id" : -2075284877,
+      "manufacturer" : "SMS",
+      "model" : "Formula Rookie",
+      "class" : "F5",
+      "country" : null
+    },
+    {
+      "id" : -2066888471,
+      "manufacturer" : "Pagani",
+      "model" : "Zonda R",
+      "class" : "GT1X",
+      "country" : null
+    },
+    {
+      "id" : -2062679088,
+      "manufacturer" : "Pagani",
+      "model" : "Huayra",
+      "class" : "Road A",
+      "country" : null
+    },
+    {
+      "id" : -2046825312,
+      "manufacturer" : "Ruf",
+      "model" : "CTR3 SMS-R",
+      "class" : "GT1X",
+      "country" : null
+    },
+    {
+      "id" : -2030487367,
+      "manufacturer" : "Marek",
+      "model" : "RP 339H LMP1",
+      "class" : "LMP1",
+      "country" : null
+    },
+    {
+      "id" : -2025231366,
+      "manufacturer" : "Cadillac",
+      "model" : "ATS-V.R GT3",
+      "class" : "GT3",
+      "country" : null
+    },
+    {
+      "id" : -2020758805,
+      "manufacturer" : "Ruf",
+      "model" : "RGT-8 GT3",
+      "class" : "GT3",
+      "country" : null
+    },
+    {
+      "id" : -1966060946,
+      "manufacturer" : "Mazda",
+      "model" : "MX-5 Radbul",
+      "class" : "Road A",
+      "country" : null
+    },
+    {
+      "id" : -1921505310,
+      "manufacturer" : "Palmer",
+      "model" : "Jaguar JP-LM",
+      "class" : "LMP3",
+      "country" : null
+    },
+    {
+      "id" : -1856998124,
+      "manufacturer" : "Renault",
+      "model" : "Sport R.S. 01",
+      "class" : "RS01 Trophy",
+      "country" : null
+    },
+    {
+      "id" : -1835861548,
+      "manufacturer" : "Lotus",
+      "model" : "Type 78 Cosworth",
+      "class" : "Vintage F1 B",
+      "country" : null
+    },
+    {
+      "id" : -1774335742,
+      "manufacturer" : "Ford",
+      "model" : "MkIV",
+      "class" : "Vintage GT",
+      "country" : null
+    },
+    {
+      "id" : -1770401008,
+      "manufacturer" : "Ariel",
+      "model" : "Atom 300 Supercharged",
+      "class" : "Road B",
+      "country" : null
+    },
+    {
+      "id" : -1761671051,
+      "manufacturer" : "Audi",
+      "model" : "R8 (LMP900)",
+      "class" : "LMP900",
+      "country" : null
+    },
+    {
+      "id" : -1748676965,
+      "manufacturer" : "McLaren",
+      "model" : "P1",
+      "class" : "Road A",
+      "country" : null
+    },
+    {
+      "id" : -1738120892,
+      "manufacturer" : "Ford",
+      "model" : "Focus RS",
+      "class" : "Road C2",
+      "country" : null
+    },
+    {
+      "id" : -1729266457,
+      "manufacturer" : "Mercedes-Benz",
+      "model" : "SLS AMG",
+      "class" : "Road B",
+      "country" : null
+    },
+    {
+      "id" : -1706259671,
+      "manufacturer" : "SMS",
+      "model" : "Formula Gulf 1000",
+      "class" : "F4",
+      "country" : null
+    },
+    {
+      "id" : -1617916111,
+      "manufacturer" : "Pagani",
+      "model" : "Zonda Cinque Roadster",
+      "class" : "Road A",
+      "country" : null
+    },
+    {
+      "id" : -1545450182,
+      "manufacturer" : "BMW",
+      "model" : "M3 GT4",
+      "class" : "GT4",
+      "country" : null
+    },
+    {
+      "id" : -1522922538,
+      "manufacturer" : "Mercedes-Benz",
+      "model" : "A45 AMG",
+      "class" : "Road C1",
+      "country" : null
+    },
+    {
+      "id" : -1435057179,
+      "manufacturer" : "Lotus",
+      "model" : "Type 51",
+      "class" : "Vintage F3 A",
+      "country" : null
+    },
+    {
+      "id" : -1411323812,
+      "manufacturer" : "BMW",
+      "model" : "1-Series M Coupe StanceWorks Edition",
+      "class" : "Road B",
+      "country" : null
+    },
+    {
+      "id" : -1365918055,
+      "manufacturer" : "BMW",
+      "model" : "M3 GT",
+      "class" : "GT3",
+      "country" : null
+    },
+    {
+      "id" : -1320616846,
+      "manufacturer" : "Lotus",
+      "model" : "Type 72D Cosworth",
+      "class" : "Vintage F1 B",
+      "country" : null
+    },
+    {
+      "id" : -1318848040,
+      "manufacturer" : "SMS",
+      "model" : "Formula B",
+      "class" : "FB",
+      "country" : null
+    },
+    {
+      "id" : -1253474718,
+      "manufacturer" : "Ford",
+      "model" : "Sierra RS500 Cosworth Group A",
+      "class" : "Group A",
+      "country" : null
+    },
+    {
+      "id" : -1226176940,
+      "manufacturer" : "BMW",
+      "model" : "1-Series M Coupe",
+      "class" : "Road C1",
+      "country" : null
+    },
+    {
+      "id" : -1204688299,
+      "manufacturer" : "Lotus",
+      "model" : "Type 40 Ford",
+      "class" : "Vintage GT",
+      "country" : null
+    },
+    {
+      "id" : -1187748261,
+      "manufacturer" : "BMW",
+      "model" : "2002 StanceWorks Edition",
+      "class" : "Historic Touring 2",
+      "country" : null
+    },
+    {
+      "id" : -1170674276,
+      "manufacturer" : "Ginetta",
+      "model" : "G55 GT3",
+      "class" : "GT3",
+      "country" : null
+    },
+    {
+      "id" : -1166911988,
+      "manufacturer" : "McLaren",
+      "model" : "12C GT3",
+      "class" : "GT3",
+      "country" : null
+    },
+    {
+      "id" : -1127314200,
+      "manufacturer" : "Scion",
+      "model" : "FR-S Rocket Bunny Edition",
+      "class" : "Road B",
+      "country" : null
+    },
+    {
+      "id" : -1067902110,
+      "manufacturer" : "Audi",
+      "model" : "R18 TDI",
+      "class" : "LMP1",
+      "country" : null
+    },
+    {
+      "id" : -1048050877,
+      "manufacturer" : "Radical",
+      "model" : "RXC Turbo",
+      "class" : "Road A",
+      "country" : null
+    },
+    {
+      "id" : -1041674971,
+      "manufacturer" : "SMS",
+      "model" : "Formula C",
+      "class" : "FC",
+      "country" : null
+    },
+    {
+      "id" : -1001569309,
+      "manufacturer" : "McLaren",
+      "model" : "F1 GTR Long Tail",
+      "class" : "GT1",
+      "country" : null
+    },
+    {
+      "id" : -956881226,
+      "manufacturer" : "Renault",
+      "model" : "Megane R.S. 275 Trophy-R",
+      "class" : "Road C1",
+      "country" : null
+    },
+    {
+      "id" : -937933849,
       "manufacturer" : "SMS",
       "model" : "250cc Superkart",
-      "class": "Kart3",
-      "country" : "England"
+      "class" : "Kart3",
+      "country" : null
     },
     {
-      "manufacturer": "Scion",
-      "model": "FR-S",
-      "class": "Road D",
-      "country": "Japan"
+      "id" : -934098507,
+      "manufacturer" : "BMW",
+      "model" : "M3 E30 Group A",
+      "class" : "Group A",
+      "country" : null
     },
     {
-      "manufacturer": "Scion",
-      "model": "FR-S Rocket Bunny Edition",
-      "class": "Road B",
-      "country": "Japan"
+      "id" : -931590477,
+      "manufacturer" : "Renault",
+      "model" : "Megane Trophy V6",
+      "class" : "Megane Trophy",
+      "country" : null
     },
     {
+      "id" : -886212684,
+      "manufacturer" : "Caterham",
+      "model" : "Seven Classic",
+      "class" : "Road D",
+      "country" : null
+    },
+    {
+      "id" : -713284494,
+      "manufacturer" : "Lotus",
+      "model" : "Type 25 Climax",
+      "class" : "Vintage F1 A1",
+      "country" : null
+    },
+    {
+      "id" : -699643670,
+      "manufacturer" : "Renault",
+      "model" : "Alpine A442B",
+      "class" : "Group 6",
+      "country" : null
+    },
+    {
+      "id" : -674255528,
+      "manufacturer" : "GUMPERT",
+      "model" : "apollo S",
+      "class" : "Road A",
+      "country" : null
+    },
+    {
+      "id" : -648709823,
+      "manufacturer" : "Renault",
+      "model" : "Clio Cup",
+      "class" : "TC1",
+      "country" : null
+    },
+    {
+      "id" : -525060572,
+      "manufacturer" : "Mercedes-Benz",
+      "model" : "AMG C-Coupe DTM",
+      "class" : "TC3",
+      "country" : null
+    },
+    {
+      "id" : -494100071,
+      "manufacturer" : "Bentley",
+      "model" : "Speed 8",
+      "class" : "LMP900",
+      "country" : null
+    },
+    {
+      "id" : -486674040,
+      "manufacturer" : "Pagani",
+      "model" : "Zonda Revolucion",
+      "class" : "GT1X",
+      "country" : null
+    },
+    {
+      "id" : -444124510,
+      "manufacturer" : "McLaren",
+      "model" : "12C",
+      "class" : "Road A",
+      "country" : null
+    },
+    {
+      "id" : -384044277,
+      "manufacturer" : "Chevrolet",
+      "model" : "Corvette C7.R",
+      "class" : "GT3",
+      "country" : null
+    },
+    {
+      "id" : -356101373,
+      "manufacturer" : "Scion",
+      "model" : "FR-S",
+      "class" : "Road D",
+      "country" : null
+    },
+    {
+      "id" : -324240456,
+      "manufacturer" : "Aston Martin",
+      "model" : "Rapide S Hydrogen Hybrid",
+      "class" : "GT4",
+      "country" : null
+    },
+    {
+      "id" : -235751604,
+      "manufacturer" : "Toyota",
+      "model" : "GT-86",
+      "class" : "Road D",
+      "country" : null
+    },
+    {
+      "id" : -180129877,
+      "manufacturer" : "W Motors",
+      "model" : "Lykan HyperSport",
+      "class" : "Road A",
+      "country" : null
+    },
+    {
+      "id" : -162683612,
+      "manufacturer" : "Caterham",
+      "model" : "Superlight R500",
+      "class" : "Road B",
+      "country" : null
+    },
+    {
+      "id" : -149617068,
+      "manufacturer" : "Mitsubishi",
+      "model" : "Lancer Evolution IX FQ360",
+      "class" : "Road C1",
+      "country" : null
+    },
+    {
+      "id" : -98064499,
+      "manufacturer" : "Oreca",
+      "model" : "03 Nissan",
+      "class" : "LMP2",
+      "country" : null
+    },
+    {
+      "id" : -91815086,
+      "manufacturer" : "Aston Martin",
+      "model" : "DBR1/300",
+      "class" : "Vintage GT2",
+      "country" : null
+    },
+    {
+      "id" : -85660500,
+      "manufacturer" : "Mercedes-Benz",
+      "model" : "300SEL 6.8 AMG",
+      "class" : "Historic Touring 2",
+      "country" : null
+    },
+    {
+      "id" : -41807622,
       "manufacturer" : "Toyota",
       "model" : "86",
       "class" : "Road D",
-      "country": "Japan"
+      "country" : null
     },
     {
-      "manufacturer": "Toyota",
-      "model": "GT-86",
-      "class": "Road D",
-      "country": "Japan"
+      "id" : -11335215,
+      "manufacturer" : "Ford",
+      "model" : "Mustang Cobra TransAm",
+      "class" : "Trans-Am",
+      "country" : null
+    }
+  ],
+  "classes" : [
+    {
+      "id" : -564539194,
+      "name" : "LMP2"
+    },
+    {
+      "id" : -1300724070,
+      "name" : "Road B"
+    },
+    {
+      "id" : 767810805,
+      "name" : "Road A"
+    },
+    {
+      "id" : -453292945,
+      "name" : "Vintage GT2"
+    },
+    {
+      "id" : -1289517523,
+      "name" : "LMP1"
+    },
+    {
+      "id" : 1553262379,
+      "name" : "GT4"
+    },
+    {
+      "id" : -112887377,
+      "name" : "GT3"
+    },
+    {
+      "id" : 99101703,
+      "name" : "Trans-Am"
+    },
+    {
+      "id" : -1811847806,
+      "name" : "Road C2"
+    },
+    {
+      "id" : 1543160927,
+      "name" : "LMP900"
+    },
+    {
+      "id" : -101706458,
+      "name" : "Road C1"
+    },
+    {
+      "id" : -1176205746,
+      "name" : "Historic Touring 2"
+    },
+    {
+      "id" : -1199540832,
+      "name" : "TC2"
+    },
+    {
+      "id" : -48135339,
+      "name" : "Group 5"
+    },
+    {
+      "id" : -718294614,
+      "name" : "Group 4"
+    },
+    {
+      "id" : -1270088329,
+      "name" : "Group A"
+    },
+    {
+      "id" : 298754909,
+      "name" : "Road D"
+    },
+    {
+      "id" : 974854672,
+      "name" : "LMP3"
+    },
+    {
+      "id" : -105273098,
+      "name" : "Vintage GT"
+    },
+    {
+      "id" : 2111151040,
+      "name" : "FA"
+    },
+    {
+      "id" : 1189178377,
+      "name" : "FB"
+    },
+    {
+      "id" : 1646832695,
+      "name" : "FC"
+    },
+    {
+      "id" : -1981841276,
+      "name" : "Formula Renault"
+    },
+    {
+      "id" : 1361234018,
+      "name" : "F5"
+    },
+    {
+      "id" : 529493584,
+      "name" : "F4"
+    },
+    {
+      "id" : -1358908608,
+      "name" : "GT5"
+    },
+    {
+      "id" : 2028372520,
+      "name" : "Kart1"
+    },
+    {
+      "id" : -1562493614,
+      "name" : "Kart3"
+    },
+    {
+      "id" : -434935163,
+      "name" : "Vintage F1 A1"
+    },
+    {
+      "id" : 1554536027,
+      "name" : "Vintage Indy 65"
+    },
+    {
+      "id" : -541941989,
+      "name" : "Vintage F1 A"
+    },
+    {
+      "id" : -322104719,
+      "name" : "Vintage F3 A"
+    },
+    {
+      "id" : 1153998110,
+      "name" : "Vintage F1 B"
+    },
+    {
+      "id" : -1741070546,
+      "name" : "Vintage F1 C"
+    },
+    {
+      "id" : 1323122160,
+      "name" : "GT1"
+    },
+    {
+      "id" : -985885375,
+      "name" : "Vintage GT3"
+    },
+    {
+      "id" : -1251471527,
+      "name" : "TC3"
+    },
+    {
+      "id" : -1206906486,
+      "name" : "GT1X"
+    },
+    {
+      "id" : -427741350,
+      "name" : "Group 6"
+    },
+    {
+      "id" : -1529501352,
+      "name" : "TC1"
+    },
+    {
+      "id" : -824554870,
+      "name" : "Megane Trophy"
+    },
+    {
+      "id" : -4596059,
+      "name" : "RS01 Trophy"
+    },
+    {
+      "id" : -1503297100,
+      "name" : "Group C1"
+    },
+    {
+      "id" : -880731824,
+      "name" : "Vintage Stockcar"
+    },
+    {
+      "id" : 1572999773,
+      "name" : "V8 Supercars"
+    },
+    {
+      "id" : 61661019,
+      "name" : "Indycar"
+    },
+    {
+      "id" : 1992634946,
+      "name" : "Modern Stockcar"
     }
   ],
   "events" : [
     {
       "name" : "Kart One UK Nationals",
       "carFilter" : "model LIKE '125cc Shifter Kart'",
-      "tier": 8,
+      "tier" : 8,
       "rounds" : [
         {
           "location" : "Glencairn",
@@ -313,7 +1107,7 @@
     {
       "name" : "Kart One Championship",
       "carFilter" : "model LIKE '125cc Shifter Kart'",
-      "tier": 8,
+      "tier" : 8,
       "rounds" : [
         {
           "location" : "Dubai Autodrome",
@@ -370,7 +1164,7 @@
     {
       "name" : "McLaren F1 Track Masters 3 HR Trophy",
       "carFilter" : "model LIKE 'F1'",
-      "tier": null,
+      "tier" : null,
       "rounds" : [
         {
           "location" : "Zolder",
@@ -419,7 +1213,7 @@
     {
       "name" : "Historic GT4 M1 Procar Challenge",
       "carFilter" : "model LIKE 'M1 Procar'",
-      "tier": null,
+      "tier" : null,
       "rounds" : [
         {
           "location" : "Circuit de Spa-Francorchamps",
@@ -429,24 +1223,24 @@
         {
           "location" : "Zolder",
           "variation" : "Grand Prix",
-          "laps": 8
+          "laps" : 8
         },
         {
           "location" : "Mazda Raceway",
           "variation" : "Laguna Seca",
-          "laps": 8
+          "laps" : 8
         },
         {
           "location" : "Bathurst",
           "variation" : "",
-          "laps": 6
+          "laps" : 6
         }
       ]
     },
     {
       "name" : "Road Entry Club UK Cup",
       "carFilter" : "class LIKE 'Road D'",
-      "tier": null,
+      "tier" : null,
       "rounds" : [
         {
           "location" : "Oulton Park",
@@ -456,24 +1250,24 @@
         {
           "location" : "Donington Park",
           "variation" : "National",
-          "laps": 6
+          "laps" : 6
         },
         {
           "location" : "Silverstone",
           "variation" : "National",
-          "laps": 6
+          "laps" : 6
         },
         {
           "location" : "Snetterton",
           "variation" : "200 Circuit",
-          "laps": 6
+          "laps" : 6
         }
       ]
     },
     {
       "name" : "Lakeville Focus Challenge",
       "carFilter" : "model LIKE 'Focus RS'",
-      "tier": null,
+      "tier" : null,
       "rounds" : [
         {
           "location" : "Sonoma Raceway",
@@ -485,7 +1279,7 @@
     {
       "name" : "BMW 1M Eifelwald Sprint Club",
       "carFilter" : "model LIKE '1-Series M Coupe'",
-      "tier": null,
+      "tier" : null,
       "rounds" : [
         {
           "location" : "Nürburgring",
@@ -497,7 +1291,7 @@
     {
       "name" : "RTC1 UK Cup",
       "carFilter" : "class LIKE 'Road C1'",
-      "tier": null,
+      "tier" : null,
       "rounds" : [
         {
           "location" : "Snetterton",
@@ -514,7 +1308,7 @@
     {
       "name" : "Historic GT5 UK Trophy",
       "carFilter" : "class LIKE 'Group 5'",
-      "tier": null,
+      "tier" : null,
       "rounds" : [
         {
           "location" : "Snetterton",
@@ -541,7 +1335,7 @@
     {
       "name" : "Road TC Euro Championship",
       "carFilter" : "class LIKE 'Road C1' OR class LIKE 'Road C2'",
-      "tier": null,
+      "tier" : null,
       "rounds" : [
         {
           "location" : "Oschersleben",
@@ -563,7 +1357,7 @@
     {
       "name" : "Road TC Euro Championship",
       "carFilter" : "class LIKE 'Road B'",
-      "tier": null,
+      "tier" : null,
       "rounds" : [
         {
           "location" : "Brands Hatch",
@@ -575,7 +1369,7 @@
     {
       "name" : "Road TC Euro Championship",
       "carFilter" : "model LIKE 'Type 98T Renault Turbo'",
-      "tier": null,
+      "tier" : null,
       "rounds" : [
         {
           "location" : "Donington Park",
@@ -617,7 +1411,7 @@
     {
       "name" : "Supercar US Clubsport Trophy",
       "carFilter" : "model LIKE 'CTR3'",
-      "tier": null,
+      "tier" : null,
       "rounds" : [
         {
           "location" : "Road America",
@@ -639,7 +1433,7 @@
     {
       "name" : "Historic GT5 320 Turbo Pan-Euro Cup",
       "carFilter" : "model LIKE '320 Turbo Group 5'",
-      "tier": null,
+      "tier" : null,
       "rounds" : [
         {
           "location" : "Hockenheim",
@@ -661,7 +1455,7 @@
     {
       "name" : "WMD Euro Trackday Trophy",
       "carFilter" : "class LIKE 'Road B' --Something wrong here, not all Road B are valid",
-      "tier": null,
+      "tier" : null,
       "rounds" : [
         {
           "location" : "Zolder",
@@ -678,7 +1472,7 @@
     {
       "name" : "Dubai Kart Masters Cup",
       "carFilter" : "model LIKE '250cc Superkart'",
-      "tier": null,
+      "tier" : null,
       "rounds" : [
         {
           "location" : "Dubai Autodrome",
@@ -695,7 +1489,7 @@
     {
       "name" : "Pagani Monza Club Day",
       "carFilter" : "manufacturer LIKE 'Pagani'",
-      "tier": null,
+      "tier" : null,
       "rounds" : [
         {
           "location" : "Autodromo Nazionale Monza",
@@ -707,7 +1501,7 @@
     {
       "name" : "Audi Ruapuna Track Challenge",
       "carFilter" : "manufacturer LIKE 'Audi'",
-      "tier": null,
+      "tier" : null,
       "rounds" : [
         {
           "location" : "Ruapuna Park",
@@ -724,7 +1518,7 @@
     {
       "name" : "Superkart UK Nationals",
       "carFilter" : "model LIKE '250cc Superkart'",
-      "tier": 7,
+      "tier" : 7,
       "rounds" : [
         {
           "location" : "Oulton Park",
@@ -761,7 +1555,7 @@
     {
       "name" : "Caterham Academy",
       "carFilter" : "model LIKE 'Seven Classic'",
-      "tier": null,
+      "tier" : null,
       "rounds" : [
         {
           "location" : "Snetterton",
@@ -788,7 +1582,7 @@
     {
       "name" : "Ruapuna LMP900 Showdown",
       "carFilter" : "class LIKE 'LMP900'",
-      "tier": null,
+      "tier" : null,
       "rounds" : [
         {
           "location" : "Ruapuna Park",
@@ -800,7 +1594,7 @@
     {
       "name" : "320 Touring Challenge",
       "carFilter" : "model LIKE '320 TC'",
-      "tier": null,
+      "tier" : null,
       "rounds" : [
         {
           "location" : "Oulton Park",
@@ -827,7 +1621,7 @@
     {
       "name" : "Historic TGA Euro Trophy",
       "carFilter" : "class LIKE 'Group A'",
-      "tier": null,
+      "tier" : null,
       "rounds" : [
         {
           "location" : "Zolder",
@@ -854,7 +1648,7 @@
     {
       "name" : "Superkart Championship",
       "carFilter" : "model LIKE '250cc Superkart'",
-      "tier": 7,
+      "tier" : 7,
       "rounds" : [
         {
           "location" : "Hockenheim",
@@ -911,7 +1705,7 @@
     {
       "name" : "Road TD British Track Challenge",
       "carFilter" : "class LIKE 'Road B' AND country LIKE 'England' AND model NOT LIKE 'F1' --Maybe this is by year?",
-      "tier": null,
+      "tier" : null,
       "rounds" : [
         {
           "location" : "Snetterton",
@@ -928,7 +1722,7 @@
     {
       "name" : "Historic C1 Euro Cup",
       "carFilter" : "model LIKE 'C9 Mercedes-Benz'",
-      "tier": null,
+      "tier" : null,
       "rounds" : [
         {
           "location" : "Brno",
@@ -953,375 +1747,1206 @@
       ]
     }
   ],
-  "tracks" : [
+  "tracks" :[
     {
-      "location" : "Verify Sarthe Data",
-      "variation" : "",
-      "length" : 0.0000,
-      "pitEntryX": -737.9395,
-      "pitEntryZ": 1107.3670,
-      "pitExitX": -721.3452,
-      "pitExitZ": 1582.8730
-    },
-    {
-      "location" : "Autodromo Nazionale Monza",
-      "variation" : "Grand Prix",
-      "length" : 5782.5210,
-      "pitEntryX": 22.2031,
-      "pitEntryZ": -437.1672,
-      "pitExitX": 63.6092,
-      "pitExitZ": -1.1178
-    },
-    {
-      "location" : "Autodromo Nazionale Monza",
-      "variation" : "Short",
-      "length" : 2422.8311,
-      "pitEntryX": 22.2031,
-      "pitEntryZ": -437.1672,
-      "pitExitX": 63.6092,
-      "pitExitZ": -1.1178
-    },
-    {
-      "location" : "Bathurst",
-      "variation" : "",
-      "length" : 6238.0469,
-      "pitEntryX": 80.8500,
-      "pitEntryZ": 7.2141,
-      "pitExitX": -368.7227,
-      "pitExitZ": 12.9354
-    },
-    {
-      "location" : "Brands Hatch",
-      "variation" : "Grand Prix",
-      "length" : 3890.4072,
-      "pitEntryX": -329.1295,
-      "pitEntryZ": 165.8752,
-      "pitExitX": -36.6833,
-      "pitExitZ": 355.6110
-    },
-    {
-      "location" : "Brno",
-      "variation" : "",
-      "length" : 5377.7324,
-      "pitEntryX": -194.1228,
-      "pitEntryZ": -11.4185,
-      "pitExitX": 139.6739,
-      "pitExitZ": 0.0617
-    },
-    {
-      "location" : "Chesterfield",
-      "variation" : "Grand Prix",
-      "length" : 871.2593,
+      "id" : 328972919,
+      "name" : "Cadwell Club Circuit",
+      "location" : "Cadwell",
+      "variation" : "Club",
+      "length" : 0,
       "pitEntryX" : null,
       "pitEntryZ" : null,
       "pitExitX" : null,
-      "pitExitZ" : null
+      "pitExitZ" : null,
+      "gridsize" : 20
     },
     {
-      "location" : "Circuit de Barcelona-Catalunya",
-      "variation" : "National",
-      "length" : 2948.2970,
-      "pitEntryX": 622.7108,
-      "pitEntryZ": -137.3975,
-      "pitExitX": 26.5286,
-      "pitExitZ": -167.9301
-    },
-    {
-      "location" : "Circuit de Spa-Francorchamps",
-      "variation" : "",
-      "length" : 6997.8159,
-      "pitEntryX": -685.1871,
-      "pitEntryZ": 1238.6070,
-      "pitExitX": -952.3125,
-      "pitExitZ": 1656.8100
-    },
-    {
+      "id" : 354022214,
+      "name" : "Donington Park GP",
       "location" : "Donington Park",
       "variation" : "Grand Prix",
       "length" : 3982.9487,
-      "pitEntryX": 200.8843,
-      "pitEntryZ": 144.8465,
-      "pitExitX": 486.4654,
-      "pitExitZ": 119.9713
+      "pitEntryX" : 200.8843,
+      "pitEntryZ" : 144.8465,
+      "pitExitX" : 486.4654,
+      "pitExitZ" : 119.9713,
+      "gridsize" : 38
     },
     {
-      "location" : "Donington Park",
-      "variation" : "National",
-      "length" : 3175.8020,
-      "pitEntryX": 200.8843,
-      "pitEntryZ": 144.8465,
-      "pitExitX": 486.4654,
-      "pitExitZ": 119.9713
+      "id" : 368740158,
+      "name" : "Autodromo Nazionale Monza Short",
+      "location" : "Autodromo Nazionale Monza",
+      "variation" : "Short",
+      "length" : 2422.8311,
+      "pitEntryX" : 22.2031,
+      "pitEntryZ" : -437.1672,
+      "pitExitX" : 63.6092,
+      "pitExitZ" : -1.1178,
+      "gridsize" : 40
     },
     {
-      "location" : "Dubai Autodrome",
-      "variation" : "Club",
-      "length" : 2525.3628,
-      "pitEntryX" : 971.8023,
-      "pitEntryZ" : 199.1564,
-      "pitExitX" : 452.5084,
-      "pitExitZ" : 126.7626
+      "id" : 521933422,
+      "name" : "Circuit de Barcelona-Catalunya GP",
+      "location" : "Circuit de Barcelona-Catalunya",
+      "variation" : "Grand Prix",
+      "length" : 0,
+      "pitEntryX" : 622.7108,
+      "pitEntryZ" : -137.3975,
+      "pitExitX" : 26.5286,
+      "pitExitZ" : -167.9301,
+      "gridsize" : 36
     },
     {
-      "location" : "Dubai Autodrome",
-      "variation" : "Kartdrome",
-      "length" : 1165.7298,
+      "id" : 545979690,
+      "name" : "Oulton Park International",
+      "location" : "Oulton Park",
+      "variation" : "International",
+      "length" : 4302.7388,
+      "pitEntryX" : 46.9972,
+      "pitEntryZ" : 80.4018,
+      "pitExitX" : 114.8132,
+      "pitExitZ" : -165.5994,
+      "gridsize" : 26
+    },
+    {
+      "id" : 550129415,
+      "name" : "Azure Coast Stage 1",
+      "location" : "Azure Coast",
+      "variation" : "Stage 1",
+      "length" : 0,
       "pitEntryX" : null,
       "pitEntryZ" : null,
       "pitExitX" : null,
-      "pitExitZ" : null
+      "pitExitZ" : null,
+      "gridsize" : 32
     },
     {
+      "id" : 560711985,
+      "name" : "Azure Coast",
+      "location" : "Azure Coast",
+      "variation" : "",
+      "length" : 0,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 32
+    },
+    {
+      "id" : 619694160,
+      "name" : "Ruapuna Park A Circuit",
+      "location" : "Ruapuna Park",
+      "variation" : "A_Circuit",
+      "length" : 1171.3093,
+      "pitEntryX" : 546.2500,
+      "pitEntryZ" : 112.5000,
+      "pitExitX" : 219.2500,
+      "pitExitZ" : 325.5000,
+      "gridsize" : 28
+    },
+    {
+      "id" : 697498609,
+      "name" : "Nordschleife",
+      "location" : "Nordschleife",
+      "variation" : "",
+      "length" : 0,
+      "pitEntryX" : 599.2930,
+      "pitEntryZ" : 606.7135,
+      "pitExitX" : 391.6694,
+      "pitExitZ" : 694.4844,
+      "gridsize" : 32
+    },
+    {
+      "id" : 766599953,
+      "name" : "Glencairn East",
       "location" : "Glencairn",
       "variation" : "East",
       "length" : 510.1722,
       "pitEntryX" : null,
       "pitEntryZ" : null,
       "pitExitX" : null,
-      "pitExitZ" : null
+      "pitExitZ" : null,
+      "gridsize" : 16
     },
     {
-      "location" : "Glencairn",
-      "variation" : "Grand Prix",
-      "length" : 921.8007,
+      "id" : 816601966,
+      "name" : "Oschersleben National",
+      "location" : "Oschersleben",
+      "variation" : "National",
+      "length" : 2417.6504,
+      "pitEntryX" : -350.7033,
+      "pitEntryZ" : 31.3908,
+      "pitExitX" : 239.3137,
+      "pitExitZ" : 91.7386,
+      "gridsize" : 30
+    },
+    {
+      "id" : 832629329,
+      "name" : "Azure Circuit",
+      "location" : "Azure Circuit",
+      "variation" : "",
+      "length" : 0,
+      "pitEntryX" : -203.8109,
+      "pitEntryZ" : 613.3162,
+      "pitExitX" : 105.2057,
+      "pitExitZ" : 525.9147,
+      "gridsize" : 36
+    },
+    {
+      "id" : 850003838,
+      "name" : "Mojave Boa Ascent",
+      "location" : "Mojave",
+      "variation" : "Boa Ascent",
+      "length" : 0,
       "pitEntryX" : null,
       "pitEntryZ" : null,
       "pitExitX" : null,
-      "pitExitZ" : null
+      "pitExitZ" : null,
+      "gridsize" : 47
     },
     {
-      "location" : "Glencairn",
-      "variation" : "West",
-      "length" : 451.7371,
-      "pitEntryX" : null,
-      "pitEntryZ" : null,
-      "pitExitX" : null,
-      "pitExitZ" : null
+      "id" : 904625875,
+      "name" : "Circuit de Spa-Francorchamps",
+      "location" : "Circuit de Spa-Francorchamps",
+      "variation" : "",
+      "length" : 6997.8159,
+      "pitEntryX" : -685.1871,
+      "pitEntryZ" : 1238.6070,
+      "pitExitX" : -952.3125,
+      "pitExitZ" : 1656.8100,
+      "gridsize" : 36
     },
     {
-      "location" : "Greenwood",
-      "variation" : "Karting Circuit",
-      "length" : 1073.6631,
-      "pitEntryX" : null,
-      "pitEntryZ" : null,
-      "pitExitX" : null,
-      "pitExitZ" : null
-    },
-    {
-      "location" : "Hockenheim",
-      "variation" : "Short",
-      "length" : 2593.4663,
-      "pitEntryX" : -483.1076,
-      "pitEntryZ" : -428.4700,
-      "pitExitX" : -704.3397,
-      "pitExitZ" : 11.1541
-    },
-    {
+      "id" : 920145926,
+      "name" : "Imola",
       "location" : "Imola",
       "variation" : "Grand Prix",
       "length" : 4847.8799,
       "pitEntryX" : 311.2590,
       "pitEntryZ" : 420.3269,
       "pitExitX" : -272.6198,
-      "pitExitZ" : 418.3795
+      "pitExitZ" : 418.3795,
+      "gridsize" : 40
     },
     {
-      "location" : "Mazda Raceway",
-      "variation" : "Laguna Seca",
-      "length" : 3593.5823,
-      "pitEntryX": -70.2240,
-      "pitEntryZ": 432.3777,
-      "pitExitX": -279.2681,
-      "pitExitZ": 228.1650
-    },
-    {
-      "location" : "Nürburgring",
-      "variation" : "Sprint Short",
-      "length" : 3083.5505,
-      "pitEntryX": 443.6332,
-      "pitEntryZ": 527.8024,
-      "pitExitX": 66.8471,
-      "pitExitZ": 96.7378
-    },
-    {
-      "location" : "Oschersleben",
-      "variation" : "Grand Prix",
-      "length" : 3656.8550,
-      "pitEntryX": -350.7033,
-      "pitEntryZ": 31.3908,
-      "pitExitX": 239.3137,
-      "pitExitZ": 91.7386
-    },
-    {
-      "location" : "Oschersleben",
-      "variation" : "National",
-      "length" : 2417.6504,
-      "pitEntryX": -350.7033,
-      "pitEntryZ": 31.3908,
-      "pitExitX": 239.3137,
-      "pitExitZ": 91.7386
-    },
-    {
-      "location" : "Oulton Park",
-      "variation" : "Fosters",
-      "length" : 2649.9097,
-      "pitEntryX": 46.9972,
-      "pitEntryZ": 80.4018,
-      "pitExitX": 114.8132,
-      "pitExitZ": -165.5994
-    },
-    {
-      "location" : "Oulton Park",
-      "variation" : "International",
-      "length" : 4302.7388,
-      "pitEntryX": 46.9972,
-      "pitEntryZ": 80.4018,
-      "pitExitX": 114.8132,
-      "pitExitZ": -165.5994
-    },
-    {
-      "location" : "Oulton Park",
-      "variation" : "Island",
-      "length" : 3547.5857,
-      "pitEntryX": 46.9972,
-      "pitEntryZ": 80.4018,
-      "pitExitX": 114.8132,
-      "pitExitZ": -165.5994
-    },
-    {
-      "location" : "Road America",
+      "id" : 921120824,
+      "name" : "Bathurst",
+      "location" : "Bathurst",
       "variation" : "",
-      "length" : 6482.4893,
-      "pitEntryX": 430.8689,
-      "pitEntryZ": 245.7329,
-      "pitExitX": 451.5659,
-      "pitExitZ": -330.7411
+      "length" : 6238.0469,
+      "pitEntryX" : 80.8500,
+      "pitEntryZ" : 7.2141,
+      "pitExitX" : -368.7227,
+      "pitExitZ" : 12.9354,
+      "gridsize" : 36
     },
     {
-      "location" : "Ruapuna Park",
-      "variation" : "A_Circuit",
-      "length" : 1171.3093,
-      "pitEntryX": 546.2500,
-      "pitEntryZ": 112.5000,
-      "pitExitX": 219.2500,
-      "pitExitZ": 325.5000
+      "id" : 928006536,
+      "name" : "California Highway Reverse",
+      "location" : "California Highway",
+      "variation" : "Reverse",
+      "length" : 0,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 32
     },
     {
-      "location" : "Ruapuna Park",
-      "variation" : "Grand Prix",
-      "length" : 3251.9809,
-      "pitEntryX": 546.2500,
-      "pitEntryZ": 112.5000,
-      "pitExitX": 219.2500,
-      "pitExitZ": 325.5000
+      "id" : 940391868,
+      "name" : "California Highway Stage 2",
+      "location" : "California Highway",
+      "variation" : "Stage 2",
+      "length" : 0,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 36
     },
     {
-      "location" : "Ruapuna Park",
-      "variation" : "Outer_Loop",
-      "length" : 2165.7734,
-      "pitEntryX": 546.2500,
-      "pitEntryZ": 112.5000,
-      "pitExitX": 219.2500,
-      "pitExitZ": 325.5000
-    },
-    {
-      "location" : "Sakitto",
-      "variation" : "Grand Prix",
-      "length" : 5383.8838,
-      "pitEntryX": 576.6671,
-      "pitEntryZ": -142.1608,
-      "pitExitX": 607.2910,
-      "pitExitZ": -646.9218
-    },
-    {
-      "location" : "Sakitto",
-      "variation" : "Sprint",
-      "length" : 3539.3838,
-      "pitEntryX": 576.6671,
-      "pitEntryZ": -142.1608,
-      "pitExitX": 607.2910,
-      "pitExitZ": -646.9218
-    },
-    {
-      "location" : "Silverstone",
-      "variation" : "International",
-      "length" : 2978.3494,
-      "pitEntryX": -504.7390,
-      "pitEntryZ": -1274.6860,
-      "pitExitX": -273.1427,
-      "pitExitZ": -861.1436
-    },
-    {
-      "location" : "Silverstone",
-      "variation" : "National",
-      "length" : 2620.8909,
-      "pitEntryX": -323.1119,
-      "pitEntryZ": -115.6939,
-      "pitExitX": 157.4515,
-      "pitExitZ": 0.4209
-    },
-    {
-      "location" : "Snetterton",
-      "variation" : "200 Circuit",
-      "length" : 3170.3074,
-      "pitEntryX" : 228.4838,
-      "pitEntryZ" : -25.2368,
-      "pitExitX" : -44.5122,
-      "pitExitZ" : -55.8216
-    },
-    {
-      "location" : "Snetterton",
-      "variation" : "300 Circuit",
-      "length" : 4747.8750,
-      "pitEntryX" : 228.4838,
-      "pitEntryZ" : -25.2368,
-      "pitExitX" : -44.5122,
-      "pitExitZ" : -55.8216
-    },
-    {
-      "location" : "Sonoma Raceway",
-      "variation" : "Grand Prix",
-      "length" : 4025.9775,
-      "pitEntryX" : -592.7792,
-      "pitEntryZ" : 87.4373,
-      "pitExitX" : -152.6224,
-      "pitExitZ" : -30.7139
-    },
-    {
+      "id" : 1035110721,
+      "name" : "Sonoma Raceway Short",
       "location" : "Sonoma Raceway",
       "variation" : "Short",
       "length" : 3174.8245,
       "pitEntryX" : -592.7792,
       "pitEntryZ" : 87.4373,
       "pitExitX" : -152.6224,
-      "pitExitZ" : -30.7139
+      "pitExitZ" : -30.7139,
+      "gridsize" : 43
     },
     {
-      "location" : "Summerton",
+      "id" : 1058872832,
+      "name" : "Snetterton 200",
+      "location" : "Snetterton",
+      "variation" : "200 Circuit",
+      "length" : 3170.3074,
+      "pitEntryX" : 228.4838,
+      "pitEntryZ" : -25.2368,
+      "pitExitX" : -44.5122,
+      "pitExitZ" : -55.8216,
+      "gridsize" : 26
+    },
+    {
+      "id" : 1101719627,
+      "name" : "Silverstone International",
+      "location" : "Silverstone",
       "variation" : "International",
-      "length" : 996.8077,
+      "length" : 2978.3494,
+      "pitEntryX" : -504.7390,
+      "pitEntryZ" : -1274.6860,
+      "pitExitX" : -273.1427,
+      "pitExitZ" : -861.1436,
+      "gridsize" : 32
+    },
+    {
+      "id" : 1128950148,
+      "name" : "Nordschleife Stage 3",
+      "location" : "Nordschleife",
+      "variation" : "Stage 3",
+      "length" : 0,
       "pitEntryX" : null,
       "pitEntryZ" : null,
       "pitExitX" : null,
-      "pitExitZ" : null
+      "pitExitZ" : null,
+      "gridsize" : 36
     },
     {
+      "id" : 1277693448,
+      "name" : "Ruapuna Park GP",
+      "location" : "Ruapuna Park",
+      "variation" : "Grand Prix",
+      "length" : 3251.9809,
+      "pitEntryX" : 546.2500,
+      "pitEntryZ" : 112.5000,
+      "pitExitX" : 219.2500,
+      "pitExitZ" : 325.5000,
+      "gridsize" : 28
+    },
+    {
+      "id" : 1300627020,
+      "name" : "Brands Hatch Indy",
+      "location" : "Brands Hatch",
+      "variation" : "Indy",
+      "length" : 0,
+      "pitEntryX" : -329.1295,
+      "pitEntryZ" : 165.8752,
+      "pitExitX" : -36.6833,
+      "pitExitZ" : 355.6110,
+      "gridsize" : 30
+    },
+    {
+      "id" : 1408845203,
+      "name" : "Summerton National",
+      "location" : "Summerton",
+      "variation" : "National",
+      "length" : 0,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 28
+    },
+    {
+      "id" : 1446378877,
+      "name" : "Ruapuna Park Club",
+      "location" : "Ruapuna Park",
+      "variation" : "Club",
+      "length" : 0,
+      "pitEntryX" : 546.2500,
+      "pitEntryZ" : 112.5000,
+      "pitExitX" : 219.2500,
+      "pitExitZ" : 325.5000,
+      "gridsize" : 28
+    },
+    {
+      "id" : 1459212514,
+      "name" : "Nordschleife Stage 1",
+      "location" : "Nordschleife",
+      "variation" : "Stage 1",
+      "length" : 0,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 36
+    },
+    {
+      "id" : 1508903068,
+      "name" : "Snetterton 300",
+      "location" : "Snetterton",
+      "variation" : "300 Circuit",
+      "length" : 4747.8750,
+      "pitEntryX" : 228.4838,
+      "pitEntryZ" : -25.2368,
+      "pitExitX" : -44.5122,
+      "pitExitZ" : -55.8216,
+      "gridsize" : 26
+    },
+    {
+      "id" : 1552853772,
+      "name" : "Hockenheim Classic",
+      "location" : "Hockenheim",
+      "variation" : "Classic",
+      "length" : 0,
+      "pitEntryX" : -533.0000,
+      "pitEntryZ" : 318.2500,
+      "pitExitX" : -705.5000,
+      "pitExitZ" : -2.0000,
+      "gridsize" : 36
+    },
+    {
+      "id" : 1590386668,
+      "name" : "Watkins Glen Short",
+      "location" : "Watkins Glen International",
+      "variation" : "Short",
+      "length" : 0,
+      "pitEntryX" : 589.6273,
+      "pitEntryZ" : -928.2814,
+      "pitExitX" : 542.0042,
+      "pitExitZ" : -1410.4640,
+      "gridsize" : 43
+    },
+    {
+      "id" : 1600840139,
+      "name" : "Silverstone Stowe",
+      "location" : "Silverstone",
+      "variation" : "Stowe",
+      "length" : 0,
+      "pitEntryX" : -75.9050,
+      "pitEntryZ" : -1396.1830,
+      "pitExitX" : -0.5096,
+      "pitExitZ" : -1096.3970,
+      "gridsize" : 16
+    },
+    {
+      "id" : 1641471184,
+      "name" : "Silverstone GP",
+      "location" : "Silverstone",
+      "variation" : "Grand Prix",
+      "length" : 0,
+      "pitEntryX" : -504.7390,
+      "pitEntryZ" : -1274.6860,
+      "pitExitX" : -273.1427,
+      "pitExitZ" : -861.1436,
+      "gridsize" : 32
+    },
+    {
+      "id" : 1676943041,
+      "name" : "California Highway Stage 1",
+      "location" : "California Highway",
+      "variation" : "Stage 1",
+      "length" : 0,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 40
+    },
+    {
+      "id" : 1695182971,
+      "name" : "Hockenheim GP",
+      "location" : "Hockenheim",
+      "variation" : "Grand Prix",
+      "length" : 0,
+      "pitEntryX" : -483.1076,
+      "pitEntryZ" : -428.4700,
+      "pitExitX" : -704.3397,
+      "pitExitZ" : 11.1541,
+      "gridsize" : 30
+    },
+    {
+      "id" : 1735854797,
+      "name" : "Dubai Autodrome Club",
+      "location" : "Dubai Autodrome",
+      "variation" : "Club",
+      "length" : 2525.3628,
+      "pitEntryX" : 971.8023,
+      "pitEntryZ" : 199.1564,
+      "pitExitX" : 452.5084,
+      "pitExitZ" : 126.7626,
+      "gridsize" : 36
+    },
+    {
+      "id" : 1740968730,
+      "name" : "Circuit des 24 Heures du Mans",
+      "location" : "Circuit des 24 Heures du Mans",
+      "variation" : "",
+      "length" : 0,
+      "pitEntryX" : -737.9395,
+      "pitEntryZ" : 1107.367,
+      "pitExitX" : -721.3452,
+      "pitExitZ" : 1582.873,
+      "gridsize" : 56
+    },
+    {
+      "id" : 1768660198,
+      "name" : "Hockenheim Short",
+      "location" : "Hockenheim",
+      "variation" : "Short",
+      "length" : 2593.4663,
+      "pitEntryX" : -483.1076,
+      "pitEntryZ" : -428.4700,
+      "pitExitX" : -704.3397,
+      "pitExitZ" : 11.1541,
+      "gridsize" : 30
+    },
+    {
+      "id" : 1836888499,
+      "name" : "Zhuhai International Circuit",
+      "location" : "Zhuhai",
+      "variation" : "International",
+      "length" : 0,
+      "pitEntryX" : -193.7068,
+      "pitEntryZ" : 123.6790,
+      "pitExitX" : 64.5628,
+      "pitExitZ" : -71.5125,
+      "gridsize" : 42
+    },
+    {
+      "id" : 1876749797,
+      "name" : "Cadwell GP",
+      "location" : "Cadwell",
+      "variation" : "Grand Prix",
+      "length" : 0,
+      "pitEntryX" : 45.9242,
+      "pitEntryZ" : 72.0486,
+      "pitExitX" : -10.3149,
+      "pitExitZ" : -40.4326,
+      "gridsize" : 12
+    },
+    {
+      "id" : 1940584155,
+      "name" : "Ruapuna Park Outer Loop",
+      "location" : "Ruapuna Park",
+      "variation" : "Outer_Loop",
+      "length" : 2165.7734,
+      "pitEntryX" : 546.2500,
+      "pitEntryZ" : 112.5000,
+      "pitExitX" : 219.2500,
+      "pitExitZ" : 325.5000,
+      "gridsize" : 28
+    },
+    {
+      "id" : 1952936927,
+      "name" : "Silverstone National",
+      "location" : "Silverstone",
+      "variation" : "National",
+      "length" : 2620.8909,
+      "pitEntryX" : -323.1119,
+      "pitEntryZ" : -115.6939,
+      "pitExitX" : 157.4515,
+      "pitExitZ" : 0.4209,
+      "gridsize" : 32
+    },
+    {
+      "id" : 1988984740,
+      "name" : "Brands Hatch GP",
+      "location" : "Brands Hatch",
+      "variation" : "Grand Prix",
+      "length" : 3890.4072,
+      "pitEntryX" : -329.1295,
+      "pitEntryZ" : 165.8752,
+      "pitExitX" : -36.6833,
+      "pitExitZ" : 355.6110,
+      "gridsize" : 30
+    },
+    {
+      "id" : 2089801285,
+      "name" : "Mojave Gila Crest",
+      "location" : "Mojave",
+      "variation" : "Gila Crest",
+      "length" : 0,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 47
+    },
+    {
+      "id" : -2125682335,
+      "name" : "Mojave Coyote Noose",
+      "location" : "Mojave",
+      "variation" : "Coyote Noose",
+      "length" : 0,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 47
+    },
+    {
+      "id" : -2046633090,
+      "name" : "Ruapuna Park B Circuit",
+      "location" : "Ruapuna Park",
+      "variation" : "B_Circuit",
+      "length" : 0,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 28
+    },
+    {
+      "id" : -2021024495,
+      "name" : "Oulton Park Fosters",
+      "location" : "Oulton Park",
+      "variation" : "Fosters",
+      "length" : 2649.9097,
+      "pitEntryX" : 46.9972,
+      "pitEntryZ" : 80.4018,
+      "pitExitX" : 114.8132,
+      "pitExitZ" : -165.5994,
+      "gridsize" : 26
+    },
+    {
+      "id" : -1977142985,
+      "name" : "Hockenheim National",
+      "location" : "Hockenheim",
+      "variation" : "National",
+      "length" : 0,
+      "pitEntryX" : -483.1076,
+      "pitEntryZ" : -428.4700,
+      "pitExitX" : -704.3397,
+      "pitExitZ" : 11.1541,
+      "gridsize" : 30
+    },
+    {
+      "id" : -1936790504,
+      "name" : "Azure Coast Westbound",
+      "location" : "Azure Coast",
+      "variation" : "Westbound",
+      "length" : 0,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 25
+    },
+    {
+      "id" : -1877699523,
+      "name" : "Oulton Park Island",
+      "location" : "Oulton Park",
+      "variation" : "Island",
+      "length" : 3547.5857,
+      "pitEntryX" : 46.9972,
+      "pitEntryZ" : 80.4018,
+      "pitExitX" : 114.8132,
+      "pitExitZ" : -165.5994,
+      "gridsize" : 26
+    },
+    {
+      "id" : -1849531562,
+      "name" : "Willow Springs Horse Thief Mile",
+      "location" : "Willow Springs",
+      "variation" : "Short",
+      "length" : 0,
+      "pitEntryX" : -386.1919,
+      "pitEntryZ" : 818.1310,
+      "pitExitX" : -317.1366,
+      "pitExitZ" : 641.9470,
+      "gridsize" : 24
+    },
+    {
+      "id" : -1785781495,
+      "name" : "Watkins Glen GP",
       "location" : "Watkins Glen International",
       "variation" : "Grand Prix",
       "length" : 5112.1216,
       "pitEntryX" : 589.6273,
       "pitEntryZ" : -928.2814,
       "pitExitX" : 542.0042,
-      "pitExitZ" : -1410.4640
+      "pitExitZ" : -1410.4640,
+      "gridsize" : 43
     },
     {
+      "id" : -1759743046,
+      "name" : "Sakitto GP",
+      "location" : "Sakitto",
+      "variation" : "Grand Prix",
+      "length" : 5383.8838,
+      "pitEntryX" : 576.6671,
+      "pitEntryZ" : -142.1608,
+      "pitExitX" : 607.2910,
+      "pitExitZ" : -646.9218,
+      "gridsize" : 54
+    },
+    {
+      "id" : -1737261125,
+      "name" : "Azure Coast Stage 3",
+      "location" : "Azure Coast",
+      "variation" : "Stage 3",
+      "length" : 0,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 36
+    },
+    {
+      "id" : -1735912413,
+      "name" : "Chesterfield",
+      "location" : "Chesterfield",
+      "variation" : "Grand Prix",
+      "length" : 871.2593,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 24
+    },
+    {
+      "id" : -1612023328,
+      "name" : "Mazda Raceway Laguna Seca",
+      "location" : "Mazda Raceway",
+      "variation" : "Laguna Seca",
+      "length" : 3593.5823,
+      "pitEntryX" : -70.2240,
+      "pitEntryZ" : 432.3777,
+      "pitExitX" : -279.2681,
+      "pitExitZ" : 228.1650,
+      "gridsize" : 26
+    },
+    {
+      "id" : -1605913568,
+      "name" : "Summerton Sprint",
+      "location" : "Summerton",
+      "variation" : "Sprint",
+      "length" : 0,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 28
+    },
+    {
+      "id" : -1593944167,
+      "name" : "California Highway Full",
+      "location" : "California Highway",
+      "variation" : "",
+      "length" : 0,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 36
+    },
+    {
+      "id" : -1520844580,
+      "name" : "Glencairn Reverse",
+      "location" : "Glencairn",
+      "variation" : "Reverse",
+      "length" : 0,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 16
+    },
+    {
+      "id" : -1515473908,
+      "name" : "Rouen Les Essarts Short",
+      "location" : "Rouen Les Essarts",
+      "variation" : "Short",
+      "length" : 0,
+      "pitEntryX" : 117.2500,
+      "pitEntryZ" : 25.5000,
+      "pitExitX" : -84.7500,
+      "pitExitZ" : -13.5000,
+      "gridsize" : 20
+    },
+    {
+      "id" : -1474170192,
+      "name" : "Sakitto International",
+      "location" : "Sakitto",
+      "variation" : "International",
+      "length" : 0,
+      "pitEntryX" : -265.1671,
+      "pitEntryZ" : 472.4344,
+      "pitExitX" : -154.9505,
+      "pitExitZ" : 278.1627,
+      "gridsize" : 26
+    },
+    {
+      "id" : -1463443929,
+      "name" : "Mojave Sidewinder",
+      "location" : "Mojave",
+      "variation" : "Sidewinder",
+      "length" : 0,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 47
+    },
+    {
+      "id" : -1454279631,
+      "name" : "Sonoma Raceway GP",
+      "location" : "Sonoma Raceway",
+      "variation" : "Grand Prix",
+      "length" : 4025.9775,
+      "pitEntryX" : -592.7792,
+      "pitEntryZ" : 87.4373,
+      "pitExitX" : -152.6224,
+      "pitExitZ" : -30.7139,
+      "gridsize" : 43
+    },
+    {
+      "id" : -1408779593,
+      "name" : "Glencairn West",
+      "location" : "Glencairn",
+      "variation" : "West",
+      "length" : 451.7371,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 16
+    },
+    {
+      "id" : -1408189041,
+      "name" : "Cadwell Woodland",
+      "location" : "Cadwell",
+      "variation" : "Woodland",
+      "length" : 0,
+      "pitEntryX" : 45.9242,
+      "pitEntryZ" : 72.0486,
+      "pitExitX" : -10.3149,
+      "pitExitZ" : -40.4326,
+      "gridsize" : 12
+    },
+    {
+      "id" : -1359299594,
+      "name" : "Oschersleben C Circuit",
+      "location" : "Oschersleben",
+      "variation" : "C Circuit",
+      "length" : 0,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 23
+    },
+    {
+      "id" : -1260826266,
+      "name" : "Sakitto National",
+      "location" : "Sakitto",
+      "variation" : "National",
+      "length" : 0,
+      "pitEntryX" : -265.1671,
+      "pitEntryZ" : 472.4344,
+      "pitExitX" : -154.9505,
+      "pitExitZ" : 278.1627,
+      "gridsize" : 26
+    },
+    {
+      "id" : -1194290828,
+      "name" : "Silverstone Classic",
+      "location" : "Silverstone",
+      "variation" : "Classic",
+      "length" : 0,
+      "pitEntryX" : -347.0000,
+      "pitEntryZ" : -165.0000,
+      "pitExitX" : 152.7500,
+      "pitExitZ" : -1.2500,
+      "gridsize" : 18
+    },
+    {
+      "id" : -1194185720,
+      "name" : "Oschersleben GP",
+      "location" : "Oschersleben",
+      "variation" : "Grand Prix",
+      "length" : 3656.8550,
+      "pitEntryX" : -350.7033,
+      "pitEntryZ" : 31.3908,
+      "pitExitX" : 239.3137,
+      "pitExitZ" : 91.7386,
+      "gridsize" : 30
+    },
+    {
+      "id" : -1194019375,
+      "name" : "Donington Park National",
+      "location" : "Donington Park",
+      "variation" : "National",
+      "length" : 3175.8020,
+      "pitEntryX" : 200.8843,
+      "pitEntryZ" : 144.8465,
+      "pitExitX" : 486.4654,
+      "pitExitZ" : 119.9713,
+      "gridsize" : 38
+    },
+    {
+      "id" : -1160443077,
+      "name" : "Greenwood Karting Circuit",
+      "location" : "Greenwood",
+      "variation" : "Karting Circuit",
+      "length" : 1073.6631,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 22
+    },
+    {
+      "id" : -1066742780,
+      "name" : "Glencairn",
+      "location" : "Glencairn",
+      "variation" : "Grand Prix",
+      "length" : 921.8007,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 16
+    },
+    {
+      "id" : -1042928898,
+      "name" : "Circuit de Barcelona-Catalunya Club",
+      "location" : "Circuit de Barcelona-Catalunya",
+      "variation" : "Club",
+      "length" : 0,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 40
+    },
+    {
+      "id" : -1031249929,
+      "name" : "Rouen Les Essarts",
+      "location" : "Rouen Les Essarts",
+      "variation" : "",
+      "length" : 0,
+      "pitEntryX" : 117.2500,
+      "pitEntryZ" : 25.5000,
+      "pitExitX" : -84.7500,
+      "pitExitZ" : -13.5000,
+      "gridsize" : 20
+    },
+    {
+      "id" : -1027934689,
+      "name" : "Le Circuit Bugatti",
+      "location" : "Le Circuit Bugatti",
+      "variation" : "",
+      "length" : 0,
+      "pitEntryX" : -737.9395,
+      "pitEntryZ" : 1107.3670,
+      "pitExitX" : -721.3452,
+      "pitExitZ" : 1582.873,
+      "gridsize" : 40
+    },
+    {
+      "id" : -998191994,
+      "name" : "Circuit de Barcelona-Catalunya National",
+      "location" : "Circuit de Barcelona-Catalunya",
+      "variation" : "National",
+      "length" : 2948.2970,
+      "pitEntryX" : 622.7108,
+      "pitEntryZ" : -137.3975,
+      "pitExitX" : 26.5286,
+      "pitExitZ" : -167.9301,
+      "gridsize" : 36
+    },
+    {
+      "id" : -995202729,
+      "name" : "Sonoma Raceway National",
+      "location" : "Sonoma Raceway",
+      "variation" : "National",
+      "length" : 0,
+      "pitEntryX" : -592.7792,
+      "pitEntryZ" : 87.4373,
+      "pitExitX" : -152.6224,
+      "pitExitZ" : -30.7139,
+      "gridsize" : 33
+    },
+    {
+      "id" : -945967394,
+      "name" : "Nürburgring GP",
+      "location" : "Nürburgring",
+      "variation" : "Grand Prix",
+      "length" : 0,
+      "pitEntryX" : 443.6332,
+      "pitEntryZ" : 527.8024,
+      "pitExitX" : 66.8471,
+      "pitExitZ" : 96.7378,
+      "gridsize" : 30
+    },
+    {
+      "id" : -913625358,
+      "name" : "Glencairn West Reverse",
+      "location" : "Glencairn West",
+      "variation" : "Reverse",
+      "length" : 0,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 16
+    },
+    {
+      "id" : -907901266,
+      "name" : "Brno",
+      "location" : "Brno",
+      "variation" : "",
+      "length" : 5377.7324,
+      "pitEntryX" : -194.1228,
+      "pitEntryZ" : -11.4185,
+      "pitExitX" : 139.6739,
+      "pitExitZ" : 0.0617,
+      "gridsize" : 40
+    },
+    {
+      "id" : -891514248,
+      "name" : "Nürburgring Combined",
+      "location" : "Nürburgring",
+      "variation" : "Combined",
+      "length" : 0,
+      "pitEntryX" : 443.6332,
+      "pitEntryZ" : 527.8024,
+      "pitExitX" : 66.8471,
+      "pitExitZ" : 96.7378,
+      "gridsize" : 30
+    },
+    {
+      "id" : -879282119,
+      "name" : "Sakitto Sprint",
+      "location" : "Sakitto",
+      "variation" : "Sprint",
+      "length" : 3539.3838,
+      "pitEntryX" : 576.6671,
+      "pitEntryZ" : -142.1608,
+      "pitExitX" : 607.2910,
+      "pitExitZ" : -646.9218,
+      "gridsize" : 54
+    },
+    {
+      "id" : -867340010,
+      "name" : "Snetterton 100",
+      "location" : "Snetterton",
+      "variation" : "100 Circuit",
+      "length" : 0,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 26
+    },
+    {
+      "id" : -810715843,
+      "name" : "Nürburgring Sprint Short",
+      "location" : "Nürburgring",
+      "variation" : "Sprint Short",
+      "length" : 3083.5505,
+      "pitEntryX" : 443.6332,
+      "pitEntryZ" : 527.8024,
+      "pitExitX" : 66.8471,
+      "pitExitZ" : 96.7378,
+      "gridsize" : 30
+    },
+    {
+      "id" : -780879576,
+      "name" : "Azure Coast Stage 2",
+      "location" : "Azure Coast",
+      "variation" : "Stage 2",
+      "length" : 0,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 32
+    },
+    {
+      "id" : -710712693,
+      "name" : "Dubai Autodrome International",
+      "location" : "Dubai Autodrome",
+      "variation" : "International",
+      "length" : 0,
+      "pitEntryX" : 971.8023,
+      "pitEntryZ" : 199.1564,
+      "pitExitX" : 452.5084,
+      "pitExitZ" : 126.7626,
+      "gridsize" : 36
+    },
+    {
+      "id" : -709737101,
+      "name" : "Nürburgring Sprint",
+      "location" : "Nürburgring",
+      "variation" : "Sprint",
+      "length" : 0,
+      "pitEntryX" : 443.6332,
+      "pitEntryZ" : 527.8024,
+      "pitExitX" : 66.8471,
+      "pitExitZ" : 96.7378,
+      "gridsize" : 30
+    },
+    {
+      "id" : -688586697,
+      "name" : "Mojave Cougar Ridge",
+      "location" : "Mojave",
+      "variation" : "Cougar Ridge",
+      "length" : 0,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 47
+    },
+    {
+      "id" : -661887517,
+      "name" : "Dubai Autodrome GP",
+      "location" : "Dubai Autodrome",
+      "variation" : "Grand Prix",
+      "length" : 0,
+      "pitEntryX" : 971.8023,
+      "pitEntryZ" : 199.1564,
+      "pitExitX" : 452.5084,
+      "pitExitZ" : 126.7626,
+      "gridsize" : 36
+    },
+    {
+      "id" : -660300766,
+      "name" : "Road America",
+      "location" : "Road America",
+      "variation" : "",
+      "length" : 6482.4893,
+      "pitEntryX" : 430.8689,
+      "pitEntryZ" : 245.7329,
+      "pitExitX" : 451.5659,
+      "pitExitZ" : -330.7411,
+      "gridsize" : 64
+    },
+    {
+      "id" : -602684269,
+      "name" : "Bannochbrae Road Circuit",
+      "location" : "Bannochbrae",
+      "variation" : "",
+      "length" : 0,
+      "pitEntryX" : -175.0000,
+      "pitEntryZ" : 16.0000,
+      "pitExitX" : 131.0000,
+      "pitExitZ" : 14.5000,
+      "gridsize" : 20
+    },
+    {
+      "id" : -446794969,
+      "name" : "Glencairn East Reverse",
+      "location" : "Glencairn",
+      "variation" : "East Reverse",
+      "length" : 0,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 16
+    },
+    {
+      "id" : -360711057,
+      "name" : "Zolder",
       "location" : "Zolder",
       "variation" : "Grand Prix",
       "length" : 4146.7334,
       "pitEntryX" : 138.3811,
       "pitEntryZ" : 132.7747,
       "pitExitX" : 682.2009,
-      "pitExitZ" : 179.8147
+      "pitExitZ" : 179.8147,
+      "gridsize" : 36
+    },
+    {
+      "id" : -331502851,
+      "name" : "California Highway Stage 3",
+      "location" : "California Highway",
+      "variation" : "Stage 3",
+      "length" : 0,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 36
+    },
+    {
+      "id" : -300387291,
+      "name" : "Nordschleife Stage 2",
+      "location" : "Nordschleife",
+      "variation" : "Stage 2",
+      "length" : 0,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 36
+    },
+    {
+      "id" : -246966400,
+      "name" : "Nürburgring Müllenbach",
+      "location" : "Nürburgring",
+      "variation" : "Müllenbach",
+      "length" : 0,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 36
+    },
+    {
+      "id" : -232513374,
+      "name" : "Dubai Kartdrome",
+      "location" : "Dubai Autodrome",
+      "variation" : "Kartdrome",
+      "length" : 1165.7298,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 22
+    },
+    {
+      "id" : -103312908,
+      "name" : "Willow Springs International Raceway",
+      "location" : "Willow Springs",
+      "variation" : "",
+      "length" : 0,
+      "pitEntryX" : 319.4275,
+      "pitEntryZ" : -21.5124,
+      "pitExitX" : -44.8402,
+      "pitExitZ" : -23.4134,
+      "gridsize" : 50
+    },
+    {
+      "id" : -52972612,
+      "name" : "Autodromo Nazionale Monza GP",
+      "location" : "Autodromo Nazionale Monza",
+      "variation" : "Grand Prix",
+      "length" : 5782.5210,
+      "pitEntryX" : 22.2031,
+      "pitEntryZ" : -437.1672,
+      "pitExitX" : 63.6092,
+      "pitExitZ" : -1.1178,
+      "gridsize" : 54
+    },
+    {
+      "id" : -44748320,
+      "name" : "Summerton",
+      "location" : "Summerton",
+      "variation" : "International",
+      "length" : 996.8077,
+      "pitEntryX" : null,
+      "pitEntryZ" : null,
+      "pitExitX" : null,
+      "pitExitZ" : null,
+      "gridsize" : 28
+    },
+    {
+      "id" : -31727447,
+      "name" : "Dubai Autodrome National",
+      "location" : "Dubai Autodrome",
+      "variation" : "National",
+      "length" : 0,
+      "pitEntryX" : 971.8023,
+      "pitEntryZ" : 199.1564,
+      "pitExitX" : 452.5084,
+      "pitExitZ" : 126.7626,
+      "gridsize" : 36
     }
   ]
 }

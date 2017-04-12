@@ -10,10 +10,14 @@ import java.util.List;
 
 @RestController
 class CarController {
-    private static final String JDBC_DRIVER = "org.h2.Driver";
-    private static final String DB_URL = "jdbc:h2:~/projectcars";
-    private static final String USER_NAME = "project_cars_api_user";
-    private static final String USER_PASS = "o5RXD}XL!-K2";
+    private static final String MYSQL_DRIVER = "com.mysql.cj.jdbc.Driver";
+    private static final String MYSQL_URL = "jdbc:mysql://pcarsapi.cbwuidepjacv.us-west-2.rds.amazonaws.com:3306/";
+
+    private static final String H2_DRIVER = "org.h2.Driver";
+    private static final String H2_URL = "jdbc:h2:~/projectcars;MODE=mysql";
+
+    private static final String USER_NAME = "pcarsapi_user";
+    private static final String USER_PASS = "F=R4tV}p:Jb2>VqJ";
 
     @RequestMapping(value = "/v1/cars")
     public List<Car> cars() {
@@ -23,8 +27,13 @@ class CarController {
         List<Car> cars = new ArrayList<>();
 
         try {
-            Class.forName(JDBC_DRIVER);
-            conn = DriverManager.getConnection(DB_URL, USER_NAME, USER_PASS);
+            try {
+                Class.forName(MYSQL_DRIVER);
+                conn = DriverManager.getConnection(MYSQL_URL, USER_NAME, USER_PASS);
+            } catch (ClassNotFoundException | SQLException e) {
+                Class.forName(H2_DRIVER);
+                conn = DriverManager.getConnection(H2_URL, USER_NAME, USER_PASS);
+            }
             stmt = conn.createStatement();
 
             ResultSet carResults = stmt.executeQuery(sql);
@@ -72,8 +81,13 @@ class CarController {
         Car car = null;
 
         try {
-            Class.forName(JDBC_DRIVER);
-            conn = DriverManager.getConnection(DB_URL, USER_NAME, USER_PASS);
+            try {
+                Class.forName(MYSQL_DRIVER);
+                conn = DriverManager.getConnection(MYSQL_URL, USER_NAME, USER_PASS);
+            } catch (ClassNotFoundException | SQLException e) {
+                Class.forName(H2_DRIVER);
+                conn = DriverManager.getConnection(H2_URL, USER_NAME, USER_PASS);
+            }
             stmt = conn.createStatement();
 
             ResultSet carResults = stmt.executeQuery(sql);

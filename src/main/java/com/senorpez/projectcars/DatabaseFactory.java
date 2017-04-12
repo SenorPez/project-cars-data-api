@@ -47,21 +47,21 @@ public class DatabaseFactory {
             stmt = conn.createStatement();
             System.out.println("Nuking existing database from orbit. It's the only way to be sure.");
             if (databaseType.equals("mysql")) {
-		stmt.executeUpdate("DROP DATABASE IF EXISTS projectcarsapi;");
-		stmt.executeUpdate("CREATE DATABASE projectcarsapi;");
-		stmt.execute("USE projectcarsapi;");
+                stmt.executeUpdate("DROP DATABASE IF EXISTS projectcarsapi;");
+                stmt.executeUpdate("CREATE DATABASE projectcarsapi;");
+                stmt.execute("USE projectcarsapi;");
+
+                System.out.println("Creating access user.");
+                try {
+                    stmt.executeUpdate("DROP USER " + USER_NAME + ";");
+                } catch (SQLException e) {
+                    // No need to do anything. Later MySQL adds support for IF EXISTS
+                }
+                stmt.execute("CREATE USER " + USER_NAME + " IDENTIFIED BY  '" + USER_PASS + "';");
             } else if (databaseType.equals("h2")) {
-		stmt.executeUpdate("DROP ALL OBJECTS;");
+                stmt.executeUpdate("DROP ALL OBJECTS;");
+                stmt.execute("CREATE USER " + USER_NAME + " PASSWORD '" + USER_PASS + "';");
             }
-
-            System.out.println("Creating access user.");
-	    try {
-                stmt.executeUpdate("DROP USER " + USER_NAME + ";");
-            } catch (SQLException e) {
-            }
-
-            sql = "CREATE USER " + USER_NAME + " IDENTIFIED BY  '" + USER_PASS + "';";
-            stmt.execute(sql);
 
             CreateCarsTable(conn);
             CreateTracksTable(conn);
@@ -88,11 +88,11 @@ public class DatabaseFactory {
 
         System.out.println("Creating Cars table.");
         sql = "CREATE TABLE cars " +
-                "(id INTEGER NOT NULL AUTO_INCREMENT, " +
+                "(id INTEGER NOT NULL, " +
                 " manufacturer VARCHAR(255) NOT NULL, " +
                 " model VARCHAR(255) NOT NULL, " +
                 " class VARCHAR(255) NOT NULL, " +
-                " country VARCHAR(255) NOT NULL, " +
+                " country VARCHAR(255) NULL, " +
                 " PRIMARY KEY (id), " +
                 " UNIQUE (manufacturer, model));";
         stmt.executeUpdate(sql);
@@ -119,19 +119,6 @@ public class DatabaseFactory {
         if (cars != null) {
             sqlValues = cars
                     .stream()
-                    .sorted((o1, o2) -> {
-                        int compareResult;
-                        String mfg1 = (String) o1.get("manufacturer");
-                        String mfg2 = (String) o2.get("manufacturer");
-
-                        compareResult = mfg1.compareTo(mfg2);
-                        if (compareResult == 0) {
-                            String model1 = (String) o1.get("model");
-                            String model2 = (String) o2.get("model");
-                            compareResult = model1.compareTo(model2);
-                        }
-                        return compareResult;
-                    })
                     .map(stringObjectMap -> stringObjectMap
                             .values()
                             .stream()
@@ -141,7 +128,7 @@ public class DatabaseFactory {
 
             System.out.println("Adding Cars data.");
             sql = "INSERT INTO cars " +
-                    "(manufacturer, model, class, country) " +
+                    "(id, manufacturer, model, class, country) " +
                     "VALUES " + sqlValues + ";";
             stmt.executeUpdate(sql);
         }
@@ -155,7 +142,8 @@ public class DatabaseFactory {
 
         System.out.println("Creating Tracks table.");
         sql = "CREATE TABLE tracks " +
-                "(id INTEGER NOT NULL AUTO_INCREMENT, " +
+                "(id INTEGER NOT NULL, " +
+                " name VARCHAR(255) NOT NULL, " +
                 " location VARCHAR(255) NOT NULL, " +
                 " variation VARCHAR(255) NOT NULL, " +
                 " length DECIMAL(8,4) NOT NULL, " +
@@ -163,6 +151,7 @@ public class DatabaseFactory {
                 " pitEntryZ DECIMAL(8,4) NULL, " +
                 " pitExitX DECIMAL(8,4) NULL, " +
                 " pitExitZ DECIMAL(8,4) NULL, " +
+                " gridSize INTEGER NOT NULL, " +
                 " PRIMARY KEY (id), " +
                 " UNIQUE (location, variation));";
         stmt.executeUpdate(sql);
@@ -189,19 +178,6 @@ public class DatabaseFactory {
         if (tracks != null) {
             sqlValues = tracks
                     .stream()
-                    .sorted((o1, o2) -> {
-                        int compareResult;
-                        String location1 = (String) o1.get("location");
-                        String location2 = (String) o2.get("location");
-
-                        compareResult = location1.compareTo(location2);
-                        if (compareResult == 0) {
-                            String variation1 = (String) o1.get("variation");
-                            String variation2 = (String) o2.get("variation");
-                            compareResult = variation1.compareTo(variation2);
-                        }
-                        return compareResult;
-                    })
                     .map(stringObjectMap -> stringObjectMap
                             .values()
                             .stream()
@@ -210,7 +186,7 @@ public class DatabaseFactory {
                     .collect(Collectors.joining(", "));
             System.out.println("Adding Tracks data.");
             sql = "INSERT INTO tracks " +
-                    "(location, variation, length, pitEntryX, pitEntryZ, pitExitX, pitExitZ) " +
+                    "(id, name, location, variation, length, pitEntryX, pitEntryZ, pitExitX, pitExitZ, gridSize) " +
                     "VALUES " + sqlValues + ";";
             stmt.executeUpdate(sql);
         }
