@@ -89,9 +89,9 @@ public class DatabaseFactory {
         System.out.println("Creating Cars table.");
         sql = "CREATE TABLE cars " +
                 "(id INTEGER NOT NULL, " +
-                " manufacturer VARCHAR(255) NOT NULL, " +
-                " model VARCHAR(255) NOT NULL, " +
-                " class VARCHAR(255) NOT NULL, " +
+                " manufacturer VARCHAR(13) NOT NULL, " +
+                " model VARCHAR(36) NOT NULL, " +
+                " class VARCHAR(18) NOT NULL, " +
                 " country VARCHAR(255) NULL, " +
                 " PRIMARY KEY (id), " +
                 " UNIQUE (manufacturer, model));";
@@ -143,15 +143,15 @@ public class DatabaseFactory {
         System.out.println("Creating Tracks table.");
         sql = "CREATE TABLE tracks " +
                 "(id INTEGER NOT NULL, " +
-                " name VARCHAR(255) NOT NULL, " +
-                " location VARCHAR(255) NOT NULL, " +
-                " variation VARCHAR(255) NOT NULL, " +
-                " length DECIMAL(8,4) NOT NULL, " +
-                " pitEntryX DECIMAL(8,4) NULL, " +
-                " pitEntryZ DECIMAL(8,4) NULL, " +
-                " pitExitX DECIMAL(8,4) NULL, " +
-                " pitExitZ DECIMAL(8,4) NULL, " +
-                " gridSize INTEGER NOT NULL, " +
+                " name VARCHAR(39) NOT NULL, " +
+                " location VARCHAR(50) NOT NULL, " +
+                " variation VARCHAR(50) NOT NULL, " +
+                " length DECIMAL(15,4) UNSIGNED NOT NULL, " +
+                " pitEntryX DECIMAL(15,4) NULL, " +
+                " pitEntryZ DECIMAL(15,4) NULL, " +
+                " pitExitX DECIMAL(15,4) NULL, " +
+                " pitExitZ DECIMAL(15,4) NULL, " +
+                " gridSize TINYINT UNSIGNED NOT NULL, " +
                 " PRIMARY KEY (id), " +
                 " UNIQUE (location, variation));";
         stmt.executeUpdate(sql);
@@ -200,10 +200,10 @@ public class DatabaseFactory {
 
         System.out.println("Creating Events table.");
         sql = "CREATE TABLE events " +
-                "(id INTEGER NOT NULL AUTO_INCREMENT, " +
-                " name VARCHAR(255) NOT NULL, " +
+                "(id TINYINT UNSIGNED NOT NULL AUTO_INCREMENT, " +
+                " name VARCHAR(75) NOT NULL, " +
                 " carFilter VARCHAR(255) NOT NULL, " +
-                " tier INTEGER, " +
+                " tier TINYINT UNSIGNED, " +
                 " PRIMARY KEY (id));";
         stmt.executeUpdate(sql);
 
@@ -213,11 +213,11 @@ public class DatabaseFactory {
 
         System.out.println("Creating Rounds table.");
         sql = "CREATE TABLE rounds " +
-                "(id INTEGER NOT NULL, " +
-                " eventID INTEGER NOT NULL, " +
+                "(id TINYINT UNSIGNED NOT NULL, " +
+                " eventID TINYINT UNSIGNED NOT NULL, " +
                 " trackID INTEGER NOT NULL, " +
-                " laps INTEGER, " +
-                " time INTEGER, " +
+                " laps SMALLINT UNSIGNED, " +
+                " time SMALLINT UNSIGNED, " +
                 " CHECK ((laps IS NOT NULL AND time IS NULL) OR (laps IS NULL AND time IS NOT NULL)), " + 
                 " PRIMARY KEY (id, eventID), " +
                 " FOREIGN KEY (eventID) REFERENCES events(id) ON DELETE CASCADE);";
