@@ -1740,8 +1740,8 @@
           "laps" : 6
         },
         {
-          "location" : "Circuit des 24 Heures du Mans",
-          "variation" : "",
+          "location" : "Le Mans",
+          "variation" : "Circuit des 24 Heures du Mans",
           "laps" : 4
         }
       ]
@@ -2183,9 +2183,9 @@
     {
       "id" : 1740968730,
       "name" : "Circuit des 24 Heures du Mans",
-      "location" : "Circuit des 24 Heures du Mans",
-      "variation" : "",
-      "length" : 0,
+      "location" : "Le Mans",
+      "variation" : "Circuit des 24 Heures du Mans",
+      "length" : 13595.0078,
       "pitEntryX" : -737.9395,
       "pitEntryZ" : 1107.367,
       "pitExitX" : -721.3452,
