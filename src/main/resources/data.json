@@ -1745,6 +1745,18 @@
           "laps" : 4
         }
       ]
+    },
+    {
+      "name" : "Ruapuna TransAm Challenge",
+      "carFilter" : "class LIKE 'Trans-Am'",
+      "tier" : null,
+      "rounds" : [
+        {
+          "location" : "Ruapuna Park",
+          "variation" : "Club",
+          "laps" : 30
+        }
+      ]
     }
   ],
   "tracks" :[
@@ -2053,7 +2065,7 @@
       "name" : "Ruapuna Park Club",
       "location" : "Ruapuna Park",
       "variation" : "Club",
-      "length" : 0,
+      "length" : 2261.9836,
       "pitEntryX" : 546.2500,
       "pitEntryZ" : 112.5000,
       "pitExitX" : 219.2500,
