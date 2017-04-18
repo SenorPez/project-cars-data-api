@@ -11,20 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @Api(tags = {"events"})
 @RequestMapping(method = {RequestMethod.GET})
 class EventController {
-    private static final String MYSQL_DRIVER = "com.mysql.cj.jdbc.Driver";
-    private static final String MYSQL_URL = "jdbc:mysql://pcarsapi.cbwuidepjacv.us-west-2.rds.amazonaws.com:3306/";
-
-    private static final String H2_DRIVER = "org.h2.Driver";
-    private static final String H2_URL = "jdbc:h2:~/projectcars;MODE=mysql";
-
-    private static final String USER_NAME = "pcarsapi_user";
-    private static final String USER_PASS = "F=R4tV}p:Jb2>VqJ";
-
     @RequestMapping(value = "/v1/events")
     @ApiOperation(
             value = "Lists all events available",
@@ -33,151 +25,15 @@ class EventController {
             responseContainer = "List"
     )
     public List<Event> events() {
-        Connection conn = null;
-        Statement stmt = null;
-        final String sql = "SELECT id, name, carFilter, tier FROM events;";
-        final List<Event> events = new ArrayList<>();
-
-        try {
-            try {
-                Class.forName(MYSQL_DRIVER);
-                conn = DriverManager.getConnection(MYSQL_URL, USER_NAME, USER_PASS);
-                stmt = conn.createStatement();
-                stmt.execute("USE projectcarsapi;");
-            } catch (ClassNotFoundException | SQLException e) {
-                Class.forName(H2_DRIVER);
-                conn = DriverManager.getConnection(H2_URL, USER_NAME, USER_PASS);
-                stmt = conn.createStatement();
-            }
-
-            ResultSet eventsResults = stmt.executeQuery(sql);
-            while (eventsResults.next()) {
-                Integer id = eventsResults.getInt("id");
-                String name = eventsResults.getString("name");
-                Integer tier = eventsResults.getInt("tier");
-                if (eventsResults.wasNull()) tier = null;
-                String carFilter = eventsResults.getString("carFilter");
-
-                Statement roundsStmt = conn.createStatement();
-                final String roundsSql = "SELECT id, trackID, laps, time FROM rounds WHERE eventID = " + id + ";";
-                final List<Round> rounds = new ArrayList<>();
-
-                ResultSet roundsResults = roundsStmt.executeQuery(roundsSql);
-                while (roundsResults.next()) {
-                    Integer roundId = roundsResults.getInt("id");
-                    Integer trackId = roundsResults.getInt("trackID");
-                    Integer laps = roundsResults.getInt("laps");
-                    if (roundsResults.wasNull()) laps = null;
-                    Integer time = roundsResults.getInt("time");
-                    if (roundsResults.wasNull()) time = null;
-
-                    Statement trackStmt = conn.createStatement();
-                    final String trackSql = "SELECT name, location, variation, length, pitEntryX, pitEntryZ, pitExitX, pitExitZ, gridSize " +
-                            "FROM tracks " +
-                            "WHERE id = " + trackId + ";";
-                    Track track = null;
-
-                    ResultSet trackResults = trackStmt.executeQuery(trackSql);
-                    while (trackResults.next()) {
-                        String trackName = trackResults.getString("name");
-                        String location = trackResults.getString("location");
-                        String variation = trackResults.getString("variation");
-                        Float length = trackResults.getFloat("length");
-
-                        Float pitEntryX = trackResults.getFloat("pitEntryX");
-                        if (trackResults.wasNull()) pitEntryX = null;
-                        Float pitEntryZ = trackResults.getFloat("pitEntryZ");
-                        if (trackResults.wasNull()) pitEntryZ = null;
-
-                        Float pitExitX = trackResults.getFloat("pitExitX");
-                        if (trackResults.wasNull()) pitExitX = null;
-                        Float pitExitZ = trackResults.getFloat("pitExitZ");
-                        if (trackResults.wasNull()) pitExitZ = null;
-
-                        Integer gridSize = trackResults.getInt("gridSize");
-
-                        track = new Track(
-                                trackId,
-                                trackName,
-                                location,
-                                variation,
-                                length,
-                                pitEntryX,
-                                pitEntryZ,
-                                pitExitX,
-                                pitExitZ,
-                                gridSize);
-                    }
-
-                    trackResults.close();
-                    trackStmt.close();
-
-                    rounds.add(new Round(
-                            roundId,
-                            track,
-                            laps,
-                            time
-                    ));
-                }
-
-                roundsResults.close();
-                roundsStmt.close();
-
-                Statement carsStmt = conn.createStatement();
-                final String carsSql = "SELECT id, manufacturer, model, class, country FROM cars WHERE " + carFilter + ";";
-                final List<Car> cars = new ArrayList<>();
-
-                ResultSet carsResults = carsStmt.executeQuery(carsSql);
-                while (carsResults.next()) {
-                    Integer carID = carsResults.getInt("id");
-                    String manufacturer = carsResults.getString("manufacturer");
-                    String model = carsResults.getString("model");
-                    String country = carsResults.getString("country");
-                    String carClass = carsResults.getString("class");
-
-                    cars.add(new Car(
-                            carID,
-                            manufacturer,
-                            model,
-                            country,
-                            carClass
-                    ));
-                }
-
-                carsResults.close();
-                carsStmt.close();
-
-                events.add(new Event(
-                        id,
-                        name,
-                        tier,
-                        cars,
-                        rounds,
-                        carFilter
-                ));
-            }
-
-            eventsResults.close();
-            stmt.close();
-            conn.close();
+        try (Connection conn = Application.DatabaseConnection()) {
+            return eventQuery(conn);
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                if (stmt != null) stmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-            try {
-                if (conn != null) conn.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
-        return events;
+        return null;
     }
 
-    @RequestMapping(value = "/v1/events/{id}")
+    @RequestMapping(value = "/v1/events/{eventId}")
     @ApiOperation(
             value = "Returns an event",
             notes = "Returns an event as specified by its ID number",
@@ -188,253 +44,29 @@ class EventController {
                     value = "ID of event to return",
                     required = true
             )
-            @PathVariable Integer id) {
-        Connection conn = null;
-        Statement stmt = null;
-        final String sql = "SELECT id, name, carFilter, tier FROM events WHERE id = " + id + ";";
-        Event event = null;
-
-        try {
-            try {
-                Class.forName(MYSQL_DRIVER);
-                conn = DriverManager.getConnection(MYSQL_URL, USER_NAME, USER_PASS);
-                stmt = conn.createStatement();
-                stmt.execute("USE projectcarsapi;");
-            } catch (ClassNotFoundException | SQLException e) {
-                Class.forName(H2_DRIVER);
-                conn = DriverManager.getConnection(H2_URL, USER_NAME, USER_PASS);
-                stmt = conn.createStatement();
-            }
-
-            ResultSet eventsResults = stmt.executeQuery(sql);
-            while (eventsResults.next()) {
-                String name = eventsResults.getString("name");
-                String carFilter = eventsResults.getString("carFilter");
-                Integer tier = eventsResults.getInt("tier");
-                if (eventsResults.wasNull()) tier = null;
-
-                Statement roundsStmt = conn.createStatement();
-                final String roundsSql = "SELECT id, trackID, laps, time FROM rounds WHERE eventID = " + id + ";";
-                final List<Round> rounds = new ArrayList<>();
-
-                ResultSet roundsResults = roundsStmt.executeQuery(roundsSql);
-                while (roundsResults.next()) {
-                    Integer roundId = roundsResults.getInt("id");
-                    Integer trackId = roundsResults.getInt("trackID");
-                    Integer laps = roundsResults.getInt("laps");
-                    if (roundsResults.wasNull()) laps = null;
-                    Integer time = roundsResults.getInt("time");
-                    if (roundsResults.wasNull()) time = null;
-
-                    Statement trackStmt = conn.createStatement();
-                    final String trackSql = "SELECT name, location, variation, length, pitEntryX, pitEntryZ, pitExitX, pitExitZ, gridSize " +
-                            "FROM tracks " +
-                            "WHERE id = " + trackId + ";";
-                    Track track = null;
-
-                    ResultSet trackResults = trackStmt.executeQuery(trackSql);
-                    while (trackResults.next()) {
-                        String trackName = trackResults.getString("name");
-                        String location = trackResults.getString("location");
-                        String variation = trackResults.getString("variation");
-                        Float length = trackResults.getFloat("length");
-
-                        Float pitEntryX = trackResults.getFloat("pitEntryX");
-                        if (trackResults.wasNull()) pitEntryX = null;
-                        Float pitEntryZ = trackResults.getFloat("pitEntryZ");
-                        if (trackResults.wasNull()) pitEntryZ = null;
-
-                        Float pitExitX = trackResults.getFloat("pitExitX");
-                        if (trackResults.wasNull()) pitExitX = null;
-                        Float pitExitZ = trackResults.getFloat("pitExitZ");
-                        if (trackResults.wasNull()) pitExitZ = null;
-
-                        Integer gridSize = trackResults.getInt("gridSize");
-
-                        track = new Track(
-                                trackId,
-                                trackName,
-                                location,
-                                variation,
-                                length,
-                                pitEntryX,
-                                pitEntryZ,
-                                pitExitX,
-                                pitExitZ,
-                                gridSize);
-                    }
-
-                    trackResults.close();
-                    trackStmt.close();
-
-                    rounds.add(new Round(
-                            roundId,
-                            track,
-                            laps,
-                            time
-                    ));
-                }
-
-                roundsResults.close();
-                roundsStmt.close();
-
-                Statement carsStmt = conn.createStatement();
-                final String carsSql = "SELECT id, manufacturer, model, class, country FROM cars WHERE " + carFilter + ";";
-                final List<Car> cars = new ArrayList<>();
-
-                ResultSet carsResults = carsStmt.executeQuery(carsSql);
-                while (carsResults.next()) {
-                    Integer carID = carsResults.getInt("id");
-                    String manufacturer = carsResults.getString("manufacturer");
-                    String model = carsResults.getString("model");
-                    String country = carsResults.getString("country");
-                    String carClass = carsResults.getString("class");
-
-                    cars.add(new Car(
-                            carID,
-                            manufacturer,
-                            model,
-                            country,
-                            carClass
-                    ));
-                }
-
-                carsResults.close();
-                carsStmt.close();
-
-                event = new Event(id, name, tier, cars, rounds, carFilter);
-            }
-
-            eventsResults.close();
-            stmt.close();
-            conn.close();
+            @PathVariable Integer eventId) {
+        try (Connection conn = Application.DatabaseConnection()) {
+            return eventQuery(conn, eventId);
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                if (stmt != null) stmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-            try {
-                if (conn != null) conn.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
-        return event;
+        return null;
     }
 
-    @RequestMapping(value = "/v1/events/{id}/rounds")
+    @RequestMapping(value = "/v1/events/{eventId}/rounds")
     @ApiOperation(
             value = "Lists all rounds available for an event",
             notes = "Returns a list of all rounds in a single player event",
             response = Round.class,
             responseContainer = "List"
     )
-    public List<Round> eventRounds(@PathVariable Integer id) {
-        Connection conn = null;
-        Statement stmt = null;
-        final String sql = "SELECT id, name, carFilter, tier FROM events WHERE id = " + id + ";";
-        final List<Round> rounds = new ArrayList<>();
-
-        try {
-            try {
-                Class.forName(MYSQL_DRIVER);
-                conn = DriverManager.getConnection(MYSQL_URL, USER_NAME, USER_PASS);
-                stmt = conn.createStatement();
-                stmt.execute("USE projectcarsapi;");
-            } catch (ClassNotFoundException | SQLException e) {
-                Class.forName(H2_DRIVER);
-                conn = DriverManager.getConnection(H2_URL, USER_NAME, USER_PASS);
-                stmt = conn.createStatement();
-            }
-
-            ResultSet eventsResults = stmt.executeQuery(sql);
-            while (eventsResults.next()) {
-                Statement roundsStmt = conn.createStatement();
-                final String roundsSql = "SELECT id, trackID, laps, time FROM rounds WHERE eventID = " + id + ";";
-
-                ResultSet roundsResults = roundsStmt.executeQuery(roundsSql);
-                while (roundsResults.next()) {
-                    Integer roundId = roundsResults.getInt("id");
-                    Integer trackId = roundsResults.getInt("trackID");
-                    Integer laps = roundsResults.getInt("laps");
-                    if (roundsResults.wasNull()) laps = null;
-                    Integer time = roundsResults.getInt("time");
-                    if (roundsResults.wasNull()) time = null;
-
-                    Statement trackStmt = conn.createStatement();
-                    final String trackSql = "SELECT name, location, variation, length, pitEntryX, pitEntryZ, pitExitX, pitExitZ, gridSize " +
-                            "FROM tracks " +
-                            "WHERE id = " + trackId + ";";
-                    Track track = null;
-
-                    ResultSet trackResults = trackStmt.executeQuery(trackSql);
-                    while (trackResults.next()) {
-                        String trackName = trackResults.getString("name");
-                        String location = trackResults.getString("location");
-                        String variation = trackResults.getString("variation");
-                        Float length = trackResults.getFloat("length");
-
-                        Float pitEntryX = trackResults.getFloat("pitEntryX");
-                        if (trackResults.wasNull()) pitEntryX = null;
-                        Float pitEntryZ = trackResults.getFloat("pitEntryZ");
-                        if (trackResults.wasNull()) pitEntryZ = null;
-
-                        Float pitExitX = trackResults.getFloat("pitExitX");
-                        if (trackResults.wasNull()) pitExitX = null;
-                        Float pitExitZ = trackResults.getFloat("pitExitZ");
-                        if (trackResults.wasNull()) pitExitZ = null;
-
-                        Integer gridSize = trackResults.getInt("gridSize");
-
-                        track = new Track(
-                                trackId,
-                                trackName,
-                                location,
-                                variation,
-                                length,
-                                pitEntryX,
-                                pitEntryZ,
-                                pitExitX,
-                                pitExitZ,
-                                gridSize);
-                    }
-
-                    trackResults.close();
-                    trackStmt.close();
-
-                    rounds.add(new Round(
-                            roundId,
-                            track,
-                            laps,
-                            time
-                    ));
-                }
-
-                roundsResults.close();
-                roundsStmt.close();
-            }
-
-            eventsResults.close();
-            stmt.close();
-            conn.close();
+    public List<Round> eventRounds(@PathVariable Integer eventId) {
+        try (Connection conn = Application.DatabaseConnection()) {
+            return roundQuery(conn, eventId);
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                if (stmt != null) stmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-            try {
-                if (conn != null) conn.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
-        return rounds;
+        return null;
     }
 
     @RequestMapping(value = "/v1/events/{eventID}/rounds/{roundID}")
@@ -454,176 +86,29 @@ class EventController {
                     required = true
             )
             @PathVariable Integer roundID) {
-        Connection conn = null;
-        Statement stmt = null;
-        final String sql = "SELECT id, name, carFilter, tier FROM events WHERE id = " + eventID + ";";
-        Round round = null;
-
-        try {
-            try {
-                Class.forName(MYSQL_DRIVER);
-                conn = DriverManager.getConnection(MYSQL_URL, USER_NAME, USER_PASS);
-                stmt = conn.createStatement();
-                stmt.execute("USE projectcarsapi;");
-            } catch (ClassNotFoundException | SQLException e) {
-                Class.forName(H2_DRIVER);
-                conn = DriverManager.getConnection(H2_URL, USER_NAME, USER_PASS);
-                stmt = conn.createStatement();
-            }
-
-            ResultSet eventsResults = stmt.executeQuery(sql);
-            while (eventsResults.next()) {
-                Statement roundsStmt = conn.createStatement();
-                final String roundsSql = "SELECT id, trackID, laps, time FROM rounds " +
-                        "WHERE eventID = " + eventID + " AND id = " + roundID + ";";
-
-                ResultSet roundsResults = roundsStmt.executeQuery(roundsSql);
-                while (roundsResults.next()) {
-                    Integer roundId = roundsResults.getInt("id");
-                    Integer trackId = roundsResults.getInt("trackID");
-                    Integer laps = roundsResults.getInt("laps");
-                    if (roundsResults.wasNull()) laps = null;
-                    Integer time = roundsResults.getInt("time");
-                    if (roundsResults.wasNull()) time = null;
-
-                    Statement trackStmt = conn.createStatement();
-                    final String trackSql = "SELECT name, location, variation, length, pitEntryX, pitEntryZ, pitExitX, pitExitZ, gridSize " +
-                            "FROM tracks " +
-                            "WHERE id = " + trackId + ";";
-                    Track track = null;
-
-                    ResultSet trackResults = trackStmt.executeQuery(trackSql);
-                    while (trackResults.next()) {
-                        String trackName = trackResults.getString("name");
-                        String location = trackResults.getString("location");
-                        String variation = trackResults.getString("variation");
-                        Float length = trackResults.getFloat("length");
-
-                        Float pitEntryX = trackResults.getFloat("pitEntryX");
-                        if (trackResults.wasNull()) pitEntryX = null;
-                        Float pitEntryZ = trackResults.getFloat("pitEntryZ");
-                        if (trackResults.wasNull()) pitEntryZ = null;
-
-                        Float pitExitX = trackResults.getFloat("pitExitX");
-                        if (trackResults.wasNull()) pitExitX = null;
-                        Float pitExitZ = trackResults.getFloat("pitExitZ");
-                        if (trackResults.wasNull()) pitExitZ = null;
-
-                        Integer gridSize = trackResults.getInt("gridSize");
-
-                        track = new Track(
-                                trackId,
-                                trackName,
-                                location,
-                                variation,
-                                length,
-                                pitEntryX,
-                                pitEntryZ,
-                                pitExitX,
-                                pitExitZ,
-                                gridSize);
-                    }
-
-                    trackResults.close();
-                    trackStmt.close();
-
-                    round = new Round(roundID, track, laps, time);
-                }
-
-                roundsResults.close();
-                roundsStmt.close();
-            }
-
-            eventsResults.close();
-            stmt.close();
-            conn.close();
+        try (Connection conn = Application.DatabaseConnection()) {
+            return roundQuery(conn, eventID, roundID);
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                if (stmt != null) stmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-            try {
-                if (conn != null) conn.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
-        return round;
+        return null;
     }
 
-    @RequestMapping(value = "/v1/events/{id}/cars")
+    @RequestMapping(value = "/v1/events/{eventId}/cars")
     @ApiOperation(
             value = "Lists all cars eligible for an event",
             notes = "Returns a list of all cars eligible for a single player event",
             response = Car.class,
             responseContainer = "List"
     )
-    public List<Car> eventCars(@PathVariable Integer id) {
-        Connection conn = null;
-        Statement stmt = null;
-        final String sql = "SELECT carFilter, tier FROM events WHERE id = " + id + ";";
-        final List<Car> cars = new ArrayList<>();
-
-        try {
-            try {
-                Class.forName(MYSQL_DRIVER);
-                conn = DriverManager.getConnection(MYSQL_URL, USER_NAME, USER_PASS);
-                stmt = conn.createStatement();
-                stmt.execute("USE projectcarsapi;");
-            } catch (ClassNotFoundException | SQLException e) {
-                Class.forName(H2_DRIVER);
-                conn = DriverManager.getConnection(H2_URL, USER_NAME, USER_PASS);
-                stmt = conn.createStatement();
-            }
-
-            ResultSet eventsResults = stmt.executeQuery(sql);
-            while (eventsResults.next()) {
-                String carFilter = eventsResults.getString("carFilter");
-                Statement carsStmt = conn.createStatement();
-                final String carsSql = "SELECT id, manufacturer, model, class, country FROM cars WHERE " + carFilter + ";";
-
-                ResultSet carsResults = carsStmt.executeQuery(carsSql);
-                while (carsResults.next()) {
-                    Integer carID = carsResults.getInt("id");
-                    String manufacturer = carsResults.getString("manufacturer");
-                    String model = carsResults.getString("model");
-                    String country = carsResults.getString("country");
-                    String carClass = carsResults.getString("class");
-
-                    cars.add(new Car(
-                            carID,
-                            manufacturer,
-                            model,
-                            country,
-                            carClass
-                    ));
-                }
-
-                carsResults.close();
-                carsStmt.close();
-            }
-
-            eventsResults.close();
-            stmt.close();
-            conn.close();
+    public List<Car> eventCars(@PathVariable Integer eventId) {
+        try (Connection conn = Application.DatabaseConnection()) {
+            Event event = eventQuery(conn, eventId);
+            return (event == null) ? null : CarController.carQuery(conn, event.getCarFilter());
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                if (stmt != null) stmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-            try {
-                if (conn != null) conn.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
-        return cars;
+        return null;
     }
 
     @RequestMapping(value = "/v1/events/{eventId}/cars/{carId}")
@@ -643,61 +128,88 @@ class EventController {
                     required = true
             )
             @PathVariable Integer carId) {
-        Connection conn = null;
-        Statement stmt = null;
-        final String sql = "SELECT carFilter, tier FROM events WHERE id = " + eventId + ";";
-        Car car = null;
-
-        try {
-            try {
-                Class.forName(MYSQL_DRIVER);
-                conn = DriverManager.getConnection(MYSQL_URL, USER_NAME, USER_PASS);
-                stmt = conn.createStatement();
-                stmt.execute("USE projectcarsapi;");
-            } catch (ClassNotFoundException | SQLException e) {
-                Class.forName(H2_DRIVER);
-                conn = DriverManager.getConnection(H2_URL, USER_NAME, USER_PASS);
-                stmt = conn.createStatement();
-            }
-
-            ResultSet eventsResults = stmt.executeQuery(sql);
-            while (eventsResults.next()) {
-                String carFilter = eventsResults.getString("carFilter");
-                Statement carsStmt = conn.createStatement();
-                final String carsSql = "SELECT manufacturer, model, class, country FROM cars " +
-                        "WHERE " + carFilter + " AND id = " + carId + ";";
-
-                ResultSet carsResults = carsStmt.executeQuery(carsSql);
-                while (carsResults.next()) {
-                    String manufacturer = carsResults.getString("manufacturer");
-                    String model = carsResults.getString("model");
-                    String country = carsResults.getString("country");
-                    String carClass = carsResults.getString("class");
-
-                    car = new Car(carId, manufacturer, model, country, carClass);
-                }
-
-                carsResults.close();
-                carsStmt.close();
-            }
-
-            eventsResults.close();
-            stmt.close();
-            conn.close();
+        try (Connection conn = Application.DatabaseConnection()) {
+            Event event = eventQuery(conn, eventId);
+            return (event == null) ? null : CarController.carQuery(conn, event.getCarFilter(), carId);
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                if (stmt != null) stmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-            try {
-                if (conn != null) conn.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
+        }
+        return null;
+    }
+
+    private static List<Event> processEventResults(final Connection conn, final ResultSet eventResults) throws SQLException {
+        final List<Event> events = new ArrayList<>();
+        while (eventResults.next()) {
+            Integer eventId = eventResults.getInt("id");
+            String carFilter = eventResults.getString("carFilter");
+            List<Car> cars = CarController.carQuery(conn, carFilter);
+            List<Round> rounds = roundQuery(conn, eventId);
+            events.add(new Event(eventResults, cars, rounds));
+        }
+        return events;
+    }
+
+    private static List<Event> eventQuery(final Connection conn) throws SQLException {
+        try (
+                final Statement eventStmt = conn.createStatement();
+                final ResultSet eventResults = eventStmt.executeQuery(
+                        "SELECT " + Event.DB_COLUMNS.stream().collect(Collectors.joining(", ")) +
+                                " FROM " + Event.DB_TABLE_NAME + ";"
+                )
+        ) {
+            return processEventResults(conn, eventResults);
+        }
+    }
+
+    private static Event eventQuery(final Connection conn, final Integer eventId) throws SQLException {
+        try (final PreparedStatement eventStmt = conn.prepareStatement(
+                "SELECT " + Event.DB_COLUMNS.stream().collect(Collectors.joining(", ")) +
+                        " FROM " + Event.DB_TABLE_NAME +
+                        " WHERE id = ?;")
+        ) {
+            eventStmt.setInt(1, eventId);
+            try (final ResultSet eventResults = eventStmt.executeQuery()) {
+                List<Event> events = processEventResults(conn, eventResults);
+                return (events.size() == 1) ? events.get(0) : null;
             }
         }
-        return car;
+    }
+
+    private static List<Round> processRoundResults(final Connection conn, final ResultSet roundResults) throws SQLException {
+        final List<Round> rounds = new ArrayList<>();
+        while (roundResults.next()) {
+            Integer trackId = roundResults.getInt("trackID");
+            Track track = TrackController.trackQuery(conn, trackId);
+            rounds.add(new Round(roundResults, track));
+        }
+        return rounds;
+    }
+
+    private static List<Round> roundQuery(final Connection conn, final Integer eventId) throws SQLException {
+        try (final PreparedStatement roundStmt = conn.prepareStatement(
+                "SELECT " + Round.DB_COLUMNS.stream().collect(Collectors.joining(", ")) +
+                        " FROM " + Round.DB_TABLE_NAME +
+                        " WHERE eventId = ?;")
+        ) {
+            roundStmt.setInt(1, eventId);
+            try (final ResultSet roundResults = roundStmt.executeQuery()) {
+                return processRoundResults(conn, roundResults);
+            }
+        }
+    }
+
+    private static Round roundQuery(final Connection conn, final Integer eventId, final Integer roundId) throws SQLException {
+        try (final PreparedStatement roundStmt = conn.prepareStatement(
+                "SELECT " + Round.DB_COLUMNS.stream().collect(Collectors.joining(", ")) +
+                        " FROM " + Round.DB_TABLE_NAME +
+                        " WHERE id = ? AND eventID = ?;")
+        ) {
+            roundStmt.setInt(1, roundId);
+            roundStmt.setInt(2, eventId);
+            try (final ResultSet roundResults = roundStmt.executeQuery()) {
+                List<Round> rounds = processRoundResults(conn, roundResults);
+                return (rounds.size() == 1) ? rounds.get(0) : null;
+            }
+        }
     }
 }

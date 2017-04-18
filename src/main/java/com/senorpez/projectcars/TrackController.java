@@ -11,20 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @Api(tags = {"tracks"})
 @RequestMapping(method = {RequestMethod.GET})
 class TrackController {
-    private static final String MYSQL_DRIVER = "com.mysql.cj.jdbc.Driver";
-    private static final String MYSQL_URL = "jdbc:mysql://pcarsapi.cbwuidepjacv.us-west-2.rds.amazonaws.com:3306/";
-
-    private static final String H2_DRIVER = "org.h2.Driver";
-    private static final String H2_URL = "jdbc:h2:~/projectcars;MODE=mysql";
-
-    private static final String USER_NAME = "pcarsapi_user";
-    private static final String USER_PASS = "F=R4tV}p:Jb2>VqJ";
-
     @RequestMapping(value = "/v1/tracks")
     @ApiOperation(
             value = "Lists all tracks",
@@ -33,79 +25,15 @@ class TrackController {
             responseContainer = "List"
     )
     public List<Track> tracks() {
-        Connection conn = null;
-        Statement stmt = null;
-        String sql = "SELECT id, name, location, variation, length, pitEntryX, pitEntryZ, pitExitX, pitExitZ, gridSize " +
-                "FROM tracks;";
-        List<Track> tracks = new ArrayList<>();
-
-        try {
-            try {
-                Class.forName(MYSQL_DRIVER);
-                conn = DriverManager.getConnection(MYSQL_URL, USER_NAME, USER_PASS);
-                stmt = conn.createStatement();
-                stmt.execute("USE projectcarsapi;");
-            } catch (ClassNotFoundException | SQLException e) {
-                Class.forName(H2_DRIVER);
-                conn = DriverManager.getConnection(H2_URL, USER_NAME, USER_PASS);
-                stmt = conn.createStatement();
-            }
-
-            ResultSet trackResults = stmt.executeQuery(sql);
-            while (trackResults.next()) {
-                Integer trackId = trackResults.getInt("id");
-                String name = trackResults.getString("name");
-                String location = trackResults.getString("location");
-                String variation = trackResults.getString("variation");
-                Float length = trackResults.getFloat("length");
-
-                Float pitEntryX = trackResults.getFloat("pitEntryX");
-                if (trackResults.wasNull()) pitEntryX = null;
-                Float pitEntryZ = trackResults.getFloat("pitEntryZ");
-                if (trackResults.wasNull()) pitEntryZ = null;
-
-                Float pitExitX = trackResults.getFloat("pitExitX");
-                if (trackResults.wasNull()) pitExitX = null;
-                Float pitExitZ = trackResults.getFloat("pitExitZ");
-                if (trackResults.wasNull()) pitExitZ = null;
-
-                Integer gridSize = trackResults.getInt("gridSize");
-
-                tracks.add(new Track(
-                        trackId,
-                        name,
-                        location,
-                        variation,
-                        length,
-                        pitEntryX,
-                        pitEntryZ,
-                        pitExitX,
-                        pitExitZ,
-                        gridSize
-                ));
-            }
-
-            trackResults.close();
-            stmt.close();
-            conn.close();
+        try (Connection conn = Application.DatabaseConnection()) {
+            return trackQuery(conn);
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                if (stmt != null) stmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-            try {
-                if (conn != null) conn.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
-        return tracks;
+        return null;
     }
 
-    @RequestMapping(value = "/v1/tracks/{id}")
+    @RequestMapping(value = "/v1/tracks/{trackId}")
     @ApiOperation(
             value = "Lists all tracks",
             notes = "Returns a track as specified by its ID number",
@@ -116,75 +44,44 @@ class TrackController {
                     value = "ID of track to return",
                     required = true
             )
-            @PathVariable Integer id) {
-        Connection conn = null;
-        Statement stmt = null;
-        String sql = "SELECT name, location, variation, length, pitEntryX, pitEntryZ, pitExitX, pitExitZ, gridSize " +
-                "FROM tracks " +
-                "WHERE id = " + id + ";";
-        Track track = null;
-
-        try {
-            try {
-                Class.forName(MYSQL_DRIVER);
-                conn = DriverManager.getConnection(MYSQL_URL, USER_NAME, USER_PASS);
-                stmt = conn.createStatement();
-                stmt.execute("USE projectcarsapi;");
-            } catch (ClassNotFoundException | SQLException e) {
-                Class.forName(H2_DRIVER);
-                conn = DriverManager.getConnection(H2_URL, USER_NAME, USER_PASS);
-                stmt = conn.createStatement();
-            }
-
-            ResultSet trackResults = stmt.executeQuery(sql);
-            while (trackResults.next()) {
-                String name = trackResults.getString("name");
-                String location = trackResults.getString("location");
-                String variation = trackResults.getString("variation");
-                Float length = trackResults.getFloat("length");
-
-                Float pitEntryX = trackResults.getFloat("pitEntryX");
-                if (trackResults.wasNull()) pitEntryX = null;
-                Float pitEntryZ = trackResults.getFloat("pitEntryZ");
-                if (trackResults.wasNull()) pitEntryZ = null;
-
-                Float pitExitX = trackResults.getFloat("pitExitX");
-                if (trackResults.wasNull()) pitExitX = null;
-                Float pitExitZ = trackResults.getFloat("pitExitZ");
-                if (trackResults.wasNull()) pitExitZ = null;
-
-                Integer gridSize = trackResults.getInt("gridSize");
-
-                track = new Track(
-                        id,
-                        name,
-                        location,
-                        variation,
-                        length,
-                        pitEntryX,
-                        pitEntryZ,
-                        pitExitX,
-                        pitExitZ,
-                        gridSize);
-            }
-
-            trackResults.close();
-            stmt.close();
-            conn.close();
+            @PathVariable Integer trackId) {
+        try (Connection conn = Application.DatabaseConnection()) {
+            return trackQuery(conn, trackId);
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                if (stmt != null) stmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-            try {
-                if (conn != null) conn.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
+        }
+        return null;
+    }
+
+    private static List<Track> processTrackResults(final ResultSet trackResults) throws SQLException {
+        final List<Track> tracks = new ArrayList<>();
+        while (trackResults.next()) tracks.add(new Track(trackResults));
+        return tracks;
+    }
+
+    private static List<Track> trackQuery(final Connection conn) throws SQLException {
+        try (
+                final Statement trackStmt = conn.createStatement();
+                final ResultSet trackResults = trackStmt.executeQuery(
+                        "SELECT " + Track.DB_COLUMNS.stream().collect(Collectors.joining(", ")) +
+                                " FROM " + Track.DB_TABLE_NAME + ";"
+                )
+        ) {
+            return processTrackResults(trackResults);
+        }
+    }
+
+    static Track trackQuery(final Connection conn, final Integer trackId) throws SQLException {
+        try (final PreparedStatement trackStmt = conn.prepareStatement(
+                "SELECT " + Track.DB_COLUMNS.stream().collect(Collectors.joining(", ")) +
+                        " FROM " + Track.DB_TABLE_NAME +
+                        " WHERE id = ?;")
+        ) {
+            trackStmt.setInt(1, trackId);
+            try (final ResultSet trackResults = trackStmt.executeQuery()) {
+                List<Track> tracks = processTrackResults(trackResults);
+                return (tracks.size() == 1) ? tracks.get(0) : null;
             }
         }
-        return track;
     }
 }

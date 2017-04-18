@@ -1,5 +1,10 @@
 package com.senorpez.projectcars;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Arrays;
+import java.util.List;
+
 class Car {
     private final Integer id;
     private final String manufacturer;
@@ -7,12 +12,23 @@ class Car {
     private final String country;
     private final String carClass;
 
+    static final List<String> DB_COLUMNS = Arrays.asList("id", "manufacturer", "model", "country", "class");
+    static final String DB_TABLE_NAME = "cars";
+
     Car(Integer id, String manufacturer, String model, String country, String carClass) {
         this.id = id;
         this.manufacturer = manufacturer;
         this.model = model;
         this.country = country;
         this.carClass = carClass;
+    }
+
+    Car(ResultSet carResults) throws SQLException {
+        this.id = carResults.getInt("id");
+        this.manufacturer = carResults.getString("manufacturer");
+        this.model = carResults.getString("model");
+        this.country = carResults.getString("country");
+        this.carClass = carResults.getString("class");
     }
 
     public Integer getId() {
