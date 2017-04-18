@@ -1,7 +1,11 @@
 package com.senorpez.projectcars;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.sql.*;
@@ -9,6 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@Api(tags = {"events"})
+@RequestMapping(method = {RequestMethod.GET})
 class EventController {
     private static final String MYSQL_DRIVER = "com.mysql.cj.jdbc.Driver";
     private static final String MYSQL_URL = "jdbc:mysql://pcarsapi.cbwuidepjacv.us-west-2.rds.amazonaws.com:3306/";
@@ -20,6 +26,12 @@ class EventController {
     private static final String USER_PASS = "F=R4tV}p:Jb2>VqJ";
 
     @RequestMapping(value = "/v1/events")
+    @ApiOperation(
+            value = "Lists all events available",
+            notes = "Returns a list of all single player events available through the Project CARS Data API",
+            response = Event.class,
+            responseContainer = "List"
+    )
     public List<Event> events() {
         Connection conn = null;
         Statement stmt = null;
@@ -166,10 +178,20 @@ class EventController {
     }
 
     @RequestMapping(value = "/v1/events/{id}")
-    public Event events(@PathVariable Integer id) {
+    @ApiOperation(
+            value = "Returns an event",
+            notes = "Returns an event as specified by its ID number",
+            response = Event.class
+    )
+    public Event events(
+            @ApiParam(
+                    value = "ID of event to return",
+                    required = true
+            )
+            @PathVariable Integer id) {
         Connection conn = null;
         Statement stmt = null;
-        final String sql = "SELECT id, name, carFilter, tier FROM events WHERE id = " + id +";";
+        final String sql = "SELECT id, name, carFilter, tier FROM events WHERE id = " + id + ";";
         Event event = null;
 
         try {
@@ -304,10 +326,16 @@ class EventController {
     }
 
     @RequestMapping(value = "/v1/events/{id}/rounds")
+    @ApiOperation(
+            value = "Lists all rounds available for an event",
+            notes = "Returns a list of all rounds in a single player event",
+            response = Round.class,
+            responseContainer = "List"
+    )
     public List<Round> eventRounds(@PathVariable Integer id) {
         Connection conn = null;
         Statement stmt = null;
-        final String sql = "SELECT id, name, carFilter, tier FROM events WHERE id = " + id +";";
+        final String sql = "SELECT id, name, carFilter, tier FROM events WHERE id = " + id + ";";
         final List<Round> rounds = new ArrayList<>();
 
         try {
@@ -410,10 +438,25 @@ class EventController {
     }
 
     @RequestMapping(value = "/v1/events/{eventID}/rounds/{roundID}")
-    public Round eventRounds(@PathVariable Integer eventID, @PathVariable Integer roundID) {
+    @ApiOperation(
+            value = "Returns a round for an event",
+            notes = "Returns a specific round for an event.",
+            response = Round.class
+    )
+    public Round eventRounds(
+            @ApiParam(
+                    value = "ID of event",
+                    required = true
+            )
+            @PathVariable Integer eventID,
+            @ApiParam(
+                    value = "Round number within event.",
+                    required = true
+            )
+            @PathVariable Integer roundID) {
         Connection conn = null;
         Statement stmt = null;
-        final String sql = "SELECT id, name, carFilter, tier FROM events WHERE id = " + eventID +";";
+        final String sql = "SELECT id, name, carFilter, tier FROM events WHERE id = " + eventID + ";";
         Round round = null;
 
         try {
@@ -512,10 +555,16 @@ class EventController {
     }
 
     @RequestMapping(value = "/v1/events/{id}/cars")
+    @ApiOperation(
+            value = "Lists all cars eligible for an event",
+            notes = "Returns a list of all cars eligible for a single player event",
+            response = Car.class,
+            responseContainer = "List"
+    )
     public List<Car> eventCars(@PathVariable Integer id) {
         Connection conn = null;
         Statement stmt = null;
-        final String sql = "SELECT carFilter, tier FROM events WHERE id = " + id +";";
+        final String sql = "SELECT carFilter, tier FROM events WHERE id = " + id + ";";
         final List<Car> cars = new ArrayList<>();
 
         try {
@@ -576,11 +625,27 @@ class EventController {
         }
         return cars;
     }
+
     @RequestMapping(value = "/v1/events/{eventId}/cars/{carId}")
-    public Car eventCars(@PathVariable Integer eventId, @PathVariable Integer carId) {
+    @ApiOperation(
+            value = "Returns an eligible car for an event",
+            notes = "Returns an eligible car for an event",
+            response = Car.class
+    )
+    public Car eventCars(
+            @ApiParam(
+                    value = "ID of event",
+                    required = true
+            )
+            @PathVariable Integer eventId,
+            @ApiParam(
+                    value = "ID of car",
+                    required = true
+            )
+            @PathVariable Integer carId) {
         Connection conn = null;
         Statement stmt = null;
-        final String sql = "SELECT carFilter, tier FROM events WHERE id = " + eventId +";";
+        final String sql = "SELECT carFilter, tier FROM events WHERE id = " + eventId + ";";
         Car car = null;
 
         try {

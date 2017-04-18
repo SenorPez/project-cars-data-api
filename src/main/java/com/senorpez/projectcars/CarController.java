@@ -1,7 +1,11 @@
 package com.senorpez.projectcars;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.sql.*;
@@ -9,6 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@Api(tags = {"cars"})
+@RequestMapping(method = {RequestMethod.GET})
 class CarController {
     private static final String MYSQL_DRIVER = "com.mysql.cj.jdbc.Driver";
     private static final String MYSQL_URL = "jdbc:mysql://pcarsapi.cbwuidepjacv.us-west-2.rds.amazonaws.com:3306/";
@@ -20,6 +26,12 @@ class CarController {
     private static final String USER_PASS = "F=R4tV}p:Jb2>VqJ";
 
     @RequestMapping(value = "/v1/cars")
+    @ApiOperation(
+            value = "Lists all cars available",
+            notes = "Returns a list of all cars available through the Project CARS Data API",
+            response = Car.class,
+            responseContainer = "List"
+    )
     public List<Car> cars() {
         Connection conn = null;
         Statement stmt = null;
@@ -76,7 +88,17 @@ class CarController {
     }
 
     @RequestMapping(value = "/v1/cars/{carId}")
-    public Car cars(@PathVariable Integer carId) {
+    @ApiOperation(
+            value = "Returns a car",
+            notes = "Returns a car as specified by its ID number",
+            response = Car.class
+    )
+    public Car cars(
+            @ApiParam(
+                    value = "ID of car to return",
+                    required = true
+            )
+            @PathVariable Integer carId) {
         Connection conn = null;
         Statement stmt = null;
         String sql = "SELECT manufacturer, model, class, country FROM cars WHERE id = " + carId + ";";

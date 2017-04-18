@@ -1,7 +1,11 @@
 package com.senorpez.projectcars;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.sql.*;
@@ -9,6 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@Api(tags = {"tracks"})
+@RequestMapping(method = {RequestMethod.GET})
 class TrackController {
     private static final String MYSQL_DRIVER = "com.mysql.cj.jdbc.Driver";
     private static final String MYSQL_URL = "jdbc:mysql://pcarsapi.cbwuidepjacv.us-west-2.rds.amazonaws.com:3306/";
@@ -20,6 +26,12 @@ class TrackController {
     private static final String USER_PASS = "F=R4tV}p:Jb2>VqJ";
 
     @RequestMapping(value = "/v1/tracks")
+    @ApiOperation(
+            value = "Lists all tracks",
+            notes = "Returns a list of all tracks available through the Project CARS Data API",
+            response = Track.class,
+            responseContainer = "List"
+    )
     public List<Track> tracks() {
         Connection conn = null;
         Statement stmt = null;
@@ -94,7 +106,17 @@ class TrackController {
     }
 
     @RequestMapping(value = "/v1/tracks/{id}")
-    public Track tracks(@PathVariable Integer id) {
+    @ApiOperation(
+            value = "Lists all tracks",
+            notes = "Returns a track as specified by its ID number",
+            response = Track.class
+    )
+    public Track tracks(
+            @ApiParam(
+                    value = "ID of track to return",
+                    required = true
+            )
+            @PathVariable Integer id) {
         Connection conn = null;
         Statement stmt = null;
         String sql = "SELECT name, location, variation, length, pitEntryX, pitEntryZ, pitExitX, pitExitZ, gridSize " +
