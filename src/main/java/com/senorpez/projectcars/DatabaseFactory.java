@@ -128,7 +128,7 @@ public class DatabaseFactory {
 
             System.out.println("Adding Cars data.");
             sql = "INSERT INTO cars " +
-                    "(id, manufacturer, model, class, country) " +
+                    "(class, country, id, manufacturer, model) " +
                     "VALUES " + sqlValues + ";";
             stmt.executeUpdate(sql);
         }
@@ -186,7 +186,7 @@ public class DatabaseFactory {
                     .collect(Collectors.joining(", "));
             System.out.println("Adding Tracks data.");
             sql = "INSERT INTO tracks " +
-                    "(id, name, location, variation, length, pitEntryX, pitEntryZ, pitExitX, pitExitZ, gridSize) " +
+                    "(gridSize, id, length, location, name, pitEntryX, pitEntryZ, pitExitX, pitExitZ, variation) " +
                     "VALUES " + sqlValues + ";";
             stmt.executeUpdate(sql);
         }
