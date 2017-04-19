@@ -27,8 +27,7 @@ public class DatabaseFactory {
     public static void main(String[] args) {
         Connection conn = null;
         Statement stmt = null;
-        String sql = null;
-        String databaseType = null;
+        String databaseType;
 
         try {
             try {
@@ -106,6 +105,7 @@ public class DatabaseFactory {
 
         TypeReference<Map<String, Object>> typeReference = new TypeReference<Map<String, Object>>() {};
         List<Map<String, Object>> cars = null;
+        String sqlKeys;
         String sqlValues;
 
         try {
@@ -117,6 +117,12 @@ public class DatabaseFactory {
         }
 
         if (cars != null) {
+            sqlKeys = cars
+                    .stream()
+                    .limit(1)
+                    .flatMap(o -> o.keySet().stream())
+                    .collect(Collectors.joining(", ", "(", ")"));
+
             sqlValues = cars
                     .stream()
                     .map(stringObjectMap -> stringObjectMap
@@ -127,9 +133,7 @@ public class DatabaseFactory {
                     .collect(Collectors.joining(", "));
 
             System.out.println("Adding Cars data.");
-            sql = "INSERT INTO cars " +
-                    "(class, country, id, manufacturer, model) " +
-                    "VALUES " + sqlValues + ";";
+            sql = "INSERT INTO cars " + sqlKeys + " VALUES " + sqlValues + ";";
             stmt.executeUpdate(sql);
         }
 
@@ -165,6 +169,7 @@ public class DatabaseFactory {
 
         TypeReference<Map<String, Object>> typeReference = new TypeReference<Map<String, Object>>() {};
         List<Map<String, Object>> tracks = null;
+        String sqlKeys;
         String sqlValues;
 
         try {
@@ -176,6 +181,12 @@ public class DatabaseFactory {
         }
 
         if (tracks != null) {
+            sqlKeys = tracks
+                    .stream()
+                    .limit(1)
+                    .flatMap(o -> o.keySet().stream())
+                    .collect(Collectors.joining(", ", "(", ")"));
+
             sqlValues = tracks
                     .stream()
                     .map(stringObjectMap -> stringObjectMap
@@ -185,9 +196,7 @@ public class DatabaseFactory {
                             .collect(Collectors.joining(", ", "(", ")")))
                     .collect(Collectors.joining(", "));
             System.out.println("Adding Tracks data.");
-            sql = "INSERT INTO tracks " +
-                    "(gridSize, id, length, location, name, pitEntryX, pitEntryZ, pitExitX, pitExitZ, variation) " +
-                    "VALUES " + sqlValues + ";";
+            sql = "INSERT INTO tracks " + sqlKeys + " VALUES " + sqlValues + ";";
             stmt.executeUpdate(sql);
         }
 
@@ -296,7 +305,6 @@ public class DatabaseFactory {
                 System.out.println("Rounds: " + roundCount.getInt("roundCount"));
             }
             roundCount.close();
-
         }
     }
 }
