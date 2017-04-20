@@ -8,36 +8,26 @@ import java.util.List;
 class Round {
     private final Integer id;
     private final Track track;
-    private final Integer laps;
-    private final Integer time;
+    private final List<Race> races;
 
     static final List<String> DB_COLUMNS = Arrays.asList(
             "id",
             "eventID",
-            "trackID",
-            "laps",
-            "time"
+            "trackID"
     );
     static final String DB_TABLE_NAME = "rounds";
 
-    Round(Integer id, Track track, Integer laps, Integer time) {
+    Round(Integer id, Track track, List<Race> races) {
         this.id = id;
         this.track = track;
-        this.laps = laps;
-        this.time = time;
+        this.races = races;
     }
 
-    Round(ResultSet roundResults, Track track) throws SQLException {
+    Round(ResultSet roundResults, Track track, List<Race> races) throws SQLException {
         this.id = roundResults.getInt("id");
+
         this.track = track;
-
-        Integer laps = roundResults.getInt("laps");
-        if (roundResults.wasNull()) laps = null;
-        this.laps = laps;
-
-        Integer time = roundResults.getInt("time");
-        if (roundResults.wasNull()) time = null;
-        this.time = time;
+        this.races = races;
     }
 
     public Integer getId() {
@@ -48,11 +38,7 @@ class Round {
         return track;
     }
 
-    public Integer getLaps() {
-        return laps;
-    }
-
-    public Integer getTime() {
-        return time;
+    public List<Race> getRaces() {
+        return races;
     }
 }

@@ -11,16 +11,25 @@ class Car {
     private final String model;
     private final String country;
     private final String carClass;
+    private final Integer year;
 
-    static final List<String> DB_COLUMNS = Arrays.asList("id", "manufacturer", "model", "country", "class");
+    static final List<String> DB_COLUMNS = Arrays.asList(
+            "id",
+            "manufacturer",
+            "model",
+            "country",
+            "class",
+            "year"
+    );
     static final String DB_TABLE_NAME = "cars";
 
-    Car(Integer id, String manufacturer, String model, String country, String carClass) {
+    Car(Integer id, String manufacturer, String model, String country, String carClass, Integer year) {
         this.id = id;
         this.manufacturer = manufacturer;
         this.model = model;
         this.country = country;
         this.carClass = carClass;
+        this.year = year;
     }
 
     Car(ResultSet carResults) throws SQLException {
@@ -29,6 +38,7 @@ class Car {
         this.model = carResults.getString("model");
         this.country = carResults.getString("country");
         this.carClass = carResults.getString("class");
+        this.year = carResults.getInt("year");
     }
 
     public Integer getId() {
@@ -49,5 +59,9 @@ class Car {
 
     public String getCarClass() {
         return carClass;
+    }
+
+    public Integer getYear() {
+        return year;
     }
 }

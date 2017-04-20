@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class DatabaseFactory {
     private static final String MYSQL_DRIVER = "com.mysql.cj.jdbc.Driver";
@@ -92,6 +93,7 @@ public class DatabaseFactory {
                 " model VARCHAR(36) NOT NULL, " +
                 " class VARCHAR(18) NOT NULL, " +
                 " country VARCHAR(255) NULL, " +
+                " year INTEGER NOT NULL, " +
                 " PRIMARY KEY (id), " +
                 " UNIQUE (manufacturer, model));";
         stmt.executeUpdate(sql);
@@ -213,6 +215,7 @@ public class DatabaseFactory {
                 " name VARCHAR(75) NOT NULL, " +
                 " carFilter VARCHAR(255) NOT NULL, " +
                 " tier TINYINT UNSIGNED, " +
+                " verified BOOLEAN, " +
                 " PRIMARY KEY (id));";
         stmt.executeUpdate(sql);
 
@@ -225,15 +228,29 @@ public class DatabaseFactory {
                 "(id TINYINT UNSIGNED NOT NULL, " +
                 " eventID TINYINT UNSIGNED NOT NULL, " +
                 " trackID INTEGER NOT NULL, " +
-                " laps SMALLINT UNSIGNED, " +
-                " time SMALLINT UNSIGNED, " +
-                " CHECK ((laps IS NOT NULL AND time IS NULL) OR (laps IS NULL AND time IS NOT NULL)), " + 
                 " PRIMARY KEY (id, eventID), " +
                 " FOREIGN KEY (eventID) REFERENCES events(id) ON DELETE CASCADE);";
         stmt.executeUpdate(sql);
 
         System.out.println("Granting Rounds privileges.");
         sql = "GRANT SELECT ON rounds TO " + USER_NAME + ";";
+        stmt.executeUpdate(sql);
+
+        System.out.println("Creating Races table.");
+        sql = "CREATE TABLE races " +
+                "(id TINYINT UNSIGNED NOT NULL, " +
+                " roundID TINYINT UNSIGNED NOT NULL, " +
+                " eventID TINYINT UNSIGNED NOT NULL, " +
+                " laps SMALLINT UNSIGNED, " +
+                " time SMALLINT UNSIGNED, " +
+                " type VARCHAR(255), " +
+                " CHECK ((laps IS NOT NULL AND time IS NULL) OR (laps IS NULL AND time IS NOT NULL)), " +
+                " PRIMARY KEY (id, roundID, eventID), " +
+                " FOREIGN KEY (roundID, eventID) REFERENCES rounds(id, eventID) ON DELETE CASCADE);";
+        stmt.executeUpdate(sql);
+
+        System.out.println("Granting Races privileges.");
+        sql = "GRANT SELECT ON races TO " + USER_NAME + ";";
         stmt.executeUpdate(sql);
 
         ObjectMapper mapper = new ObjectMapper();
@@ -254,57 +271,80 @@ public class DatabaseFactory {
             events
                     .forEach(event -> {
                         System.out.println("Adding Event data.");
-                        String eventName = "'" + event.get("name") + "'";
-                        String carFilter = (String) event.get("carFilter");
-                        Integer tier = (event.get("tier") == null) ? null : (Integer) event.get("tier");
-                        carFilter = "'" + carFilter.replace("'", "''") + "'";
-                        String eventSql = "INSERT INTO events (name, carFilter, tier) VALUES (" + eventName + ", " + carFilter + ", " + tier +");";
-                        ResultSet keys;
-                        Integer eventID = null;
-                        AtomicInteger counter = new AtomicInteger(0);
+
+                        String eventValues = Stream
+                                .of(
+                                        "'" + event.get("name") + "'",
+                                        "'" + ((String) event.get("carFilter")).replace("'", "''") + "'",
+                                        (event.get("tier") == null) ? "NULL" : event.get("tier").toString(),
+                                        event.get("verified").toString())
+                                .collect(Collectors.joining(", ", "(", ")"));
+
+                        String eventSql = "INSERT INTO events (name, carFilter, tier, verified) " +
+                                "VALUES " + eventValues + ";";
+                        ResultSet eventKeys;
+                        Integer eventID = 0;
 
                         try {
                             stmt.executeUpdate(eventSql, Statement.RETURN_GENERATED_KEYS);
-                            keys = stmt.getGeneratedKeys();
-                            while (keys.next()) {
-                                eventID = keys.getInt(1);
+                            eventKeys = stmt.getGeneratedKeys();
+                            if (eventKeys.next()) {
+                                eventID = eventKeys.getInt(1);
                             }
                         } catch (SQLException e) {
                             e.printStackTrace();
                         }
+
+                        final Integer finalEventID = eventID;
                         List<Map<String, Object>> rounds = (List<Map<String, Object>>) event.get("rounds");
+                        AtomicInteger roundNumber = new AtomicInteger(0);
 
-                        final Integer eventIDfinal = eventID;
-                        String roundsSQLValues = rounds
-                                .stream()
-                                .map(round -> {
-                                    String location = "'" + round.get("location") + "'";
-                                    String variation = "'" + round.get("variation") + "'";
-                                    Integer laps = (round.get("laps") == null) ? null : (Integer) round.get("laps");
-                                    Integer time = (round.get("time") == null) ? null : (Integer) round.get("time");
+                        rounds
+                                .forEach(round -> {
+                                    System.out.println("Adding Round data.");
 
+                                    String roundValues = Stream
+                                            .of(
+                                                    String.valueOf(roundNumber.incrementAndGet()),
+                                                    finalEventID.toString(),
+                                                    "(SELECT id FROM tracks WHERE location LIKE '" + round.get("location") + "' AND variation LIKE '" + round.get("variation") + "')")
+                                            .collect(Collectors.joining(", ", "(", ")"));
 
-                                    return ("(" + counter.incrementAndGet() + ", " + eventIDfinal +
-                                            ", (SELECT id FROM tracks WHERE location LIKE " + location + " AND variation LIKE " + variation + "), " + laps + ", " + time +")");
-                                })
-                                .collect(Collectors.joining(","));
+                                    String roundSql = "INSERT INTO rounds (id, eventID, trackID) " +
+                                            "VALUES " + roundValues + ";";
 
-                        System.out.println("Adding Rounds data.");
-                        String roundSql = "INSERT INTO rounds " +
-                                "(id, eventID, trackID, laps, time) " +
-                                "VALUES " + roundsSQLValues + ";";
-                        try {
-                            stmt.executeUpdate(roundSql);
-                        } catch (SQLException e) {
-                            e.printStackTrace();
-                        }
+                                    try {
+                                        stmt.executeUpdate(roundSql);
+                                    } catch (SQLException e) {
+                                        e.printStackTrace();
+                                    }
+
+                                    List<Map<String, Object>> races = (List<Map<String, Object>>) round.get("races");
+                                    AtomicInteger raceNumber = new AtomicInteger(0);
+
+                                    String raceValues = races
+                                            .stream()
+                                            .map(race -> Stream
+                                                    .of(
+                                                            String.valueOf(raceNumber.incrementAndGet()),
+                                                            String.valueOf(roundNumber.get()),
+                                                            finalEventID.toString(),
+                                                            (race.get("laps") == null) ? "NULL" : race.get("laps").toString(),
+                                                            (race.get("time") == null) ? "NULL" : race.get("time").toString(),
+                                                            (race.get("type") == null) ? "NULL" : "'" + race.get("type").toString() + "'")
+                                                    .collect(Collectors.joining(", ", "(", ")")))
+                                            .collect(Collectors.joining(","));
+                                    System.out.println("Adding Race data.");
+                                    String raceSql = "INSERT INTO races (id, roundID, eventID, laps, time, type) " +
+                                            "VALUES " + raceValues + ";";
+
+                                    try {
+                                        stmt.executeUpdate(raceSql);
+                                    } catch (SQLException e){
+                                        e.printStackTrace();
+                                    }
+                                });
                     });
-
-            ResultSet roundCount = stmt.executeQuery("SELECT COUNT(*) as roundCount FROM rounds;");
-            if (roundCount.next()) {
-                System.out.println("Rounds: " + roundCount.getInt("roundCount"));
-            }
-            roundCount.close();
         }
     }
 }

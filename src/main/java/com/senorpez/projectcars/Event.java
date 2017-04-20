@@ -13,24 +13,27 @@ class Event {
     private final Integer tier;
     private final List<Car> cars;
     private final List<Round> rounds;
+    private final Boolean verified;
 
     final static List<String> DB_COLUMNS = Arrays.asList(
             "id",
             "name",
             "carFilter",
-            "tier"
+            "tier",
+            "verified"
     );
     final static String DB_TABLE_NAME = "events";
 
     @JsonIgnore
     private final String carFilter;
 
-    Event(Integer id, String name, Integer tier, List<Car> cars, List<Round> rounds, String carFilter) {
+    Event(Integer id, String name, Integer tier, List<Car> cars, List<Round> rounds, String carFilter, Boolean verified) {
         this.id = id;
         this.name = name;
         this.tier = tier;
         this.cars = cars;
         this.rounds = rounds;
+        this.verified = verified;
 
         this.carFilter = carFilter;
     }
@@ -41,6 +44,8 @@ class Event {
 
         Integer tier = eventResults.getInt("tier");
         this.tier = eventResults.wasNull() ? null : tier;
+
+        this.verified = eventResults.getBoolean("verified");
 
         this.carFilter = eventResults.getString("carFilter");
 
@@ -70,5 +75,9 @@ class Event {
 
     public String getCarFilter() {
         return carFilter;
+    }
+
+    public Boolean getVerified() {
+        return verified;
     }
 }
