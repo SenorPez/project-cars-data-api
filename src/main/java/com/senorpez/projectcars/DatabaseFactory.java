@@ -92,8 +92,8 @@ public class DatabaseFactory {
                 " manufacturer VARCHAR(13) NOT NULL, " +
                 " model VARCHAR(36) NOT NULL, " +
                 " class VARCHAR(18) NOT NULL, " +
-                " country VARCHAR(255) NULL, " +
-                " year INTEGER NOT NULL, " +
+                " country VARCHAR(20) NOT NULL, " +
+                " year SMALLINT UNSIGNED NOT NULL, " +
                 " PRIMARY KEY (id), " +
                 " UNIQUE (manufacturer, model));";
         stmt.executeUpdate(sql);
@@ -150,8 +150,8 @@ public class DatabaseFactory {
         sql = "CREATE TABLE tracks " +
                 "(id INTEGER NOT NULL, " +
                 " name VARCHAR(39) NOT NULL, " +
-                " location VARCHAR(50) NOT NULL, " +
-                " variation VARCHAR(50) NOT NULL, " +
+                " location VARCHAR(30) NOT NULL, " +
+                " variation VARCHAR(29) NOT NULL, " +
                 " length DECIMAL(15,4) UNSIGNED NOT NULL, " +
                 " pitEntryX DECIMAL(15,4) NULL, " +
                 " pitEntryZ DECIMAL(15,4) NULL, " +
@@ -212,10 +212,10 @@ public class DatabaseFactory {
         System.out.println("Creating Events table.");
         sql = "CREATE TABLE events " +
                 "(id TINYINT UNSIGNED NOT NULL AUTO_INCREMENT, " +
-                " name VARCHAR(75) NOT NULL, " +
-                " carFilter VARCHAR(255) NOT NULL, " +
+                " name VARCHAR(41) NOT NULL, " +
+                " carFilter VARCHAR(78) NOT NULL, " +
                 " tier TINYINT UNSIGNED, " +
-                " verified BOOLEAN, " +
+                " verified TINYINT UNSIGNED NOT NULL, " +
                 " PRIMARY KEY (id));";
         stmt.executeUpdate(sql);
 
@@ -243,7 +243,7 @@ public class DatabaseFactory {
                 " eventID TINYINT UNSIGNED NOT NULL, " +
                 " laps SMALLINT UNSIGNED, " +
                 " time SMALLINT UNSIGNED, " +
-                " type VARCHAR(255), " +
+                " type VARCHAR(50), " +
                 " CHECK ((laps IS NOT NULL AND time IS NULL) OR (laps IS NULL AND time IS NOT NULL)), " +
                 " PRIMARY KEY (id, roundID, eventID), " +
                 " FOREIGN KEY (roundID, eventID) REFERENCES rounds(id, eventID) ON DELETE CASCADE);";
