@@ -22,6 +22,10 @@ repositories {
     mavenCentral()
 }
 
+springBoot {
+    executable = true
+}
+
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile group: 'com.h2database', name: 'h2', version: '1.4.194'
