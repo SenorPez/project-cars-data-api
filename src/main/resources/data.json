@@ -6,7 +6,7 @@
       "id": 2022787216,
       "manufacturer": "Alpine",
       "model": "A450",
-      "year": 2017
+      "year": 2014
     },
     {
       "class": "Road B",
@@ -14,7 +14,7 @@
       "id": -1770401008,
       "manufacturer": "Ariel",
       "model": "Atom 300 Supercharged",
-      "year": 2017
+      "year": 2011
     },
     {
       "class": "Road A",
@@ -22,7 +22,7 @@
       "id": 607772150,
       "manufacturer": "Ariel",
       "model": "Atom 500 V8",
-      "year": 2017
+      "year": 2011
     },
     {
       "class": "Road B",
@@ -30,7 +30,7 @@
       "id": 526708607,
       "manufacturer": "Ariel",
       "model": "Atom Mugen",
-      "year": 2017
+      "year": 2011
     },
     {
       "class": "LMP1",
@@ -38,7 +38,7 @@
       "id": 738755746,
       "manufacturer": "Aston Martin",
       "model": "DBR1-2",
-      "year": 2017
+      "year": 2009
     },
     {
       "class": "Vintage GT2",
@@ -46,7 +46,7 @@
       "id": -91815086,
       "manufacturer": "Aston Martin",
       "model": "DBR1/300",
-      "year": 2017
+      "year": 1959
     },
     {
       "class": "GT4",
@@ -54,7 +54,7 @@
       "id": -324240456,
       "manufacturer": "Aston Martin",
       "model": "Rapide S Hydrogen Hybrid",
-      "year": 2017
+      "year": 2013
     },
     {
       "class": "GT3",
@@ -62,7 +62,7 @@
       "id": 1452261378,
       "manufacturer": "Aston Martin",
       "model": "V12 Vantage GT3",
-      "year": 2017
+      "year": 2013
     },
     {
       "class": "GT4",
@@ -70,7 +70,7 @@
       "id": 2086246081,
       "manufacturer": "Aston Martin",
       "model": "V8 Vantage GT4",
-      "year": 2017
+      "year": 2013
     },
     {
       "class": "GT3",
@@ -78,7 +78,7 @@
       "id": 1401532035,
       "manufacturer": "Aston Martin",
       "model": "V8 Vantage GTE",
-      "year": 2017
+      "year": 2014
     },
     {
       "class": "Road B",
@@ -86,7 +86,7 @@
       "id": 1268015922,
       "manufacturer": "Aston Martin",
       "model": "Vantage GT12",
-      "year": 2017
+      "year": 2015
     },
     {
       "class": "Trans-Am",
@@ -94,7 +94,7 @@
       "id": 1470929381,
       "manufacturer": "Audi",
       "model": "90 quattro IMSA GTO",
-      "year": 2017
+      "year": 1989
     },
     {
       "class": "Road C2",
@@ -102,7 +102,7 @@
       "id": 2082176226,
       "manufacturer": "Audi",
       "model": "A1 quattro",
-      "year": 2017
+      "year": 2013
     },
     {
       "class": "LMP1",
@@ -110,7 +110,7 @@
       "id": 1219511257,
       "manufacturer": "Audi",
       "model": "R18 e-tron quattro",
-      "year": 2017
+      "year": 2014
     },
     {
       "class": "LMP1",
@@ -118,7 +118,7 @@
       "id": -1067902110,
       "manufacturer": "Audi",
       "model": "R18 TDI",
-      "year": 2017
+      "year": 2011
     },
     {
       "class": "LMP900",
@@ -126,7 +126,7 @@
       "id": -1761671051,
       "manufacturer": "Audi",
       "model": "R8 (LMP900)",
-      "year": 2017
+      "year": 2002
     },
     {
       "class": "GT3",
@@ -134,7 +134,7 @@
       "id": 1884411907,
       "manufacturer": "Audi",
       "model": "R8 LMS Ultra",
-      "year": 2017
+      "year": 2013
     },
     {
       "class": "Road B",
@@ -142,7 +142,7 @@
       "id": 1469658023,
       "manufacturer": "Audi",
       "model": "R8 V10 plus",
-      "year": 2017
+      "year": 2013
     },
     {
       "class": "Road B",
@@ -150,7 +150,7 @@
       "id": 1400443574,
       "manufacturer": "BAC",
       "model": "Mono",
-      "year": 2017
+      "year": 2012
     },
     {
       "class": "GT3",
@@ -158,7 +158,7 @@
       "id": 987814806,
       "manufacturer": "Bentley",
       "model": "Continental GT3",
-      "year": 2017
+      "year": 2014
     },
     {
       "class": "LMP900",
@@ -166,7 +166,7 @@
       "id": -494100071,
       "manufacturer": "Bentley",
       "model": "Speed 8",
-      "year": 2017
+      "year": 2003
     },
     {
       "class": "Road C1",
@@ -174,7 +174,7 @@
       "id": -1226176940,
       "manufacturer": "BMW",
       "model": "1-Series M Coupe",
-      "year": 2017
+      "year": 2011
     },
     {
       "class": "Road B",
@@ -182,7 +182,7 @@
       "id": -1411323812,
       "manufacturer": "BMW",
       "model": "1-Series M Coupe StanceWorks Edition",
-      "year": 2017
+      "year": 2011
     },
     {
       "class": "Historic Touring 2",
@@ -190,7 +190,7 @@
       "id": -1187748261,
       "manufacturer": "BMW",
       "model": "2002 StanceWorks Edition",
-      "year": 2017
+      "year": 1973
     },
     {
       "class": "Historic Touring 2",
@@ -198,7 +198,7 @@
       "id": 143364290,
       "manufacturer": "BMW",
       "model": "2002 Turbo",
-      "year": 2017
+      "year": 1973
     },
     {
       "class": "TC2",
@@ -206,7 +206,7 @@
       "id": 9503224,
       "manufacturer": "BMW",
       "model": "320 TC",
-      "year": 2017
+      "year": 2012
     },
     {
       "class": "Group 5",
@@ -214,7 +214,7 @@
       "id": 779111340,
       "manufacturer": "BMW",
       "model": "320 Turbo Group 5",
-      "year": 2017
+      "year": 1978
     },
     {
       "class": "Group 4",
@@ -222,7 +222,7 @@
       "id": 1368036017,
       "manufacturer": "BMW",
       "model": "M1 Procar",
-      "year": 2017
+      "year": 1981
     },
     {
       "class": "Group A",
@@ -230,7 +230,7 @@
       "id": -934098507,
       "manufacturer": "BMW",
       "model": "M3 E30 Group A",
-      "year": 2017
+      "year": 1991
     },
     {
       "class": "GT3",
@@ -238,7 +238,7 @@
       "id": -1365918055,
       "manufacturer": "BMW",
       "model": "M3 GT",
-      "year": 2017
+      "year": 2012
     },
     {
       "class": "GT4",
@@ -246,7 +246,7 @@
       "id": -1545450182,
       "manufacturer": "BMW",
       "model": "M3 GT4",
-      "year": 2017
+      "year": 2012
     },
     {
       "class": "LMP900",
@@ -254,7 +254,7 @@
       "id": 975104023,
       "manufacturer": "BMW",
       "model": "V12 LMR",
-      "year": 2017
+      "year": 1999
     },
     {
       "class": "GT3",
@@ -262,7 +262,7 @@
       "id": 1161219858,
       "manufacturer": "BMW",
       "model": "Z4 GT3",
-      "year": 2017
+      "year": 2012
     },
     {
       "class": "GT3",
@@ -270,7 +270,7 @@
       "id": -2025231366,
       "manufacturer": "Cadillac",
       "model": "ATS-V.R GT3",
-      "year": 2017
+      "year": 2016
     },
     {
       "class": "Vintage Stockcar",
@@ -278,7 +278,7 @@
       "id": 578910088,
       "manufacturer": "Caper",
       "model": "Monterey Stockcar",
-      "year": 2017
+      "year": 1990
     },
     {
       "class": "Road D",
@@ -286,7 +286,7 @@
       "id": -886212684,
       "manufacturer": "Caterham",
       "model": "Seven Classic",
-      "year": 2017
+      "year": 2011
     },
     {
       "class": "LMP3",
@@ -294,7 +294,7 @@
       "id": 675194619,
       "manufacturer": "Caterham",
       "model": "SP/300.R",
-      "year": 2017
+      "year": 2012
     },
     {
       "class": "Road B",
@@ -302,7 +302,7 @@
       "id": -162683612,
       "manufacturer": "Caterham",
       "model": "Superlight R500",
-      "year": 2017
+      "year": 2011
     },
     {
       "class": "GT3",
@@ -310,7 +310,7 @@
       "id": -384044277,
       "manufacturer": "Chevrolet",
       "model": "Corvette C7.R",
-      "year": 2017
+      "year": 2016
     },
     {
       "class": "Indycar",
@@ -318,7 +318,7 @@
       "id": 1901402958,
       "manufacturer": "Dallara",
       "model": "DW12 Indycar (Road Course)",
-      "year": 2017
+      "year": 2014
     },
     {
       "class": "Historic Touring 2",
@@ -326,7 +326,7 @@
       "id": 1639105598,
       "manufacturer": "Ford",
       "model": "Escort Mk1 RS1600",
-      "year": 2017
+      "year": 1972
     },
     {
       "class": "V8 Supercars",
@@ -334,7 +334,7 @@
       "id": 1357515789,
       "manufacturer": "Ford",
       "model": "Falcon FG V8 Supercar",
-      "year": 2017
+      "year": 2013
     },
     {
       "class": "Road C2",
@@ -342,7 +342,7 @@
       "id": -1738120892,
       "manufacturer": "Ford",
       "model": "Focus RS",
-      "year": 2017
+      "year": 2009
     },
     {
       "class": "Modern Stockcar",
@@ -350,7 +350,7 @@
       "id": 851491257,
       "manufacturer": "Ford",
       "model": "Fusion Stockcar",
-      "year": 2017
+      "year": 2016
     },
     {
       "class": "Vintage GT",
@@ -358,7 +358,7 @@
       "id": -1774335742,
       "manufacturer": "Ford",
       "model": "MkIV",
-      "year": 2017
+      "year": 1967
     },
     {
       "class": "Historic Touring 2",
@@ -366,7 +366,7 @@
       "id": 1397255601,
       "manufacturer": "Ford",
       "model": "Mustang 2+2 Fastback",
-      "year": 2017
+      "year": 1966
     },
     {
       "class": "GT4",
@@ -374,7 +374,7 @@
       "id": 1111049682,
       "manufacturer": "Ford",
       "model": "Mustang Boss 302R1",
-      "year": 2017
+      "year": 2012
     },
     {
       "class": "Trans-Am",
@@ -382,7 +382,7 @@
       "id": -11335215,
       "manufacturer": "Ford",
       "model": "Mustang Cobra TransAm",
-      "year": 2017
+      "year": 1997
     },
     {
       "class": "Road B",
@@ -390,7 +390,7 @@
       "id": 1230061845,
       "manufacturer": "Ford",
       "model": "Mustang GT",
-      "year": 2017
+      "year": 2015
     },
     {
       "class": "Group A",
@@ -398,7 +398,7 @@
       "id": -1253474718,
       "manufacturer": "Ford",
       "model": "Sierra RS500 Cosworth Group A",
-      "year": 2017
+      "year": 1988
     },
     {
       "class": "Group 5",
@@ -406,7 +406,7 @@
       "id": 1817703058,
       "manufacturer": "Ford",
       "model": "Zakspeed Capri Group 5",
-      "year": 2017
+      "year": 1980
     },
     {
       "class": "GT5",
@@ -414,7 +414,7 @@
       "id": 310900789,
       "manufacturer": "Ginetta",
       "model": "G40 Junior",
-      "year": 2017
+      "year": 2013
     },
     {
       "class": "GT3",
@@ -422,7 +422,7 @@
       "id": -1170674276,
       "manufacturer": "Ginetta",
       "model": "G55 GT3",
-      "year": 2017
+      "year": 2013
     },
     {
       "class": "GT4",
@@ -430,7 +430,7 @@
       "id": 2091910841,
       "manufacturer": "Ginetta",
       "model": "G55 GT4",
-      "year": 2017
+      "year": 2013
     },
     {
       "class": "Road A",
@@ -438,7 +438,7 @@
       "id": -674255528,
       "manufacturer": "GUMPERT",
       "model": "apollo S",
-      "year": 2017
+      "year": 2011
     },
     {
       "class": "Road B",
@@ -446,7 +446,7 @@
       "id": 761457895,
       "manufacturer": "KTM",
       "model": "X-Bow R",
-      "year": 2017
+      "year": 2015
     },
     {
       "class": "Vintage F1 A1",
@@ -454,7 +454,7 @@
       "id": -713284494,
       "manufacturer": "Lotus",
       "model": "Type 25 Climax",
-      "year": 2017
+      "year": 1963
     },
     {
       "class": "Vintage Indy 65",
@@ -462,7 +462,7 @@
       "id": 1162971218,
       "manufacturer": "Lotus",
       "model": "Type 38 Ford",
-      "year": 2017
+      "year": 1965
     },
     {
       "class": "Vintage GT",
@@ -470,7 +470,7 @@
       "id": -1204688299,
       "manufacturer": "Lotus",
       "model": "Type 40 Ford",
-      "year": 2017
+      "year": 1965
     },
     {
       "class": "Vintage F1 A",
@@ -478,7 +478,7 @@
       "id": 578969971,
       "manufacturer": "Lotus",
       "model": "Type 49 Cosworth",
-      "year": 2017
+      "year": 1967
     },
     {
       "class": "Vintage F1 A",
@@ -486,7 +486,7 @@
       "id": 1061494025,
       "manufacturer": "Lotus",
       "model": "Type 49C Cosworth",
-      "year": 2017
+      "year": 1970
     },
     {
       "class": "Vintage F3 A",
@@ -494,7 +494,7 @@
       "id": -1435057179,
       "manufacturer": "Lotus",
       "model": "Type 51",
-      "year": 2017
+      "year": 1967
     },
     {
       "class": "Vintage F1 B",
@@ -502,7 +502,7 @@
       "id": -1320616846,
       "manufacturer": "Lotus",
       "model": "Type 72D Cosworth",
-      "year": 2017
+      "year": 1972
     },
     {
       "class": "Vintage F1 B",
@@ -510,7 +510,7 @@
       "id": -1835861548,
       "manufacturer": "Lotus",
       "model": "Type 78 Cosworth",
-      "year": 2017
+      "year": 1977
     },
     {
       "class": "Vintage F1 C",
@@ -518,7 +518,7 @@
       "id": 1959097924,
       "manufacturer": "Lotus",
       "model": "Type 98T Renault Turbo",
-      "year": 2017
+      "year": 1986
     },
     {
       "class": "LMP2",
@@ -526,7 +526,7 @@
       "id": 1355771595,
       "manufacturer": "Marek",
       "model": "RP 219D LMP2",
-      "year": 2017
+      "year": 2014
     },
     {
       "class": "LMP1",
@@ -534,7 +534,7 @@
       "id": -2030487367,
       "manufacturer": "Marek",
       "model": "RP 339H LMP1",
-      "year": 2017
+      "year": 2014
     },
     {
       "class": "Road A",
@@ -542,7 +542,7 @@
       "id": -1966060946,
       "manufacturer": "Mazda",
       "model": "MX-5 Radbul",
-      "year": 2017
+      "year": 2015
     },
     {
       "class": "Road A",
@@ -550,7 +550,7 @@
       "id": -444124510,
       "manufacturer": "McLaren",
       "model": "12C",
-      "year": 2017
+      "year": 2013
     },
     {
       "class": "GT3",
@@ -558,7 +558,7 @@
       "id": -1166911988,
       "manufacturer": "McLaren",
       "model": "12C GT3",
-      "year": 2017
+      "year": 2012
     },
     {
       "class": "Road B",
@@ -566,7 +566,7 @@
       "id": 307010432,
       "manufacturer": "McLaren",
       "model": "F1",
-      "year": 2017
+      "year": 1992
     },
     {
       "class": "GT1",
@@ -574,7 +574,7 @@
       "id": -1001569309,
       "manufacturer": "McLaren",
       "model": "F1 GTR Long Tail",
-      "year": 2017
+      "year": 1997
     },
     {
       "class": "Road A",
@@ -582,7 +582,7 @@
       "id": -1748676965,
       "manufacturer": "McLaren",
       "model": "P1",
-      "year": 2017
+      "year": 2014
     },
     {
       "class": "GT3",
@@ -590,7 +590,7 @@
       "id": 1353949246,
       "manufacturer": "Mercedes-AMG",
       "model": "GT3",
-      "year": 2017
+      "year": 2015
     },
     {
       "class": "Group A",
@@ -598,7 +598,7 @@
       "id": 262982797,
       "manufacturer": "Mercedes-Benz",
       "model": "190E 2.5-16 Evolution2 DTM",
-      "year": 2017
+      "year": 1991
     },
     {
       "class": "Historic Touring 2",
@@ -606,7 +606,7 @@
       "id": -85660500,
       "manufacturer": "Mercedes-Benz",
       "model": "300SEL 6.8 AMG",
-      "year": 2017
+      "year": 1971
     },
     {
       "class": "Vintage GT3",
@@ -614,7 +614,7 @@
       "id": 1401308680,
       "manufacturer": "Mercedes-Benz",
       "model": "300SL (W194)",
-      "year": 2017
+      "year": 1952
     },
     {
       "class": "Road C1",
@@ -622,7 +622,7 @@
       "id": -1522922538,
       "manufacturer": "Mercedes-Benz",
       "model": "A45 AMG",
-      "year": 2017
+      "year": 2013
     },
     {
       "class": "TC3",
@@ -630,7 +630,7 @@
       "id": -525060572,
       "manufacturer": "Mercedes-Benz",
       "model": "AMG C-Coupe DTM",
-      "year": 2017
+      "year": 2013
     },
     {
       "class": "GT1",
@@ -638,7 +638,7 @@
       "id": 1979398129,
       "manufacturer": "Mercedes-Benz",
       "model": "CLK-LM",
-      "year": 2017
+      "year": 1998
     },
     {
       "class": "Road B",
@@ -646,7 +646,7 @@
       "id": -1729266457,
       "manufacturer": "Mercedes-Benz",
       "model": "SLS AMG",
-      "year": 2017
+      "year": 2011
     },
     {
       "class": "GT3",
@@ -654,7 +654,7 @@
       "id": 274862187,
       "manufacturer": "Mercedes-Benz",
       "model": "SLS AMG GT3",
-      "year": 2017
+      "year": 2012
     },
     {
       "class": "Road C1",
@@ -662,7 +662,7 @@
       "id": -149617068,
       "manufacturer": "Mitsubishi",
       "model": "Lancer Evolution IX FQ360",
-      "year": 2017
+      "year": 2008
     },
     {
       "class": "Road C2",
@@ -670,7 +670,7 @@
       "id": 460478144,
       "manufacturer": "Mitsubishi",
       "model": "Lancer Evolution VI TME",
-      "year": 2017
+      "year": 1999
     },
     {
       "class": "Road C1",
@@ -678,7 +678,7 @@
       "id": 998947753,
       "manufacturer": "Mitsubishi",
       "model": "Lancer Evolution X FQ400",
-      "year": 2017
+      "year": 2012
     },
     {
       "class": "LMP2",
@@ -686,7 +686,7 @@
       "id": -98064499,
       "manufacturer": "Oreca",
       "model": "03 Nissan",
-      "year": 2017
+      "year": 2013
     },
     {
       "class": "Road A",
@@ -694,7 +694,7 @@
       "id": -2062679088,
       "manufacturer": "Pagani",
       "model": "Huayra",
-      "year": 2017
+      "year": 2014
     },
     {
       "class": "Road A",
@@ -702,7 +702,7 @@
       "id": 1356687088,
       "manufacturer": "Pagani",
       "model": "Huayra BC",
-      "year": 2017
+      "year": 2016
     },
     {
       "class": "Road A",
@@ -710,7 +710,7 @@
       "id": -1617916111,
       "manufacturer": "Pagani",
       "model": "Zonda Cinque Roadster",
-      "year": 2017
+      "year": 2011
     },
     {
       "class": "GT1X",
@@ -718,7 +718,7 @@
       "id": -2066888471,
       "manufacturer": "Pagani",
       "model": "Zonda R",
-      "year": 2017
+      "year": 2011
     },
     {
       "class": "GT1X",
@@ -726,7 +726,7 @@
       "id": -486674040,
       "manufacturer": "Pagani",
       "model": "Zonda Revolucion",
-      "year": 2017
+      "year": 2015
     },
     {
       "class": "LMP3",
@@ -734,7 +734,7 @@
       "id": -1921505310,
       "manufacturer": "Palmer",
       "model": "Jaguar JP-LM",
-      "year": 2017
+      "year": 2012
     },
     {
       "class": "Road A",
@@ -742,7 +742,7 @@
       "id": -1048050877,
       "manufacturer": "Radical",
       "model": "RXC Turbo",
-      "year": 2017
+      "year": 2015
     },
     {
       "class": "LMP3",
@@ -750,7 +750,7 @@
       "id": 1231996358,
       "manufacturer": "Radical",
       "model": "SR3-RS",
-      "year": 2017
+      "year": 2011
     },
     {
       "class": "LMP3",
@@ -758,7 +758,7 @@
       "id": 152867459,
       "manufacturer": "Radical",
       "model": "SR8-RX",
-      "year": 2017
+      "year": 2011
     },
     {
       "class": "Group 6",
@@ -766,7 +766,7 @@
       "id": -699643670,
       "manufacturer": "Renault",
       "model": "Alpine A442B",
-      "year": 2017
+      "year": 1978
     },
     {
       "class": "TC1",
@@ -774,7 +774,7 @@
       "id": -648709823,
       "manufacturer": "Renault",
       "model": "Clio Cup",
-      "year": 2017
+      "year": 2014
     },
     {
       "class": "Road C2",
@@ -782,7 +782,7 @@
       "id": 1694837381,
       "manufacturer": "Renault",
       "model": "Megane R.S. 265",
-      "year": 2017
+      "year": 2011
     },
     {
       "class": "Road C1",
@@ -790,7 +790,7 @@
       "id": -956881226,
       "manufacturer": "Renault",
       "model": "Megane R.S. 275 Trophy-R",
-      "year": 2017
+      "year": 2015
     },
     {
       "class": "Megane Trophy",
@@ -798,7 +798,7 @@
       "id": -931590477,
       "manufacturer": "Renault",
       "model": "Megane Trophy V6",
-      "year": 2017
+      "year": 2009
     },
     {
       "class": "RS01 Trophy",
@@ -806,7 +806,7 @@
       "id": -1856998124,
       "manufacturer": "Renault",
       "model": "Sport R.S. 01",
-      "year": 2017
+      "year": 2015
     },
     {
       "class": "Road B",
@@ -814,7 +814,7 @@
       "id": 2017392050,
       "manufacturer": "Ruf",
       "model": "CTR",
-      "year": 2017
+      "year": 1987
     },
     {
       "class": "Road A",
@@ -822,7 +822,7 @@
       "id": 558051123,
       "manufacturer": "Ruf",
       "model": "CTR3",
-      "year": 2017
+      "year": 2012
     },
     {
       "class": "GT1X",
@@ -830,7 +830,7 @@
       "id": -2046825312,
       "manufacturer": "Ruf",
       "model": "CTR3 SMS-R",
-      "year": 2017
+      "year": 2014
     },
     {
       "class": "Road B",
@@ -838,7 +838,7 @@
       "id": 462547146,
       "manufacturer": "Ruf",
       "model": "RGT-8",
-      "year": 2017
+      "year": 2013
     },
     {
       "class": "GT3",
@@ -846,7 +846,7 @@
       "id": -2020758805,
       "manufacturer": "Ruf",
       "model": "RGT-8 GT3",
-      "year": 2017
+      "year": 2014
     },
     {
       "class": "Road A",
@@ -854,7 +854,7 @@
       "id": 704998514,
       "manufacturer": "Ruf",
       "model": "Rt 12 R",
-      "year": 2017
+      "year": 2012
     },
     {
       "class": "LMP2",
@@ -862,7 +862,7 @@
       "id": 146414985,
       "manufacturer": "RWD",
       "model": "P20 LMP2",
-      "year": 2017
+      "year": 2013
     },
     {
       "class": "LMP1",
@@ -870,7 +870,7 @@
       "id": 1023089804,
       "manufacturer": "RWD",
       "model": "P30 LMP1",
-      "year": 2017
+      "year": 2013
     },
     {
       "class": "Group C1",
@@ -878,7 +878,7 @@
       "id": 65306143,
       "manufacturer": "Sauber",
       "model": "C9 Mercedes-Benz",
-      "year": 2017
+      "year": 1989
     },
     {
       "class": "Road D",
@@ -886,7 +886,7 @@
       "id": -356101373,
       "manufacturer": "Scion",
       "model": "FR-S",
-      "year": 2017
+      "year": 2013
     },
     {
       "class": "Road B",
@@ -894,7 +894,7 @@
       "id": -1127314200,
       "manufacturer": "Scion",
       "model": "FR-S Rocket Bunny Edition",
-      "year": 2017
+      "year": 2015
     },
     {
       "class": "Kart1",
@@ -902,7 +902,7 @@
       "id": 844159614,
       "manufacturer": "SMS",
       "model": "125cc Shifter Kart",
-      "year": 2017
+      "year": 2011
     },
     {
       "class": "Kart3",
@@ -910,7 +910,7 @@
       "id": -937933849,
       "manufacturer": "SMS",
       "model": "250cc Superkart",
-      "year": 2017
+      "year": 2011
     },
     {
       "class": "FA",
@@ -918,7 +918,7 @@
       "id": 1909945073,
       "manufacturer": "SMS",
       "model": "Formula A",
-      "year": 2017
+      "year": 2011
     },
     {
       "class": "FB",
@@ -926,7 +926,7 @@
       "id": -1318848040,
       "manufacturer": "SMS",
       "model": "Formula B",
-      "year": 2017
+      "year": 2011
     },
     {
       "class": "FC",
@@ -934,23 +934,23 @@
       "id": -1041674971,
       "manufacturer": "SMS",
       "model": "Formula C",
-      "year": 2017
+      "year": 2012
     },
     {
       "class": "F4",
       "country": "England",
       "id": -1706259671,
-      "manufacturer": "SMS",
+      "manufacturer": "Formula Gulf",
       "model": "Formula Gulf 1000",
-      "year": 2017
+      "year": 2013
     },
     {
       "class": "Formula Renault",
       "country": "France",
       "id": 1626504761,
-      "manufacturer": "SMS",
+      "manufacturer": "Renault",
       "model": "Formula Renault 3.5",
-      "year": 2017
+      "year": 2015
     },
     {
       "class": "F5",
@@ -958,7 +958,7 @@
       "id": -2075284877,
       "manufacturer": "SMS",
       "model": "Formula Rookie",
-      "year": 2017
+      "year": 2012
     },
     {
       "class": "Road D",
@@ -966,7 +966,7 @@
       "id": -41807622,
       "manufacturer": "Toyota",
       "model": "86",
-      "year": 2017
+      "year": 2013
     },
     {
       "class": "Road D",
@@ -974,7 +974,7 @@
       "id": -235751604,
       "manufacturer": "Toyota",
       "model": "GT-86",
-      "year": 2017
+      "year": 2013
     },
     {
       "class": "GT4",
@@ -982,7 +982,7 @@
       "id": 1764851930,
       "manufacturer": "Toyota",
       "model": "GT-86 Rocket Bunny GT Edition",
-      "year": 2017
+      "year": 2015
     },
     {
       "class": "LMP1",
@@ -990,7 +990,7 @@
       "id": 1810453820,
       "manufacturer": "Toyota",
       "model": "TS040 Hybrid",
-      "year": 2017
+      "year": 2014
     },
     {
       "class": "Road A",
@@ -998,7 +998,7 @@
       "id": -180129877,
       "manufacturer": "W Motors",
       "model": "Lykan HyperSport",
-      "year": 2017
+      "year": 2014
     }
   ],
   "classes": [
