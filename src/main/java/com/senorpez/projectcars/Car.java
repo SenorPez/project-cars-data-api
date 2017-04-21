@@ -7,6 +7,8 @@ import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.List;
 
+import static java.lang.Math.round;
+
 class Car {
     private final Integer id;
     private final String manufacturer;
@@ -18,6 +20,11 @@ class Car {
     private final EnginePosition enginePosition;
     private final String engineType;
 
+    private final Integer topSpeedMetric;
+    private final Integer topSpeedImperial;
+
+    private static final Double KM_TO_MI = 0.621371;
+
     static final List<String> DB_COLUMNS = Arrays.asList(
             "id",
             "manufacturer",
@@ -27,7 +34,8 @@ class Car {
             "country",
             "drivetrain",
             "enginePosition",
-            "engineType"
+            "engineType",
+            "topSpeed"
     );
     static final String DB_TABLE_NAME = "cars";
 
@@ -54,7 +62,7 @@ class Car {
         }
     }
 
-    Car(Integer id, String manufacturer, String model, String country, String carClass, Integer year, Drivetrain drivetrain, EnginePosition enginePosition, String engineType) {
+    Car(Integer id, String manufacturer, String model, String country, String carClass, Integer year, Drivetrain drivetrain, EnginePosition enginePosition, String engineType, Integer topSpeedMetric) {
         this.id = id;
         this.manufacturer = manufacturer;
         this.model = model;
@@ -64,6 +72,9 @@ class Car {
         this.drivetrain = drivetrain;
         this.enginePosition = enginePosition;
         this.engineType = engineType;
+
+        this.topSpeedMetric = topSpeedMetric;
+        this.topSpeedImperial = (int) round(topSpeedMetric * KM_TO_MI);
     }
 
     Car(ResultSet carResults) throws SQLException {
@@ -76,6 +87,9 @@ class Car {
         this.drivetrain = Drivetrain.valueOf(carResults.getString("drivetrain").toUpperCase());
         this.enginePosition = EnginePosition.valueOf(carResults.getString("enginePosition").toUpperCase());
         this.engineType = carResults.getString("engineType");
+
+        this.topSpeedMetric = carResults.getInt("topSpeed");
+        this.topSpeedImperial = (int) round(this.topSpeedMetric * KM_TO_MI);
     }
 
     public Integer getId() {
@@ -112,5 +126,13 @@ class Car {
 
     public String getEngineType() {
         return engineType;
+    }
+
+    public Integer getTopSpeedMetric() {
+        return topSpeedMetric;
+    }
+
+    public Integer getTopSpeedImperial() {
+        return topSpeedImperial;
     }
 }
