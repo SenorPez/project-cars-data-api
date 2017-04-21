@@ -1,3 +1,5 @@
+svn up &&
+./gradlew build &&
 sudo chattr -i ~data-api-app/data-api-0.1-SNAPSHOT.jar &&
 sudo rm ~data-api-app/data-api-0.1-SNAPSHOT.jar &&
 sudo chown data-api-app:data-api-app build/libs/data-api-0.1-SNAPSHOT.jar &&
