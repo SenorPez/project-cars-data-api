@@ -6,7 +6,8 @@
       "model": "A450",
       "class": "LMP2",
       "year": 2014,
-      "country": "France"
+      "country": "France",
+      "drivetrain": "RWD"
     },
     {
       "id": -1770401008,
@@ -14,7 +15,8 @@
       "model": "Atom 300 Supercharged",
       "class": "Road B",
       "year": 2011,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": 607772150,
@@ -22,7 +24,8 @@
       "model": "Atom 500 V8",
       "class": "Road A",
       "year": 2011,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": 526708607,
@@ -30,7 +33,8 @@
       "model": "Atom Mugen",
       "class": "Road B",
       "year": 2011,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": 738755746,
@@ -38,7 +42,8 @@
       "model": "DBR1-2",
       "class": "LMP1",
       "year": 2009,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": -91815086,
@@ -46,7 +51,8 @@
       "model": "DBR1/300",
       "class": "Vintage GT2",
       "year": 1959,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": -324240456,
@@ -54,7 +60,8 @@
       "model": "Rapide S Hydrogen Hybrid",
       "class": "GT4",
       "year": 2013,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": 1452261378,
@@ -62,7 +69,8 @@
       "model": "V12 Vantage GT3",
       "class": "GT3",
       "year": 2013,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": 2086246081,
@@ -70,7 +78,8 @@
       "model": "V8 Vantage GT4",
       "class": "GT4",
       "year": 2013,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": 1401532035,
@@ -78,7 +87,8 @@
       "model": "V8 Vantage GTE",
       "class": "GT3",
       "year": 2014,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": 1268015922,
@@ -86,7 +96,8 @@
       "model": "Vantage GT12",
       "class": "Road B",
       "year": 2015,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": 1470929381,
@@ -94,7 +105,8 @@
       "model": "90 quattro IMSA GTO",
       "class": "Trans-Am",
       "year": 1989,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "AWD"
     },
     {
       "id": 2082176226,
@@ -102,7 +114,8 @@
       "model": "A1 quattro",
       "class": "Road C2",
       "year": 2013,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "AWD"
     },
     {
       "id": 1219511257,
@@ -110,7 +123,8 @@
       "model": "R18 e-tron quattro",
       "class": "LMP1",
       "year": 2014,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "AWD"
     },
     {
       "id": -1067902110,
@@ -118,7 +132,8 @@
       "model": "R18 TDI",
       "class": "LMP1",
       "year": 2011,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": -1761671051,
@@ -126,7 +141,8 @@
       "model": "R8 (LMP900)",
       "class": "LMP900",
       "year": 2002,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": 1884411907,
@@ -134,7 +150,8 @@
       "model": "R8 LMS Ultra",
       "class": "GT3",
       "year": 2013,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": 1469658023,
@@ -142,7 +159,8 @@
       "model": "R8 V10 plus",
       "class": "Road B",
       "year": 2013,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "AWD"
     },
     {
       "id": 1400443574,
@@ -150,7 +168,8 @@
       "model": "Mono",
       "class": "Road B",
       "year": 2012,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": 987814806,
@@ -158,7 +177,8 @@
       "model": "Continental GT3",
       "class": "GT3",
       "year": 2014,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": -494100071,
@@ -166,7 +186,8 @@
       "model": "Speed 8",
       "class": "LMP900",
       "year": 2003,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "AWD"
     },
     {
       "id": -1226176940,
@@ -174,7 +195,8 @@
       "model": "1-Series M Coupe",
       "class": "Road C1",
       "year": 2011,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": -1411323812,
@@ -182,7 +204,8 @@
       "model": "1-Series M Coupe StanceWorks Edition",
       "class": "Road B",
       "year": 2011,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": -1187748261,
@@ -190,7 +213,8 @@
       "model": "2002 StanceWorks Edition",
       "class": "Historic Touring 2",
       "year": 1973,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": 143364290,
@@ -198,7 +222,8 @@
       "model": "2002 Turbo",
       "class": "Historic Touring 2",
       "year": 1973,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": 9503224,
@@ -206,7 +231,8 @@
       "model": "320 TC",
       "class": "TC2",
       "year": 2012,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": 779111340,
@@ -214,7 +240,8 @@
       "model": "320 Turbo Group 5",
       "class": "Group 5",
       "year": 1978,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": 1368036017,
@@ -222,7 +249,8 @@
       "model": "M1 Procar",
       "class": "Group 4",
       "year": 1981,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": -934098507,
@@ -230,7 +258,8 @@
       "model": "M3 E30 Group A",
       "class": "Group A",
       "year": 1991,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": -1365918055,
@@ -238,7 +267,8 @@
       "model": "M3 GT",
       "class": "GT3",
       "year": 2012,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": -1545450182,
@@ -246,7 +276,8 @@
       "model": "M3 GT4",
       "class": "GT4",
       "year": 2012,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": 975104023,
@@ -254,7 +285,8 @@
       "model": "V12 LMR",
       "class": "LMP900",
       "year": 1999,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": 1161219858,
@@ -262,7 +294,8 @@
       "model": "Z4 GT3",
       "class": "GT3",
       "year": 2012,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": -2025231366,
@@ -270,7 +303,8 @@
       "model": "ATS-V.R GT3",
       "class": "GT3",
       "year": 2016,
-      "country": "USA"
+      "country": "USA",
+      "drivetrain": "RWD"
     },
     {
       "id": 578910088,
@@ -278,7 +312,8 @@
       "model": "Monterey Stockcar",
       "class": "Vintage Stockcar",
       "year": 1990,
-      "country": "USA"
+      "country": "USA",
+      "drivetrain": "RWD"
     },
     {
       "id": -886212684,
@@ -286,7 +321,8 @@
       "model": "Seven Classic",
       "class": "Road D",
       "year": 2011,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": 675194619,
@@ -294,7 +330,8 @@
       "model": "SP/300.R",
       "class": "LMP3",
       "year": 2012,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": -162683612,
@@ -302,7 +339,8 @@
       "model": "Superlight R500",
       "class": "Road B",
       "year": 2011,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": -384044277,
@@ -310,7 +348,8 @@
       "model": "Corvette C7.R",
       "class": "GT3",
       "year": 2016,
-      "country": "USA"
+      "country": "USA",
+      "drivetrain": "RWD"
     },
     {
       "id": 1901402958,
@@ -318,7 +357,8 @@
       "model": "DW12 Indycar (Road Course)",
       "class": "Indycar",
       "year": 2014,
-      "country": "USA"
+      "country": "USA",
+      "drivetrain": "RWD"
     },
     {
       "id": 1639105598,
@@ -326,7 +366,8 @@
       "model": "Escort Mk1 RS1600",
       "class": "Historic Touring 2",
       "year": 1972,
-      "country": "USA"
+      "country": "USA",
+      "drivetrain": "FWD"
     },
     {
       "id": 1357515789,
@@ -334,7 +375,8 @@
       "model": "Falcon FG V8 Supercar",
       "class": "V8 Supercars",
       "year": 2013,
-      "country": "Australia"
+      "country": "Australia",
+      "drivetrain": "RWD"
     },
     {
       "id": -1738120892,
@@ -342,7 +384,8 @@
       "model": "Focus RS",
       "class": "Road C2",
       "year": 2009,
-      "country": "USA"
+      "country": "USA",
+      "drivetrain": "FWD"
     },
     {
       "id": 851491257,
@@ -350,7 +393,8 @@
       "model": "Fusion Stockcar",
       "class": "Modern Stockcar",
       "year": 2016,
-      "country": "USA"
+      "country": "USA",
+      "drivetrain": "RWD"
     },
     {
       "id": -1774335742,
@@ -358,7 +402,8 @@
       "model": "MkIV",
       "class": "Vintage GT",
       "year": 1967,
-      "country": "USA"
+      "country": "USA",
+      "drivetrain": "RWD"
     },
     {
       "id": 1397255601,
@@ -366,7 +411,8 @@
       "model": "Mustang 2+2 Fastback",
       "class": "Historic Touring 2",
       "year": 1966,
-      "country": "USA"
+      "country": "USA",
+      "drivetrain": "RWD"
     },
     {
       "id": 1111049682,
@@ -374,7 +420,8 @@
       "model": "Mustang Boss 302R1",
       "class": "GT4",
       "year": 2012,
-      "country": "USA"
+      "country": "USA",
+      "drivetrain": "RWD"
     },
     {
       "id": -11335215,
@@ -382,7 +429,8 @@
       "model": "Mustang Cobra TransAm",
       "class": "Trans-Am",
       "year": 1997,
-      "country": "USA"
+      "country": "USA",
+      "drivetrain": "RWD"
     },
     {
       "id": 1230061845,
@@ -390,7 +438,8 @@
       "model": "Mustang GT",
       "class": "Road B",
       "year": 2015,
-      "country": "USA"
+      "country": "USA",
+      "drivetrain": "RWD"
     },
     {
       "id": -1253474718,
@@ -398,7 +447,8 @@
       "model": "Sierra RS500 Cosworth Group A",
       "class": "Group A",
       "year": 1988,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": 1817703058,
@@ -406,7 +456,8 @@
       "model": "Zakspeed Capri Group 5",
       "class": "Group 5",
       "year": 1980,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": 310900789,
@@ -414,7 +465,8 @@
       "model": "G40 Junior",
       "class": "GT5",
       "year": 2013,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": -1170674276,
@@ -422,7 +474,8 @@
       "model": "G55 GT3",
       "class": "GT3",
       "year": 2013,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": 2091910841,
@@ -430,7 +483,8 @@
       "model": "G55 GT4",
       "class": "GT4",
       "year": 2013,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": -674255528,
@@ -438,7 +492,8 @@
       "model": "apollo S",
       "class": "Road A",
       "year": 2011,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": 761457895,
@@ -446,7 +501,8 @@
       "model": "X-Bow R",
       "class": "Road B",
       "year": 2015,
-      "country": "Austria"
+      "country": "Austria",
+      "drivetrain": "RWD"
     },
     {
       "id": -713284494,
@@ -454,7 +510,8 @@
       "model": "Type 25 Climax",
       "class": "Vintage F1 A1",
       "year": 1963,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": 1162971218,
@@ -462,7 +519,8 @@
       "model": "Type 38 Ford",
       "class": "Vintage Indy 65",
       "year": 1965,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": -1204688299,
@@ -470,7 +528,8 @@
       "model": "Type 40 Ford",
       "class": "Vintage GT",
       "year": 1965,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": 578969971,
@@ -478,7 +537,8 @@
       "model": "Type 49 Cosworth",
       "class": "Vintage F1 A",
       "year": 1967,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": 1061494025,
@@ -486,7 +546,8 @@
       "model": "Type 49C Cosworth",
       "class": "Vintage F1 A",
       "year": 1970,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": -1435057179,
@@ -494,7 +555,8 @@
       "model": "Type 51",
       "class": "Vintage F3 A",
       "year": 1967,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": -1320616846,
@@ -502,7 +564,8 @@
       "model": "Type 72D Cosworth",
       "class": "Vintage F1 B",
       "year": 1972,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": -1835861548,
@@ -510,7 +573,8 @@
       "model": "Type 78 Cosworth",
       "class": "Vintage F1 B",
       "year": 1977,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": 1959097924,
@@ -518,7 +582,8 @@
       "model": "Type 98T Renault Turbo",
       "class": "Vintage F1 C",
       "year": 1986,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": 1355771595,
@@ -526,7 +591,8 @@
       "model": "RP 219D LMP2",
       "class": "LMP2",
       "year": 2014,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": -2030487367,
@@ -534,7 +600,8 @@
       "model": "RP 339H LMP1",
       "class": "LMP1",
       "year": 2014,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": -1966060946,
@@ -542,7 +609,8 @@
       "model": "MX-5 Radbul",
       "class": "Road A",
       "year": 2015,
-      "country": "Japan"
+      "country": "Japan",
+      "drivetrain": "RWD"
     },
     {
       "id": -444124510,
@@ -550,7 +618,8 @@
       "model": "12C",
       "class": "Road A",
       "year": 2013,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": -1166911988,
@@ -558,7 +627,8 @@
       "model": "12C GT3",
       "class": "GT3",
       "year": 2012,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": 307010432,
@@ -566,7 +636,8 @@
       "model": "F1",
       "class": "Road B",
       "year": 1992,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": -1001569309,
@@ -574,7 +645,8 @@
       "model": "F1 GTR Long Tail",
       "class": "GT1",
       "year": 1997,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": -1748676965,
@@ -582,7 +654,8 @@
       "model": "P1",
       "class": "Road A",
       "year": 2014,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": 1353949246,
@@ -590,7 +663,8 @@
       "model": "GT3",
       "class": "GT3",
       "year": 2015,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": 262982797,
@@ -598,7 +672,8 @@
       "model": "190E 2.5-16 Evolution2 DTM",
       "class": "Group A",
       "year": 1991,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": -85660500,
@@ -606,7 +681,8 @@
       "model": "300SEL 6.8 AMG",
       "class": "Historic Touring 2",
       "year": 1971,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": 1401308680,
@@ -614,7 +690,8 @@
       "model": "300SL (W194)",
       "class": "Vintage GT3",
       "year": 1952,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": -1522922538,
@@ -622,7 +699,8 @@
       "model": "A45 AMG",
       "class": "Road C1",
       "year": 2013,
-      "country": "USA"
+      "country": "USA",
+      "drivetrain": "AWD"
     },
     {
       "id": -525060572,
@@ -630,7 +708,8 @@
       "model": "AMG C-Coupe DTM",
       "class": "TC3",
       "year": 2013,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": 1979398129,
@@ -638,7 +717,8 @@
       "model": "CLK-LM",
       "class": "GT1",
       "year": 1998,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": -1729266457,
@@ -646,7 +726,8 @@
       "model": "SLS AMG",
       "class": "Road B",
       "year": 2011,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": 274862187,
@@ -654,7 +735,8 @@
       "model": "SLS AMG GT3",
       "class": "GT3",
       "year": 2012,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": -149617068,
@@ -662,7 +744,8 @@
       "model": "Lancer Evolution IX FQ360",
       "class": "Road C1",
       "year": 2008,
-      "country": "Japan"
+      "country": "Japan",
+      "drivetrain": "AWD"
     },
     {
       "id": 460478144,
@@ -670,7 +753,8 @@
       "model": "Lancer Evolution VI TME",
       "class": "Road C2",
       "year": 1999,
-      "country": "Japan"
+      "country": "Japan",
+      "drivetrain": "AWD"
     },
     {
       "id": 998947753,
@@ -678,7 +762,8 @@
       "model": "Lancer Evolution X FQ400",
       "class": "Road C1",
       "year": 2012,
-      "country": "Japan"
+      "country": "Japan",
+      "drivetrain": "AWD"
     },
     {
       "id": -98064499,
@@ -686,7 +771,8 @@
       "model": "03 Nissan",
       "class": "LMP2",
       "year": 2013,
-      "country": "France"
+      "country": "France",
+      "drivetrain": "RWD"
     },
     {
       "id": -2062679088,
@@ -694,7 +780,8 @@
       "model": "Huayra",
       "class": "Road A",
       "year": 2014,
-      "country": "Italy"
+      "country": "Italy",
+      "drivetrain": "RWD"
     },
     {
       "id": 1356687088,
@@ -702,7 +789,8 @@
       "model": "Huayra BC",
       "class": "Road A",
       "year": 2016,
-      "country": "Italy"
+      "country": "Italy",
+      "drivetrain": "RWD"
     },
     {
       "id": -1617916111,
@@ -710,7 +798,8 @@
       "model": "Zonda Cinque Roadster",
       "class": "Road A",
       "year": 2011,
-      "country": "Italy"
+      "country": "Italy",
+      "drivetrain": "RWD"
     },
     {
       "id": -2066888471,
@@ -718,7 +807,8 @@
       "model": "Zonda R",
       "class": "GT1X",
       "year": 2011,
-      "country": "Italy"
+      "country": "Italy",
+      "drivetrain": "RWD"
     },
     {
       "id": -486674040,
@@ -726,7 +816,8 @@
       "model": "Zonda Revolucion",
       "class": "GT1X",
       "year": 2015,
-      "country": "Italy"
+      "country": "Italy",
+      "drivetrain": "RWD"
     },
     {
       "id": -1921505310,
@@ -734,7 +825,8 @@
       "model": "Jaguar JP-LM",
       "class": "LMP3",
       "year": 2012,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": -1048050877,
@@ -742,7 +834,8 @@
       "model": "RXC Turbo",
       "class": "Road A",
       "year": 2015,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": 1231996358,
@@ -750,7 +843,8 @@
       "model": "SR3-RS",
       "class": "LMP3",
       "year": 2011,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": 152867459,
@@ -758,7 +852,8 @@
       "model": "SR8-RX",
       "class": "LMP3",
       "year": 2011,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": -699643670,
@@ -766,7 +861,8 @@
       "model": "Alpine A442B",
       "class": "Group 6",
       "year": 1978,
-      "country": "France"
+      "country": "France",
+      "drivetrain": "RWD"
     },
     {
       "id": -648709823,
@@ -774,7 +870,8 @@
       "model": "Clio Cup",
       "class": "TC1",
       "year": 2014,
-      "country": "France"
+      "country": "France",
+      "drivetrain": "FWD"
     },
     {
       "id": 1694837381,
@@ -782,7 +879,8 @@
       "model": "Megane R.S. 265",
       "class": "Road C2",
       "year": 2011,
-      "country": "France"
+      "country": "France",
+      "drivetrain": "FWD"
     },
     {
       "id": -956881226,
@@ -790,7 +888,8 @@
       "model": "Megane R.S. 275 Trophy-R",
       "class": "Road C1",
       "year": 2015,
-      "country": "France"
+      "country": "France",
+      "drivetrain": "FWD"
     },
     {
       "id": -931590477,
@@ -798,7 +897,8 @@
       "model": "Megane Trophy V6",
       "class": "Megane Trophy",
       "year": 2009,
-      "country": "France"
+      "country": "France",
+      "drivetrain": "RWD"
     },
     {
       "id": -1856998124,
@@ -806,7 +906,8 @@
       "model": "Sport R.S. 01",
       "class": "RS01 Trophy",
       "year": 2015,
-      "country": "France"
+      "country": "France",
+      "drivetrain": "RWD"
     },
     {
       "id": 2017392050,
@@ -814,7 +915,8 @@
       "model": "CTR",
       "class": "Road B",
       "year": 1987,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": 558051123,
@@ -822,7 +924,8 @@
       "model": "CTR3",
       "class": "Road A",
       "year": 2012,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": -2046825312,
@@ -830,7 +933,8 @@
       "model": "CTR3 SMS-R",
       "class": "GT1X",
       "year": 2014,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": 462547146,
@@ -838,7 +942,8 @@
       "model": "RGT-8",
       "class": "Road B",
       "year": 2013,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": -2020758805,
@@ -846,7 +951,8 @@
       "model": "RGT-8 GT3",
       "class": "GT3",
       "year": 2014,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": 704998514,
@@ -854,7 +960,8 @@
       "model": "Rt 12 R",
       "class": "Road A",
       "year": 2012,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "AWD"
     },
     {
       "id": 146414985,
@@ -862,7 +969,8 @@
       "model": "P20 LMP2",
       "class": "LMP2",
       "year": 2013,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": 1023089804,
@@ -870,7 +978,8 @@
       "model": "P30 LMP1",
       "class": "LMP1",
       "year": 2013,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": 65306143,
@@ -878,7 +987,8 @@
       "model": "C9 Mercedes-Benz",
       "class": "Group C1",
       "year": 1989,
-      "country": "Germany"
+      "country": "Germany",
+      "drivetrain": "RWD"
     },
     {
       "id": -356101373,
@@ -886,7 +996,8 @@
       "model": "FR-S",
       "class": "Road D",
       "year": 2013,
-      "country": "Japan"
+      "country": "Japan",
+      "drivetrain": "RWD"
     },
     {
       "id": -1127314200,
@@ -894,7 +1005,8 @@
       "model": "FR-S Rocket Bunny Edition",
       "class": "Road B",
       "year": 2015,
-      "country": "Japan"
+      "country": "Japan",
+      "drivetrain": "RWD"
     },
     {
       "id": 844159614,
@@ -902,7 +1014,8 @@
       "model": "125cc Shifter Kart",
       "class": "Kart1",
       "year": 2011,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": -937933849,
@@ -910,7 +1023,8 @@
       "model": "250cc Superkart",
       "class": "Kart3",
       "year": 2011,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": 1909945073,
@@ -918,7 +1032,8 @@
       "model": "Formula A",
       "class": "FA",
       "year": 2011,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": -1318848040,
@@ -926,7 +1041,8 @@
       "model": "Formula B",
       "class": "FB",
       "year": 2011,
-      "country": "Italy"
+      "country": "Italy",
+      "drivetrain": "RWD"
     },
     {
       "id": -1041674971,
@@ -934,7 +1050,8 @@
       "model": "Formula C",
       "class": "FC",
       "year": 2012,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": -1706259671,
@@ -942,7 +1059,8 @@
       "model": "Formula Gulf 1000",
       "class": "F4",
       "year": 2013,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": 1626504761,
@@ -950,7 +1068,8 @@
       "model": "Formula Renault 3.5",
       "class": "Formula Renault",
       "year": 2015,
-      "country": "France"
+      "country": "France",
+      "drivetrain": "RWD"
     },
     {
       "id": -2075284877,
@@ -958,7 +1077,8 @@
       "model": "Formula Rookie",
       "class": "F5",
       "year": 2012,
-      "country": "England"
+      "country": "England",
+      "drivetrain": "RWD"
     },
     {
       "id": -41807622,
@@ -966,7 +1086,8 @@
       "model": "86",
       "class": "Road D",
       "year": 2013,
-      "country": "Japan"
+      "country": "Japan",
+      "drivetrain": "RWD"
     },
     {
       "id": -235751604,
@@ -974,7 +1095,8 @@
       "model": "GT-86",
       "class": "Road D",
       "year": 2013,
-      "country": "Japan"
+      "country": "Japan",
+      "drivetrain": "RWD"
     },
     {
       "id": 1764851930,
@@ -982,7 +1104,8 @@
       "model": "GT-86 Rocket Bunny GT Edition",
       "class": "GT4",
       "year": 2015,
-      "country": "Japan"
+      "country": "Japan",
+      "drivetrain": "RWD"
     },
     {
       "id": 1810453820,
@@ -990,7 +1113,8 @@
       "model": "TS040 Hybrid",
       "class": "LMP1",
       "year": 2014,
-      "country": "Japan"
+      "country": "Japan",
+      "drivetrain": "AWD"
     },
     {
       "id": -180129877,
@@ -998,7 +1122,8 @@
       "model": "Lykan HyperSport",
       "class": "Road A",
       "year": 2014,
-      "country": "United Arab Emirates"
+      "country": "United Arab Emirates",
+      "drivetrain": "RWD"
     }
   ],
   "classes": [

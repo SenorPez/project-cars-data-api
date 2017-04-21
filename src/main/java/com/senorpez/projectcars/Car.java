@@ -12,24 +12,33 @@ class Car {
     private final String country;
     private final String carClass;
     private final Integer year;
+    private final Drivetrain drivetrain;
 
     static final List<String> DB_COLUMNS = Arrays.asList(
             "id",
             "manufacturer",
             "model",
-            "country",
             "class",
-            "year"
+            "year",
+            "country",
+            "drivetrain"
     );
     static final String DB_TABLE_NAME = "cars";
 
-    Car(Integer id, String manufacturer, String model, String country, String carClass, Integer year) {
+    enum Drivetrain {
+        FWD,
+        RWD,
+        AWD
+    }
+
+    Car(Integer id, String manufacturer, String model, String country, String carClass, Integer year, Drivetrain drivetrain) {
         this.id = id;
         this.manufacturer = manufacturer;
         this.model = model;
         this.country = country;
         this.carClass = carClass;
         this.year = year;
+        this.drivetrain = drivetrain;
     }
 
     Car(ResultSet carResults) throws SQLException {
@@ -39,6 +48,7 @@ class Car {
         this.country = carResults.getString("country");
         this.carClass = carResults.getString("class");
         this.year = carResults.getInt("year");
+        this.drivetrain = Drivetrain.valueOf(carResults.getString("drivetrain"));
     }
 
     public Integer getId() {
@@ -63,5 +73,9 @@ class Car {
 
     public Integer getYear() {
         return year;
+    }
+
+    public Drivetrain getDrivetrain() {
+        return drivetrain;
     }
 }

@@ -92,8 +92,9 @@ public class DatabaseFactory {
                 " manufacturer VARCHAR(13) NOT NULL, " +
                 " model VARCHAR(36) NOT NULL, " +
                 " class VARCHAR(18) NOT NULL, " +
-                " country VARCHAR(20) NOT NULL, " +
                 " year SMALLINT UNSIGNED NOT NULL, " +
+                " country VARCHAR(20) NOT NULL, " +
+                " drivetrain VARCHAR(3) NOT NULL, " +
                 " PRIMARY KEY (id), " +
                 " UNIQUE (manufacturer, model));";
         stmt.executeUpdate(sql);
