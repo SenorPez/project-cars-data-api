@@ -15,8 +15,8 @@ class Car {
     private final String carClass;
     private final Integer year;
     private final Drivetrain drivetrain;
-
     private final EnginePosition enginePosition;
+    private final String engineType;
 
     static final List<String> DB_COLUMNS = Arrays.asList(
             "id",
@@ -26,7 +26,8 @@ class Car {
             "year",
             "country",
             "drivetrain",
-            "enginePosition"
+            "enginePosition",
+            "engineType"
     );
     static final String DB_TABLE_NAME = "cars";
 
@@ -53,7 +54,7 @@ class Car {
         }
     }
 
-    Car(Integer id, String manufacturer, String model, String country, String carClass, Integer year, Drivetrain drivetrain, EnginePosition enginePosition) {
+    Car(Integer id, String manufacturer, String model, String country, String carClass, Integer year, Drivetrain drivetrain, EnginePosition enginePosition, String engineType) {
         this.id = id;
         this.manufacturer = manufacturer;
         this.model = model;
@@ -62,6 +63,7 @@ class Car {
         this.year = year;
         this.drivetrain = drivetrain;
         this.enginePosition = enginePosition;
+        this.engineType = engineType;
     }
 
     Car(ResultSet carResults) throws SQLException {
@@ -73,6 +75,7 @@ class Car {
         this.year = carResults.getInt("year");
         this.drivetrain = Drivetrain.valueOf(carResults.getString("drivetrain").toUpperCase());
         this.enginePosition = EnginePosition.valueOf(carResults.getString("enginePosition").toUpperCase());
+        this.engineType = carResults.getString("engineType");
     }
 
     public Integer getId() {
@@ -105,5 +108,9 @@ class Car {
 
     public EnginePosition getEnginePosition() {
         return enginePosition;
+    }
+
+    public String getEngineType() {
+        return engineType;
     }
 }
