@@ -7,7 +7,8 @@
       "class": "LMP2",
       "year": 2014,
       "country": "France",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -1770401008,
@@ -16,7 +17,8 @@
       "class": "Road B",
       "year": 2011,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": 607772150,
@@ -25,7 +27,8 @@
       "class": "Road A",
       "year": 2011,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": 526708607,
@@ -34,7 +37,8 @@
       "class": "Road B",
       "year": 2011,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": 738755746,
@@ -43,7 +47,8 @@
       "class": "LMP1",
       "year": 2009,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -91815086,
@@ -52,7 +57,8 @@
       "class": "Vintage GT2",
       "year": 1959,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": -324240456,
@@ -61,7 +67,8 @@
       "class": "GT4",
       "year": 2013,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": 1452261378,
@@ -70,7 +77,8 @@
       "class": "GT3",
       "year": 2013,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": 2086246081,
@@ -79,7 +87,8 @@
       "class": "GT4",
       "year": 2013,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": 1401532035,
@@ -88,7 +97,8 @@
       "class": "GT3",
       "year": 2014,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": 1268015922,
@@ -97,7 +107,8 @@
       "class": "Road B",
       "year": 2015,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": 1470929381,
@@ -106,7 +117,8 @@
       "class": "Trans-Am",
       "year": 1989,
       "country": "Germany",
-      "drivetrain": "AWD"
+      "drivetrain": "AWD",
+      "enginePosition": "Front"
     },
     {
       "id": 2082176226,
@@ -115,7 +127,8 @@
       "class": "Road C2",
       "year": 2013,
       "country": "Germany",
-      "drivetrain": "AWD"
+      "drivetrain": "AWD",
+      "enginePosition": "Front"
     },
     {
       "id": 1219511257,
@@ -124,7 +137,8 @@
       "class": "LMP1",
       "year": 2014,
       "country": "Germany",
-      "drivetrain": "AWD"
+      "drivetrain": "AWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -1067902110,
@@ -133,7 +147,8 @@
       "class": "LMP1",
       "year": 2011,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -1761671051,
@@ -142,7 +157,8 @@
       "class": "LMP900",
       "year": 2002,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": 1884411907,
@@ -151,7 +167,8 @@
       "class": "GT3",
       "year": 2013,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": 1469658023,
@@ -160,7 +177,8 @@
       "class": "Road B",
       "year": 2013,
       "country": "Germany",
-      "drivetrain": "AWD"
+      "drivetrain": "AWD",
+      "enginePosition": "Mid"
     },
     {
       "id": 1400443574,
@@ -169,7 +187,8 @@
       "class": "Road B",
       "year": 2012,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": 987814806,
@@ -178,7 +197,8 @@
       "class": "GT3",
       "year": 2014,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": -494100071,
@@ -187,7 +207,8 @@
       "class": "LMP900",
       "year": 2003,
       "country": "England",
-      "drivetrain": "AWD"
+      "drivetrain": "AWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -1226176940,
@@ -196,7 +217,8 @@
       "class": "Road C1",
       "year": 2011,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": -1411323812,
@@ -205,7 +227,8 @@
       "class": "Road B",
       "year": 2011,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": -1187748261,
@@ -214,7 +237,8 @@
       "class": "Historic Touring 2",
       "year": 1973,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": 143364290,
@@ -223,7 +247,8 @@
       "class": "Historic Touring 2",
       "year": 1973,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": 9503224,
@@ -232,7 +257,8 @@
       "class": "TC2",
       "year": 2012,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": 779111340,
@@ -241,7 +267,8 @@
       "class": "Group 5",
       "year": 1978,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": 1368036017,
@@ -250,7 +277,8 @@
       "class": "Group 4",
       "year": 1981,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -934098507,
@@ -259,7 +287,8 @@
       "class": "Group A",
       "year": 1991,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": -1365918055,
@@ -268,7 +297,8 @@
       "class": "GT3",
       "year": 2012,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": -1545450182,
@@ -277,7 +307,8 @@
       "class": "GT4",
       "year": 2012,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": 975104023,
@@ -286,7 +317,8 @@
       "class": "LMP900",
       "year": 1999,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": 1161219858,
@@ -295,7 +327,8 @@
       "class": "GT3",
       "year": 2012,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": -2025231366,
@@ -304,7 +337,8 @@
       "class": "GT3",
       "year": 2016,
       "country": "USA",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": 578910088,
@@ -313,7 +347,8 @@
       "class": "Vintage Stockcar",
       "year": 1990,
       "country": "USA",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": -886212684,
@@ -322,7 +357,8 @@
       "class": "Road D",
       "year": 2011,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": 675194619,
@@ -331,7 +367,8 @@
       "class": "LMP3",
       "year": 2012,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -162683612,
@@ -340,7 +377,8 @@
       "class": "Road B",
       "year": 2011,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": -384044277,
@@ -349,7 +387,8 @@
       "class": "GT3",
       "year": 2016,
       "country": "USA",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": 1901402958,
@@ -358,7 +397,8 @@
       "class": "Indycar",
       "year": 2014,
       "country": "USA",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": 1639105598,
@@ -367,7 +407,8 @@
       "class": "Historic Touring 2",
       "year": 1972,
       "country": "USA",
-      "drivetrain": "FWD"
+      "drivetrain": "FWD",
+      "enginePosition": "Front"
     },
     {
       "id": 1357515789,
@@ -376,7 +417,8 @@
       "class": "V8 Supercars",
       "year": 2013,
       "country": "Australia",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": -1738120892,
@@ -385,7 +427,8 @@
       "class": "Road C2",
       "year": 2009,
       "country": "USA",
-      "drivetrain": "FWD"
+      "drivetrain": "FWD",
+      "enginePosition": "Front"
     },
     {
       "id": 851491257,
@@ -394,7 +437,8 @@
       "class": "Modern Stockcar",
       "year": 2016,
       "country": "USA",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": -1774335742,
@@ -403,7 +447,8 @@
       "class": "Vintage GT",
       "year": 1967,
       "country": "USA",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": 1397255601,
@@ -412,7 +457,8 @@
       "class": "Historic Touring 2",
       "year": 1966,
       "country": "USA",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": 1111049682,
@@ -421,7 +467,8 @@
       "class": "GT4",
       "year": 2012,
       "country": "USA",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": -11335215,
@@ -430,7 +477,8 @@
       "class": "Trans-Am",
       "year": 1997,
       "country": "USA",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": 1230061845,
@@ -439,7 +487,8 @@
       "class": "Road B",
       "year": 2015,
       "country": "USA",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": -1253474718,
@@ -448,7 +497,8 @@
       "class": "Group A",
       "year": 1988,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": 1817703058,
@@ -457,7 +507,8 @@
       "class": "Group 5",
       "year": 1980,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": 310900789,
@@ -466,7 +517,8 @@
       "class": "GT5",
       "year": 2013,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": -1170674276,
@@ -475,7 +527,8 @@
       "class": "GT3",
       "year": 2013,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": 2091910841,
@@ -484,7 +537,8 @@
       "class": "GT4",
       "year": 2013,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": -674255528,
@@ -493,7 +547,8 @@
       "class": "Road A",
       "year": 2011,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": 761457895,
@@ -502,7 +557,8 @@
       "class": "Road B",
       "year": 2015,
       "country": "Austria",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -713284494,
@@ -511,7 +567,8 @@
       "class": "Vintage F1 A1",
       "year": 1963,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": 1162971218,
@@ -520,7 +577,8 @@
       "class": "Vintage Indy 65",
       "year": 1965,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -1204688299,
@@ -529,7 +587,8 @@
       "class": "Vintage GT",
       "year": 1965,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": 578969971,
@@ -538,7 +597,8 @@
       "class": "Vintage F1 A",
       "year": 1967,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": 1061494025,
@@ -547,7 +607,8 @@
       "class": "Vintage F1 A",
       "year": 1970,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -1435057179,
@@ -556,7 +617,8 @@
       "class": "Vintage F3 A",
       "year": 1967,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -1320616846,
@@ -565,7 +627,8 @@
       "class": "Vintage F1 B",
       "year": 1972,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -1835861548,
@@ -574,7 +637,8 @@
       "class": "Vintage F1 B",
       "year": 1977,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": 1959097924,
@@ -583,7 +647,8 @@
       "class": "Vintage F1 C",
       "year": 1986,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": 1355771595,
@@ -592,7 +657,8 @@
       "class": "LMP2",
       "year": 2014,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -2030487367,
@@ -601,7 +667,8 @@
       "class": "LMP1",
       "year": 2014,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -1966060946,
@@ -610,7 +677,8 @@
       "class": "Road A",
       "year": 2015,
       "country": "Japan",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": -444124510,
@@ -619,7 +687,8 @@
       "class": "Road A",
       "year": 2013,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -1166911988,
@@ -628,7 +697,8 @@
       "class": "GT3",
       "year": 2012,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": 307010432,
@@ -637,7 +707,8 @@
       "class": "Road B",
       "year": 1992,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -1001569309,
@@ -646,7 +717,8 @@
       "class": "GT1",
       "year": 1997,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -1748676965,
@@ -655,7 +727,8 @@
       "class": "Road A",
       "year": 2014,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": 1353949246,
@@ -664,7 +737,8 @@
       "class": "GT3",
       "year": 2015,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": 262982797,
@@ -673,7 +747,8 @@
       "class": "Group A",
       "year": 1991,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": -85660500,
@@ -682,7 +757,8 @@
       "class": "Historic Touring 2",
       "year": 1971,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": 1401308680,
@@ -691,7 +767,8 @@
       "class": "Vintage GT3",
       "year": 1952,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": -1522922538,
@@ -700,7 +777,8 @@
       "class": "Road C1",
       "year": 2013,
       "country": "USA",
-      "drivetrain": "AWD"
+      "drivetrain": "AWD",
+      "enginePosition": "Front"
     },
     {
       "id": -525060572,
@@ -709,7 +787,8 @@
       "class": "TC3",
       "year": 2013,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": 1979398129,
@@ -718,7 +797,8 @@
       "class": "GT1",
       "year": 1998,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -1729266457,
@@ -727,7 +807,8 @@
       "class": "Road B",
       "year": 2011,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": 274862187,
@@ -736,7 +817,8 @@
       "class": "GT3",
       "year": 2012,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": -149617068,
@@ -745,7 +827,8 @@
       "class": "Road C1",
       "year": 2008,
       "country": "Japan",
-      "drivetrain": "AWD"
+      "drivetrain": "AWD",
+      "enginePosition": "Front"
     },
     {
       "id": 460478144,
@@ -754,7 +837,8 @@
       "class": "Road C2",
       "year": 1999,
       "country": "Japan",
-      "drivetrain": "AWD"
+      "drivetrain": "AWD",
+      "enginePosition": "Front"
     },
     {
       "id": 998947753,
@@ -763,7 +847,8 @@
       "class": "Road C1",
       "year": 2012,
       "country": "Japan",
-      "drivetrain": "AWD"
+      "drivetrain": "AWD",
+      "enginePosition": "Front"
     },
     {
       "id": -98064499,
@@ -772,7 +857,8 @@
       "class": "LMP2",
       "year": 2013,
       "country": "France",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -2062679088,
@@ -781,7 +867,8 @@
       "class": "Road A",
       "year": 2014,
       "country": "Italy",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": 1356687088,
@@ -790,7 +877,8 @@
       "class": "Road A",
       "year": 2016,
       "country": "Italy",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -1617916111,
@@ -799,7 +887,8 @@
       "class": "Road A",
       "year": 2011,
       "country": "Italy",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -2066888471,
@@ -808,7 +897,8 @@
       "class": "GT1X",
       "year": 2011,
       "country": "Italy",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -486674040,
@@ -817,7 +907,8 @@
       "class": "GT1X",
       "year": 2015,
       "country": "Italy",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -1921505310,
@@ -826,7 +917,8 @@
       "class": "LMP3",
       "year": 2012,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -1048050877,
@@ -835,7 +927,8 @@
       "class": "Road A",
       "year": 2015,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": 1231996358,
@@ -844,7 +937,8 @@
       "class": "LMP3",
       "year": 2011,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": 152867459,
@@ -853,7 +947,8 @@
       "class": "LMP3",
       "year": 2011,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -699643670,
@@ -862,7 +957,8 @@
       "class": "Group 6",
       "year": 1978,
       "country": "France",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -648709823,
@@ -871,7 +967,8 @@
       "class": "TC1",
       "year": 2014,
       "country": "France",
-      "drivetrain": "FWD"
+      "drivetrain": "FWD",
+      "enginePosition": "Front"
     },
     {
       "id": 1694837381,
@@ -880,7 +977,8 @@
       "class": "Road C2",
       "year": 2011,
       "country": "France",
-      "drivetrain": "FWD"
+      "drivetrain": "FWD",
+      "enginePosition": "Front"
     },
     {
       "id": -956881226,
@@ -889,7 +987,8 @@
       "class": "Road C1",
       "year": 2015,
       "country": "France",
-      "drivetrain": "FWD"
+      "drivetrain": "FWD",
+      "enginePosition": "Front"
     },
     {
       "id": -931590477,
@@ -898,7 +997,8 @@
       "class": "Megane Trophy",
       "year": 2009,
       "country": "France",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -1856998124,
@@ -907,7 +1007,8 @@
       "class": "RS01 Trophy",
       "year": 2015,
       "country": "France",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": 2017392050,
@@ -916,7 +1017,8 @@
       "class": "Road B",
       "year": 1987,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Rear"
     },
     {
       "id": 558051123,
@@ -925,7 +1027,8 @@
       "class": "Road A",
       "year": 2012,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -2046825312,
@@ -934,7 +1037,8 @@
       "class": "GT1X",
       "year": 2014,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": 462547146,
@@ -943,7 +1047,8 @@
       "class": "Road B",
       "year": 2013,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Rear"
     },
     {
       "id": -2020758805,
@@ -952,7 +1057,8 @@
       "class": "GT3",
       "year": 2014,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Rear"
     },
     {
       "id": 704998514,
@@ -961,7 +1067,8 @@
       "class": "Road A",
       "year": 2012,
       "country": "Germany",
-      "drivetrain": "AWD"
+      "drivetrain": "AWD",
+      "enginePosition": "Rear"
     },
     {
       "id": 146414985,
@@ -970,7 +1077,8 @@
       "class": "LMP2",
       "year": 2013,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": 1023089804,
@@ -979,7 +1087,8 @@
       "class": "LMP1",
       "year": 2013,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": 65306143,
@@ -988,7 +1097,8 @@
       "class": "Group C1",
       "year": 1989,
       "country": "Germany",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -356101373,
@@ -997,7 +1107,8 @@
       "class": "Road D",
       "year": 2013,
       "country": "Japan",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": -1127314200,
@@ -1006,7 +1117,8 @@
       "class": "Road B",
       "year": 2015,
       "country": "Japan",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": 844159614,
@@ -1015,7 +1127,8 @@
       "class": "Kart1",
       "year": 2011,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -937933849,
@@ -1024,7 +1137,8 @@
       "class": "Kart3",
       "year": 2011,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": 1909945073,
@@ -1033,7 +1147,8 @@
       "class": "FA",
       "year": 2011,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -1318848040,
@@ -1042,7 +1157,8 @@
       "class": "FB",
       "year": 2011,
       "country": "Italy",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -1041674971,
@@ -1051,7 +1167,8 @@
       "class": "FC",
       "year": 2012,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -1706259671,
@@ -1060,7 +1177,8 @@
       "class": "F4",
       "year": 2013,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": 1626504761,
@@ -1069,7 +1187,8 @@
       "class": "Formula Renault",
       "year": 2015,
       "country": "France",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -2075284877,
@@ -1078,7 +1197,8 @@
       "class": "F5",
       "year": 2012,
       "country": "England",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -41807622,
@@ -1087,7 +1207,8 @@
       "class": "Road D",
       "year": 2013,
       "country": "Japan",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": -235751604,
@@ -1096,7 +1217,8 @@
       "class": "Road D",
       "year": 2013,
       "country": "Japan",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": 1764851930,
@@ -1105,7 +1227,8 @@
       "class": "GT4",
       "year": 2015,
       "country": "Japan",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Front"
     },
     {
       "id": 1810453820,
@@ -1114,7 +1237,8 @@
       "class": "LMP1",
       "year": 2014,
       "country": "Japan",
-      "drivetrain": "AWD"
+      "drivetrain": "AWD",
+      "enginePosition": "Mid"
     },
     {
       "id": -180129877,
@@ -1123,7 +1247,8 @@
       "class": "Road A",
       "year": 2014,
       "country": "United Arab Emirates",
-      "drivetrain": "RWD"
+      "drivetrain": "RWD",
+      "enginePosition": "Mid"
     }
   ],
   "classes": [

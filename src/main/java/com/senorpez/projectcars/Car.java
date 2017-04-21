@@ -1,5 +1,7 @@
 package com.senorpez.projectcars;
 
+import com.fasterxml.jackson.annotation.JsonValue;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Arrays;
@@ -14,6 +16,8 @@ class Car {
     private final Integer year;
     private final Drivetrain drivetrain;
 
+    private final EnginePosition enginePosition;
+
     static final List<String> DB_COLUMNS = Arrays.asList(
             "id",
             "manufacturer",
@@ -21,7 +25,8 @@ class Car {
             "class",
             "year",
             "country",
-            "drivetrain"
+            "drivetrain",
+            "enginePosition"
     );
     static final String DB_TABLE_NAME = "cars";
 
@@ -31,7 +36,24 @@ class Car {
         AWD
     }
 
-    Car(Integer id, String manufacturer, String model, String country, String carClass, Integer year, Drivetrain drivetrain) {
+    enum EnginePosition {
+        FRONT ("Front"),
+        MID ("Mid"),
+        REAR ("Rear");
+
+        private String displayString;
+
+        EnginePosition(String displayString) {
+            this.displayString = displayString;
+        }
+
+        @JsonValue
+        public String getDisplayString() {
+            return displayString;
+        }
+    }
+
+    Car(Integer id, String manufacturer, String model, String country, String carClass, Integer year, Drivetrain drivetrain, EnginePosition enginePosition) {
         this.id = id;
         this.manufacturer = manufacturer;
         this.model = model;
@@ -39,6 +61,7 @@ class Car {
         this.carClass = carClass;
         this.year = year;
         this.drivetrain = drivetrain;
+        this.enginePosition = enginePosition;
     }
 
     Car(ResultSet carResults) throws SQLException {
@@ -48,7 +71,8 @@ class Car {
         this.country = carResults.getString("country");
         this.carClass = carResults.getString("class");
         this.year = carResults.getInt("year");
-        this.drivetrain = Drivetrain.valueOf(carResults.getString("drivetrain"));
+        this.drivetrain = Drivetrain.valueOf(carResults.getString("drivetrain").toUpperCase());
+        this.enginePosition = EnginePosition.valueOf(carResults.getString("enginePosition").toUpperCase());
     }
 
     public Integer getId() {
@@ -77,5 +101,9 @@ class Car {
 
     public Drivetrain getDrivetrain() {
         return drivetrain;
+    }
+
+    public EnginePosition getEnginePosition() {
+        return enginePosition;
     }
 }
