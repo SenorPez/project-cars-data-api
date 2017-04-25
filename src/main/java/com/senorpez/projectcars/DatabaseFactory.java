@@ -93,21 +93,21 @@ public class DatabaseFactory {
                 " class VARCHAR(18) NOT NULL, " +
                 " year SMALLINT UNSIGNED NOT NULL, " +
                 " country VARCHAR(20) NOT NULL, " +
-                " drivetrain VARCHAR(3) NOT NULL, " +
+                " drivetrain CHAR(3) NOT NULL, " +
                 " enginePosition VARCHAR(5) NOT NULL, " +
                 " engineType VARCHAR(15) NOT NULL, " +
                 " topSpeed SMALLINT UNSIGNED NOT NULL, " +
                 " horsepower SMALLINT UNSIGNED NOT NULL, " +
-                " acceleration DECIMAL(15,4) UNSIGNED NOT NULL, " +
-                " braking DECIMAL(15, 4) UNSIGNED NOT NULL, " +
+                " acceleration DECIMAL(4, 2) UNSIGNED NOT NULL, " +
+                " braking DECIMAL(3, 2) UNSIGNED NOT NULL, " +
                 " weight SMALLINT UNSIGNED NOT NULL, " +
                 " torque SMALLINT UNSIGNED NOT NULL, " +
                 " weightBalance TINYINT UNSIGNED NOT NULL, " +
-                " wheelbase DECIMAL(15, 4) UNSIGNED NOT NULL, " +
+                " wheelbase DECIMAL(3, 2) UNSIGNED NOT NULL, " +
                 " shiftPattern VARCHAR(10) NOT NULL, " +
-                " shifter VARCHAR(7) NOT NULL, " +
+                " shifter CHAR(7) NOT NULL, " +
                 " gears TINYINT UNSIGNED NOT NULL, " +
-                " dlc VARCHAR(255) NULL, " +
+                " dlc VARCHAR(43) NULL, " +
                 " PRIMARY KEY (id), " +
                 " UNIQUE (manufacturer, model));";
         stmt.executeUpdate(sql);
