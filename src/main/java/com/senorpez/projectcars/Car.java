@@ -27,6 +27,10 @@ class Car {
     private final Integer torque;
     private final Integer weightBalance;
     private final Float wheelbase;
+    private final ShiftPattern shiftPattern;
+    private final Shifter shifter;
+    private final Integer gears;
+    private final String dlc;
 
     static final List<String> DB_COLUMNS = Arrays.asList(
             "id",
@@ -45,7 +49,11 @@ class Car {
             "weight",
             "torque",
             "weightBalance",
-            "wheelbase"
+            "wheelbase",
+            "shiftPattern",
+            "shifter",
+            "gears",
+            "dlc"
     );
     static final String DB_TABLE_NAME = "cars";
 
@@ -72,7 +80,34 @@ class Car {
         }
     }
 
-    Car(Integer id, String manufacturer, String model, String country, String carClass, Integer year, Drivetrain drivetrain, EnginePosition enginePosition, String engineType, Integer topSpeed, Integer horsepower, Float acceleration, Float braking, Integer weight, Integer torque, Integer weightBalance, Float wheelbase) {
+    enum ShiftPattern {
+        SEQUENTIAL ("Sequential"),
+        H ("H");
+
+        private String displayString;
+
+        ShiftPattern(String displayString) { this.displayString = displayString; }
+
+        @JsonValue
+        public String getDisplayString() { return displayString; }
+    }
+
+    enum Shifter {
+        SHIFTER ("Shifter"),
+        PADDLES ("Paddles");
+
+        private String displayString;
+
+        Shifter(String displayString) { this.displayString = displayString; }
+
+        @JsonValue
+        public String getDisplayString() { return displayString; }
+    }
+
+    Car(Integer id, String manufacturer, String model, String country, String carClass, Integer year,
+        Drivetrain drivetrain, EnginePosition enginePosition, String engineType, Integer topSpeed, Integer horsepower,
+        Float acceleration, Float braking, Integer weight, Integer torque, Integer weightBalance, Float wheelbase,
+        ShiftPattern shiftPattern, Shifter shifter, Integer gears, String dlc) {
         this.id = id;
         this.manufacturer = manufacturer;
         this.model = model;
@@ -90,6 +125,10 @@ class Car {
         this.torque = torque;
         this.weightBalance = weightBalance;
         this.wheelbase = wheelbase;
+        this.shiftPattern = shiftPattern;
+        this.shifter = shifter;
+        this.gears = gears;
+        this.dlc = dlc;
     }
 
     Car(ResultSet carResults) throws SQLException {
@@ -110,6 +149,10 @@ class Car {
         this.torque = carResults.getInt("torque");
         this.weightBalance = carResults.getInt("weightBalance");
         this.wheelbase = carResults.getFloat("wheelbase");
+        this.shiftPattern = ShiftPattern.valueOf(carResults.getString("shiftPattern").toUpperCase());
+        this.shifter = Shifter.valueOf(carResults.getString("shifter").toUpperCase());
+        this.gears = carResults.getInt("gears");
+        this.dlc = carResults.getString("dlc");
     }
 
     public Integer getId() {
@@ -172,11 +215,27 @@ class Car {
         return torque;
     }
 
-    public Integer getweightBalance() {
+    public Integer getWeightBalance() {
         return weightBalance;
     }
 
     public Float getWheelbase() {
         return wheelbase;
+    }
+
+    public ShiftPattern getShiftPattern() {
+        return shiftPattern;
+    }
+
+    public Shifter getShifter() {
+        return shifter;
+    }
+
+    public Integer getGears() {
+        return gears;
+    }
+
+    public String getDlc() {
+        return dlc;
     }
 }

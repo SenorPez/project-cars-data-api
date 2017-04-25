@@ -104,6 +104,10 @@ public class DatabaseFactory {
                 " torque SMALLINT UNSIGNED NOT NULL, " +
                 " weightBalance TINYINT UNSIGNED NOT NULL, " +
                 " wheelbase DECIMAL(15, 4) UNSIGNED NOT NULL, " +
+                " shiftPattern VARCHAR(10) NOT NULL, " +
+                " shifter VARCHAR(7) NOT NULL, " +
+                " gears TINYINT UNSIGNED NOT NULL, " +
+                " dlc VARCHAR(255) NULL, " +
                 " PRIMARY KEY (id), " +
                 " UNIQUE (manufacturer, model));";
         stmt.executeUpdate(sql);

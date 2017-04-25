@@ -17,7 +17,11 @@
       "weight": 900,
       "torque": 572,
       "weightBalance": 51,
-      "wheelbase": 2.82
+      "wheelbase": 2.82,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": -1770401008,
@@ -36,7 +40,11 @@
       "weight": 645,
       "torque": 304,
       "weightBalance": 62,
-      "wheelbase": 2.26
+      "wheelbase": 2.26,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": 607772150,
@@ -55,7 +63,11 @@
       "weight": 630,
       "torque": 362,
       "weightBalance": 62,
-      "wheelbase": 2.26
+      "wheelbase": 2.26,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": 526708607,
@@ -74,7 +86,11 @@
       "weight": 620,
       "torque": 247,
       "weightBalance": 61,
-      "wheelbase": 2.26
+      "wheelbase": 2.26,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": "Modified Car Pack"
     },
     {
       "id": 738755746,
@@ -93,7 +109,11 @@
       "weight": 900,
       "torque": 766,
       "weightBalance": 55,
-      "wheelbase": 2.89
+      "wheelbase": 2.89,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": "Aston Martin Track Expansion"
     },
     {
       "id": -91815086,
@@ -112,7 +132,11 @@
       "weight": 856,
       "torque": 340,
       "weightBalance": 50,
-      "wheelbase": 2.29
+      "wheelbase": 2.29,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 5,
+      "dlc": "Aston Martin Track Expansion"
     },
     {
       "id": -324240456,
@@ -131,7 +155,11 @@
       "weight": 1795,
       "torque": 613,
       "weightBalance": 46,
-      "wheelbase": 2.99
+      "wheelbase": 2.99,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": 1452261378,
@@ -150,7 +178,11 @@
       "weight": 1280,
       "torque": 603,
       "weightBalance": 50,
-      "wheelbase": 2.60
+      "wheelbase": 2.60,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": 2086246081,
@@ -169,7 +201,11 @@
       "weight": 1450,
       "torque": 501,
       "weightBalance": 50,
-      "wheelbase": 2.62
+      "wheelbase": 2.62,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": 1401532035,
@@ -188,7 +224,11 @@
       "weight": 1225,
       "torque": 500,
       "weightBalance": 50,
-      "wheelbase": 2.60
+      "wheelbase": 2.60,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": "Aston Martin Track Expansion"
     },
     {
       "id": 1268015922,
@@ -207,7 +247,11 @@
       "weight": 1565,
       "torque": 625,
       "weightBalance": 48,
-      "wheelbase": 2.60
+      "wheelbase": 2.60,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 7,
+      "dlc": "Free Car 9"
     },
     {
       "id": 1470929381,
@@ -226,7 +270,11 @@
       "weight": 1206,
       "torque": 712,
       "weightBalance": 50,
-      "wheelbase": 2.54
+      "wheelbase": 2.54,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 5,
+      "dlc": "Audi Ruapuna Park Track Expansion"
     },
     {
       "id": 2082176226,
@@ -245,7 +293,11 @@
       "weight": 1465,
       "torque": 350,
       "weightBalance": 42,
-      "wheelbase": 2.47
+      "wheelbase": 2.47,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": "Free Car 2"
     },
     {
       "id": 1219511257,
@@ -264,7 +316,11 @@
       "weight": 870,
       "torque": 1085,
       "weightBalance": 50,
-      "wheelbase": 2.97
+      "wheelbase": 2.97,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 7,
+      "dlc": "Audi Ruapuna Park Track Expansion"
     },
     {
       "id": -1067902110,
@@ -283,7 +339,11 @@
       "weight": 900,
       "torque": 1084,
       "weightBalance": 48,
-      "wheelbase": 2.92
+      "wheelbase": 2.92,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": -1761671051,
@@ -302,7 +362,11 @@
       "weight": 900,
       "torque": 700,
       "weightBalance": 56,
-      "wheelbase": 2.74
+      "wheelbase": 2.74,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": "Audi Ruapuna Park Track Expansion"
     },
     {
       "id": 1884411907,
@@ -321,7 +385,11 @@
       "weight": 1270,
       "torque": 526,
       "weightBalance": 57,
-      "wheelbase": 2.65
+      "wheelbase": 2.65,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": 1469658023,
@@ -340,7 +408,11 @@
       "weight": 1691,
       "torque": 549,
       "weightBalance": 57,
-      "wheelbase": 2.65
+      "wheelbase": 2.65,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 7,
+      "dlc": null
     },
     {
       "id": 1400443574,
@@ -359,7 +431,11 @@
       "weight": 620,
       "torque": 271,
       "weightBalance": 50,
-      "wheelbase": 2.57
+      "wheelbase": 2.57,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": 987814806,
@@ -378,7 +454,11 @@
       "weight": 1300,
       "torque": 692,
       "weightBalance": 47,
-      "wheelbase": 2.78
+      "wheelbase": 2.78,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": "Racing Icons Car Pack"
     },
     {
       "id": -494100071,
@@ -397,7 +477,11 @@
       "weight": 916,
       "torque": 766,
       "weightBalance": 50,
-      "wheelbase": 2.60
+      "wheelbase": 2.60,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": "Racing Icons Car Pack"
     },
     {
       "id": -1226176940,
@@ -416,7 +500,11 @@
       "weight": 1610,
       "torque": 460,
       "weightBalance": 48,
-      "wheelbase": 2.67
+      "wheelbase": 2.67,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": -1411323812,
@@ -435,7 +523,11 @@
       "weight": 1555,
       "torque": 630,
       "weightBalance": 48,
-      "wheelbase": 2.67
+      "wheelbase": 2.67,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": "Stanceworks Track Expansion"
     },
     {
       "id": -1187748261,
@@ -454,7 +546,11 @@
       "weight": 1060,
       "torque": 250,
       "weightBalance": 49,
-      "wheelbase": 2.50
+      "wheelbase": 2.50,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 5,
+      "dlc": "Stanceworks Track Expansion"
     },
     {
       "id": 143364290,
@@ -473,7 +569,11 @@
       "weight": 1060,
       "torque": 244,
       "weightBalance": 49,
-      "wheelbase": 2.50
+      "wheelbase": 2.50,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 5,
+      "dlc": "Old Vs. New Car Pack"
     },
     {
       "id": 9503224,
@@ -492,7 +592,11 @@
       "weight": 1150,
       "torque": 415,
       "weightBalance": 50,
-      "wheelbase": 2.76
+      "wheelbase": 2.76,
+      "shiftPattern": "Sequential",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": "Old Vs. New Car Pack"
     },
     {
       "id": 779111340,
@@ -511,7 +615,11 @@
       "weight": 860,
       "torque": 336,
       "weightBalance": 50,
-      "wheelbase": 2.53
+      "wheelbase": 2.53,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 5,
+      "dlc": null
     },
     {
       "id": 1368036017,
@@ -530,7 +638,11 @@
       "weight": 1100,
       "torque": 413,
       "weightBalance": 56,
-      "wheelbase": 2.56
+      "wheelbase": 2.56,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 5,
+      "dlc": "Limited Edition Car Pack"
     },
     {
       "id": -934098507,
@@ -549,7 +661,11 @@
       "weight": 1040,
       "torque": 289,
       "weightBalance": 50,
-      "wheelbase": 2.57
+      "wheelbase": 2.57,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 5,
+      "dlc": null
     },
     {
       "id": -1365918055,
@@ -568,7 +684,11 @@
       "weight": 1245,
       "torque": 495,
       "weightBalance": 50,
-      "wheelbase": 2.76
+      "wheelbase": 2.76,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": -1545450182,
@@ -587,7 +707,11 @@
       "weight": 1495,
       "torque": 395,
       "weightBalance": 48,
-      "wheelbase": 2.76
+      "wheelbase": 2.76,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": 975104023,
@@ -606,7 +730,11 @@
       "weight": 915,
       "torque": 698,
       "weightBalance": 55,
-      "wheelbase": 2.80
+      "wheelbase": 2.80,
+      "shiftPattern": "Sequential",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": "Racing Icons Car Pack"
     },
     {
       "id": 1161219858,
@@ -625,7 +753,11 @@
       "weight": 1245,
       "torque": 494,
       "weightBalance": 59,
-      "wheelbase": 2.50
+      "wheelbase": 2.50,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": -2025231366,
@@ -644,7 +776,11 @@
       "weight": 1315,
       "torque": 599,
       "weightBalance": 51,
-      "wheelbase": 2.82
+      "wheelbase": 2.82,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": "US Race Car Pack"
     },
     {
       "id": 578910088,
@@ -663,7 +799,11 @@
       "weight": 1680,
       "torque": 677,
       "weightBalance": 49,
-      "wheelbase": 2.79
+      "wheelbase": 2.79,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 4,
+      "dlc": null
     },
     {
       "id": -886212684,
@@ -682,7 +822,11 @@
       "weight": 605,
       "torque": 128,
       "weightBalance": 50,
-      "wheelbase": 2.22
+      "wheelbase": 2.22,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 5,
+      "dlc": null
     },
     {
       "id": 675194619,
@@ -701,7 +845,11 @@
       "weight": 625,
       "torque": 283,
       "weightBalance": 56,
-      "wheelbase": 2.64
+      "wheelbase": 2.64,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": -162683612,
@@ -720,7 +868,11 @@
       "weight": 596,
       "torque": 237,
       "weightBalance": 53,
-      "wheelbase": 2.22
+      "wheelbase": 2.22,
+      "shiftPattern": "Sequential",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": -384044277,
@@ -739,7 +891,11 @@
       "weight": 1245,
       "torque": 712,
       "weightBalance": 50,
-      "wheelbase": 2.72
+      "wheelbase": 2.72,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": "US Race Car Pack"
     },
     {
       "id": 1901402958,
@@ -758,7 +914,11 @@
       "weight": 725,
       "torque": 404,
       "weightBalance": 58,
-      "wheelbase": 3.05
+      "wheelbase": 3.05,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": "US Race Car Pack"
     },
     {
       "id": 1639105598,
@@ -777,7 +937,11 @@
       "weight": 865,
       "torque": 193,
       "weightBalance": 46,
-      "wheelbase": 2.40
+      "wheelbase": 2.40,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 4,
+      "dlc": null
     },
     {
       "id": 1357515789,
@@ -796,7 +960,11 @@
       "weight": 1410,
       "torque": 677,
       "weightBalance": 46,
-      "wheelbase": 2.81
+      "wheelbase": 2.81,
+      "shiftPattern": "Sequential",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": "Free Car 8"
     },
     {
       "id": -1738120892,
@@ -815,7 +983,11 @@
       "weight": 1540,
       "torque": 434,
       "weightBalance": 37,
-      "wheelbase": 2.64
+      "wheelbase": 2.64,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": 851491257,
@@ -834,7 +1006,11 @@
       "weight": 1497,
       "torque": 745,
       "weightBalance": 49,
-      "wheelbase": 2.80
+      "wheelbase": 2.80,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 4,
+      "dlc": "US Race Car Pack"
     },
     {
       "id": -1774335742,
@@ -853,7 +1029,11 @@
       "weight": 1080,
       "torque": 629,
       "weightBalance": 57,
-      "wheelbase": 2.41
+      "wheelbase": 2.41,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 4,
+      "dlc": "Limited Edition Car Pack"
     },
     {
       "id": 1397255601,
@@ -872,7 +1052,11 @@
       "weight": 1312,
       "torque": 423,
       "weightBalance": 45,
-      "wheelbase": 2.76
+      "wheelbase": 2.76,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 4,
+      "dlc": "Old Vs. New Car Pack"
     },
     {
       "id": 1111049682,
@@ -891,7 +1075,11 @@
       "weight": 1506,
       "torque": 491,
       "weightBalance": 44,
-      "wheelbase": 2.72
+      "wheelbase": 2.72,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": -11335215,
@@ -910,7 +1098,11 @@
       "weight": 1270,
       "torque": 603,
       "weightBalance": 48,
-      "wheelbase": 2.59
+      "wheelbase": 2.59,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 5,
+      "dlc": null
     },
     {
       "id": 1230061845,
@@ -929,7 +1121,11 @@
       "weight": 1683,
       "torque": 542,
       "weightBalance": 46,
-      "wheelbase": 2.72
+      "wheelbase": 2.72,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": "Old Vs. New Car Pack"
     },
     {
       "id": -1253474718,
@@ -948,7 +1144,11 @@
       "weight": 1120,
       "torque": 436,
       "weightBalance": 43,
-      "wheelbase": 2.61
+      "wheelbase": 2.61,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 5,
+      "dlc": null
     },
     {
       "id": 1817703058,
@@ -967,7 +1167,11 @@
       "weight": 870,
       "torque": 353,
       "weightBalance": 50,
-      "wheelbase": 2.56
+      "wheelbase": 2.56,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 5,
+      "dlc": null
     },
     {
       "id": 310900789,
@@ -986,7 +1190,11 @@
       "weight": 900,
       "torque": 152,
       "weightBalance": 47,
-      "wheelbase": 2.25
+      "wheelbase": 2.25,
+      "shiftPattern": "Sequential",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": -1170674276,
@@ -1005,7 +1213,11 @@
       "weight": 1200,
       "torque": 496,
       "weightBalance": 48,
-      "wheelbase": 2.49
+      "wheelbase": 2.49,
+      "shiftPattern": "Sequential",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": 2091910841,
@@ -1024,7 +1236,11 @@
       "weight": 1260,
       "torque": 437,
       "weightBalance": 50,
-      "wheelbase": 2.46
+      "wheelbase": 2.46,
+      "shiftPattern": "Sequential",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": -674255528,
@@ -1043,7 +1259,11 @@
       "weight": 1445,
       "torque": 870,
       "weightBalance": 57,
-      "wheelbase": 2.70
+      "wheelbase": 2.70,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": 761457895,
@@ -1062,7 +1282,11 @@
       "weight": 790,
       "torque": 400,
       "weightBalance": 63,
-      "wheelbase": 2.43
+      "wheelbase": 2.43,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": "Stanceworks Track Expansion"
     },
     {
       "id": -713284494,
@@ -1081,7 +1305,11 @@
       "weight": 452,
       "torque": 163,
       "weightBalance": 63,
-      "wheelbase": 2.41
+      "wheelbase": 2.41,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 5,
+      "dlc": "Classic Lotus Track Expansion"
     },
     {
       "id": 1162971218,
@@ -1100,7 +1328,11 @@
       "weight": 612,
       "torque": 447,
       "weightBalance": 58,
-      "wheelbase": 2.46
+      "wheelbase": 2.46,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 2,
+      "dlc": "Classic Lotus Track Expansion"
     },
     {
       "id": -1204688299,
@@ -1119,7 +1351,11 @@
       "weight": 765,
       "torque": 474,
       "weightBalance": 58,
-      "wheelbase": 2.40
+      "wheelbase": 2.40,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 4,
+      "dlc": "Classic Lotus Track Expansion"
     },
     {
       "id": 578969971,
@@ -1138,7 +1374,11 @@
       "weight": 615,
       "torque": 328,
       "weightBalance": 60,
-      "wheelbase": 2.41
+      "wheelbase": 2.41,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 5,
+      "dlc": null
     },
     {
       "id": 1061494025,
@@ -1157,7 +1397,11 @@
       "weight": 545,
       "torque": 331,
       "weightBalance": 62,
-      "wheelbase": 2.41
+      "wheelbase": 2.41,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 5,
+      "dlc": "Free Car 6"
     },
     {
       "id": -1435057179,
@@ -1176,7 +1420,11 @@
       "weight": 423,
       "torque": 134,
       "weightBalance": 57,
-      "wheelbase": 2.30
+      "wheelbase": 2.30,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 4,
+      "dlc": "Classic Lotus Track Expansion"
     },
     {
       "id": -1320616846,
@@ -1195,7 +1443,11 @@
       "weight": 655,
       "torque": 354,
       "weightBalance": 65,
-      "wheelbase": 2.54
+      "wheelbase": 2.54,
+      "shiftPattern": "Sequential",
+      "shifter": "Shifter",
+      "gears": 5,
+      "dlc": null
     },
     {
       "id": -1835861548,
@@ -1214,7 +1466,11 @@
       "weight": 648,
       "torque": 329,
       "weightBalance": 62,
-      "wheelbase": 2.75
+      "wheelbase": 2.75,
+      "shiftPattern": "Sequential",
+      "shifter": "Shifter",
+      "gears": 5,
+      "dlc": null
     },
     {
       "id": 1959097924,
@@ -1233,7 +1489,11 @@
       "weight": 620,
       "torque": 552,
       "weightBalance": 60,
-      "wheelbase": 2.75
+      "wheelbase": 2.75,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 5,
+      "dlc": null
     },
     {
       "id": 1355771595,
@@ -1252,7 +1512,11 @@
       "weight": 900,
       "torque": 810,
       "weightBalance": 52,
-      "wheelbase": 2.91
+      "wheelbase": 2.91,
+      "shiftPattern": "Sequential",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": -2030487367,
@@ -1271,7 +1535,11 @@
       "weight": 900,
       "torque": 615,
       "weightBalance": 50,
-      "wheelbase": 2.95
+      "wheelbase": 2.95,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": -1966060946,
@@ -1290,7 +1558,11 @@
       "weight": 1225,
       "torque": 1267,
       "weightBalance": 52,
-      "wheelbase": 2.33
+      "wheelbase": 2.33,
+      "shiftPattern": "Sequential",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": "Stanceworks Track Expansion"
     },
     {
       "id": -444124510,
@@ -1309,7 +1581,11 @@
       "weight": 1440,
       "torque": 600,
       "weightBalance": 57,
-      "wheelbase": 2.67
+      "wheelbase": 2.67,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 7,
+      "dlc": null
     },
     {
       "id": -1166911988,
@@ -1328,7 +1604,11 @@
       "weight": 1295,
       "torque": 584,
       "weightBalance": 53,
-      "wheelbase": 2.68
+      "wheelbase": 2.68,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": 307010432,
@@ -1347,7 +1627,11 @@
       "weight": 1136,
       "torque": 651,
       "weightBalance": 58,
-      "wheelbase": 2.72
+      "wheelbase": 2.72,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": "Limited Edition Car Pack"
     },
     {
       "id": -1001569309,
@@ -1366,7 +1650,11 @@
       "weight": 915,
       "torque": 677,
       "weightBalance": 57,
-      "wheelbase": 2.72
+      "wheelbase": 2.72,
+      "shiftPattern": "Sequential",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": "Racing Icons Car Pack"
     },
     {
       "id": -1748676965,
@@ -1385,7 +1673,11 @@
       "weight": 1475,
       "torque": 890,
       "weightBalance": 58,
-      "wheelbase": 2.67
+      "wheelbase": 2.67,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 7,
+      "dlc": null
     },
     {
       "id": 1353949246,
@@ -1404,7 +1696,11 @@
       "weight": 1350,
       "torque": 580,
       "weightBalance": 52,
-      "wheelbase": 2.64
+      "wheelbase": 2.64,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": "Free Car 10"
     },
     {
       "id": 262982797,
@@ -1423,7 +1719,11 @@
       "weight": 1060,
       "torque": 289,
       "weightBalance": 50,
-      "wheelbase": 2.66
+      "wheelbase": 2.66,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": -85660500,
@@ -1442,7 +1742,11 @@
       "weight": 1635,
       "torque": 610,
       "weightBalance": 41,
-      "wheelbase": 2.87
+      "wheelbase": 2.87,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 5,
+      "dlc": null
     },
     {
       "id": 1401308680,
@@ -1461,7 +1765,11 @@
       "weight": 1060,
       "torque": 280,
       "weightBalance": 46,
-      "wheelbase": 2.42
+      "wheelbase": 2.42,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 4,
+      "dlc": "Free Car 4"
     },
     {
       "id": -1522922538,
@@ -1480,7 +1788,11 @@
       "weight": 1635,
       "torque": 445,
       "weightBalance": 38,
-      "wheelbase": 3.70
+      "wheelbase": 3.70,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 7,
+      "dlc": null
     },
     {
       "id": -525060572,
@@ -1499,7 +1811,11 @@
       "weight": 1160,
       "torque": 495,
       "weightBalance": 50,
-      "wheelbase": 2.68
+      "wheelbase": 2.68,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": "Limited Edition Car Pack"
     },
     {
       "id": 1979398129,
@@ -1518,7 +1834,11 @@
       "weight": 1000,
       "torque": 662,
       "weightBalance": 56,
-      "wheelbase": 2.67
+      "wheelbase": 2.67,
+      "shiftPattern": "Sequential",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": "Racing Icons Car Pack"
     },
     {
       "id": -1729266457,
@@ -1537,7 +1857,11 @@
       "weight": 1620,
       "torque": 640,
       "weightBalance": 52,
-      "wheelbase": 2.68
+      "wheelbase": 2.68,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 7,
+      "dlc": null
     },
     {
       "id": 274862187,
@@ -1556,7 +1880,11 @@
       "weight": 1350,
       "torque": 612,
       "weightBalance": 51,
-      "wheelbase": 2.68
+      "wheelbase": 2.68,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": -149617068,
@@ -1575,7 +1903,11 @@
       "weight": 1400,
       "torque": 492,
       "weightBalance": 43,
-      "wheelbase": 2.63
+      "wheelbase": 2.63,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": "Japanese Car Pack"
     },
     {
       "id": 460478144,
@@ -1594,7 +1926,11 @@
       "weight": 1365,
       "torque": 372,
       "weightBalance": 39,
-      "wheelbase": 2.52
+      "wheelbase": 2.52,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 5,
+      "dlc": "Japanese Car Pack"
     },
     {
       "id": 998947753,
@@ -1613,7 +1949,11 @@
       "weight": 1640,
       "torque": 543,
       "weightBalance": 43,
-      "wheelbase": 2.65
+      "wheelbase": 2.65,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 5,
+      "dlc": null
     },
     {
       "id": -98064499,
@@ -1632,7 +1972,11 @@
       "weight": 900,
       "torque": 572,
       "weightBalance": 51,
-      "wheelbase": 2.82
+      "wheelbase": 2.82,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": -2062679088,
@@ -1651,7 +1995,11 @@
       "weight": 1430,
       "torque": 979,
       "weightBalance": 55,
-      "wheelbase": 2.80
+      "wheelbase": 2.80,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 7,
+      "dlc": null
     },
     {
       "id": 1356687088,
@@ -1670,7 +2018,11 @@
       "weight": 1288,
       "torque": 998,
       "weightBalance": 57,
-      "wheelbase": 2.80
+      "wheelbase": 2.80,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 7,
+      "dlc": "Pagani N\u00fcrburgring Combined Track Expansion"
     },
     {
       "id": -1617916111,
@@ -1689,7 +2041,11 @@
       "weight": 1320,
       "torque": 769,
       "weightBalance": 52,
-      "wheelbase": 2.73
+      "wheelbase": 2.73,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": "Modified Car Pack"
     },
     {
       "id": -2066888471,
@@ -1708,7 +2064,11 @@
       "weight": 1185,
       "torque": 700,
       "weightBalance": 54,
-      "wheelbase": 2.79
+      "wheelbase": 2.79,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": -486674040,
@@ -1727,7 +2087,11 @@
       "weight": 1070,
       "torque": 728,
       "weightBalance": 54,
-      "wheelbase": 2.79
+      "wheelbase": 2.79,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": "Pagani N\u00fcrburgring Combined Track Expansion"
     },
     {
       "id": -1921505310,
@@ -1746,7 +2110,11 @@
       "weight": 730,
       "torque": 311,
       "weightBalance": 61,
-      "wheelbase": 2.72
+      "wheelbase": 2.72,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": -1048050877,
@@ -1765,7 +2133,11 @@
       "weight": 940,
       "torque": 677,
       "weightBalance": 55,
-      "wheelbase": 2.70
+      "wheelbase": 2.70,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": "Free Car 7"
     },
     {
       "id": 1231996358,
@@ -1784,7 +2156,11 @@
       "weight": 625,
       "torque": 205,
       "weightBalance": 57,
-      "wheelbase": 2.38
+      "wheelbase": 2.38,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": 152867459,
@@ -1803,7 +2179,11 @@
       "weight": 730,
       "torque": 343,
       "weightBalance": 60,
-      "wheelbase": 2.38
+      "wheelbase": 2.38,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": -699643670,
@@ -1822,7 +2202,11 @@
       "weight": 715,
       "torque": 387,
       "weightBalance": 70,
-      "wheelbase": 2.47
+      "wheelbase": 2.47,
+      "shiftPattern": "Sequential",
+      "shifter": "Shifter",
+      "gears": 5,
+      "dlc": "Renault Sport Car Pack"
     },
     {
       "id": -648709823,
@@ -1841,7 +2225,11 @@
       "weight": 1160,
       "torque": 266,
       "weightBalance": 36,
-      "wheelbase": 2.59
+      "wheelbase": 2.59,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": 1694837381,
@@ -1860,7 +2248,11 @@
       "weight": 1480,
       "torque": 357,
       "weightBalance": 35,
-      "wheelbase": 2.64
+      "wheelbase": 2.64,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": -956881226,
@@ -1879,7 +2271,11 @@
       "weight": 1297,
       "torque": 359,
       "weightBalance": 34,
-      "wheelbase": 2.65
+      "wheelbase": 2.65,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": "Renault Sport Car Pack"
     },
     {
       "id": -931590477,
@@ -1898,7 +2294,11 @@
       "weight": 998,
       "torque": 454,
       "weightBalance": 52,
-      "wheelbase": 2.65
+      "wheelbase": 2.65,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": "Renault Sport Car Pack"
     },
     {
       "id": -1856998124,
@@ -1917,7 +2317,11 @@
       "weight": 1144,
       "torque": 628,
       "weightBalance": 56,
-      "wheelbase": 2.74
+      "wheelbase": 2.74,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 7,
+      "dlc": "Renault Sport Car Pack"
     },
     {
       "id": 2017392050,
@@ -1936,7 +2340,11 @@
       "weight": 1087,
       "torque": 553,
       "weightBalance": 58,
-      "wheelbase": 2.27
+      "wheelbase": 2.27,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 5,
+      "dlc": "Old Vs. New Car Pack"
     },
     {
       "id": 558051123,
@@ -1955,7 +2363,11 @@
       "weight": 1425,
       "torque": 944,
       "weightBalance": 60,
-      "wheelbase": 2.62
+      "wheelbase": 2.62,
+      "shiftPattern": "Sequential",
+      "shifter": "Shifter",
+      "gears": 7,
+      "dlc": null
     },
     {
       "id": -2046825312,
@@ -1974,7 +2386,11 @@
       "weight": 1155,
       "torque": 944,
       "weightBalance": 60,
-      "wheelbase": 2.62
+      "wheelbase": 2.62,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": "Modified Car Pack"
     },
     {
       "id": 462547146,
@@ -1993,7 +2409,11 @@
       "weight": 1430,
       "torque": 494,
       "weightBalance": 58,
-      "wheelbase": 2.45
+      "wheelbase": 2.45,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": -2020758805,
@@ -2012,7 +2432,11 @@
       "weight": 1235,
       "torque": 480,
       "weightBalance": 58,
-      "wheelbase": 2.45
+      "wheelbase": 2.45,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": 704998514,
@@ -2031,7 +2455,11 @@
       "weight": 1494,
       "torque": 940,
       "weightBalance": 61,
-      "wheelbase": 2.35
+      "wheelbase": 2.35,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": "Free Car 3"
     },
     {
       "id": 146414985,
@@ -2050,7 +2478,11 @@
       "weight": 900,
       "torque": 521,
       "weightBalance": 52,
-      "wheelbase": 2.86
+      "wheelbase": 2.86,
+      "shiftPattern": "Sequential",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": 1023089804,
@@ -2069,7 +2501,11 @@
       "weight": 900,
       "torque": 508,
       "weightBalance": 50,
-      "wheelbase": 2.90
+      "wheelbase": 2.90,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": 65306143,
@@ -2088,7 +2524,11 @@
       "weight": 980,
       "torque": 833,
       "weightBalance": 60,
-      "wheelbase": 2.70
+      "wheelbase": 2.70,
+      "shiftPattern": "Sequential",
+      "shifter": "Shifter",
+      "gears": 5,
+      "dlc": "Limited Edition Car Pack"
     },
     {
       "id": -356101373,
@@ -2107,7 +2547,11 @@
       "weight": 1213,
       "torque": 205,
       "weightBalance": 44,
-      "wheelbase": 2.57
+      "wheelbase": 2.57,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": "Free Car 5"
     },
     {
       "id": -1127314200,
@@ -2126,7 +2570,11 @@
       "weight": 1290,
       "torque": 508,
       "weightBalance": 43,
-      "wheelbase": 2.57
+      "wheelbase": 2.57,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": "Japanese Car Pack"
     },
     {
       "id": 844159614,
@@ -2145,7 +2593,11 @@
       "weight": 160,
       "torque": 17,
       "weightBalance": 59,
-      "wheelbase": 1.03
+      "wheelbase": 1.03,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": -937933849,
@@ -2164,7 +2616,11 @@
       "weight": 205,
       "torque": 49,
       "weightBalance": 56,
-      "wheelbase": 1.04
+      "wheelbase": 1.04,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": 1909945073,
@@ -2183,7 +2639,11 @@
       "weight": 640,
       "torque": 330,
       "weightBalance": 52,
-      "wheelbase": 3.38
+      "wheelbase": 3.38,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 7,
+      "dlc": null
     },
     {
       "id": -1318848040,
@@ -2202,7 +2662,11 @@
       "weight": 750,
       "torque": 436,
       "weightBalance": 60,
-      "wheelbase": 3.16
+      "wheelbase": 3.16,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": -1041674971,
@@ -2221,7 +2685,11 @@
       "weight": 550,
       "torque": 274,
       "weightBalance": 56,
-      "wheelbase": 2.67
+      "wheelbase": 2.67,
+      "shiftPattern": "Sequential",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": -1706259671,
@@ -2240,7 +2708,11 @@
       "weight": 460,
       "torque": 115,
       "weightBalance": 56,
-      "wheelbase": 2.43
+      "wheelbase": 2.43,
+      "shiftPattern": "Sequential",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": null
     },
     {
       "id": 1626504761,
@@ -2259,7 +2731,11 @@
       "weight": 623,
       "torque": 444,
       "weightBalance": 56,
-      "wheelbase": 3.13
+      "wheelbase": 3.13,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 6,
+      "dlc": "Renault Sport Car Pack"
     },
     {
       "id": -2075284877,
@@ -2278,7 +2754,11 @@
       "weight": 505,
       "torque": 135,
       "weightBalance": 55,
-      "wheelbase": 2.44
+      "wheelbase": 2.44,
+      "shiftPattern": "Sequential",
+      "shifter": "Shifter",
+      "gears": 4,
+      "dlc": null
     },
     {
       "id": -41807622,
@@ -2297,7 +2777,11 @@
       "weight": 1213,
       "torque": 205,
       "weightBalance": 44,
-      "wheelbase": 2.57
+      "wheelbase": 2.57,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": "Japanese Car Pack"
     },
     {
       "id": -235751604,
@@ -2316,7 +2800,11 @@
       "weight": 1213,
       "torque": 205,
       "weightBalance": 44,
-      "wheelbase": 2.57
+      "wheelbase": 2.57,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": "Japanese Car Pack"
     },
     {
       "id": 1764851930,
@@ -2335,7 +2823,11 @@
       "weight": 1175,
       "torque": 349,
       "weightBalance": 47,
-      "wheelbase": 2.57
+      "wheelbase": 2.57,
+      "shiftPattern": "H",
+      "shifter": "Shifter",
+      "gears": 6,
+      "dlc": "Japanese Car Pack"
     },
     {
       "id": 1810453820,
@@ -2354,7 +2846,11 @@
       "weight": 870,
       "torque": 915,
       "weightBalance": 50,
-      "wheelbase": 2.90
+      "wheelbase": 2.90,
+      "shiftPattern": "Sequential",
+      "shifter": "Paddles",
+      "gears": 7,
+      "dlc": "Japanese Car Pack"
     },
     {
       "id": -180129877,
@@ -2373,7 +2869,11 @@
       "weight": 1400,
       "torque": 960,
       "weightBalance": 51,
-      "wheelbase": 2.63
+      "wheelbase": 2.63,
+      "shiftPattern": "Sequential",
+      "shifter": "Shifter",
+      "gears": 7,
+      "dlc": "Free Car 1"
     }
   ],
   "classes": [
