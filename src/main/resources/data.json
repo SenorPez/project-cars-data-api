@@ -10,7 +10,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V8",
-      "topSpeed": 309
+      "topSpeed": 309,
+      "horsepower": 462,
+      "acceleration": 3.00,
+      "braking": 1.66,
+      "weight": 900,
+      "torque": 572,
+      "weightBalance": 51,
+      "wheelbase": 2.82
     },
     {
       "id": -1770401008,
@@ -22,7 +29,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "Straight 4",
-      "topSpeed": 259
+      "topSpeed": 259,
+      "horsepower": 300,
+      "acceleration": 2.90,
+      "braking": 2.67,
+      "weight": 645,
+      "torque": 304,
+      "weightBalance": 62,
+      "wheelbase": 2.26
     },
     {
       "id": 607772150,
@@ -34,7 +48,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V8",
-      "topSpeed": 298
+      "topSpeed": 298,
+      "horsepower": 430,
+      "acceleration": 2.29,
+      "braking": 2.53,
+      "weight": 630,
+      "torque": 362,
+      "weightBalance": 62,
+      "wheelbase": 2.26
     },
     {
       "id": 526708607,
@@ -46,7 +67,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "Straight 4",
-      "topSpeed": 251
+      "topSpeed": 251,
+      "horsepower": 270,
+      "acceleration": 2.90,
+      "braking": 2.58,
+      "weight": 620,
+      "torque": 247,
+      "weightBalance": 61,
+      "wheelbase": 2.26
     },
     {
       "id": 738755746,
@@ -58,7 +86,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V12",
-      "topSpeed": 340
+      "topSpeed": 340,
+      "horsepower": 670,
+      "acceleration": 2.70,
+      "braking": 1.70,
+      "weight": 900,
+      "torque": 766,
+      "weightBalance": 55,
+      "wheelbase": 2.89
     },
     {
       "id": -91815086,
@@ -70,7 +105,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "Straight 6",
-      "topSpeed": 266
+      "topSpeed": 266,
+      "horsepower": 254,
+      "acceleration": 5.40,
+      "braking": 4.34,
+      "weight": 856,
+      "torque": 340,
+      "weightBalance": 50,
+      "wheelbase": 2.29
     },
     {
       "id": -324240456,
@@ -82,7 +124,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "V12",
-      "topSpeed": 300
+      "topSpeed": 300,
+      "horsepower": 560,
+      "acceleration": 4.30,
+      "braking": 2.31,
+      "weight": 1795,
+      "torque": 613,
+      "weightBalance": 46,
+      "wheelbase": 2.99
     },
     {
       "id": 1452261378,
@@ -94,7 +143,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "V12",
-      "topSpeed": 304
+      "topSpeed": 304,
+      "horsepower": 520,
+      "acceleration": 3.29,
+      "braking": 1.77,
+      "weight": 1280,
+      "torque": 603,
+      "weightBalance": 50,
+      "wheelbase": 2.60
     },
     {
       "id": 2086246081,
@@ -106,7 +162,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "V8",
-      "topSpeed": 302
+      "topSpeed": 302,
+      "horsepower": 430,
+      "acceleration": 3.79,
+      "braking": 2.36,
+      "weight": 1450,
+      "torque": 501,
+      "weightBalance": 50,
+      "wheelbase": 2.62
     },
     {
       "id": 1401532035,
@@ -118,7 +181,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "V8",
-      "topSpeed": 301
+      "topSpeed": 301,
+      "horsepower": 450,
+      "acceleration": 3.15,
+      "braking": 1.71,
+      "weight": 1225,
+      "torque": 500,
+      "weightBalance": 50,
+      "wheelbase": 2.60
     },
     {
       "id": 1268015922,
@@ -130,7 +200,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "V12",
-      "topSpeed": 299
+      "topSpeed": 299,
+      "horsepower": 595,
+      "acceleration": 3.50,
+      "braking": 2.51,
+      "weight": 1565,
+      "torque": 625,
+      "weightBalance": 48,
+      "wheelbase": 2.60
     },
     {
       "id": 1470929381,
@@ -142,7 +219,14 @@
       "drivetrain": "AWD",
       "enginePosition": "Front",
       "engineType": "Straight 5",
-      "topSpeed": 310
+      "topSpeed": 310,
+      "horsepower": 720,
+      "acceleration": 3.10,
+      "braking": 2.15,
+      "weight": 1206,
+      "torque": 712,
+      "weightBalance": 50,
+      "wheelbase": 2.54
     },
     {
       "id": 2082176226,
@@ -154,7 +238,14 @@
       "drivetrain": "AWD",
       "enginePosition": "Front",
       "engineType": "Straight 4",
-      "topSpeed": 245
+      "topSpeed": 245,
+      "horsepower": 256,
+      "acceleration": 5.70,
+      "braking": 3.29,
+      "weight": 1465,
+      "torque": 350,
+      "weightBalance": 42,
+      "wheelbase": 2.47
     },
     {
       "id": 1219511257,
@@ -166,7 +257,14 @@
       "drivetrain": "AWD",
       "enginePosition": "Mid",
       "engineType": "V6",
-      "topSpeed": 338
+      "topSpeed": 338,
+      "horsepower": 540,
+      "acceleration": 2.60,
+      "braking": 1.50,
+      "weight": 870,
+      "torque": 1085,
+      "weightBalance": 50,
+      "wheelbase": 2.97
     },
     {
       "id": -1067902110,
@@ -178,7 +276,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V6",
-      "topSpeed": 331
+      "topSpeed": 331,
+      "horsepower": 612,
+      "acceleration": 2.59,
+      "braking": 1.61,
+      "weight": 900,
+      "torque": 1084,
+      "weightBalance": 48,
+      "wheelbase": 2.92
     },
     {
       "id": -1761671051,
@@ -190,7 +295,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V8",
-      "topSpeed": 330
+      "topSpeed": 330,
+      "horsepower": 610,
+      "acceleration": 2.80,
+      "braking": 1.61,
+      "weight": 900,
+      "torque": 700,
+      "weightBalance": 56,
+      "wheelbase": 2.74
     },
     {
       "id": 1884411907,
@@ -202,7 +314,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V10",
-      "topSpeed": 281
+      "topSpeed": 281,
+      "horsepower": 520,
+      "acceleration": 3.59,
+      "braking": 1.72,
+      "weight": 1270,
+      "torque": 526,
+      "weightBalance": 57,
+      "wheelbase": 2.65
     },
     {
       "id": 1469658023,
@@ -214,7 +333,14 @@
       "drivetrain": "AWD",
       "enginePosition": "Mid",
       "engineType": "V10",
-      "topSpeed": 333
+      "topSpeed": 333,
+      "horsepower": 550,
+      "acceleration": 3.20,
+      "braking": 2.61,
+      "weight": 1691,
+      "torque": 549,
+      "weightBalance": 57,
+      "wheelbase": 2.65
     },
     {
       "id": 1400443574,
@@ -226,7 +352,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "Straight 4",
-      "topSpeed": 286
+      "topSpeed": 286,
+      "horsepower": 275,
+      "acceleration": 2.79,
+      "braking": 2.55,
+      "weight": 620,
+      "torque": 271,
+      "weightBalance": 50,
+      "wheelbase": 2.57
     },
     {
       "id": 987814806,
@@ -238,7 +371,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "V8",
-      "topSpeed": 274
+      "topSpeed": 274,
+      "horsepower": 540,
+      "acceleration": 3.29,
+      "braking": 1.76,
+      "weight": 1300,
+      "torque": 692,
+      "weightBalance": 47,
+      "wheelbase": 2.78
     },
     {
       "id": -494100071,
@@ -250,7 +390,14 @@
       "drivetrain": "AWD",
       "enginePosition": "Mid",
       "engineType": "V8",
-      "topSpeed": 326
+      "topSpeed": 326,
+      "horsepower": 625,
+      "acceleration": 2.59,
+      "braking": 1.61,
+      "weight": 916,
+      "torque": 766,
+      "weightBalance": 50,
+      "wheelbase": 2.60
     },
     {
       "id": -1226176940,
@@ -262,7 +409,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "Straight 6",
-      "topSpeed": 249
+      "topSpeed": 249,
+      "horsepower": 342,
+      "acceleration": 4.19,
+      "braking": 2.89,
+      "weight": 1610,
+      "torque": 460,
+      "weightBalance": 48,
+      "wheelbase": 2.67
     },
     {
       "id": -1411323812,
@@ -274,7 +428,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "Straight 6",
-      "topSpeed": 299
+      "topSpeed": 299,
+      "horsepower": 460,
+      "acceleration": 3.90,
+      "braking": 2.71,
+      "weight": 1555,
+      "torque": 630,
+      "weightBalance": 48,
+      "wheelbase": 2.67
     },
     {
       "id": -1187748261,
@@ -286,7 +447,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "Straight 4",
-      "topSpeed": 257
+      "topSpeed": 257,
+      "horsepower": 275,
+      "acceleration": 5.19,
+      "braking": 3.84,
+      "weight": 1060,
+      "torque": 250,
+      "weightBalance": 49,
+      "wheelbase": 2.50
     },
     {
       "id": 143364290,
@@ -298,7 +466,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "Straight 4",
-      "topSpeed": 209
+      "topSpeed": 209,
+      "horsepower": 170,
+      "acceleration": 7.30,
+      "braking": 4.36,
+      "weight": 1060,
+      "torque": 244,
+      "weightBalance": 49,
+      "wheelbase": 2.50
     },
     {
       "id": 9503224,
@@ -310,7 +485,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "Straight 4",
-      "topSpeed": 267
+      "topSpeed": 267,
+      "horsepower": 310,
+      "acceleration": 4.19,
+      "braking": 2.04,
+      "weight": 1150,
+      "torque": 415,
+      "weightBalance": 50,
+      "wheelbase": 2.76
     },
     {
       "id": 779111340,
@@ -322,7 +504,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "Straight 4",
-      "topSpeed": 281
+      "topSpeed": 281,
+      "horsepower": 400,
+      "acceleration": 4.09,
+      "braking": 1.72,
+      "weight": 860,
+      "torque": 336,
+      "weightBalance": 50,
+      "wheelbase": 2.53
     },
     {
       "id": 1368036017,
@@ -334,7 +523,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "Straight 6",
-      "topSpeed": 333
+      "topSpeed": 333,
+      "horsepower": 487,
+      "acceleration": 4.30,
+      "braking": 2.04,
+      "weight": 1100,
+      "torque": 413,
+      "weightBalance": 56,
+      "wheelbase": 2.56
     },
     {
       "id": -934098507,
@@ -346,7 +542,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "Straight 4",
-      "topSpeed": 293
+      "topSpeed": 293,
+      "horsepower": 316,
+      "acceleration": 5.19,
+      "braking": 2.13,
+      "weight": 1040,
+      "torque": 289,
+      "weightBalance": 50,
+      "wheelbase": 2.57
     },
     {
       "id": -1365918055,
@@ -358,7 +561,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "V8",
-      "topSpeed": 291
+      "topSpeed": 291,
+      "horsepower": 481,
+      "acceleration": 3.50,
+      "braking": 1.83,
+      "weight": 1245,
+      "torque": 495,
+      "weightBalance": 50,
+      "wheelbase": 2.76
     },
     {
       "id": -1545450182,
@@ -370,7 +580,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "V8",
-      "topSpeed": 276
+      "topSpeed": 276,
+      "horsepower": 416,
+      "acceleration": 4.09,
+      "braking": 2.34,
+      "weight": 1495,
+      "torque": 395,
+      "weightBalance": 48,
+      "wheelbase": 2.76
     },
     {
       "id": 975104023,
@@ -382,7 +599,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V12",
-      "topSpeed": 350
+      "topSpeed": 350,
+      "horsepower": 580,
+      "acceleration": 2.79,
+      "braking": 1.66,
+      "weight": 915,
+      "torque": 698,
+      "weightBalance": 55,
+      "wheelbase": 2.80
     },
     {
       "id": 1161219858,
@@ -394,7 +618,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "V8",
-      "topSpeed": 282
+      "topSpeed": 282,
+      "horsepower": 484,
+      "acceleration": 3.59,
+      "braking": 1.77,
+      "weight": 1245,
+      "torque": 494,
+      "weightBalance": 59,
+      "wheelbase": 2.50
     },
     {
       "id": -2025231366,
@@ -406,7 +637,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "V6",
-      "topSpeed": 282
+      "topSpeed": 282,
+      "horsepower": 500,
+      "acceleration": 3.30,
+      "braking": 1.71,
+      "weight": 1315,
+      "torque": 599,
+      "weightBalance": 51,
+      "wheelbase": 2.82
     },
     {
       "id": 578910088,
@@ -418,7 +656,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "V8",
-      "topSpeed": 370
+      "topSpeed": 370,
+      "horsepower": 650,
+      "acceleration": 2.90,
+      "braking": 2.40,
+      "weight": 1680,
+      "torque": 677,
+      "weightBalance": 49,
+      "wheelbase": 2.79
     },
     {
       "id": -886212684,
@@ -430,7 +675,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "Straight 4",
-      "topSpeed": 193
+      "topSpeed": 193,
+      "horsepower": 105,
+      "acceleration": 6.50,
+      "braking": 3.41,
+      "weight": 605,
+      "torque": 128,
+      "weightBalance": 50,
+      "wheelbase": 2.22
     },
     {
       "id": 675194619,
@@ -442,7 +694,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "Straight 4",
-      "topSpeed": 304
+      "topSpeed": 304,
+      "horsepower": 312,
+      "acceleration": 2.79,
+      "braking": 1.83,
+      "weight": 625,
+      "torque": 283,
+      "weightBalance": 56,
+      "wheelbase": 2.64
     },
     {
       "id": -162683612,
@@ -454,7 +713,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "Straight 4",
-      "topSpeed": 261
+      "topSpeed": 261,
+      "horsepower": 261,
+      "acceleration": 2.88,
+      "braking": 2.89,
+      "weight": 596,
+      "torque": 237,
+      "weightBalance": 53,
+      "wheelbase": 2.22
     },
     {
       "id": -384044277,
@@ -466,7 +732,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "V8",
-      "topSpeed": 295
+      "topSpeed": 295,
+      "horsepower": 500,
+      "acceleration": 3.20,
+      "braking": 1.70,
+      "weight": 1245,
+      "torque": 712,
+      "weightBalance": 50,
+      "wheelbase": 2.72
     },
     {
       "id": 1901402958,
@@ -478,7 +751,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V6",
-      "topSpeed": 373
+      "topSpeed": 373,
+      "horsepower": 680,
+      "acceleration": 3.50,
+      "braking": 1.56,
+      "weight": 725,
+      "torque": 404,
+      "weightBalance": 58,
+      "wheelbase": 3.05
     },
     {
       "id": 1639105598,
@@ -490,7 +770,14 @@
       "drivetrain": "FWD",
       "enginePosition": "Front",
       "engineType": "Straight 4",
-      "topSpeed": 187
+      "topSpeed": 187,
+      "horsepower": 190,
+      "acceleration": 10.69,
+      "braking": 3.26,
+      "weight": 865,
+      "torque": 193,
+      "weightBalance": 46,
+      "wheelbase": 2.40
     },
     {
       "id": 1357515789,
@@ -502,7 +789,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "V8",
-      "topSpeed": 295
+      "topSpeed": 295,
+      "horsepower": 635,
+      "acceleration": 3.40,
+      "braking": 1.90,
+      "weight": 1410,
+      "torque": 677,
+      "weightBalance": 46,
+      "wheelbase": 2.81
     },
     {
       "id": -1738120892,
@@ -514,7 +808,14 @@
       "drivetrain": "FWD",
       "enginePosition": "Front",
       "engineType": "Straight 5",
-      "topSpeed": 269
+      "topSpeed": 269,
+      "horsepower": 303,
+      "acceleration": 5.50,
+      "braking": 3.10,
+      "weight": 1540,
+      "torque": 434,
+      "weightBalance": 37,
+      "wheelbase": 2.64
     },
     {
       "id": 851491257,
@@ -526,7 +827,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "V8",
-      "topSpeed": 354
+      "topSpeed": 354,
+      "horsepower": 880,
+      "acceleration": 3.50,
+      "braking": 2.18,
+      "weight": 1497,
+      "torque": 745,
+      "weightBalance": 49,
+      "wheelbase": 2.80
     },
     {
       "id": -1774335742,
@@ -538,7 +846,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V8",
-      "topSpeed": 359
+      "topSpeed": 359,
+      "horsepower": 494,
+      "acceleration": 4.19,
+      "braking": 2.55,
+      "weight": 1080,
+      "torque": 629,
+      "weightBalance": 57,
+      "wheelbase": 2.41
     },
     {
       "id": 1397255601,
@@ -550,7 +865,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "V8",
-      "topSpeed": 225
+      "topSpeed": 225,
+      "horsepower": 271,
+      "acceleration": 7.40,
+      "braking": 4.77,
+      "weight": 1312,
+      "torque": 423,
+      "weightBalance": 45,
+      "wheelbase": 2.76
     },
     {
       "id": 1111049682,
@@ -562,7 +884,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "V8",
-      "topSpeed": 301
+      "topSpeed": 301,
+      "horsepower": 406,
+      "acceleration": 3.75,
+      "braking": 2.43,
+      "weight": 1506,
+      "torque": 491,
+      "weightBalance": 44,
+      "wheelbase": 2.72
     },
     {
       "id": -11335215,
@@ -574,7 +903,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "V8",
-      "topSpeed": 344
+      "topSpeed": 344,
+      "horsepower": 633,
+      "acceleration": 3.09,
+      "braking": 1.64,
+      "weight": 1270,
+      "torque": 603,
+      "weightBalance": 48,
+      "wheelbase": 2.59
     },
     {
       "id": 1230061845,
@@ -586,7 +922,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "V8",
-      "topSpeed": 264
+      "topSpeed": 264,
+      "horsepower": 435,
+      "acceleration": 4.50,
+      "braking": 2.92,
+      "weight": 1683,
+      "torque": 542,
+      "weightBalance": 46,
+      "wheelbase": 2.72
     },
     {
       "id": -1253474718,
@@ -598,7 +941,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "Straight 4",
-      "topSpeed": 301
+      "topSpeed": 301,
+      "horsepower": 387,
+      "acceleration": 4.90,
+      "braking": 2.28,
+      "weight": 1120,
+      "torque": 436,
+      "weightBalance": 43,
+      "wheelbase": 2.61
     },
     {
       "id": 1817703058,
@@ -610,7 +960,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "Straight 4",
-      "topSpeed": 290
+      "topSpeed": 290,
+      "horsepower": 409,
+      "acceleration": 4.09,
+      "braking": 1.72,
+      "weight": 870,
+      "torque": 353,
+      "weightBalance": 50,
+      "wheelbase": 2.56
     },
     {
       "id": 310900789,
@@ -622,7 +979,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "Straight 4",
-      "topSpeed": 212
+      "topSpeed": 212,
+      "horsepower": 104,
+      "acceleration": 5.44,
+      "braking": 2.70,
+      "weight": 900,
+      "torque": 152,
+      "weightBalance": 47,
+      "wheelbase": 2.25
     },
     {
       "id": -1170674276,
@@ -634,7 +998,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "V8",
-      "topSpeed": 287
+      "topSpeed": 287,
+      "horsepower": 525,
+      "acceleration": 3.20,
+      "braking": 1.69,
+      "weight": 1200,
+      "torque": 496,
+      "weightBalance": 48,
+      "wheelbase": 2.49
     },
     {
       "id": 2091910841,
@@ -646,7 +1017,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "V6",
-      "topSpeed": 266
+      "topSpeed": 266,
+      "horsepower": 343,
+      "acceleration": 4.30,
+      "braking": 2.24,
+      "weight": 1260,
+      "torque": 437,
+      "weightBalance": 50,
+      "wheelbase": 2.46
     },
     {
       "id": -674255528,
@@ -658,7 +1036,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V8",
-      "topSpeed": 342
+      "topSpeed": 342,
+      "horsepower": 700,
+      "acceleration": 2.90,
+      "braking": 2.53,
+      "weight": 1445,
+      "torque": 870,
+      "weightBalance": 57,
+      "wheelbase": 2.70
     },
     {
       "id": 761457895,
@@ -670,7 +1055,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "Straight 4",
-      "topSpeed": 231
+      "topSpeed": 231,
+      "horsepower": 300,
+      "acceleration": 3.90,
+      "braking": 3.21,
+      "weight": 790,
+      "torque": 400,
+      "weightBalance": 63,
+      "wheelbase": 2.43
     },
     {
       "id": -713284494,
@@ -682,7 +1074,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V8",
-      "topSpeed": 248
+      "topSpeed": 248,
+      "horsepower": 200,
+      "acceleration": 3.75,
+      "braking": 3.35,
+      "weight": 452,
+      "torque": 163,
+      "weightBalance": 63,
+      "wheelbase": 2.41
     },
     {
       "id": 1162971218,
@@ -694,7 +1093,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V8",
-      "topSpeed": 322
+      "topSpeed": 322,
+      "horsepower": 495,
+      "acceleration": 5.30,
+      "braking": 4.40,
+      "weight": 612,
+      "torque": 447,
+      "weightBalance": 58,
+      "wheelbase": 2.46
     },
     {
       "id": -1204688299,
@@ -706,7 +1112,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V8",
-      "topSpeed": 290
+      "topSpeed": 290,
+      "horsepower": 385,
+      "acceleration": 4.80,
+      "braking": 3.32,
+      "weight": 765,
+      "torque": 474,
+      "weightBalance": 58,
+      "wheelbase": 2.40
     },
     {
       "id": 578969971,
@@ -718,7 +1131,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V8",
-      "topSpeed": 312
+      "topSpeed": 312,
+      "horsepower": 416,
+      "acceleration": 3.59,
+      "braking": 2.45,
+      "weight": 615,
+      "torque": 328,
+      "weightBalance": 60,
+      "wheelbase": 2.41
     },
     {
       "id": 1061494025,
@@ -730,7 +1150,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V8",
-      "topSpeed": 282
+      "topSpeed": 282,
+      "horsepower": 430,
+      "acceleration": 3.50,
+      "braking": 2.29,
+      "weight": 545,
+      "torque": 331,
+      "weightBalance": 62,
+      "wheelbase": 2.41
     },
     {
       "id": -1435057179,
@@ -742,7 +1169,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "Straight 4",
-      "topSpeed": 193
+      "topSpeed": 193,
+      "horsepower": 115,
+      "acceleration": 5.40,
+      "braking": 2.25,
+      "weight": 423,
+      "torque": 134,
+      "weightBalance": 57,
+      "wheelbase": 2.30
     },
     {
       "id": -1320616846,
@@ -754,7 +1188,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V8",
-      "topSpeed": 294
+      "topSpeed": 294,
+      "horsepower": 474,
+      "acceleration": 3.40,
+      "braking": 1.94,
+      "weight": 655,
+      "torque": 354,
+      "weightBalance": 65,
+      "wheelbase": 2.54
     },
     {
       "id": -1835861548,
@@ -766,7 +1207,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V8",
-      "topSpeed": 298
+      "topSpeed": 298,
+      "horsepower": 460,
+      "acceleration": 3.15,
+      "braking": 1.66,
+      "weight": 648,
+      "torque": 329,
+      "weightBalance": 62,
+      "wheelbase": 2.75
     },
     {
       "id": 1959097924,
@@ -778,7 +1226,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V6",
-      "topSpeed": 348
+      "topSpeed": 348,
+      "horsepower": 900,
+      "acceleration": 3.00,
+      "braking": 1.36,
+      "weight": 620,
+      "torque": 552,
+      "weightBalance": 60,
+      "wheelbase": 2.75
     },
     {
       "id": 1355771595,
@@ -790,7 +1245,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "Straight 4",
-      "topSpeed": 310
+      "topSpeed": 310,
+      "horsepower": 444,
+      "acceleration": 3.00,
+      "braking": 1.69,
+      "weight": 900,
+      "torque": 810,
+      "weightBalance": 52,
+      "wheelbase": 2.91
     },
     {
       "id": -2030487367,
@@ -802,7 +1264,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V8",
-      "topSpeed": 338
+      "topSpeed": 338,
+      "horsepower": 566,
+      "acceleration": 2.59,
+      "braking": 1.64,
+      "weight": 900,
+      "torque": 615,
+      "weightBalance": 50,
+      "wheelbase": 2.95
     },
     {
       "id": -1966060946,
@@ -814,7 +1283,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "Rotary 3",
-      "topSpeed": 282
+      "topSpeed": 282,
+      "horsepower": 1200,
+      "acceleration": 3.20,
+      "braking": 3.15,
+      "weight": 1225,
+      "torque": 1267,
+      "weightBalance": 52,
+      "wheelbase": 2.33
     },
     {
       "id": -444124510,
@@ -826,7 +1302,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V8",
-      "topSpeed": 333
+      "topSpeed": 333,
+      "horsepower": 616,
+      "acceleration": 3.10,
+      "braking": 2.73,
+      "weight": 1440,
+      "torque": 600,
+      "weightBalance": 57,
+      "wheelbase": 2.67
     },
     {
       "id": -1166911988,
@@ -838,7 +1321,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V8",
-      "topSpeed": 291
+      "topSpeed": 291,
+      "horsepower": 496,
+      "acceleration": 3.20,
+      "braking": 1.75,
+      "weight": 1295,
+      "torque": 584,
+      "weightBalance": 53,
+      "wheelbase": 2.68
     },
     {
       "id": 307010432,
@@ -850,7 +1340,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V12",
-      "topSpeed": 386
+      "topSpeed": 386,
+      "horsepower": 627,
+      "acceleration": 3.20,
+      "braking": 3.46,
+      "weight": 1136,
+      "torque": 651,
+      "weightBalance": 58,
+      "wheelbase": 2.72
     },
     {
       "id": -1001569309,
@@ -862,7 +1359,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V12",
-      "topSpeed": 386
+      "topSpeed": 386,
+      "horsepower": 600,
+      "acceleration": 2.54,
+      "braking": 1.72,
+      "weight": 915,
+      "torque": 677,
+      "weightBalance": 57,
+      "wheelbase": 2.72
     },
     {
       "id": -1748676965,
@@ -874,7 +1378,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V8",
-      "topSpeed": 365
+      "topSpeed": 365,
+      "horsepower": 906,
+      "acceleration": 2.59,
+      "braking": 2.70,
+      "weight": 1475,
+      "torque": 890,
+      "weightBalance": 58,
+      "wheelbase": 2.67
     },
     {
       "id": 1353949246,
@@ -886,7 +1397,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "V8",
-      "topSpeed": 300
+      "topSpeed": 300,
+      "horsepower": 500,
+      "acceleration": 3.09,
+      "braking": 1.82,
+      "weight": 1350,
+      "torque": 580,
+      "weightBalance": 52,
+      "wheelbase": 2.64
     },
     {
       "id": 262982797,
@@ -898,7 +1416,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "Straight 4",
-      "topSpeed": 286
+      "topSpeed": 286,
+      "horsepower": 320,
+      "acceleration": 5.19,
+      "braking": 2.06,
+      "weight": 1060,
+      "torque": 289,
+      "weightBalance": 50,
+      "wheelbase": 2.66
     },
     {
       "id": -85660500,
@@ -910,7 +1435,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "V8",
-      "topSpeed": 230
+      "topSpeed": 230,
+      "horsepower": 421,
+      "acceleration": 5.50,
+      "braking": 3.59,
+      "weight": 1635,
+      "torque": 610,
+      "weightBalance": 41,
+      "wheelbase": 2.87
     },
     {
       "id": 1401308680,
@@ -922,7 +1454,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "Straight 6",
-      "topSpeed": 308
+      "topSpeed": 308,
+      "horsepower": 175,
+      "acceleration": 7.00,
+      "braking": 3.56,
+      "weight": 1060,
+      "torque": 280,
+      "weightBalance": 46,
+      "wheelbase": 2.42
     },
     {
       "id": -1522922538,
@@ -934,7 +1473,14 @@
       "drivetrain": "AWD",
       "enginePosition": "Front",
       "engineType": "Straight 4",
-      "topSpeed": 290
+      "topSpeed": 290,
+      "horsepower": 360,
+      "acceleration": 4.59,
+      "braking": 3.25,
+      "weight": 1635,
+      "torque": 445,
+      "weightBalance": 38,
+      "wheelbase": 3.70
     },
     {
       "id": -525060572,
@@ -946,7 +1492,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "V8",
-      "topSpeed": 306
+      "topSpeed": 306,
+      "horsepower": 462,
+      "acceleration": 3.00,
+      "braking": 1.77,
+      "weight": 1160,
+      "torque": 495,
+      "weightBalance": 50,
+      "wheelbase": 2.68
     },
     {
       "id": 1979398129,
@@ -958,7 +1511,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V8",
-      "topSpeed": 320
+      "topSpeed": 320,
+      "horsepower": 600,
+      "acceleration": 2.60,
+      "braking": 1.64,
+      "weight": 1000,
+      "torque": 662,
+      "weightBalance": 56,
+      "wheelbase": 2.67
     },
     {
       "id": -1729266457,
@@ -970,7 +1530,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "V8",
-      "topSpeed": 340
+      "topSpeed": 340,
+      "horsepower": 574,
+      "acceleration": 3.50,
+      "braking": 3.00,
+      "weight": 1620,
+      "torque": 640,
+      "weightBalance": 52,
+      "wheelbase": 2.68
     },
     {
       "id": 274862187,
@@ -982,7 +1549,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "V8",
-      "topSpeed": 290
+      "topSpeed": 290,
+      "horsepower": 550,
+      "acceleration": 3.09,
+      "braking": 1.85,
+      "weight": 1350,
+      "torque": 612,
+      "weightBalance": 51,
+      "wheelbase": 2.68
     },
     {
       "id": -149617068,
@@ -994,7 +1568,14 @@
       "drivetrain": "AWD",
       "enginePosition": "Front",
       "engineType": "Straight 4",
-      "topSpeed": 266
+      "topSpeed": 266,
+      "horsepower": 366,
+      "acceleration": 4.10,
+      "braking": 3.10,
+      "weight": 1400,
+      "torque": 492,
+      "weightBalance": 43,
+      "wheelbase": 2.63
     },
     {
       "id": 460478144,
@@ -1006,7 +1587,14 @@
       "drivetrain": "AWD",
       "enginePosition": "Front",
       "engineType": "Straight 4",
-      "topSpeed": 241
+      "topSpeed": 241,
+      "horsepower": 280,
+      "acceleration": 4.40,
+      "braking": 3.34,
+      "weight": 1365,
+      "torque": 372,
+      "weightBalance": 39,
+      "wheelbase": 2.52
     },
     {
       "id": 998947753,
@@ -1018,7 +1606,14 @@
       "drivetrain": "AWD",
       "enginePosition": "Front",
       "engineType": "Straight 4",
-      "topSpeed": 303
+      "topSpeed": 303,
+      "horsepower": 404,
+      "acceleration": 3.50,
+      "braking": 3.14,
+      "weight": 1640,
+      "torque": 543,
+      "weightBalance": 43,
+      "wheelbase": 2.65
     },
     {
       "id": -98064499,
@@ -1030,7 +1625,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V8",
-      "topSpeed": 306
+      "topSpeed": 306,
+      "horsepower": 462,
+      "acceleration": 3.00,
+      "braking": 1.66,
+      "weight": 900,
+      "torque": 572,
+      "weightBalance": 51,
+      "wheelbase": 2.82
     },
     {
       "id": -2062679088,
@@ -1042,7 +1644,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V12",
-      "topSpeed": 372
+      "topSpeed": 372,
+      "horsepower": 720,
+      "acceleration": 3.29,
+      "braking": 2.61,
+      "weight": 1430,
+      "torque": 979,
+      "weightBalance": 55,
+      "wheelbase": 2.80
     },
     {
       "id": 1356687088,
@@ -1054,7 +1663,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V12",
-      "topSpeed": 360
+      "topSpeed": 360,
+      "horsepower": 800,
+      "acceleration": 3.43,
+      "braking": 2.61,
+      "weight": 1288,
+      "torque": 998,
+      "weightBalance": 57,
+      "wheelbase": 2.80
     },
     {
       "id": -1617916111,
@@ -1066,7 +1682,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V12",
-      "topSpeed": 351
+      "topSpeed": 351,
+      "horsepower": 664,
+      "acceleration": 3.29,
+      "braking": 2.61,
+      "weight": 1320,
+      "torque": 769,
+      "weightBalance": 52,
+      "wheelbase": 2.73
     },
     {
       "id": -2066888471,
@@ -1078,7 +1701,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V12",
-      "topSpeed": 351
+      "topSpeed": 351,
+      "horsepower": 733,
+      "acceleration": 2.59,
+      "braking": 2.24,
+      "weight": 1185,
+      "torque": 700,
+      "weightBalance": 54,
+      "wheelbase": 2.79
     },
     {
       "id": -486674040,
@@ -1090,7 +1720,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V12",
-      "topSpeed": 351
+      "topSpeed": 351,
+      "horsepower": 800,
+      "acceleration": 2.59,
+      "braking": 2.24,
+      "weight": 1070,
+      "torque": 728,
+      "weightBalance": 54,
+      "wheelbase": 2.79
     },
     {
       "id": -1921505310,
@@ -1102,7 +1739,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V6",
-      "topSpeed": 266
+      "topSpeed": 266,
+      "horsepower": 262,
+      "acceleration": 3.40,
+      "braking": 1.94,
+      "weight": 730,
+      "torque": 311,
+      "weightBalance": 61,
+      "wheelbase": 2.72
     },
     {
       "id": -1048050877,
@@ -1114,7 +1758,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V6",
-      "topSpeed": 298
+      "topSpeed": 298,
+      "horsepower": 454,
+      "acceleration": 2.60,
+      "braking": 2.85,
+      "weight": 940,
+      "torque": 677,
+      "weightBalance": 55,
+      "wheelbase": 2.70
     },
     {
       "id": 1231996358,
@@ -1126,7 +1777,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "Straight 4",
-      "topSpeed": 259
+      "topSpeed": 259,
+      "horsepower": 258,
+      "acceleration": 3.20,
+      "braking": 1.75,
+      "weight": 625,
+      "torque": 205,
+      "weightBalance": 57,
+      "wheelbase": 2.38
     },
     {
       "id": 152867459,
@@ -1138,7 +1796,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V8",
-      "topSpeed": 282
+      "topSpeed": 282,
+      "horsepower": 422,
+      "acceleration": 2.79,
+      "braking": 1.77,
+      "weight": 730,
+      "torque": 343,
+      "weightBalance": 60,
+      "wheelbase": 2.38
     },
     {
       "id": -699643670,
@@ -1150,7 +1815,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V6",
-      "topSpeed": 370
+      "topSpeed": 370,
+      "horsepower": 520,
+      "acceleration": 4.20,
+      "braking": 2.54,
+      "weight": 715,
+      "torque": 387,
+      "weightBalance": 70,
+      "wheelbase": 2.47
     },
     {
       "id": -648709823,
@@ -1162,7 +1834,14 @@
       "drivetrain": "FWD",
       "enginePosition": "Front",
       "engineType": "Straight 4",
-      "topSpeed": 243
+      "topSpeed": 243,
+      "horsepower": 219,
+      "acceleration": 5.59,
+      "braking": 2.28,
+      "weight": 1160,
+      "torque": 266,
+      "weightBalance": 36,
+      "wheelbase": 2.59
     },
     {
       "id": 1694837381,
@@ -1174,7 +1853,14 @@
       "drivetrain": "FWD",
       "enginePosition": "Front",
       "engineType": "Straight 4",
-      "topSpeed": 260
+      "topSpeed": 260,
+      "horsepower": 267,
+      "acceleration": 6.09,
+      "braking": 3.22,
+      "weight": 1480,
+      "torque": 357,
+      "weightBalance": 35,
+      "wheelbase": 2.64
     },
     {
       "id": -956881226,
@@ -1186,7 +1872,14 @@
       "drivetrain": "FWD",
       "enginePosition": "Front",
       "engineType": "Straight 4",
-      "topSpeed": 255
+      "topSpeed": 255,
+      "horsepower": 275,
+      "acceleration": 5.80,
+      "braking": 3.10,
+      "weight": 1297,
+      "torque": 359,
+      "weightBalance": 34,
+      "wheelbase": 2.65
     },
     {
       "id": -931590477,
@@ -1198,7 +1891,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V6",
-      "topSpeed": 266
+      "topSpeed": 266,
+      "horsepower": 425,
+      "acceleration": 3.30,
+      "braking": 1.89,
+      "weight": 998,
+      "torque": 454,
+      "weightBalance": 52,
+      "wheelbase": 2.65
     },
     {
       "id": -1856998124,
@@ -1210,7 +1910,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V6",
-      "topSpeed": 300
+      "topSpeed": 300,
+      "horsepower": 550,
+      "acceleration": 3.10,
+      "braking": 1.79,
+      "weight": 1144,
+      "torque": 628,
+      "weightBalance": 56,
+      "wheelbase": 2.74
     },
     {
       "id": 2017392050,
@@ -1222,7 +1929,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Rear",
       "engineType": "Flat 6",
-      "topSpeed": 340
+      "topSpeed": 340,
+      "horsepower": 469,
+      "acceleration": 3.70,
+      "braking": 3.10,
+      "weight": 1087,
+      "torque": 553,
+      "weightBalance": 58,
+      "wheelbase": 2.27
     },
     {
       "id": 558051123,
@@ -1234,7 +1948,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "Flat 6",
-      "topSpeed": 365
+      "topSpeed": 365,
+      "horsepower": 760,
+      "acceleration": 3.20,
+      "braking": 2.65,
+      "weight": 1425,
+      "torque": 944,
+      "weightBalance": 60,
+      "wheelbase": 2.62
     },
     {
       "id": -2046825312,
@@ -1246,7 +1967,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "Flat 6",
-      "topSpeed": 355
+      "topSpeed": 355,
+      "horsepower": 760,
+      "acceleration": 2.90,
+      "braking": 2.18,
+      "weight": 1155,
+      "torque": 944,
+      "weightBalance": 60,
+      "wheelbase": 2.62
     },
     {
       "id": 462547146,
@@ -1258,7 +1986,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Rear",
       "engineType": "V8",
-      "topSpeed": 331
+      "topSpeed": 331,
+      "horsepower": 540,
+      "acceleration": 3.90,
+      "braking": 2.75,
+      "weight": 1430,
+      "torque": 494,
+      "weightBalance": 58,
+      "wheelbase": 2.45
     },
     {
       "id": -2020758805,
@@ -1270,7 +2005,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Rear",
       "engineType": "V8",
-      "topSpeed": 278
+      "topSpeed": 278,
+      "horsepower": 505,
+      "acceleration": 3.54,
+      "braking": 1.77,
+      "weight": 1235,
+      "torque": 480,
+      "weightBalance": 58,
+      "wheelbase": 2.45
     },
     {
       "id": 704998514,
@@ -1282,7 +2024,14 @@
       "drivetrain": "AWD",
       "enginePosition": "Rear",
       "engineType": "Flat 6",
-      "topSpeed": 370
+      "topSpeed": 370,
+      "horsepower": 730,
+      "acceleration": 3.10,
+      "braking": 3.14,
+      "weight": 1494,
+      "torque": 940,
+      "weightBalance": 61,
+      "wheelbase": 2.35
     },
     {
       "id": 146414985,
@@ -1294,7 +2043,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "Flat 4",
-      "topSpeed": 314
+      "topSpeed": 314,
+      "horsepower": 464,
+      "acceleration": 3.00,
+      "braking": 1.64,
+      "weight": 900,
+      "torque": 521,
+      "weightBalance": 52,
+      "wheelbase": 2.86
     },
     {
       "id": 1023089804,
@@ -1306,7 +2062,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "Flat 6",
-      "topSpeed": 340
+      "topSpeed": 340,
+      "horsepower": 577,
+      "acceleration": 2.59,
+      "braking": 1.54,
+      "weight": 900,
+      "torque": 508,
+      "weightBalance": 50,
+      "wheelbase": 2.90
     },
     {
       "id": 65306143,
@@ -1318,7 +2081,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V8",
-      "topSpeed": 409
+      "topSpeed": 409,
+      "horsepower": 737,
+      "acceleration": 2.79,
+      "braking": 1.96,
+      "weight": 980,
+      "torque": 833,
+      "weightBalance": 60,
+      "wheelbase": 2.70
     },
     {
       "id": -356101373,
@@ -1330,7 +2100,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "Flat 4",
-      "topSpeed": 226
+      "topSpeed": 226,
+      "horsepower": 197,
+      "acceleration": 7.10,
+      "braking": 3.41,
+      "weight": 1213,
+      "torque": 205,
+      "weightBalance": 44,
+      "wheelbase": 2.57
     },
     {
       "id": -1127314200,
@@ -1342,7 +2119,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "Flat 4",
-      "topSpeed": 290
+      "topSpeed": 290,
+      "horsepower": 500,
+      "acceleration": 4.30,
+      "braking": 3.45,
+      "weight": 1290,
+      "torque": 508,
+      "weightBalance": 43,
+      "wheelbase": 2.57
     },
     {
       "id": 844159614,
@@ -1354,7 +2138,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "Single Cylinder",
-      "topSpeed": 150
+      "topSpeed": 150,
+      "horsepower": 30,
+      "acceleration": 3.00,
+      "braking": 1.85,
+      "weight": 160,
+      "torque": 17,
+      "weightBalance": 59,
+      "wheelbase": 1.03
     },
     {
       "id": -937933849,
@@ -1366,7 +2157,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "Twin Cylinder",
-      "topSpeed": 221
+      "topSpeed": 221,
+      "horsepower": 92,
+      "acceleration": 1.90,
+      "braking": 1.69,
+      "weight": 205,
+      "torque": 49,
+      "weightBalance": 56,
+      "wheelbase": 1.04
     },
     {
       "id": 1909945073,
@@ -1378,7 +2176,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V8",
-      "topSpeed": 344
+      "topSpeed": 344,
+      "horsepower": 759,
+      "acceleration": 2.09,
+      "braking": 1.41,
+      "weight": 640,
+      "torque": 330,
+      "weightBalance": 52,
+      "wheelbase": 3.38
     },
     {
       "id": -1318848040,
@@ -1390,7 +2195,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V12",
-      "topSpeed": 302
+      "topSpeed": 302,
+      "horsepower": 617,
+      "acceleration": 2.40,
+      "braking": 1.77,
+      "weight": 750,
+      "torque": 436,
+      "weightBalance": 60,
+      "wheelbase": 3.16
     },
     {
       "id": -1041674971,
@@ -1402,7 +2214,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "Straight 4",
-      "topSpeed": 315
+      "topSpeed": 315,
+      "horsepower": 297,
+      "acceleration": 2.84,
+      "braking": 1.96,
+      "weight": 550,
+      "torque": 274,
+      "weightBalance": 56,
+      "wheelbase": 2.67
     },
     {
       "id": -1706259671,
@@ -1414,7 +2233,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "Straight 4",
-      "topSpeed": 262
+      "topSpeed": 262,
+      "horsepower": 186,
+      "acceleration": 3.20,
+      "braking": 1.75,
+      "weight": 460,
+      "torque": 115,
+      "weightBalance": 56,
+      "wheelbase": 2.43
     },
     {
       "id": 1626504761,
@@ -1426,7 +2252,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "V8",
-      "topSpeed": 300
+      "topSpeed": 300,
+      "horsepower": 530,
+      "acceleration": 2.90,
+      "braking": 1.91,
+      "weight": 623,
+      "torque": 444,
+      "weightBalance": 56,
+      "wheelbase": 3.13
     },
     {
       "id": -2075284877,
@@ -1438,7 +2271,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "Straight 4",
-      "topSpeed": 235
+      "topSpeed": 235,
+      "horsepower": 106,
+      "acceleration": 5.09,
+      "braking": 1.99,
+      "weight": 505,
+      "torque": 135,
+      "weightBalance": 55,
+      "wheelbase": 2.44
     },
     {
       "id": -41807622,
@@ -1450,7 +2290,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "Flat 4",
-      "topSpeed": 226
+      "topSpeed": 226,
+      "horsepower": 197,
+      "acceleration": 7.10,
+      "braking": 3.41,
+      "weight": 1213,
+      "torque": 205,
+      "weightBalance": 44,
+      "wheelbase": 2.57
     },
     {
       "id": -235751604,
@@ -1462,7 +2309,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "Flat 4",
-      "topSpeed": 226
+      "topSpeed": 226,
+      "horsepower": 197,
+      "acceleration": 7.10,
+      "braking": 3.41,
+      "weight": 1213,
+      "torque": 205,
+      "weightBalance": 44,
+      "wheelbase": 2.57
     },
     {
       "id": 1764851930,
@@ -1474,7 +2328,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Front",
       "engineType": "Flat 4",
-      "topSpeed": 291
+      "topSpeed": 291,
+      "horsepower": 335,
+      "acceleration": 4.90,
+      "braking": 2.84,
+      "weight": 1175,
+      "torque": 349,
+      "weightBalance": 47,
+      "wheelbase": 2.57
     },
     {
       "id": 1810453820,
@@ -1486,7 +2347,14 @@
       "drivetrain": "AWD",
       "enginePosition": "Mid",
       "engineType": "V8",
-      "topSpeed": 339
+      "topSpeed": 339,
+      "horsepower": 1000,
+      "acceleration": 2.50,
+      "braking": 1.64,
+      "weight": 870,
+      "torque": 915,
+      "weightBalance": 50,
+      "wheelbase": 2.90
     },
     {
       "id": -180129877,
@@ -1498,7 +2366,14 @@
       "drivetrain": "RWD",
       "enginePosition": "Mid",
       "engineType": "Flat 6",
-      "topSpeed": 394
+      "topSpeed": 394,
+      "horsepower": 780,
+      "acceleration": 2.80,
+      "braking": 2.50,
+      "weight": 1400,
+      "torque": 960,
+      "weightBalance": 51,
+      "wheelbase": 2.63
     }
   ],
   "classes": [

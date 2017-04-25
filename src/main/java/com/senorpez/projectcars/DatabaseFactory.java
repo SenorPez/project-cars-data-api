@@ -84,10 +84,9 @@ public class DatabaseFactory {
 
     private static void CreateCarsTable(Connection conn) throws SQLException {
         Statement stmt = conn.createStatement();
-        String sql;
 
         System.out.println("Creating Cars table.");
-        sql = "CREATE TABLE cars " +
+        String sql = "CREATE TABLE cars " +
                 "(id INTEGER NOT NULL, " +
                 " manufacturer VARCHAR(13) NOT NULL, " +
                 " model VARCHAR(36) NOT NULL, " +
@@ -98,12 +97,19 @@ public class DatabaseFactory {
                 " enginePosition VARCHAR(5) NOT NULL, " +
                 " engineType VARCHAR(15) NOT NULL, " +
                 " topSpeed SMALLINT UNSIGNED NOT NULL, " +
+                " horsepower SMALLINT UNSIGNED NOT NULL, " +
+                " acceleration DECIMAL(15,4) UNSIGNED NOT NULL, " +
+                " braking DECIMAL(15, 4) UNSIGNED NOT NULL, " +
+                " weight SMALLINT UNSIGNED NOT NULL, " +
+                " torque SMALLINT UNSIGNED NOT NULL, " +
+                " weightBalance TINYINT UNSIGNED NOT NULL, " +
+                " wheelbase DECIMAL(15, 4) UNSIGNED NOT NULL, " +
                 " PRIMARY KEY (id), " +
                 " UNIQUE (manufacturer, model));";
         stmt.executeUpdate(sql);
 
         System.out.println("Granting Cars privileges.");
-        sql = "GRANT SELECT ON cars to " + USER_NAME + ";";
+        sql = "GRANT SELECT ON cars TO " + USER_NAME + ";";
         stmt.executeUpdate(sql);
 
         ObjectMapper mapper = new ObjectMapper();

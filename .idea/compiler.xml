@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="data-api_main" target="1.8" />
       <module name="data-api_test" target="1.8" />
+      <module name="Downloads-data-api_main" target="1.8" />
+      <module name="Downloads-data-api_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

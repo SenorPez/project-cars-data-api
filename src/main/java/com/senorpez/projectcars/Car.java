@@ -19,11 +19,14 @@ class Car {
     private final Drivetrain drivetrain;
     private final EnginePosition enginePosition;
     private final String engineType;
-
-    private final Integer topSpeedMetric;
-    private final Integer topSpeedImperial;
-
-    private static final Double KM_TO_MI = 0.621371;
+    private final Integer topSpeed;
+    private final Integer horsepower;
+    private final Float acceleration;
+    private final Float braking;
+    private final Integer weight;
+    private final Integer torque;
+    private final Integer weightBalance;
+    private final Float wheelbase;
 
     static final List<String> DB_COLUMNS = Arrays.asList(
             "id",
@@ -35,7 +38,14 @@ class Car {
             "drivetrain",
             "enginePosition",
             "engineType",
-            "topSpeed"
+            "topSpeed",
+            "horsepower",
+            "acceleration",
+            "braking",
+            "weight",
+            "torque",
+            "weightBalance",
+            "wheelbase"
     );
     static final String DB_TABLE_NAME = "cars";
 
@@ -62,7 +72,7 @@ class Car {
         }
     }
 
-    Car(Integer id, String manufacturer, String model, String country, String carClass, Integer year, Drivetrain drivetrain, EnginePosition enginePosition, String engineType, Integer topSpeedMetric) {
+    Car(Integer id, String manufacturer, String model, String country, String carClass, Integer year, Drivetrain drivetrain, EnginePosition enginePosition, String engineType, Integer topSpeed, Integer horsepower, Float acceleration, Float braking, Integer weight, Integer torque, Integer weightBalance, Float wheelbase) {
         this.id = id;
         this.manufacturer = manufacturer;
         this.model = model;
@@ -72,9 +82,14 @@ class Car {
         this.drivetrain = drivetrain;
         this.enginePosition = enginePosition;
         this.engineType = engineType;
-
-        this.topSpeedMetric = topSpeedMetric;
-        this.topSpeedImperial = (int) round(topSpeedMetric * KM_TO_MI);
+        this.topSpeed = topSpeed;
+        this.horsepower = horsepower;
+        this.acceleration = acceleration;
+        this.braking = braking;
+        this.weight = weight;
+        this.torque = torque;
+        this.weightBalance = weightBalance;
+        this.wheelbase = wheelbase;
     }
 
     Car(ResultSet carResults) throws SQLException {
@@ -87,9 +102,14 @@ class Car {
         this.drivetrain = Drivetrain.valueOf(carResults.getString("drivetrain").toUpperCase());
         this.enginePosition = EnginePosition.valueOf(carResults.getString("enginePosition").toUpperCase());
         this.engineType = carResults.getString("engineType");
-
-        this.topSpeedMetric = carResults.getInt("topSpeed");
-        this.topSpeedImperial = (int) round(this.topSpeedMetric * KM_TO_MI);
+        this.topSpeed = carResults.getInt("topSpeed");
+        this.horsepower = carResults.getInt("horsepower");
+        this.acceleration = carResults.getFloat("acceleration");
+        this.braking = carResults.getFloat("braking");
+        this.weight = carResults.getInt("weight");
+        this.torque = carResults.getInt("torque");
+        this.weightBalance = carResults.getInt("weightBalance");
+        this.wheelbase = carResults.getFloat("wheelbase");
     }
 
     public Integer getId() {
@@ -128,11 +148,35 @@ class Car {
         return engineType;
     }
 
-    public Integer getTopSpeedMetric() {
-        return topSpeedMetric;
+    public Integer getTopSpeed() {
+        return topSpeed;
     }
 
-    public Integer getTopSpeedImperial() {
-        return topSpeedImperial;
+    public Integer getHorsepower() {
+        return horsepower;
+    }
+
+    public Float getAcceleration() {
+        return acceleration;
+    }
+
+    public Float getBraking() {
+        return braking;
+    }
+
+    public Integer getWeight() {
+        return weight;
+    }
+
+    public Integer getTorque() {
+        return torque;
+    }
+
+    public Integer getweightBalance() {
+        return weightBalance;
+    }
+
+    public Float getWheelbase() {
+        return wheelbase;
     }
 }
