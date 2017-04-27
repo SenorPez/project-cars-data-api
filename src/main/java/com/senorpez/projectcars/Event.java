@@ -1,14 +1,17 @@
 package com.senorpez.projectcars;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import org.springframework.hateoas.ResourceSupport;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.List;
 
-class Event {
-    private final Integer id;
+class Event extends ResourceSupport {
+    @JsonProperty("id")
+    private final Integer eventId;
     private final String name;
     private final Integer tier;
     private final List<Car> cars;
@@ -27,19 +30,8 @@ class Event {
     @JsonIgnore
     private final String carFilter;
 
-    Event(Integer id, String name, Integer tier, List<Car> cars, List<Round> rounds, String carFilter, Boolean verified) {
-        this.id = id;
-        this.name = name;
-        this.tier = tier;
-        this.cars = cars;
-        this.rounds = rounds;
-        this.verified = verified;
-
-        this.carFilter = carFilter;
-    }
-
     Event(ResultSet eventResults, List<Car> cars, List<Round> rounds) throws SQLException {
-        this.id = eventResults.getInt("id");
+        this.eventId = eventResults.getInt("id");
         this.name = eventResults.getString("name");
 
         Integer tier = eventResults.getInt("tier");
@@ -53,8 +45,8 @@ class Event {
         this.rounds = rounds;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getEventId() {
+        return eventId;
     }
 
     public String getName() {

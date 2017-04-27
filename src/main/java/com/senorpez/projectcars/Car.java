@@ -1,16 +1,17 @@
 package com.senorpez.projectcars;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
+import org.springframework.hateoas.ResourceSupport;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.List;
 
-import static java.lang.Math.round;
-
-class Car {
-    private final Integer id;
+class Car extends ResourceSupport {
+    @JsonProperty("id")
+    private final Integer carId;
     private final String manufacturer;
     private final String model;
     private final String country;
@@ -68,7 +69,7 @@ class Car {
         MID ("Mid"),
         REAR ("Rear");
 
-        private String displayString;
+        private final String displayString;
 
         EnginePosition(String displayString) {
             this.displayString = displayString;
@@ -84,7 +85,7 @@ class Car {
         SEQUENTIAL ("Sequential"),
         H ("H");
 
-        private String displayString;
+        private final String displayString;
 
         ShiftPattern(String displayString) { this.displayString = displayString; }
 
@@ -96,7 +97,7 @@ class Car {
         SHIFTER ("Shifter"),
         PADDLES ("Paddles");
 
-        private String displayString;
+        private final String displayString;
 
         Shifter(String displayString) { this.displayString = displayString; }
 
@@ -104,35 +105,8 @@ class Car {
         public String getDisplayString() { return displayString; }
     }
 
-    Car(Integer id, String manufacturer, String model, String country, String carClass, Integer year,
-        Drivetrain drivetrain, EnginePosition enginePosition, String engineType, Integer topSpeed, Integer horsepower,
-        Float acceleration, Float braking, Integer weight, Integer torque, Integer weightBalance, Float wheelbase,
-        ShiftPattern shiftPattern, Shifter shifter, Integer gears, String dlc) {
-        this.id = id;
-        this.manufacturer = manufacturer;
-        this.model = model;
-        this.country = country;
-        this.carClass = carClass;
-        this.year = year;
-        this.drivetrain = drivetrain;
-        this.enginePosition = enginePosition;
-        this.engineType = engineType;
-        this.topSpeed = topSpeed;
-        this.horsepower = horsepower;
-        this.acceleration = acceleration;
-        this.braking = braking;
-        this.weight = weight;
-        this.torque = torque;
-        this.weightBalance = weightBalance;
-        this.wheelbase = wheelbase;
-        this.shiftPattern = shiftPattern;
-        this.shifter = shifter;
-        this.gears = gears;
-        this.dlc = dlc;
-    }
-
     Car(ResultSet carResults) throws SQLException {
-        this.id = carResults.getInt("id");
+        this.carId = carResults.getInt("id");
         this.manufacturer = carResults.getString("manufacturer");
         this.model = carResults.getString("model");
         this.country = carResults.getString("country");
@@ -155,8 +129,8 @@ class Car {
         this.dlc = carResults.getString("dlc");
     }
 
-    public Integer getId() {
-        return id;
+    Integer getCarId() {
+        return carId;
     }
 
     public String getManufacturer() {

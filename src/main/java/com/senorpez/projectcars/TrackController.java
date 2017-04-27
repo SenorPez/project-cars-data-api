@@ -1,8 +1,10 @@
 package com.senorpez.projectcars;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import org.springframework.hateoas.ResourceSupport;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -13,10 +15,22 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
+
 @RestController
 @Api(tags = {"tracks"})
 @RequestMapping(method = {RequestMethod.GET})
 class TrackController {
+    private class TrackList extends ResourceSupport {
+        @JsonProperty("tracks")
+        private final List<Track> trackList;
+
+        public TrackList(List<Track> trackList) {
+            this.trackList = trackList;
+        }
+    }
+
     @RequestMapping(value = "/v1/tracks")
     @ApiOperation(
             value = "Lists all tracks",
@@ -24,9 +38,11 @@ class TrackController {
             response = Track.class,
             responseContainer = "List"
     )
-    public List<Track> tracks() {
+    public TrackList tracks() {
         try (Connection conn = Application.DatabaseConnection()) {
-            return trackQuery(conn);
+            TrackList tracks = new TrackList(trackQuery(conn));
+            tracks.add(linkTo(methodOn(TrackController.class).tracks()).withSelfRel());
+            return tracks;
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
@@ -46,7 +62,9 @@ class TrackController {
             )
             @PathVariable Integer trackId) {
         try (Connection conn = Application.DatabaseConnection()) {
-            return trackQuery(conn, trackId);
+            Track track = trackQuery(conn, trackId);
+            if (track != null) track.add(linkTo(methodOn(TrackController.class).tracks(trackId)).withSelfRel());
+            return track;
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
@@ -55,7 +73,11 @@ class TrackController {
 
     private static List<Track> processTrackResults(final ResultSet trackResults) throws SQLException {
         final List<Track> tracks = new ArrayList<>();
-        while (trackResults.next()) tracks.add(new Track(trackResults));
+        while (trackResults.next()) {
+            Track track = new Track(trackResults);
+            track.add(linkTo(methodOn(TrackController.class).tracks(track.getTrackId())).withSelfRel());
+            tracks.add(track);
+        }
         return tracks;
     }
 

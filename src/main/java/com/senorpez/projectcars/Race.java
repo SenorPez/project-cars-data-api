@@ -1,12 +1,16 @@
 package com.senorpez.projectcars;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import org.springframework.hateoas.ResourceSupport;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.List;
 
-public class Race {
-    private final Integer id;
+public class Race extends ResourceSupport {
+    @JsonProperty("id")
+    private final Integer raceId;
     private final Integer laps;
     private final Integer time;
     private final String type;
@@ -21,15 +25,8 @@ public class Race {
     );
     static final String DB_TABLE_NAME = "races";
 
-    Race(Integer id, Integer laps, Integer time, String type) {
-        this.id = id;
-        this.laps = laps;
-        this.time = time;
-        this.type = type;
-    }
-
     Race(ResultSet raceResults) throws SQLException {
-        this.id = raceResults.getInt("id");
+        this.raceId = raceResults.getInt("id");
 
         Integer laps = raceResults.getInt("laps");
         this.laps = (raceResults.wasNull()) ? null : laps;
@@ -41,8 +38,8 @@ public class Race {
         this.type = (raceResults.wasNull()) ? null : type;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getRaceId() {
+        return raceId;
     }
 
     public Integer getLaps() {

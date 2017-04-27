@@ -8,7 +8,7 @@ import org.springframework.web.servlet.view.RedirectView;
 
 @Controller
 @RequestMapping("/")
-public class RedirectController {
+class RedirectController {
     @GetMapping("/")
     public RedirectView redirectRoot(RedirectAttributes attributes) {
         return new RedirectView("/v1");

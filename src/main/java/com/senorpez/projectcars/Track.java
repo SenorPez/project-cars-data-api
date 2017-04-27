@@ -1,13 +1,17 @@
 package com.senorpez.projectcars;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import org.springframework.hateoas.ResourceSupport;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-class Track {
-    private final Integer id;
+class Track extends ResourceSupport {
+    @JsonProperty("id")
+    private final Integer trackId;
     private final String name;
     private final String location;
     private final String variation;
@@ -30,25 +34,8 @@ class Track {
     );
     final static String DB_TABLE_NAME = "tracks";
 
-    Track(Integer id, String name, String location, String variation, Float length, Float pitEntryX, Float pitEntryZ, Float pitExitX, Float pitExitZ, Integer gridSize) {
-        this.id = id;
-        this.name = name;
-        this.location = location;
-        this.variation = variation;
-        this.length = length;
-
-        this.pitEntry = pitEntryX == null || pitEntryZ == null
-                ? null
-                : Collections.unmodifiableList(Arrays.asList(pitEntryX, pitEntryZ));
-
-        this.pitExit = pitExitX == null || pitExitZ == null
-                ? null
-                : Collections.unmodifiableList(Arrays.asList(pitExitX, pitExitZ));
-        this.gridSize = gridSize;
-    }
-
     Track(ResultSet trackResults) throws SQLException {
-        this.id = trackResults.getInt("id");
+        this.trackId = trackResults.getInt("id");
         this.name = trackResults.getString("name");
         this.location = trackResults.getString("location");
         this.variation = trackResults.getString("variation");
@@ -75,8 +62,8 @@ class Track {
         this.gridSize = trackResults.getInt("gridSize");
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getTrackId() {
+        return trackId;
     }
 
     public String getName() {
