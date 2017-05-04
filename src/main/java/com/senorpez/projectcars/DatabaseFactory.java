@@ -19,7 +19,7 @@ public class DatabaseFactory {
     private static final String H2_DRIVER = "org.h2.Driver";
     private static final String H2_URL = "jdbc:h2:~/projectcars;MODE=mysql";
 
-    private static final String ADMIN_USER = "root";
+    private static final String ADMIN_USER = "pcarsapi_admin";
     private static final String ADMIN_PASS = "7,U-~N^EQhau8MAH";
 
     private static final String USER_NAME = "pcarsapi_user";
