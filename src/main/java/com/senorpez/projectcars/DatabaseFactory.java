@@ -47,9 +47,14 @@ public class DatabaseFactory {
             stmt = conn.createStatement();
             System.out.println("Nuking existing database from orbit. It's the only way to be sure.");
             if (databaseType.equals("mysql")) {
-                stmt.executeUpdate("DROP DATABASE IF EXISTS projectcarsapi;");
-                stmt.executeUpdate("CREATE DATABASE projectcarsapi;");
                 stmt.execute("USE projectcarsapi;");
+                stmt.execute("SET FOREIGN_KEY_CHECKS = 0;");
+		stmt.execute("DROP TABLE IF EXISTS cars;");
+		stmt.execute("DROP TABLE IF EXISTS tracks;");
+		stmt.execute("DROP TABLE IF EXISTS events;");
+		stmt.execute("DROP TABLE IF EXISTS rounds;");
+		stmt.execute("DROP TABLE IF EXISTS races;");
+		stmt.execute("SET FOREIGN_KEY_CHECKS = 1;");
 
                 System.out.println("Creating access user.");
                 try {
