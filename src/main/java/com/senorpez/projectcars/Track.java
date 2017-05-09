@@ -1,10 +1,10 @@
 package com.senorpez.projectcars;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.springframework.hateoas.Link;
 import org.springframework.hateoas.ResourceSupport;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -12,85 +12,61 @@ import java.util.List;
 class Track extends ResourceSupport {
     @JsonProperty("id")
     private final Integer trackId;
+    @JsonProperty("name")
     private final String name;
+    @JsonProperty("location")
     private final String location;
+    @JsonProperty("variation")
     private final String variation;
+    @JsonProperty("length")
     private final Float length;
+    @JsonProperty("pitEntry")
     private final List<Float> pitEntry;
+    @JsonProperty("pitExit")
     private final List<Float> pitExit;
+    @JsonProperty("gridSize")
     private final Integer gridSize;
 
-    final static List<String> DB_COLUMNS = Arrays.asList(
-            "id",
-            "name",
-            "location",
-            "variation",
-            "length",
-            "pitEntryX",
-            "pitEntryZ",
-            "pitExitX",
-            "pitExitZ",
-            "gridSize"
-    );
-    final static String DB_TABLE_NAME = "tracks";
-
-    Track(ResultSet trackResults) throws SQLException {
-        this.trackId = trackResults.getInt("id");
-        this.name = trackResults.getString("name");
-        this.location = trackResults.getString("location");
-        this.variation = trackResults.getString("variation");
-        this.length = trackResults.getFloat("length");
-
-        Float pitEntryX = trackResults.getFloat("pitEntryX");
-        if (trackResults.wasNull()) pitEntryX = null;
-        Float pitEntryZ = trackResults.getFloat("pitEntryZ");
-        if (trackResults.wasNull()) pitEntryZ = null;
+    @JsonCreator
+    public Track(
+            @JsonProperty("id") Integer trackId,
+            @JsonProperty("name") String name,
+            @JsonProperty("location") String location,
+            @JsonProperty("variation") String variation,
+            @JsonProperty("length") Float length,
+            @JsonProperty("pitEntryX") Float pitEntryX,
+            @JsonProperty("pitEntryZ") Float pitEntryZ,
+            @JsonProperty("pitExitX") Float pitExitX,
+            @JsonProperty("pitExitZ") Float pitExitZ,
+            @JsonProperty("gridSize") Integer gridSize) {
+        this.trackId = trackId;
+        this.name = name;
+        this.location = location;
+        this.variation = variation;
+        this.length = length;
 
         this.pitEntry = pitEntryX == null || pitEntryZ == null
                 ? null
                 : Collections.unmodifiableList(Arrays.asList(pitEntryX, pitEntryZ));
 
-        Float pitExitX = trackResults.getFloat("pitExitX");
-        if (trackResults.wasNull()) pitExitX = null;
-        Float pitExitZ = trackResults.getFloat("pitExitZ");
-        if (trackResults.wasNull()) pitExitZ = null;
-
-        this.pitExit = pitExitX == null || pitExitZ == null
+        this.pitExit = pitExitX == null || pitEntryZ == null
                 ? null
                 : Collections.unmodifiableList(Arrays.asList(pitExitX, pitExitZ));
 
-        this.gridSize = trackResults.getInt("gridSize");
+        this.gridSize = gridSize;
+
+        this.add(new Link(String.format("/tracks/%s", trackId.toString())).withSelfRel());
     }
 
-    public Integer getTrackId() {
+    Integer getTrackId() {
         return trackId;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getLocation() {
+    String getLocation() {
         return location;
     }
 
-    public String getVariation() {
+    String getVariation() {
         return variation;
-    }
-
-    public Float getLength() {
-        return length;
-    }
-
-    public List<Float> getPitEntry() {
-        return pitEntry;
-    }
-
-    public List<Float> getPitExit() {
-        return pitExit;
-    }
-
-    public Integer getGridSize() {
-        return gridSize;
     }
 }

@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
@@ -24,10 +22,17 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 class TrackController {
     private class TrackList extends ResourceSupport {
         @JsonProperty("tracks")
-        private final List<Track> trackList;
+        private final Set<Track> trackList;
 
-        public TrackList(List<Track> trackList) {
-            this.trackList = trackList;
+        TrackList(Set<Track> trackList) {
+            this.trackList = trackList.stream()
+                    .map(track -> {
+//                        track.removeLinks();
+//                        track.add(linkTo(methodOn(TrackController.class).tracks(track.getTrackId())).withSelfRel());
+                        return track;
+                    })
+                    .collect(Collectors.toSet());
+            this.add(linkTo(methodOn(TrackController.class).tracks()).withSelfRel());
         }
     }
 
@@ -39,14 +44,7 @@ class TrackController {
             responseContainer = "List"
     )
     public TrackList tracks() {
-        try (Connection conn = Application.DatabaseConnection()) {
-            TrackList tracks = new TrackList(trackQuery(conn));
-            tracks.add(linkTo(methodOn(TrackController.class).tracks()).withSelfRel());
-            return tracks;
-        } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
+        return new TrackList(Application.TRACKS);
     }
 
     @RequestMapping(value = "/v1/tracks/{trackId}")
@@ -61,49 +59,9 @@ class TrackController {
                     required = true
             )
             @PathVariable Integer trackId) {
-        try (Connection conn = Application.DatabaseConnection()) {
-            Track track = trackQuery(conn, trackId);
-            if (track != null) track.add(linkTo(methodOn(TrackController.class).tracks(trackId)).withSelfRel());
-            return track;
-        } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    private static List<Track> processTrackResults(final ResultSet trackResults) throws SQLException {
-        final List<Track> tracks = new ArrayList<>();
-        while (trackResults.next()) {
-            Track track = new Track(trackResults);
-            track.add(linkTo(methodOn(TrackController.class).tracks(track.getTrackId())).withSelfRel());
-            tracks.add(track);
-        }
-        return tracks;
-    }
-
-    private static List<Track> trackQuery(final Connection conn) throws SQLException {
-        try (
-                final Statement trackStmt = conn.createStatement();
-                final ResultSet trackResults = trackStmt.executeQuery(
-                        "SELECT " + Track.DB_COLUMNS.stream().collect(Collectors.joining(", ")) +
-                                " FROM " + Track.DB_TABLE_NAME + ";"
-                )
-        ) {
-            return processTrackResults(trackResults);
-        }
-    }
-
-    static Track trackQuery(final Connection conn, final Integer trackId) throws SQLException {
-        try (final PreparedStatement trackStmt = conn.prepareStatement(
-                "SELECT " + Track.DB_COLUMNS.stream().collect(Collectors.joining(", ")) +
-                        " FROM " + Track.DB_TABLE_NAME +
-                        " WHERE id = ?;")
-        ) {
-            trackStmt.setInt(1, trackId);
-            try (final ResultSet trackResults = trackStmt.executeQuery()) {
-                List<Track> tracks = processTrackResults(trackResults);
-                return (tracks.size() == 1) ? tracks.get(0) : null;
-            }
-        }
+        return Application.TRACKS.stream()
+                .filter(track -> track.getTrackId().equals(trackId))
+                .findAny()
+                .orElse(null);
     }
 }

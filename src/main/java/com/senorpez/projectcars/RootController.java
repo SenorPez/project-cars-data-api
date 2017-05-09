@@ -18,7 +18,6 @@ class RootController {
         root.add(linkTo(methodOn(CarController.class).cars()).withRel("cars"));
         root.add(linkTo(methodOn(EventController.class).events()).withRel("events"));
         root.add(linkTo(methodOn(TrackController.class).tracks()).withRel("tracks"));
-
         return root;
     }
 }

@@ -1,49 +1,46 @@
 package com.senorpez.projectcars;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.*;
 
 @SpringBootApplication
 public class Application {
-    private static final String MYSQL_DRIVER = "com.mysql.cj.jdbc.Driver";
-    private static final String MYSQL_URL = "jdbc:mysql://localhost:3306/";
-
-    private static final String H2_DRIVER = "org.h2.Driver";
-    private static final String H2_URL = "jdbc:h2:~/projectcars;MODE=mysql";
-
-    private static final String USER_NAME = "pcarsapi_user";
-    private static final String USER_PASS = "F=R4tV}p:Jb2>VqJ";
-    private static final String DB_NAME = "projectcarsapi";
+    static final Set<Car> CARS = Collections.unmodifiableSet(getData(Car.class, "cars"));
+    static final Set<CarClass> CAR_CLASSES = Collections.unmodifiableSet(getData(CarClass.class, "classes"));
+    static final Set<Track> TRACKS = Collections.unmodifiableSet(getData(Track.class, "tracks"));
+    static final Set<Event> EVENTS = Collections.unmodifiableSet(getData(Event.class, "events"));
 
     public static void main(String[] args) {
-        DatabaseFactory.main(args);
         SpringApplication.run(Application.class, args);
     }
 
-    static Connection DatabaseConnection() throws ClassNotFoundException, SQLException {
+    private static <T> Set<T> getData(Class objectClass, String field) {
         try {
-            return MySQLConnection();
-        } catch (ClassNotFoundException | SQLException e) {
-            return H2Connection();
+            ObjectMapper mapper = new ObjectMapper();
+            ClassLoader classLoader = Application.class.getClassLoader();
+            InputStream inputStream = classLoader.getResourceAsStream("data.json");
+            ObjectNode jsonData = mapper.readValue(inputStream, ObjectNode.class);
+            return mapper.readValue(jsonData.get(field).toString(), mapper.getTypeFactory().constructCollectionType(Set.class, objectClass));
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+        return new HashSet<>();
     }
 
-    private static Connection MySQLConnection() throws ClassNotFoundException, SQLException {
-        Class.forName(MYSQL_DRIVER);
-        Connection conn = DriverManager.getConnection(MYSQL_URL, USER_NAME, USER_PASS);
-        try (Statement stmt = conn.createStatement()) {
-            stmt.execute("USE " + DB_NAME + ";");
+    static <T> List<T> getData(Class objectClass, JsonNode jsonData) {
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+            return mapper.readValue(jsonData.toString(), mapper.getTypeFactory().constructCollectionType(List.class, objectClass));
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        return conn;
-    }
-
-    private static Connection H2Connection() throws ClassNotFoundException, SQLException {
-        Class.forName(H2_DRIVER);
-        return DriverManager.getConnection(H2_URL, USER_NAME, USER_PASS);
+        return new ArrayList<>();
     }
 }

@@ -1,56 +1,39 @@
 package com.senorpez.projectcars;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.hateoas.ResourceSupport;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.Arrays;
-import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
-public class Race extends ResourceSupport {
+class Race extends ResourceSupport {
     @JsonProperty("id")
     private final Integer raceId;
+    @JsonProperty("laps")
     private final Integer laps;
+    @JsonProperty("time")
     private final Integer time;
+    @JsonProperty("type")
     private final String type;
 
-    static final List<String> DB_COLUMNS = Arrays.asList(
-            "id",
-            "roundID",
-            "eventID",
-            "laps",
-            "time",
-            "type"
-    );
-    static final String DB_TABLE_NAME = "races";
+    private final static AtomicInteger id = new AtomicInteger(0);
 
-    Race(ResultSet raceResults) throws SQLException {
-        this.raceId = raceResults.getInt("id");
-
-        Integer laps = raceResults.getInt("laps");
-        this.laps = (raceResults.wasNull()) ? null : laps;
-
-        Integer time = raceResults.getInt("time");
-        this.time = (raceResults.wasNull()) ? null : time;
-
-        String type = raceResults.getString("type");
-        this.type = (raceResults.wasNull()) ? null : type;
+    @JsonCreator
+    public Race(
+            @JsonProperty("laps") Integer laps,
+            @JsonProperty("time") Integer time,
+            @JsonProperty("type") String type) {
+        this.raceId = id.incrementAndGet();
+        this.laps = laps;
+        this.time = time;
+        this.type = type;
     }
 
-    public Integer getRaceId() {
+    Integer getRaceId() {
         return raceId;
     }
 
-    public Integer getLaps() {
-        return laps;
-    }
-
-    public Integer getTime() {
-        return time;
-    }
-
-    public String getType() {
-        return type;
+    static void resetId() {
+        id.set(0);
     }
 }

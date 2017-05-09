@@ -3070,7 +3070,13 @@
     {
       "name": "Kart One UK Nationals",
       "tier": 8,
-      "carFilter": "model LIKE '125cc Shifter Kart'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "125cc Shifter Kart"
+        }
+      ],
       "verified": true,
       "rounds": [
         {
@@ -3126,7 +3132,13 @@
     {
       "name": "Kart One Championship",
       "tier": 8,
-      "carFilter": "model LIKE '125cc Shifter Kart'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "125cc Shifter Kart"
+        }
+      ],
       "verified": true,
       "rounds": [
         {
@@ -3214,7 +3226,13 @@
     {
       "name": "SuperKart UK Nationals",
       "tier": 7,
-      "carFilter": "model LIKE '250cc Superkart'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "250cc Superkart"
+        }
+      ],
       "verified": true,
       "rounds": [
         {
@@ -3270,7 +3288,13 @@
     {
       "name": "SuperKart Championship",
       "tier": 7,
-      "carFilter": "model LIKE '250cc Superkart'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "250cc Superkart"
+        }
+      ],
       "verified": true,
       "rounds": [
         {
@@ -3358,7 +3382,13 @@
     {
       "name": "Formula Rookie German Challenge",
       "tier": 6,
-      "carFilter": "model LIKE 'Formula Rookie'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Formula Rookie"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -3398,7 +3428,13 @@
     {
       "name": "Formula Rookie UK Challenge",
       "tier": 6,
-      "carFilter": "model LIKE 'Formula Rookie'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Formula Rookie"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -3438,7 +3474,13 @@
     {
       "name": "Formula Rookie US Challenge",
       "tier": 6,
-      "carFilter": "model LIKE 'Formula Rookie'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Formula Rookie"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -3478,7 +3520,13 @@
     {
       "name": "Formula Rookie Euro Trophy",
       "tier": 6,
-      "carFilter": "model LIKE 'Formula Rookie'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Formula Rookie"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -3518,7 +3566,13 @@
     {
       "name": "Formula Rookie World Championship",
       "tier": 6,
-      "carFilter": "model LIKE 'Formula Rookie'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Formula Rookie"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -3574,7 +3628,13 @@
     {
       "name": "Renault UK Clio Cup",
       "tier": 6,
-      "carFilter": "model LIKE 'Clio Cup'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Clio Cup"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -3662,7 +3722,13 @@
     {
       "name": "Formula Gulf Championship",
       "tier": 5,
-      "carFilter": "model LIKE 'Formula Gulf 1000'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Formula Gulf 1000"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -3702,7 +3768,13 @@
     {
       "name": "Ginetta G40 UK Challenge",
       "tier": 5,
-      "carFilter": "model LIKE 'G40 Junior'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "G40 Junior"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -3790,7 +3862,13 @@
     {
       "name": "Formula C Asia-Pacific Series",
       "tier": 4,
-      "carFilter": "model LIKE 'Formula C'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Formula C"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -3846,7 +3924,13 @@
     {
       "name": "Formula C British Series",
       "tier": 4,
-      "carFilter": "model LIKE 'Formula C'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Formula C"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -3902,7 +3986,13 @@
     {
       "name": "Formula C US Series",
       "tier": 4,
-      "carFilter": "model LIKE 'Formula C'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Formula C"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -3958,7 +4048,13 @@
     {
       "name": "Formula C Euro Championship",
       "tier": 4,
-      "carFilter": "model LIKE 'Formula C'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Formula C"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -4030,7 +4126,13 @@
     {
       "name": "GT4 Asia Pacific Trophy",
       "tier": 4,
-      "carFilter": "class LIKE 'GT4'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "GT4"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -4086,7 +4188,13 @@
     {
       "name": "GT4 UK Trophy",
       "tier": 4,
-      "carFilter": "class LIKE 'GT4'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "GT4"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -4142,7 +4250,13 @@
     {
       "name": "GT4 US Trophy",
       "tier": 4,
-      "carFilter": "class LIKE 'GT4'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "GT4"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -4198,7 +4312,13 @@
     {
       "name": "GT4 Euro Championship",
       "tier": 4,
-      "carFilter": "class LIKE 'GT4'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "GT4"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -4270,7 +4390,16 @@
     {
       "name": "LMP3 UK Rookie Cup",
       "tier": 4,
-      "carFilter": "model LIKE 'Jaguar JP-LM' OR model LIKE 'SR3-RS'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "orValues": [
+            "Jaguar JP-LM",
+            "SR3-RS"
+          ]
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -4326,7 +4455,16 @@
     {
       "name": "LMP3 US Rookie Cup",
       "tier": 4,
-      "carFilter": "model LIKE 'Jaguar JP-LM' OR model LIKE 'SR3-RS'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "orValues": [
+            "Jaguar JP-LM",
+            "SR3-RS"
+          ]
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -4382,7 +4520,16 @@
     {
       "name": "LMP3 Rookie Euro Cup",
       "tier": 4,
-      "carFilter": "model LIKE 'Jaguar JP-LM' OR model LIKE 'SR3-RS'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "orValues": [
+            "Jaguar JP-LM",
+            "SR3-RS"
+          ]
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -4454,7 +4601,13 @@
     {
       "name": "Formula B World Championship",
       "tier": 3,
-      "carFilter": "model LIKE 'Formula B'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Formula B"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -4574,7 +4727,13 @@
     {
       "name": "GT3 Asia Pacific Trophy",
       "tier": 3,
-      "carFilter": "class LIKE 'GT3'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "GT3"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -4630,7 +4789,13 @@
     {
       "name": "GT3 UK Trophy",
       "tier": 3,
-      "carFilter": "class LIKE 'GT3'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "GT3"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -4686,7 +4851,13 @@
     {
       "name": "GT3 US Trophy",
       "tier": 3,
-      "carFilter": "class LIKE 'GT3'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "GT3"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -4742,7 +4913,13 @@
     {
       "name": "GT3 RGT-8 German Cup",
       "tier": 3,
-      "carFilter": "model LIKE 'RGT-8 GT3'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "RGT-8 GT3"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -4798,7 +4975,13 @@
     {
       "name": "GT3 RGT-8 Supercup",
       "tier": 3,
-      "carFilter": "model LIKE 'RGT-8 GT3'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "RGT-8 GT3"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -4870,7 +5053,13 @@
     {
       "name": "GT3 Euro Championship",
       "tier": 3,
-      "carFilter": "class LIKE 'GT3'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "GT3"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -4958,7 +5147,16 @@
     {
       "name": "LMP3 UK Semi-Pro Cup",
       "tier": 3,
-      "carFilter": "model LIKE 'SP/300.R' OR model LIKE 'SR8-RX'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "orValues": [
+            "SP/300.R",
+            "SR8-RX"
+          ]
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -5014,7 +5212,16 @@
     {
       "name": "LMP3 US Semi-Pro Cup",
       "tier": 3,
-      "carFilter": "model LIKE 'SP/300.R' OR model LIKE 'SR8-RX'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "orValues": [
+            "SP/300.R",
+            "SR8-RX"
+          ]
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -5068,9 +5275,18 @@
       ]
     },
     {
-      "name": "LMP3 Semi-Pro Curo Championship",
+      "name": "LMP3 Semi-Pro Euro Championship",
       "tier": 3,
-      "carFilter": "model LIKE 'SP/300.R' OR model LIKE 'SR8-RX'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "orValues": [
+            "SP/300.R",
+            "SR8-RX"
+          ]
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -5142,7 +5358,13 @@
     {
       "name": "Formula A World Championship",
       "tier": 2,
-      "carFilter": "class LIKE 'Formula A'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Formula A"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -5357,9 +5579,18 @@
       ]
     },
     {
-      "name": "Tri-Nationas 1000 GT Endurance",
+      "name": "Tri-Nations 1000 GT Endurance",
       "tier": 2,
-      "carFilter": "class LIKE 'GT3' OR class LIKE 'GT4'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "orValues": [
+            "GT3",
+            "GT4"
+          ]
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -5400,7 +5631,16 @@
     {
       "name": "Tri-Nationas 1000 LMP Endurance",
       "tier": 2,
-      "carFilter": "class LIKE 'LMP1' OR class LIKE 'LMP2'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "orValues": [
+            "LMP1",
+            "LMP2"
+          ]
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -5441,7 +5681,18 @@
     {
       "name": "American Endurance Championship",
       "tier": 2,
-      "carFilter": "class LIKE 'LMP1' OR class LIKE 'LMP2' OR class LIKE 'GT3' OR class LIKE 'GT4'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "orValues": [
+            "LMP1",
+            "LMP2",
+            "GT3",
+            "GT4"
+          ]
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -5482,7 +5733,18 @@
     {
       "name": "European Endurance Championship",
       "tier": 2,
-      "carFilter": "class LIKE 'LMP1' OR class LIKE 'LMP2' OR class LIKE 'GT3' OR class LIKE 'GT4'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "orValues": [
+            "LMP1",
+            "LMP2",
+            "GT3",
+            "GT4"
+          ]
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -5523,7 +5785,16 @@
     {
       "name": "Starlight Glen 6HR GT Endurance",
       "tier": 2,
-      "carFilter": "class LIKE 'GT3' OR class LIKE 'GT4'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "orValues": [
+            "GT3",
+            "GT4"
+          ]
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -5542,7 +5813,16 @@
     {
       "name": "Rising Sun 6HR LMP Endurance",
       "tier": 2,
-      "carFilter": "class LIKE 'LMP1' OR class LIKE 'LMP2'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "orValues": [
+            "LMP1",
+            "LMP2"
+          ]
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -5561,7 +5841,16 @@
     {
       "name": "Nordschleife 12HR GT Endurance",
       "tier": 2,
-      "carFilter": "class LIKE 'GT3' OR class LIKE 'GT4'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "orValues": [
+            "GT3",
+            "GT4"
+          ]
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -5580,7 +5869,16 @@
     {
       "name": "Nordschleife 12HR LMP Endurance",
       "tier": 2,
-      "carFilter": "class LIKE 'LMP1' OR class LIKE 'LMP2'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "orValues": [
+            "LMP1",
+            "LMP2"
+          ]
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -5599,7 +5897,18 @@
     {
       "name": "World Endurance Championship",
       "tier": 2,
-      "carFilter": "class LIKE 'LMP1' OR class LIKE 'LMP2' OR class LIKE 'GT3' OR class LIKE 'GT4'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "orValues": [
+            "LMP1",
+            "LMP2",
+            "GT3",
+            "GT4"
+          ]
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -5673,7 +5982,13 @@
     {
       "name": "LMP2 American Trophy",
       "tier": 2,
-      "carFilter": "class LIKE 'LMP2'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "LMP2"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -5729,7 +6044,13 @@
     {
       "name": "LMP2 Pan Euro Trophy",
       "tier": 2,
-      "carFilter": "class LIKE 'LMP2'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "LMP2"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -5785,7 +6106,13 @@
     {
       "name": "LMP2 World Championship",
       "tier": 2,
-      "carFilter": "class LIKE 'LMP2'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "LMP2"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -5857,7 +6184,13 @@
     {
       "name": "LMP1 American Masters",
       "tier": 1,
-      "carFilter": "class LIKE 'LMP1'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "LMP1"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -5929,7 +6262,13 @@
     {
       "name": "LMP1 Pan Euro Masters",
       "tier": 1,
-      "carFilter": "class LIKE 'LMP1'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "LMP1"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -6001,7 +6340,13 @@
     {
       "name": "LMP1 World Championship",
       "tier": 1,
-      "carFilter": "class LIKE 'LMP1'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "LMP1"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -6089,7 +6434,13 @@
     {
       "name": "320 Touring Challenge",
       "tier": null,
-      "carFilter": "model LIKE '320 TC'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "320 TC"
+        }
+      ],
       "verified": true,
       "rounds": [
         {
@@ -6141,7 +6492,13 @@
     {
       "name": "Ardennes Kart Masters Cup",
       "tier": null,
-      "carFilter": "model LIKE '250cc Superkart'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "250cc Superkart"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -6165,7 +6522,13 @@
     {
       "name": "Atom Blaster Supercup",
       "tier": null,
-      "carFilter": "model LIKE 'Atom 500 V8'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Atom 500 V8"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -6206,7 +6569,18 @@
     {
       "name": "Atom Blaster Trophy",
       "tier": null,
-      "carFilter": "manufacturer LIKE 'Ariel' AND class LIKE 'Road B'",
+      "carFilter": [
+        {
+          "field": "manufacturer",
+          "operation": "equals",
+          "value": "Ariel"
+        },
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "Road B"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -6247,7 +6621,13 @@
     {
       "name": "Audi Ruapuna Track Challenge",
       "tier": null,
-      "carFilter": "manufacturer LIKE 'Audi'",
+      "carFilter": [
+        {
+          "field": "manufacturer",
+          "operation": "equals",
+          "value": "Audi"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -6277,7 +6657,13 @@
     {
       "name": "Azure 3-Point Trophy",
       "tier": null,
-      "carFilter": "class LIKE 'Road B'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "Road B"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -6318,7 +6704,13 @@
     {
       "name": "Benz A45 Club Trophy",
       "tier": null,
-      "carFilter": "model LIKE 'A45 AMG'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "A45 AMG"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -6337,7 +6729,13 @@
     {
       "name": "BMW 1M Eifelwald Sprint Club",
       "tier": null,
-      "carFilter": "model LIKE '1-Series M Coupe'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "1-Series M Coupe"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -6356,7 +6754,13 @@
     {
       "name": "Boa Ascent Challenge",
       "tier": null,
-      "carFilter": "manufacturer LIKE 'Ariel'",
+      "carFilter": [
+        {
+          "field": "manufacturer",
+          "operation": "equals",
+          "value": "Ariel"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -6375,7 +6779,13 @@
     {
       "name": "California 3-Point Trophy",
       "tier": null,
-      "carFilter": "class LIKE 'Road C1'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "Road C1"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -6416,7 +6826,13 @@
     {
       "name": "Caterham Academy",
       "tier": null,
-      "carFilter": "model LIKE 'Seven Classic'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Seven Classic"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -6468,7 +6884,13 @@
     {
       "name": "Caterham League 500",
       "tier": null,
-      "carFilter": "model LIKE 'Superlight R500'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Superlight R500"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -6509,7 +6931,16 @@
     {
       "name": "Coyote Noose Showdown",
       "tier": null,
-      "carFilter": "class LIKE 'Vintage GT2' OR class LIKE 'Vintage GT3'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "orValues": [
+            "Vintage GT2",
+            "Vintage GT3"
+          ]
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -6528,7 +6959,13 @@
     {
       "name": "Dubai Kart Masters Cup",
       "tier": null,
-      "carFilter": "model LIKE '250cc Superkart'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "250cc Superkart"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -6552,7 +6989,18 @@
     {
       "name": "German Supercar Challenge",
       "tier": null,
-      "carFilter": "class LIKE 'Road A' AND country LIKE 'Germany'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "Road A"
+        },
+        {
+          "field": "country",
+          "operation": "equals",
+          "value": "Germany"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -6593,7 +7041,13 @@
     {
       "name": "Glencairn Kart Club Trophy",
       "tier": null,
-      "carFilter": "model LIKE '125cc Shifter Kart'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "125cc Shifter Kart"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -6649,7 +7103,13 @@
     {
       "name": "Historic C1 Euro Cup",
       "tier": null,
-      "carFilter": "model LIKE 'C9 Mercedes-Benz'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "C9 Mercedes-Benz"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -6701,7 +7161,13 @@
     {
       "name": "Historic GT4 M1 Procar Challenge",
       "tier": null,
-      "carFilter": "model LIKE 'M1 Procar'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "M1 Procar"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -6751,9 +7217,15 @@
       ]
     },
     {
-      "name": "Historic GT5 320 Trubo Pan-Euro Cup",
+      "name": "Historic GT5 320 Turbo Pan-Euro Cup",
       "tier": null,
-      "carFilter": "model LIKE '320 Turbo Group 5'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "320 Turbo Group 5"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -6794,7 +7266,13 @@
     {
       "name": "Historic GT5 Capri US Torque Riders Cup",
       "tier": null,
-      "carFilter": "model LIKE 'Zakspeed Capri Group 5'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Zakspeed Capri Group 5"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -6835,7 +7313,13 @@
     {
       "name": "Historic GT5 UK Trophy",
       "tier": null,
-      "carFilter": "class LIKE 'Group 5'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "Group 5"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -6887,7 +7371,16 @@
     {
       "name": "Historic GTC TC Euro Classic Cup",
       "tier": null,
-      "carFilter": "class LIKE 'Group A' OR class LIKE 'Group 5'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "orValues": [
+            "Group A",
+            "Group 5"
+          ]
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -6939,7 +7432,16 @@
     {
       "name": "Historic GTC TC Nations Trophy",
       "tier": null,
-      "carFilter": "class LIKE 'Group A' OR class LIKE 'Group 5'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "orValues": [
+            "Group A",
+            "Group 5"
+          ]
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7002,7 +7504,13 @@
     {
       "name": "Historic TC2 Escort Classic Trophy",
       "tier": null,
-      "carFilter": "model LIKE 'Escort Mk1 RS1600'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Escort Mk1 RS1600"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7043,7 +7551,13 @@
     {
       "name": "Historic TC2 Euro Classic 300",
       "tier": null,
-      "carFilter": "model LIKE '300SEL 6.8 AMG'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "300SEL 6.8 AMG"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7084,7 +7598,13 @@
     {
       "name": "Historic TC2 UK Trophy",
       "tier": null,
-      "carFilter": "class LIKE 'Historic Touring 2'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "Historic Touring 2"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7136,7 +7656,13 @@
     {
       "name": "Historic TGA E30 Drivers Classic",
       "tier": null,
-      "carFilter": "model LIKE 'M3 E30 Group A'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "M3 E30 Group A"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7177,7 +7703,13 @@
     {
       "name": "Historic TGA Euro Trophy",
       "tier": null,
-      "carFilter": "class LIKE 'Group A'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "Group A"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7229,7 +7761,13 @@
     {
       "name": "Historic TGA Evo2 Drivers Classic",
       "tier": null,
-      "carFilter": "model LIKE '190E 2.5-16 Evolution2 DTM'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "190E 2.5-16 Evolution2 DTM"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7270,7 +7808,13 @@
     {
       "name": "Historic TGA RS500 Drivers Classic",
       "tier": null,
-      "carFilter": "model LIKE 'Sierra RS500 Cosworth Group A'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Sierra RS500 Cosworth Group A"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7311,7 +7855,13 @@
     {
       "name": "Indycar Trophy",
       "tier": null,
-      "carFilter": "model LIKE 'DW12 Indycar (Road Course)'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "DW12 Indycar (Road Course)"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7363,7 +7913,18 @@
     {
       "name": "Lakeshore Vintage Cup",
       "tier": null,
-      "carFilter": "year >= 1950 AND year <= 1973",
+      "carFilter": [
+        {
+          "field": "year",
+          "operation": "greaterthan",
+          "value": "1949"
+        },
+        {
+          "field": "year",
+          "operation": "lessthan",
+          "value": "1974"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7382,7 +7943,13 @@
     {
       "name": "Lakeville Focus Challenge",
       "tier": null,
-      "carFilter": "model LIKE 'Focus RS'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Focus RS"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7401,7 +7968,13 @@
     {
       "name": "Lancer Club Sakitto West Showdown",
       "tier": null,
-      "carFilter": "model LIKE 'Lancer Evolution X FQ400'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Lancer Evolution X FQ400"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7420,7 +7993,18 @@
     {
       "name": "LeMans 24H Endurance",
       "tier": null,
-      "carFilter": "class LIKE 'LMP1' OR class LIKE 'LMP2' OR class LIKE 'GT3' OR class LIKE 'GT4'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "orValues": [
+            "LMP1",
+            "LMP2",
+            "GT3",
+            "GT4"
+          ]
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7439,7 +8023,13 @@
     {
       "name": "Lotus Vintage Formula Challenge",
       "tier": null,
-      "carFilter": "manufacturer LIKE 'Lotus'",
+      "carFilter": [
+        {
+          "field": "manufacturer",
+          "operation": "equals",
+          "value": "Lotus"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7480,7 +8070,13 @@
     {
       "name": "Lotus Vintage Formula Challenge",
       "tier": null,
-      "carFilter": "model LIKE 'Type 40 Ford'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Type 40 Ford"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7521,7 +8117,18 @@
     {
       "name": "McLaren Brands Hatch Club Day",
       "tier": null,
-      "carFilter": "manufacturer LIKE 'McLaren' AND class LIKE 'Road A'",
+      "carFilter": [
+        {
+          "field": "manufacturer",
+          "operation": "equals",
+          "value": "McLaren"
+        },
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "Road A"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7540,7 +8147,13 @@
     {
       "name": "McLaren F1 Track Masters 3 HR Trophy",
       "tier": null,
-      "carFilter": "model LIKE 'F1'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "F1"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7559,7 +8172,18 @@
     {
       "name": "Mojave Trifauna Trophy",
       "tier": null,
-      "carFilter": "class LIKE 'Road A' AND manufacturer NOT LIKE 'Ariel'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "Road A"
+        },
+        {
+          "field": "manufacturer",
+          "operation": "notequals",
+          "value": "Ariel"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7600,7 +8224,13 @@
     {
       "name": "Mono Redliners Trophy",
       "tier": null,
-      "carFilter": "model LIKE 'Mono'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Mono"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7641,7 +8271,16 @@
     {
       "name": "N\u00fcrburgring Endurance Trophy",
       "tier": null,
-      "carFilter": "class LIKE 'GT3' OR class LIKE 'GT4'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "orValues": [
+            "GT3",
+            "GT4"
+          ]
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7660,7 +8299,18 @@
     {
       "name": "Pagani Monza Club Day",
       "tier": null,
-      "carFilter": "manufacturer LIKE 'Pagani' AND class LIKE 'Road A'",
+      "carFilter": [
+        {
+          "field": "manufacturer",
+          "operation": "equals",
+          "value": "Pagani"
+        },
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "Road A"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7679,7 +8329,13 @@
     {
       "name": "Renault Masters Trophy",
       "tier": null,
-      "carFilter": "manufacturer LIKE 'Renault'",
+      "carFilter": [
+        {
+          "field": "manufacturer",
+          "operation": "equals",
+          "value": "Renault"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7731,7 +8387,13 @@
     {
       "name": "Road Entry Club UK Cup",
       "tier": null,
-      "carFilter": "class LIKE 'Road D'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "Road D"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7783,7 +8445,16 @@
     {
       "name": "Road TC Euro Championship",
       "tier": null,
-      "carFilter": "class LIKE 'Road C1' OR class LIKE 'Road C2'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "orValues": [
+            "Road C1",
+            "Road C2"
+          ]
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7824,7 +8495,13 @@
     {
       "name": "Road TC1 UK Cup",
       "tier": null,
-      "carFilter": "class LIKE 'Road C1'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "Road C1"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7854,7 +8531,13 @@
     {
       "name": "Road TC2 US Cup",
       "tier": null,
-      "carFilter": "class LIKE 'Road C2'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "Road C2"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7884,7 +8567,13 @@
     {
       "name": "Road TD Brands Showdown",
       "tier": null,
-      "carFilter": "class LIKE 'Road B'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "Road B"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7903,7 +8592,18 @@
     {
       "name": "Road TD British Track Challenge",
       "tier": null,
-      "carFilter": "class LIKE 'Road B' AND country LIKE 'England'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "Road B"
+        },
+        {
+          "field": "country",
+          "operation": "equals",
+          "value": "England"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7933,7 +8633,18 @@
     {
       "name": "Road TD German Track Challenge",
       "tier": null,
-      "carFilter": "class LIKE 'Road B' AND country LIKE 'Germany'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "Road B"
+        },
+        {
+          "field": "country",
+          "operation": "equals",
+          "value": "Germany"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7963,7 +8674,13 @@
     {
       "name": "Ruapuna LMP900 Showdown",
       "tier": null,
-      "carFilter": "class LIKE 'LMP900'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "LMP900"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -7982,7 +8699,13 @@
     {
       "name": "Ruapuna TransAm Challenge",
       "tier": null,
-      "carFilter": "class LIKE 'Trans-Am'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "Trans-Am"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -8001,7 +8724,13 @@
     {
       "name": "RUF CTR3-GT Velocity 1H",
       "tier": null,
-      "carFilter": "model LIKE 'CTR3 SMS-R'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "CTR3 SMS-R"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -8020,7 +8749,13 @@
     {
       "name": "Stockcar Trophy",
       "tier": null,
-      "carFilter": "model LIKE 'Fusion Stockcar'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Fusion Stockcar"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -8072,7 +8807,13 @@
     {
       "name": "Supercar Ardennes Clubday",
       "tier": null,
-      "carFilter": "class LIKE 'Road A'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "Road A"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -8091,7 +8832,13 @@
     {
       "name": "Supercar Azure PointMan Trophy",
       "tier": null,
-      "carFilter": "class LIKE 'Road A'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "Road A"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -8110,7 +8857,13 @@
     {
       "name": "Supercar California PointMan Trophy",
       "tier": null,
-      "carFilter": "class LIKE 'Road A'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "Road A"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -8129,7 +8882,13 @@
     {
       "name": "Supercar FreeFall 24 HR Panorama",
       "tier": null,
-      "carFilter": "class LIKE 'Road A'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "Road A"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -8148,7 +8907,13 @@
     {
       "name": "Supercar US Clubsport Trophy",
       "tier": null,
-      "carFilter": "model LIKE 'CTR3'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "CTR3"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -8189,7 +8954,13 @@
     {
       "name": "TrackDay 25 HR Green Hell Madness",
       "tier": null,
-      "carFilter": "class LIKE 'Road B'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "Road B"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -8208,7 +8979,13 @@
     {
       "name": "TrackDay 25 HR Panorama Madness",
       "tier": null,
-      "carFilter": "class LIKE 'Road B'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "Road B"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -8227,7 +9004,13 @@
     {
       "name": "V8 Bathurst Trophy",
       "tier": null,
-      "carFilter": "model LIKE 'Falcon FG V8 Supercar'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Falcon FG V8 Supercar"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -8246,7 +9029,13 @@
     {
       "name": "Vintage F1 Lotus Class of 67 Historic Cup",
       "tier": null,
-      "carFilter": "model LIKE 'Type 49 Cosworth'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Type 49 Cosworth"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -8331,7 +9120,13 @@
     {
       "name": "Vintage F1 Lotus Class of 74 Historic Cup",
       "tier": null,
-      "carFilter": "model LIKE 'Type 72D Cosworth'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Type 72D Cosworth"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -8416,7 +9211,13 @@
     {
       "name": "Vintage F1 Lotus Class of 74 Historic Cup",
       "tier": null,
-      "carFilter": "model LIKE 'Type 78 Cosworth'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Type 78 Cosworth"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -8501,7 +9302,13 @@
     {
       "name": "Vintage F1 Lotus Class of 86 Historic Cup",
       "tier": null,
-      "carFilter": "model LIKE 'Type 98T Renault Turbo'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Type 98T Renault Turbo"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -8586,7 +9393,13 @@
     {
       "name": "Vintage GT 67 Mk IV Challenge",
       "tier": null,
-      "carFilter": "model LIKE 'MkIV'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "MkIV"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -8627,7 +9440,13 @@
     {
       "name": "Vintage GT TransAm Cobra Cup",
       "tier": null,
-      "carFilter": "model LIKE 'Mustang Cobra TransAm'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Mustang Cobra TransAm"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -8679,7 +9498,13 @@
     {
       "name": "Vintage Stock Caper Special Trophy",
       "tier": null,
-      "carFilter": "model LIKE 'Monterey Stockcar'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "value": "Monterey Stockcar"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -8731,7 +9556,13 @@
     {
       "name": "WMD Euro Trackday Trophy",
       "tier": null,
-      "carFilter": "class LIKE 'Road B'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "Road B"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -8761,7 +9592,13 @@
     {
       "name": "WMD UK Trackday Trophy",
       "tier": null,
-      "carFilter": "class LIKE 'Road B'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "Road B"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -8791,7 +9628,13 @@
     {
       "name": "WMD US Trackday Trophy",
       "tier": null,
-      "carFilter": "class LIKE 'Road B'",
+      "carFilter": [
+        {
+          "field": "carClass",
+          "operation": "equals",
+          "value": "Road B"
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -8821,7 +9664,16 @@
     {
       "name": "Zonda R Championship",
       "tier": null,
-      "carFilter": "model LIKE 'Zonda Revolucion' OR model LIKE 'Zonda R'",
+      "carFilter": [
+        {
+          "field": "model",
+          "operation": "equals",
+          "orValues": [
+            "Zonda Revolucion",
+            "Zonda R"
+          ]
+        }
+      ],
       "verified": false,
       "rounds": [
         {
@@ -8878,7 +9730,7 @@
       "location": "Autodromo Nazionale Monza",
       "variation": "Grand Prix",
       "length": 5782.521,
-      "gridsize": 54,
+      "gridSize": 54,
       "pitEntryX": 22.2031,
       "pitEntryZ": -437.1672,
       "pitExitX": 63.6092,
@@ -8890,7 +9742,7 @@
       "location": "Autodromo Nazionale Monza",
       "variation": "Short",
       "length": 2422.8311,
-      "gridsize": 40,
+      "gridSize": 40,
       "pitEntryX": 22.2031,
       "pitEntryZ": -437.1672,
       "pitExitX": 63.6092,
@@ -8902,7 +9754,7 @@
       "location": "Azure Circuit",
       "variation": "",
       "length": 0,
-      "gridsize": 36,
+      "gridSize": 36,
       "pitEntryX": -203.8109,
       "pitEntryZ": 613.3162,
       "pitExitX": 105.2057,
@@ -8914,7 +9766,7 @@
       "location": "Azure Coast",
       "variation": "",
       "length": 0,
-      "gridsize": 32,
+      "gridSize": 32,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -8926,7 +9778,7 @@
       "location": "Azure Coast",
       "variation": "Stage 1",
       "length": 0,
-      "gridsize": 32,
+      "gridSize": 32,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -8938,7 +9790,7 @@
       "location": "Azure Coast",
       "variation": "Stage 2",
       "length": 0,
-      "gridsize": 32,
+      "gridSize": 32,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -8950,7 +9802,7 @@
       "location": "Azure Coast",
       "variation": "Stage 3",
       "length": 0,
-      "gridsize": 36,
+      "gridSize": 36,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -8962,7 +9814,7 @@
       "location": "Azure Coast",
       "variation": "Westbound",
       "length": 0,
-      "gridsize": 25,
+      "gridSize": 25,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -8974,7 +9826,7 @@
       "location": "Bannochbrae",
       "variation": "",
       "length": 0,
-      "gridsize": 20,
+      "gridSize": 20,
       "pitEntryX": -175.0,
       "pitEntryZ": 16.0,
       "pitExitX": 131.0,
@@ -8986,7 +9838,7 @@
       "location": "Bathurst",
       "variation": "",
       "length": 6238.0469,
-      "gridsize": 36,
+      "gridSize": 36,
       "pitEntryX": 80.85,
       "pitEntryZ": 7.2141,
       "pitExitX": -368.7227,
@@ -8998,7 +9850,7 @@
       "location": "Brands Hatch",
       "variation": "Grand Prix",
       "length": 3890.4072,
-      "gridsize": 30,
+      "gridSize": 30,
       "pitEntryX": -329.1295,
       "pitEntryZ": 165.8752,
       "pitExitX": -36.6833,
@@ -9010,7 +9862,7 @@
       "location": "Brands Hatch",
       "variation": "Indy",
       "length": 0,
-      "gridsize": 30,
+      "gridSize": 30,
       "pitEntryX": -329.1295,
       "pitEntryZ": 165.8752,
       "pitExitX": -36.6833,
@@ -9022,7 +9874,7 @@
       "location": "Brno",
       "variation": "",
       "length": 5377.7324,
-      "gridsize": 40,
+      "gridSize": 40,
       "pitEntryX": -194.1228,
       "pitEntryZ": -11.4185,
       "pitExitX": 139.6739,
@@ -9034,7 +9886,7 @@
       "location": "Cadwell",
       "variation": "Club",
       "length": 0,
-      "gridsize": 20,
+      "gridSize": 20,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9046,7 +9898,7 @@
       "location": "Cadwell",
       "variation": "Grand Prix",
       "length": 0,
-      "gridsize": 12,
+      "gridSize": 12,
       "pitEntryX": 45.9242,
       "pitEntryZ": 72.0486,
       "pitExitX": -10.3149,
@@ -9058,7 +9910,7 @@
       "location": "Cadwell",
       "variation": "Woodland",
       "length": 0,
-      "gridsize": 12,
+      "gridSize": 12,
       "pitEntryX": 45.9242,
       "pitEntryZ": 72.0486,
       "pitExitX": -10.3149,
@@ -9070,7 +9922,7 @@
       "location": "California Highway",
       "variation": "",
       "length": 0,
-      "gridsize": 36,
+      "gridSize": 36,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9082,7 +9934,7 @@
       "location": "California Highway",
       "variation": "Reverse",
       "length": 0,
-      "gridsize": 32,
+      "gridSize": 32,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9094,7 +9946,7 @@
       "location": "California Highway",
       "variation": "Stage 1",
       "length": 0,
-      "gridsize": 40,
+      "gridSize": 40,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9106,7 +9958,7 @@
       "location": "California Highway",
       "variation": "Stage 2",
       "length": 0,
-      "gridsize": 36,
+      "gridSize": 36,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9118,7 +9970,7 @@
       "location": "California Highway",
       "variation": "Stage 3",
       "length": 0,
-      "gridsize": 36,
+      "gridSize": 36,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9130,7 +9982,7 @@
       "location": "Chesterfield",
       "variation": "Grand Prix",
       "length": 871.2593,
-      "gridsize": 24,
+      "gridSize": 24,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9142,7 +9994,7 @@
       "location": "Circuit de Barcelona-Catalunya",
       "variation": "Club",
       "length": 0,
-      "gridsize": 40,
+      "gridSize": 40,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9154,7 +10006,7 @@
       "location": "Circuit de Barcelona-Catalunya",
       "variation": "Grand Prix",
       "length": 0,
-      "gridsize": 36,
+      "gridSize": 36,
       "pitEntryX": 622.7108,
       "pitEntryZ": -137.3975,
       "pitExitX": 26.5286,
@@ -9166,7 +10018,7 @@
       "location": "Circuit de Barcelona-Catalunya",
       "variation": "National",
       "length": 2948.297,
-      "gridsize": 36,
+      "gridSize": 36,
       "pitEntryX": 622.7108,
       "pitEntryZ": -137.3975,
       "pitExitX": 26.5286,
@@ -9178,7 +10030,7 @@
       "location": "Circuit de Spa-Francorchamps",
       "variation": "",
       "length": 6997.8159,
-      "gridsize": 36,
+      "gridSize": 36,
       "pitEntryX": -685.1871,
       "pitEntryZ": 1238.607,
       "pitExitX": -952.3125,
@@ -9190,7 +10042,7 @@
       "location": "Le Mans",
       "variation": "Circuit des 24 Heures du Mans",
       "length": 13595.0078,
-      "gridsize": 56,
+      "gridSize": 56,
       "pitEntryX": -737.9395,
       "pitEntryZ": 1107.367,
       "pitExitX": -721.3452,
@@ -9202,7 +10054,7 @@
       "location": "Donington Park",
       "variation": "Grand Prix",
       "length": 3982.9487,
-      "gridsize": 38,
+      "gridSize": 38,
       "pitEntryX": 200.8843,
       "pitEntryZ": 144.8465,
       "pitExitX": 486.4654,
@@ -9214,7 +10066,7 @@
       "location": "Donington Park",
       "variation": "National",
       "length": 3175.802,
-      "gridsize": 38,
+      "gridSize": 38,
       "pitEntryX": 200.8843,
       "pitEntryZ": 144.8465,
       "pitExitX": 486.4654,
@@ -9226,7 +10078,7 @@
       "location": "Dubai Autodrome",
       "variation": "Club",
       "length": 2525.3628,
-      "gridsize": 36,
+      "gridSize": 36,
       "pitEntryX": 971.8023,
       "pitEntryZ": 199.1564,
       "pitExitX": 452.5084,
@@ -9238,7 +10090,7 @@
       "location": "Dubai Autodrome",
       "variation": "Grand Prix",
       "length": 0,
-      "gridsize": 36,
+      "gridSize": 36,
       "pitEntryX": 971.8023,
       "pitEntryZ": 199.1564,
       "pitExitX": 452.5084,
@@ -9250,7 +10102,7 @@
       "location": "Dubai Autodrome",
       "variation": "International",
       "length": 0,
-      "gridsize": 36,
+      "gridSize": 36,
       "pitEntryX": 971.8023,
       "pitEntryZ": 199.1564,
       "pitExitX": 452.5084,
@@ -9262,7 +10114,7 @@
       "location": "Dubai Autodrome",
       "variation": "National",
       "length": 0,
-      "gridsize": 36,
+      "gridSize": 36,
       "pitEntryX": 971.8023,
       "pitEntryZ": 199.1564,
       "pitExitX": 452.5084,
@@ -9274,7 +10126,7 @@
       "location": "Dubai Autodrome",
       "variation": "Kartdrome",
       "length": 1165.7298,
-      "gridsize": 22,
+      "gridSize": 22,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9286,7 +10138,7 @@
       "location": "Glencairn",
       "variation": "Grand Prix",
       "length": 921.8007,
-      "gridsize": 16,
+      "gridSize": 16,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9298,7 +10150,7 @@
       "location": "Glencairn",
       "variation": "East",
       "length": 510.1722,
-      "gridsize": 16,
+      "gridSize": 16,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9310,7 +10162,7 @@
       "location": "Glencairn",
       "variation": "East Reverse",
       "length": 0,
-      "gridsize": 16,
+      "gridSize": 16,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9322,7 +10174,7 @@
       "location": "Glencairn",
       "variation": "Reverse",
       "length": 0,
-      "gridsize": 16,
+      "gridSize": 16,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9334,7 +10186,7 @@
       "location": "Glencairn",
       "variation": "West",
       "length": 451.7371,
-      "gridsize": 16,
+      "gridSize": 16,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9346,7 +10198,7 @@
       "location": "Glencairn West",
       "variation": "Reverse",
       "length": 0,
-      "gridsize": 16,
+      "gridSize": 16,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9358,7 +10210,7 @@
       "location": "Greenwood",
       "variation": "Karting Circuit",
       "length": 1073.6631,
-      "gridsize": 22,
+      "gridSize": 22,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9370,7 +10222,7 @@
       "location": "Hockenheim",
       "variation": "Classic",
       "length": 0,
-      "gridsize": 36,
+      "gridSize": 36,
       "pitEntryX": -533.0,
       "pitEntryZ": 318.25,
       "pitExitX": -705.5,
@@ -9382,7 +10234,7 @@
       "location": "Hockenheim",
       "variation": "Grand Prix",
       "length": 0,
-      "gridsize": 30,
+      "gridSize": 30,
       "pitEntryX": -483.1076,
       "pitEntryZ": -428.47,
       "pitExitX": -704.3397,
@@ -9394,7 +10246,7 @@
       "location": "Hockenheim",
       "variation": "National",
       "length": 0,
-      "gridsize": 30,
+      "gridSize": 30,
       "pitEntryX": -483.1076,
       "pitEntryZ": -428.47,
       "pitExitX": -704.3397,
@@ -9406,7 +10258,7 @@
       "location": "Hockenheim",
       "variation": "Short",
       "length": 2593.4663,
-      "gridsize": 30,
+      "gridSize": 30,
       "pitEntryX": -483.1076,
       "pitEntryZ": -428.47,
       "pitExitX": -704.3397,
@@ -9418,7 +10270,7 @@
       "location": "Imola",
       "variation": "Grand Prix",
       "length": 4847.8799,
-      "gridsize": 40,
+      "gridSize": 40,
       "pitEntryX": 311.259,
       "pitEntryZ": 420.3269,
       "pitExitX": -272.6198,
@@ -9430,7 +10282,7 @@
       "location": "Le Circuit Bugatti",
       "variation": "",
       "length": 0,
-      "gridsize": 40,
+      "gridSize": 40,
       "pitEntryX": -737.9395,
       "pitEntryZ": 1107.367,
       "pitExitX": -721.3452,
@@ -9442,7 +10294,7 @@
       "location": "Mazda Raceway",
       "variation": "Laguna Seca",
       "length": 3593.5823,
-      "gridsize": 26,
+      "gridSize": 26,
       "pitEntryX": -70.224,
       "pitEntryZ": 432.3777,
       "pitExitX": -279.2681,
@@ -9454,7 +10306,7 @@
       "location": "Mojave",
       "variation": "Boa Ascent",
       "length": 0,
-      "gridsize": 47,
+      "gridSize": 47,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9466,7 +10318,7 @@
       "location": "Mojave",
       "variation": "Cougar Ridge",
       "length": 0,
-      "gridsize": 47,
+      "gridSize": 47,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9478,7 +10330,7 @@
       "location": "Mojave",
       "variation": "Coyote Noose",
       "length": 0,
-      "gridsize": 47,
+      "gridSize": 47,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9490,7 +10342,7 @@
       "location": "Mojave",
       "variation": "Gila Crest",
       "length": 0,
-      "gridsize": 47,
+      "gridSize": 47,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9502,7 +10354,7 @@
       "location": "Mojave",
       "variation": "Sidewinder",
       "length": 0,
-      "gridsize": 47,
+      "gridSize": 47,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9514,7 +10366,7 @@
       "location": "Nordschleife",
       "variation": "",
       "length": 0,
-      "gridsize": 32,
+      "gridSize": 32,
       "pitEntryX": 599.293,
       "pitEntryZ": 606.7135,
       "pitExitX": 391.6694,
@@ -9526,7 +10378,7 @@
       "location": "Nordschleife",
       "variation": "Stage 1",
       "length": 0,
-      "gridsize": 36,
+      "gridSize": 36,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9538,7 +10390,7 @@
       "location": "Nordschleife",
       "variation": "Stage 2",
       "length": 0,
-      "gridsize": 36,
+      "gridSize": 36,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9550,7 +10402,7 @@
       "location": "Nordschleife",
       "variation": "Stage 3",
       "length": 0,
-      "gridsize": 36,
+      "gridSize": 36,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9562,7 +10414,7 @@
       "location": "N\u00fcrburgring",
       "variation": "Combined",
       "length": 0,
-      "gridsize": 30,
+      "gridSize": 30,
       "pitEntryX": 443.6332,
       "pitEntryZ": 527.8024,
       "pitExitX": 66.8471,
@@ -9574,7 +10426,7 @@
       "location": "N\u00fcrburgring",
       "variation": "Grand Prix",
       "length": 0,
-      "gridsize": 30,
+      "gridSize": 30,
       "pitEntryX": 443.6332,
       "pitEntryZ": 527.8024,
       "pitExitX": 66.8471,
@@ -9586,7 +10438,7 @@
       "location": "N\u00fcrburgring",
       "variation": "M\u00fcllenbach",
       "length": 0,
-      "gridsize": 36,
+      "gridSize": 36,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9598,7 +10450,7 @@
       "location": "N\u00fcrburgring",
       "variation": "Sprint",
       "length": 0,
-      "gridsize": 30,
+      "gridSize": 30,
       "pitEntryX": 443.6332,
       "pitEntryZ": 527.8024,
       "pitExitX": 66.8471,
@@ -9610,7 +10462,7 @@
       "location": "N\u00fcrburgring",
       "variation": "Sprint Short",
       "length": 3083.5505,
-      "gridsize": 30,
+      "gridSize": 30,
       "pitEntryX": 443.6332,
       "pitEntryZ": 527.8024,
       "pitExitX": 66.8471,
@@ -9622,7 +10474,7 @@
       "location": "Oschersleben",
       "variation": "C Circuit",
       "length": 0,
-      "gridsize": 23,
+      "gridSize": 23,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9634,7 +10486,7 @@
       "location": "Oschersleben",
       "variation": "Grand Prix",
       "length": 3656.855,
-      "gridsize": 30,
+      "gridSize": 30,
       "pitEntryX": -350.7033,
       "pitEntryZ": 31.3908,
       "pitExitX": 239.3137,
@@ -9646,7 +10498,7 @@
       "location": "Oschersleben",
       "variation": "National",
       "length": 2417.6504,
-      "gridsize": 30,
+      "gridSize": 30,
       "pitEntryX": -350.7033,
       "pitEntryZ": 31.3908,
       "pitExitX": 239.3137,
@@ -9658,7 +10510,7 @@
       "location": "Oulton Park",
       "variation": "Fosters",
       "length": 2649.9097,
-      "gridsize": 26,
+      "gridSize": 26,
       "pitEntryX": 46.9972,
       "pitEntryZ": 80.4018,
       "pitExitX": 114.8132,
@@ -9670,7 +10522,7 @@
       "location": "Oulton Park",
       "variation": "International",
       "length": 4302.7388,
-      "gridsize": 26,
+      "gridSize": 26,
       "pitEntryX": 46.9972,
       "pitEntryZ": 80.4018,
       "pitExitX": 114.8132,
@@ -9682,7 +10534,7 @@
       "location": "Oulton Park",
       "variation": "Island",
       "length": 3547.5857,
-      "gridsize": 26,
+      "gridSize": 26,
       "pitEntryX": 46.9972,
       "pitEntryZ": 80.4018,
       "pitExitX": 114.8132,
@@ -9694,7 +10546,7 @@
       "location": "Road America",
       "variation": "",
       "length": 6482.4893,
-      "gridsize": 64,
+      "gridSize": 64,
       "pitEntryX": 430.8689,
       "pitEntryZ": 245.7329,
       "pitExitX": 451.5659,
@@ -9706,7 +10558,7 @@
       "location": "Rouen Les Essarts",
       "variation": "",
       "length": 0,
-      "gridsize": 20,
+      "gridSize": 20,
       "pitEntryX": 117.25,
       "pitEntryZ": 25.5,
       "pitExitX": -84.75,
@@ -9718,7 +10570,7 @@
       "location": "Rouen Les Essarts",
       "variation": "Short",
       "length": 0,
-      "gridsize": 20,
+      "gridSize": 20,
       "pitEntryX": 117.25,
       "pitEntryZ": 25.5,
       "pitExitX": -84.75,
@@ -9730,7 +10582,7 @@
       "location": "Ruapuna Park",
       "variation": "A_Circuit",
       "length": 1171.3093,
-      "gridsize": 28,
+      "gridSize": 28,
       "pitEntryX": 546.25,
       "pitEntryZ": 112.5,
       "pitExitX": 219.25,
@@ -9742,7 +10594,7 @@
       "location": "Ruapuna Park",
       "variation": "B_Circuit",
       "length": 0,
-      "gridsize": 28,
+      "gridSize": 28,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9754,7 +10606,7 @@
       "location": "Ruapuna Park",
       "variation": "Club",
       "length": 2261.9836,
-      "gridsize": 28,
+      "gridSize": 28,
       "pitEntryX": 546.25,
       "pitEntryZ": 112.5,
       "pitExitX": 219.25,
@@ -9766,7 +10618,7 @@
       "location": "Ruapuna Park",
       "variation": "Grand Prix",
       "length": 3251.9809,
-      "gridsize": 28,
+      "gridSize": 28,
       "pitEntryX": 546.25,
       "pitEntryZ": 112.5,
       "pitExitX": 219.25,
@@ -9778,7 +10630,7 @@
       "location": "Ruapuna Park",
       "variation": "Outer_Loop",
       "length": 2165.7734,
-      "gridsize": 28,
+      "gridSize": 28,
       "pitEntryX": 546.25,
       "pitEntryZ": 112.5,
       "pitExitX": 219.25,
@@ -9790,7 +10642,7 @@
       "location": "Sakitto",
       "variation": "Grand Prix",
       "length": 5383.8838,
-      "gridsize": 54,
+      "gridSize": 54,
       "pitEntryX": 576.6671,
       "pitEntryZ": -142.1608,
       "pitExitX": 607.291,
@@ -9802,7 +10654,7 @@
       "location": "Sakitto",
       "variation": "International",
       "length": 0,
-      "gridsize": 26,
+      "gridSize": 26,
       "pitEntryX": -265.1671,
       "pitEntryZ": 472.4344,
       "pitExitX": -154.9505,
@@ -9814,7 +10666,7 @@
       "location": "Sakitto",
       "variation": "National",
       "length": 0,
-      "gridsize": 26,
+      "gridSize": 26,
       "pitEntryX": -265.1671,
       "pitEntryZ": 472.4344,
       "pitExitX": -154.9505,
@@ -9826,7 +10678,7 @@
       "location": "Sakitto",
       "variation": "Sprint",
       "length": 3539.3838,
-      "gridsize": 54,
+      "gridSize": 54,
       "pitEntryX": 576.6671,
       "pitEntryZ": -142.1608,
       "pitExitX": 607.291,
@@ -9838,7 +10690,7 @@
       "location": "Silverstone",
       "variation": "Classic",
       "length": 0,
-      "gridsize": 18,
+      "gridSize": 18,
       "pitEntryX": -347.0,
       "pitEntryZ": -165.0,
       "pitExitX": 152.75,
@@ -9850,7 +10702,7 @@
       "location": "Silverstone",
       "variation": "Grand Prix",
       "length": 0,
-      "gridsize": 32,
+      "gridSize": 32,
       "pitEntryX": -504.739,
       "pitEntryZ": -1274.686,
       "pitExitX": -273.1427,
@@ -9862,7 +10714,7 @@
       "location": "Silverstone",
       "variation": "International",
       "length": 2978.3494,
-      "gridsize": 32,
+      "gridSize": 32,
       "pitEntryX": -504.739,
       "pitEntryZ": -1274.686,
       "pitExitX": -273.1427,
@@ -9874,7 +10726,7 @@
       "location": "Silverstone",
       "variation": "National",
       "length": 2620.8909,
-      "gridsize": 32,
+      "gridSize": 32,
       "pitEntryX": -323.1119,
       "pitEntryZ": -115.6939,
       "pitExitX": 157.4515,
@@ -9886,7 +10738,7 @@
       "location": "Silverstone",
       "variation": "Stowe",
       "length": 0,
-      "gridsize": 16,
+      "gridSize": 16,
       "pitEntryX": -75.905,
       "pitEntryZ": -1396.183,
       "pitExitX": -0.5096,
@@ -9898,7 +10750,7 @@
       "location": "Snetterton",
       "variation": "100 Circuit",
       "length": 0,
-      "gridsize": 26,
+      "gridSize": 26,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9910,7 +10762,7 @@
       "location": "Snetterton",
       "variation": "200 Circuit",
       "length": 3170.3074,
-      "gridsize": 26,
+      "gridSize": 26,
       "pitEntryX": 228.4838,
       "pitEntryZ": -25.2368,
       "pitExitX": -44.5122,
@@ -9922,7 +10774,7 @@
       "location": "Snetterton",
       "variation": "300 Circuit",
       "length": 4747.875,
-      "gridsize": 26,
+      "gridSize": 26,
       "pitEntryX": 228.4838,
       "pitEntryZ": -25.2368,
       "pitExitX": -44.5122,
@@ -9934,7 +10786,7 @@
       "location": "Sonoma Raceway",
       "variation": "Grand Prix",
       "length": 4025.9775,
-      "gridsize": 43,
+      "gridSize": 43,
       "pitEntryX": -592.7792,
       "pitEntryZ": 87.4373,
       "pitExitX": -152.6224,
@@ -9946,7 +10798,7 @@
       "location": "Sonoma Raceway",
       "variation": "National",
       "length": 0,
-      "gridsize": 33,
+      "gridSize": 33,
       "pitEntryX": -592.7792,
       "pitEntryZ": 87.4373,
       "pitExitX": -152.6224,
@@ -9958,7 +10810,7 @@
       "location": "Sonoma Raceway",
       "variation": "Short",
       "length": 3174.8245,
-      "gridsize": 43,
+      "gridSize": 43,
       "pitEntryX": -592.7792,
       "pitEntryZ": 87.4373,
       "pitExitX": -152.6224,
@@ -9970,7 +10822,7 @@
       "location": "Summerton",
       "variation": "International",
       "length": 996.8077,
-      "gridsize": 28,
+      "gridSize": 28,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9982,7 +10834,7 @@
       "location": "Summerton",
       "variation": "National",
       "length": 0,
-      "gridsize": 28,
+      "gridSize": 28,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -9994,7 +10846,7 @@
       "location": "Summerton",
       "variation": "Sprint",
       "length": 0,
-      "gridsize": 28,
+      "gridSize": 28,
       "pitEntryX": null,
       "pitEntryZ": null,
       "pitExitX": null,
@@ -10006,7 +10858,7 @@
       "location": "Watkins Glen International",
       "variation": "Grand Prix",
       "length": 5112.1216,
-      "gridsize": 43,
+      "gridSize": 43,
       "pitEntryX": 589.6273,
       "pitEntryZ": -928.2814,
       "pitExitX": 542.0042,
@@ -10018,7 +10870,7 @@
       "location": "Watkins Glen International",
       "variation": "Short",
       "length": 0,
-      "gridsize": 43,
+      "gridSize": 43,
       "pitEntryX": 589.6273,
       "pitEntryZ": -928.2814,
       "pitExitX": 542.0042,
@@ -10030,7 +10882,7 @@
       "location": "Willow Springs",
       "variation": "Short",
       "length": 0,
-      "gridsize": 24,
+      "gridSize": 24,
       "pitEntryX": -386.1919,
       "pitEntryZ": 818.131,
       "pitExitX": -317.1366,
@@ -10042,7 +10894,7 @@
       "location": "Willow Springs",
       "variation": "",
       "length": 0,
-      "gridsize": 50,
+      "gridSize": 50,
       "pitEntryX": 319.4275,
       "pitEntryZ": -21.5124,
       "pitExitX": -44.8402,
@@ -10054,7 +10906,7 @@
       "location": "Zhuhai",
       "variation": "International",
       "length": 0,
-      "gridsize": 42,
+      "gridSize": 42,
       "pitEntryX": -193.7068,
       "pitEntryZ": 123.679,
       "pitExitX": 64.5628,
@@ -10066,7 +10918,7 @@
       "location": "Zolder",
       "variation": "Grand Prix",
       "length": 4146.7334,
-      "gridsize": 36,
+      "gridSize": 36,
       "pitEntryX": 138.3811,
       "pitEntryZ": 132.7747,
       "pitExitX": 682.2009,

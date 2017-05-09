@@ -1,75 +1,75 @@
 package com.senorpez.projectcars;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.JsonNode;
+import org.springframework.hateoas.Link;
 import org.springframework.hateoas.ResourceSupport;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 class Event extends ResourceSupport {
     @JsonProperty("id")
     private final Integer eventId;
+    @JsonProperty("name")
     private final String name;
+    @JsonProperty("tier")
     private final Integer tier;
-    private final List<Car> cars;
+    @JsonProperty("cars")
+    private final Set<Car> cars;
+    @JsonProperty("rounds")
     private final List<Round> rounds;
+    @JsonProperty("verified")
     private final Boolean verified;
 
-    final static List<String> DB_COLUMNS = Arrays.asList(
-            "id",
-            "name",
-            "carFilter",
-            "tier",
-            "verified"
-    );
-    final static String DB_TABLE_NAME = "events";
+    private final static AtomicInteger id = new AtomicInteger(0);
 
-    @JsonIgnore
-    private final String carFilter;
+    @JsonCreator
+    public Event(
+            @JsonProperty("name") String name,
+            @JsonProperty("tier") Integer tier,
+            @JsonProperty("rounds") JsonNode rounds,
+            @JsonProperty("verified") Boolean verified,
+            @JsonProperty("carFilter") JsonNode carFilter) {
+        this.eventId = id.incrementAndGet();
+        this.name = name;
+        this.tier = tier;
 
-    Event(ResultSet eventResults, List<Car> cars, List<Round> rounds) throws SQLException {
-        this.eventId = eventResults.getInt("id");
-        this.name = eventResults.getString("name");
+        if (carFilter.isNull()) {
+            this.cars = null;
+        } else {
+            Set<Car> cars = new HashSet<>(Application.CARS);
+            List<CarFilter> carFilters = Application.getData(CarFilter.class, carFilter);
+            carFilters.forEach(filter -> cars.removeIf(filter.getOperation().negate()));
+            this.cars = cars;
+        }
 
-        Integer tier = eventResults.getInt("tier");
-        this.tier = eventResults.wasNull() ? null : tier;
+        this.verified = verified;
 
-        this.verified = eventResults.getBoolean("verified");
+        Round.resetId();
+        this.rounds = Application.getData(Round.class, rounds);
 
-        this.carFilter = eventResults.getString("carFilter");
-
-        this.cars = cars;
-        this.rounds = rounds;
+        this.add(new Link(String.format("/events/%s", eventId.toString())).withSelfRel());
     }
 
-    public Integer getEventId() {
+    Integer getEventId() {
         return eventId;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public Integer getTier() {
-        return tier;
-    }
-
-    public List<Car> getCars() {
+    Set<Car> getCars() {
         return cars;
     }
 
-    public List<Round> getRounds() {
+    List<Round> getRounds() {
         return rounds;
     }
 
-    public String getCarFilter() {
-        return carFilter;
+    static Optional<Event> getEventByID(Integer eventId) {
+        return Optional.ofNullable(Application.EVENTS.stream()
+                .filter(event -> event.getEventId().equals(eventId))
+                .findAny()
+                .orElse(null));
     }
 
-    public Boolean getVerified() {
-        return verified;
-    }
 }

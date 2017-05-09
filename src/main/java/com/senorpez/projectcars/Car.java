@@ -1,62 +1,61 @@
 package com.senorpez.projectcars;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
+import org.springframework.hateoas.Link;
 import org.springframework.hateoas.ResourceSupport;
+import org.springframework.hateoas.UriTemplate;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.Arrays;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 class Car extends ResourceSupport {
+    private static final UriTemplate template = new UriTemplate("/v1/cars/{carId}");
+    private final Map<String, String> uriVariables = new HashMap<>();
+
     @JsonProperty("id")
     private final Integer carId;
+    @JsonProperty("manufacturer")
     private final String manufacturer;
+    @JsonProperty("model")
     private final String model;
+    @JsonProperty("country")
     private final String country;
+    @JsonProperty("carClass")
     private final String carClass;
+    @JsonProperty("year")
     private final Integer year;
+    @JsonProperty("drivetrain")
     private final Drivetrain drivetrain;
+    @JsonProperty("enginePosition")
     private final EnginePosition enginePosition;
+    @JsonProperty("engineType")
     private final String engineType;
+    @JsonProperty("topSpeed")
     private final Integer topSpeed;
+    @JsonProperty("horsepower")
     private final Integer horsepower;
+    @JsonProperty("acceleration")
     private final Float acceleration;
+    @JsonProperty("braking")
     private final Float braking;
+    @JsonProperty("weight")
     private final Integer weight;
+    @JsonProperty("torque")
     private final Integer torque;
+    @JsonProperty("weightBalance")
     private final Integer weightBalance;
+    @JsonProperty("wheelbase")
     private final Float wheelbase;
+    @JsonProperty("shiftPattern")
     private final ShiftPattern shiftPattern;
+    @JsonProperty("shifter")
     private final Shifter shifter;
+    @JsonProperty("gears")
     private final Integer gears;
+    @JsonProperty("dlc")
     private final String dlc;
-
-    static final List<String> DB_COLUMNS = Arrays.asList(
-            "id",
-            "manufacturer",
-            "model",
-            "class",
-            "year",
-            "country",
-            "drivetrain",
-            "enginePosition",
-            "engineType",
-            "topSpeed",
-            "horsepower",
-            "acceleration",
-            "braking",
-            "weight",
-            "torque",
-            "weightBalance",
-            "wheelbase",
-            "shiftPattern",
-            "shifter",
-            "gears",
-            "dlc"
-    );
-    static final String DB_TABLE_NAME = "cars";
 
     enum Drivetrain {
         FWD,
@@ -105,111 +104,55 @@ class Car extends ResourceSupport {
         public String getDisplayString() { return displayString; }
     }
 
-    Car(ResultSet carResults) throws SQLException {
-        this.carId = carResults.getInt("id");
-        this.manufacturer = carResults.getString("manufacturer");
-        this.model = carResults.getString("model");
-        this.country = carResults.getString("country");
-        this.carClass = carResults.getString("class");
-        this.year = carResults.getInt("year");
-        this.drivetrain = Drivetrain.valueOf(carResults.getString("drivetrain").toUpperCase());
-        this.enginePosition = EnginePosition.valueOf(carResults.getString("enginePosition").toUpperCase());
-        this.engineType = carResults.getString("engineType");
-        this.topSpeed = carResults.getInt("topSpeed");
-        this.horsepower = carResults.getInt("horsepower");
-        this.acceleration = carResults.getFloat("acceleration");
-        this.braking = carResults.getFloat("braking");
-        this.weight = carResults.getInt("weight");
-        this.torque = carResults.getInt("torque");
-        this.weightBalance = carResults.getInt("weightBalance");
-        this.wheelbase = carResults.getFloat("wheelbase");
-        this.shiftPattern = ShiftPattern.valueOf(carResults.getString("shiftPattern").toUpperCase());
-        this.shifter = Shifter.valueOf(carResults.getString("shifter").toUpperCase());
-        this.gears = carResults.getInt("gears");
-        this.dlc = carResults.getString("dlc");
+    @JsonCreator
+    public Car(
+            @JsonProperty("id") Integer carId,
+            @JsonProperty("manufacturer") String manufacturer,
+            @JsonProperty("model") String model,
+            @JsonProperty("country") String country,
+            @JsonProperty("class") String carClass,
+            @JsonProperty("year") Integer year,
+            @JsonProperty("drivetrain") Drivetrain drivetrain,
+            @JsonProperty("enginePosition") EnginePosition enginePosition,
+            @JsonProperty("engineType") String engineType,
+            @JsonProperty("topSpeed") Integer topSpeed,
+            @JsonProperty("horsepower") Integer horsepower,
+            @JsonProperty("acceleration") Float acceleration,
+            @JsonProperty("braking") Float braking,
+            @JsonProperty("weight") Integer weight,
+            @JsonProperty("torque") Integer torque,
+            @JsonProperty("weightBalance") Integer weightBalance,
+            @JsonProperty("wheelbase") Float wheelbase,
+            @JsonProperty("shiftPattern") ShiftPattern shiftPattern,
+            @JsonProperty("shifter") Shifter shifter,
+            @JsonProperty("gears") Integer gears,
+            @JsonProperty("dlc") String dlc) {
+        this.carId = carId;
+        this.manufacturer = manufacturer;
+        this.model = model;
+        this.country = country;
+        this.carClass = carClass;
+        this.year = year;
+        this.drivetrain = drivetrain;
+        this.enginePosition = enginePosition;
+        this.engineType = engineType;
+        this.topSpeed = topSpeed;
+        this.horsepower = horsepower;
+        this.acceleration = acceleration;
+        this.braking = braking;
+        this.weight = weight;
+        this.torque = torque;
+        this.weightBalance = weightBalance;
+        this.wheelbase = wheelbase;
+        this.shiftPattern = shiftPattern;
+        this.shifter = shifter;
+        this.gears = gears;
+        this.dlc = dlc;
+
+        this.add(new Link(String.format("/cars/%s", carId.toString())).withSelfRel());
     }
 
     Integer getCarId() {
         return carId;
-    }
-
-    public String getManufacturer() {
-        return manufacturer;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public String getCarClass() {
-        return carClass;
-    }
-
-    public Integer getYear() {
-        return year;
-    }
-
-    public Drivetrain getDrivetrain() {
-        return drivetrain;
-    }
-
-    public EnginePosition getEnginePosition() {
-        return enginePosition;
-    }
-
-    public String getEngineType() {
-        return engineType;
-    }
-
-    public Integer getTopSpeed() {
-        return topSpeed;
-    }
-
-    public Integer getHorsepower() {
-        return horsepower;
-    }
-
-    public Float getAcceleration() {
-        return acceleration;
-    }
-
-    public Float getBraking() {
-        return braking;
-    }
-
-    public Integer getWeight() {
-        return weight;
-    }
-
-    public Integer getTorque() {
-        return torque;
-    }
-
-    public Integer getWeightBalance() {
-        return weightBalance;
-    }
-
-    public Float getWheelbase() {
-        return wheelbase;
-    }
-
-    public ShiftPattern getShiftPattern() {
-        return shiftPattern;
-    }
-
-    public Shifter getShifter() {
-        return shifter;
-    }
-
-    public Integer getGears() {
-        return gears;
-    }
-
-    public String getDlc() {
-        return dlc;
     }
 }

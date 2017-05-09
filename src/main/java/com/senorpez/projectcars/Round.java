@@ -1,42 +1,59 @@
 package com.senorpez.projectcars;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.JsonNode;
 import org.springframework.hateoas.ResourceSupport;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
+import java.util.concurrent.atomic.AtomicInteger;
 
 class Round extends ResourceSupport {
     @JsonProperty("id")
     private final Integer roundId;
+    @JsonProperty("track")
     private final Track track;
+    @JsonProperty("races")
     private final List<Race> races;
 
-    static final List<String> DB_COLUMNS = Arrays.asList(
-            "id",
-            "eventID",
-            "trackID"
-    );
-    static final String DB_TABLE_NAME = "rounds";
+    private final static AtomicInteger id = new AtomicInteger(0);
 
-    Round(ResultSet roundResults, Track track, List<Race> races) throws SQLException {
-        this.roundId = roundResults.getInt("id");
+    @JsonCreator
+    public Round(
+            @JsonProperty("location") String location,
+            @JsonProperty("variation") String variation,
+            @JsonProperty("races") JsonNode races) {
+        this.roundId = id.incrementAndGet();
+        this.track = Application.TRACKS.stream()
+                .filter(foundTrack ->
+                        foundTrack.getLocation().equalsIgnoreCase(location)
+                        && foundTrack.getVariation().equalsIgnoreCase(variation))
+                .findFirst()
+                .orElse(null);
 
-        this.track = track;
-        this.races = races;
+        Race.resetId();
+        this.races = Application.getData(Race.class, races);
     }
 
-    public Integer getRoundId() {
+    Integer getRoundId() {
         return roundId;
     }
 
-    public Track getTrack() {
-        return track;
+    List<Race> getRaces() {
+        return races;
     }
 
-    public List<Race> getRaces() {
-        return races;
+    static void resetId() {
+        id.set(0);
+    }
+
+    static Optional<Round> getRoundById(Integer eventId, Integer roundId) {
+        return Optional.ofNullable(Event.getEventByID(eventId).map(
+                event -> event.getRounds().stream()
+                        .filter(round -> round.getRoundId().equals(roundId))
+                        .findAny()
+                        .orElse(null))
+                .orElse(null));
     }
 }
