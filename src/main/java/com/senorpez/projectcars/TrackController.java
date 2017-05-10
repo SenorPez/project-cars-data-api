@@ -26,11 +26,7 @@ class TrackController {
 
         TrackList(Set<Track> trackList) {
             this.trackList = trackList.stream()
-                    .map(track -> {
-//                        track.removeLinks();
-//                        track.add(linkTo(methodOn(TrackController.class).tracks(track.getTrackId())).withSelfRel());
-                        return track;
-                    })
+                    .map(TrackController::addLink)
                     .collect(Collectors.toSet());
             this.add(linkTo(methodOn(TrackController.class).tracks()).withSelfRel());
         }
@@ -62,6 +58,13 @@ class TrackController {
         return Application.TRACKS.stream()
                 .filter(track -> track.getTrackId().equals(trackId))
                 .findAny()
+                .map(TrackController::addLink)
                 .orElse(null);
+    }
+
+    static Track addLink(Track track) {
+        track.removeLinks();
+        track.add(linkTo(methodOn(TrackController.class).tracks(track.getTrackId())).withSelfRel());
+        return track;
     }
 }

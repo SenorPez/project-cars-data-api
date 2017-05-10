@@ -7,6 +7,7 @@ import org.springframework.hateoas.ResourceSupport;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 
 class Round extends ResourceSupport {
@@ -15,7 +16,7 @@ class Round extends ResourceSupport {
     @JsonProperty("track")
     private final Track track;
     @JsonProperty("races")
-    private final List<Race> races;
+    private final Set<Race> races;
 
     private final static AtomicInteger id = new AtomicInteger(0);
 
@@ -40,7 +41,11 @@ class Round extends ResourceSupport {
         return roundId;
     }
 
-    List<Race> getRaces() {
+    public Track getTrack() {
+        return track;
+    }
+
+    Set<Race> getRaces() {
         return races;
     }
 

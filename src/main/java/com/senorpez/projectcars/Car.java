@@ -5,15 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.ResourceSupport;
-import org.springframework.hateoas.UriTemplate;
-
-import java.util.HashMap;
-import java.util.Map;
 
 class Car extends ResourceSupport {
-    private static final UriTemplate template = new UriTemplate("/v1/cars/{carId}");
-    private final Map<String, String> uriVariables = new HashMap<>();
-
     @JsonProperty("id")
     private final Integer carId;
     @JsonProperty("manufacturer")

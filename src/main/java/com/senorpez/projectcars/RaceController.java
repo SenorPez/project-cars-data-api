@@ -13,6 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
 @RestController
 @Api(tags = {"races"})
@@ -20,10 +25,13 @@ import java.util.Optional;
 class RaceController {
     class RaceList extends ResourceSupport {
         @JsonProperty("races")
-        private final List<Race> raceList;
+        private final Set<Race> raceList;
 
-        RaceList(List<Race> raceList) {
-            this.raceList = raceList;
+        RaceList(Set<Race> raceList, Integer eventId, Integer roundId) {
+            this.raceList = raceList.stream()
+                    .map(race -> addLink(race, eventId, roundId))
+                    .collect(Collectors.toSet());
+            this.add(linkTo(methodOn(RaceController.class).races(eventId, roundId)).withSelfRel());
         }
     }
 
@@ -45,7 +53,7 @@ class RaceController {
             )
             @PathVariable Integer roundID) {
         return Round.getRoundById(eventID, roundID).map(
-                round -> new RaceList(round.getRaces()))
+                round -> new RaceList(round.getRaces(), eventID, roundID))
                 .orElse(null);
     }
 
@@ -75,7 +83,16 @@ class RaceController {
                 round -> round.getRaces().stream()
                         .filter(race -> race.getRaceId().equals(raceID))
                         .findAny()
+                        .map(race -> addLink(race, eventID, roundID))
                         .orElse(null))
                 .orElse(null);
+    }
+
+    static Race addLink(Race race, Integer eventId, Integer roundId) {
+        race.removeLinks();
+        race.add(linkTo(methodOn(RaceController.class).races(eventId, roundId, race.getRaceId())).withSelfRel());
+        race.add(linkTo(methodOn(RoundController.class).rounds(eventId, roundId)).withRel("round"));
+        race.add(linkTo(methodOn(EventController.class).events(eventId)).withRel("event"));
+        return race;
     }
 }

@@ -21,7 +21,7 @@ class CarClass extends ResourceSupport{
         this.add(new Link(String.format("/classes/%s", carClassId.toString())).withSelfRel());
     }
 
-    public Integer getCarClassId() {
+    Integer getCarClassId() {
         return carClassId;
     }
 }

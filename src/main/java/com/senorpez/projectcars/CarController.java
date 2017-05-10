@@ -26,22 +26,14 @@ class CarController {
 
         CarList(Set<Car> carList) {
             this.carList = carList.stream()
-                    .map(car -> {
-//                        car.removeLinks();
-//                        car.add(linkTo(methodOn(CarController.class).cars(car.getCarId())).withSelfRel());
-                        return car;
-                    })
+                    .map(CarController.this::addLink)
                     .collect(Collectors.toSet());
             this.add(linkTo(methodOn(CarController.class).cars()).withSelfRel());
         }
 
         CarList(Set<Car> carList, Integer eventId) {
             this.carList = carList.stream()
-                    .map(car -> {
-//                        car.removeLinks();
-//                        car.add(linkTo(methodOn(CarController.class).eventCars(eventId, car.getCarId())).withSelfRel());
-                        return car;
-                    })
+                    .map(car -> addLink(car, eventId))
                     .collect(Collectors.toSet());
             this.add(linkTo(methodOn(CarController.class).eventCars(eventId)).withSelfRel());
         }
@@ -64,7 +56,7 @@ class CarController {
             notes = "Returns a car as specified by its ID number",
             response = Car.class
     )
-    public Car cars(
+    Car cars(
             @ApiParam(
                     value = "ID of car to return",
                     required = true
@@ -73,6 +65,7 @@ class CarController {
         return Application.CARS.stream()
                 .filter(car -> car.getCarId().equals(carId))
                 .findAny()
+                .map(this::addLink)
                 .orElse(null);
     }
 
@@ -83,9 +76,9 @@ class CarController {
             response = Car.class,
             responseContainer = "List"
     )
-    public CarList eventCars(@PathVariable Integer eventId) {
-        return Event.getEventByID(eventId).map(
-                event -> new CarList(event.getCars(), eventId))
+    CarList eventCars(@PathVariable Integer eventId) {
+        return Event.getEventByID(eventId)
+                .map(event -> new CarList(event.getCars(), eventId))
                 .orElse(null);
     }
 
@@ -95,7 +88,7 @@ class CarController {
             notes = "Returns an eligible car for an event",
             response = Car.class
     )
-    public Car eventCars(
+    Car eventCars(
             @ApiParam(
                     value = "ID of event",
                     required = true
@@ -110,7 +103,21 @@ class CarController {
                 event -> event.getCars().stream()
                         .filter(car -> car.getCarId().equals(carId))
                         .findAny()
+                        .map(car -> addLink(car, eventId))
                         .orElse(null))
                 .orElse(null);
+    }
+
+    private Car addLink(Car car) {
+        car.removeLinks();
+        car.add(linkTo(methodOn(CarController.class).cars(car.getCarId())).withSelfRel());
+        return car;
+    }
+
+    static Car addLink(Car car, Integer eventId) {
+        car.removeLinks();
+        car.add(linkTo(methodOn(CarController.class).eventCars(eventId, car.getCarId())).withSelfRel());
+        car.add(linkTo(methodOn(CarController.class).cars(car.getCarId())).withRel("car"));
+        return car;
     }
 }

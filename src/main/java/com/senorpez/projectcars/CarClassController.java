@@ -13,6 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
+
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
 @RestController
 @Api(tags = {"classes"})
@@ -23,7 +27,10 @@ class CarClassController {
         private final Set<CarClass> carClassList;
 
         CarClassList(Set<CarClass> carClassList) {
-            this.carClassList = carClassList;
+            this.carClassList = carClassList.stream()
+                    .map(CarClassController.this::addLink)
+                    .collect(Collectors.toSet());
+            this.add(linkTo(methodOn(CarClassController.class).carClasses()).withSelfRel());
         }
     }
 
@@ -53,6 +60,13 @@ class CarClassController {
         return Application.CAR_CLASSES.stream()
                 .filter(carClass -> carClass.getCarClassId().equals(carClassId))
                 .findAny()
+                .map(this::addLink)
                 .orElse(null);
+    }
+
+    private CarClass addLink(CarClass carClass) {
+        carClass.removeLinks();
+        carClass.add(linkTo(methodOn(CarClassController.class).carClasses(carClass.getCarClassId())).withSelfRel());
+        return carClass;
     }
 }

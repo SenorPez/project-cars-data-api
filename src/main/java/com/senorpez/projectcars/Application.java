@@ -34,13 +34,13 @@ public class Application {
         return new HashSet<>();
     }
 
-    static <T> List<T> getData(Class objectClass, JsonNode jsonData) {
+    static <T> Set<T> getData(Class objectClass, JsonNode jsonData) {
         try {
             ObjectMapper mapper = new ObjectMapper();
-            return mapper.readValue(jsonData.toString(), mapper.getTypeFactory().constructCollectionType(List.class, objectClass));
+            return mapper.readValue(jsonData.toString(), mapper.getTypeFactory().constructCollectionType(Set.class, objectClass));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return new ArrayList<>();
+        return new HashSet<>();
     }
 }

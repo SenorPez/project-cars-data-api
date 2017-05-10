@@ -13,6 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
+
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
 @RestController
 @Api(tags = {"events"})
@@ -23,7 +27,10 @@ class EventController {
         private final Set<Event> eventList;
 
         EventList(Set<Event> eventList) {
-            this.eventList = eventList;
+            this.eventList = eventList.stream()
+                    .map(EventController.this::addLink)
+                    .collect(Collectors.toSet());
+            this.add(linkTo(methodOn(EventController.class).events()).withSelfRel());
         }
     }
 
@@ -53,6 +60,16 @@ class EventController {
         return Application.EVENTS.stream()
                 .filter(event -> event.getEventId().equals(eventId))
                 .findAny()
+                .map(this::addLink)
                 .orElse(null);
+    }
+
+    private Event addLink(Event event) {
+        event.removeLinks();
+        event.add(linkTo(methodOn(EventController.class).events(event.getEventId())).withSelfRel());
+        event.add(linkTo(methodOn(CarController.class).eventCars(event.getEventId())).withRel("cars"));
+        event.getCars().forEach(car -> CarController.addLink(car, event.getEventId()));
+        event.getRounds().forEach(round -> RoundController.addLink(round, event.getEventId()));
+        return event;
     }
 }

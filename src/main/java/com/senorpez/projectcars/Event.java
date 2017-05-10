@@ -19,7 +19,7 @@ class Event extends ResourceSupport {
     @JsonProperty("cars")
     private final Set<Car> cars;
     @JsonProperty("rounds")
-    private final List<Round> rounds;
+    private final Set<Round> rounds;
     @JsonProperty("verified")
     private final Boolean verified;
 
@@ -40,7 +40,7 @@ class Event extends ResourceSupport {
             this.cars = null;
         } else {
             Set<Car> cars = new HashSet<>(Application.CARS);
-            List<CarFilter> carFilters = Application.getData(CarFilter.class, carFilter);
+            Set<CarFilter> carFilters = Application.getData(CarFilter.class, carFilter);
             carFilters.forEach(filter -> cars.removeIf(filter.getOperation().negate()));
             this.cars = cars;
         }
@@ -61,7 +61,7 @@ class Event extends ResourceSupport {
         return cars;
     }
 
-    List<Round> getRounds() {
+    Set<Round> getRounds() {
         return rounds;
     }
 
@@ -71,5 +71,4 @@ class Event extends ResourceSupport {
                 .findAny()
                 .orElse(null));
     }
-
 }
