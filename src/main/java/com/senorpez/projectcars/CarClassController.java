@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -26,8 +24,8 @@ class CarClassController {
         @JsonProperty("carClasses")
         private final Set<CarClass> carClassList;
 
-        CarClassList(Set<CarClass> carClassList) {
-            this.carClassList = carClassList.stream()
+        CarClassList() {
+            this.carClassList = Application.CAR_CLASSES.stream()
                     .map(CarClassController.this::addLink)
                     .collect(Collectors.toSet());
             this.add(linkTo(methodOn(CarClassController.class).carClasses()).withSelfRel());
@@ -42,7 +40,7 @@ class CarClassController {
             responseContainer = "List"
     )
     CarClassList carClasses() {
-        return new CarClassList(Application.CAR_CLASSES);
+        return new CarClassList();
     }
 
     @RequestMapping(value = "/v1/classes/{carClassId}")
@@ -51,7 +49,7 @@ class CarClassController {
             notes = "Returns a car class as specified by its ID number.",
             response = CarClass.class
     )
-    public CarClass carClasses(
+    CarClass carClasses(
             @ApiParam(
                     value = "ID of car class to return",
                     required = true

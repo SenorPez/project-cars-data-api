@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -41,7 +38,7 @@ class RaceController {
             notes = "Returns a list of all races in a round of a single player event.",
             response = Round.class
     )
-    public RaceList races(
+    RaceList races(
             @ApiParam(
                     value = "ID of event",
                     required = true
@@ -63,7 +60,7 @@ class RaceController {
             notes = "Returns a list of all races in a round of a single player event.",
             response = Round.class
     )
-    public Race races(
+    Race races(
             @ApiParam(
                     value = "ID of event",
                     required = true

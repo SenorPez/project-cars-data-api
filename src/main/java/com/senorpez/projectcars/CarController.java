@@ -24,8 +24,8 @@ class CarController {
         @JsonProperty("cars")
         private final Set<Car> carList;
 
-        CarList(Set<Car> carList) {
-            this.carList = carList.stream()
+        CarList() {
+            this.carList = Application.CARS.stream()
                     .map(CarController.this::addLink)
                     .collect(Collectors.toSet());
             this.add(linkTo(methodOn(CarController.class).cars()).withSelfRel());
@@ -47,7 +47,7 @@ class CarController {
             responseContainer = "List"
     )
     CarList cars() {
-        return new CarList(Application.CARS);
+        return new CarList();
     }
 
     @RequestMapping(value = "/v1/cars/{carId}")

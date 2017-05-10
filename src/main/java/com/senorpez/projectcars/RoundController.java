@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -26,7 +24,7 @@ class RoundController {
         @JsonProperty("rounds")
         private final Set<Round> roundList;
 
-        public RoundList(Set<Round> roundList, Integer eventId) {
+        RoundList(Set<Round> roundList, Integer eventId) {
             this.roundList = roundList.stream()
                     .map(round -> addLink(round, eventId))
                     .collect(Collectors.toSet());
@@ -41,7 +39,7 @@ class RoundController {
             response = Round.class,
             responseContainer = "List"
     )
-    public RoundList rounds(@PathVariable Integer eventId) {
+    RoundList rounds(@PathVariable Integer eventId) {
         return Event.getEventByID(eventId).map(
                 event -> new RoundList(event.getRounds(), eventId))
                 .orElse(null);
@@ -53,7 +51,7 @@ class RoundController {
             notes = "Returns a specific round for an event.",
             response = Round.class
     )
-    public Round rounds(
+    Round rounds(
             @ApiParam(
                     value = "ID of event",
                     required = true

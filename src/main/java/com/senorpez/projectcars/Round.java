@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import org.springframework.hateoas.ResourceSupport;
 
-import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -41,7 +40,7 @@ class Round extends ResourceSupport {
         return roundId;
     }
 
-    public Track getTrack() {
+    Track getTrack() {
         return track;
     }
 

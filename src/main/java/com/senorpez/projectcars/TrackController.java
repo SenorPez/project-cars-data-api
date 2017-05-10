@@ -24,8 +24,8 @@ class TrackController {
         @JsonProperty("tracks")
         private final Set<Track> trackList;
 
-        TrackList(Set<Track> trackList) {
-            this.trackList = trackList.stream()
+        TrackList() {
+            this.trackList = Application.TRACKS.stream()
                     .map(TrackController::addLink)
                     .collect(Collectors.toSet());
             this.add(linkTo(methodOn(TrackController.class).tracks()).withSelfRel());
@@ -39,8 +39,8 @@ class TrackController {
             response = Track.class,
             responseContainer = "List"
     )
-    public TrackList tracks() {
-        return new TrackList(Application.TRACKS);
+    TrackList tracks() {
+        return new TrackList();
     }
 
     @RequestMapping(value = "/v1/tracks/{trackId}")
@@ -49,7 +49,7 @@ class TrackController {
             notes = "Returns a track as specified by its ID number",
             response = Track.class
     )
-    public Track tracks(
+    Track tracks(
             @ApiParam(
                     value = "ID of track to return",
                     required = true

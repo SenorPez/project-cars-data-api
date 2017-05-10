@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -26,8 +24,8 @@ class EventController {
         @JsonProperty("events")
         private final Set<Event> eventList;
 
-        EventList(Set<Event> eventList) {
-            this.eventList = eventList.stream()
+        EventList() {
+            this.eventList = Application.EVENTS.stream()
                     .map(EventController.this::addLink)
                     .collect(Collectors.toSet());
             this.add(linkTo(methodOn(EventController.class).events()).withSelfRel());
@@ -41,8 +39,8 @@ class EventController {
             response = Event.class,
             responseContainer = "List"
     )
-    public EventList events() {
-        return new EventList(Application.EVENTS);
+    EventList events() {
+        return new EventList();
     }
 
     @RequestMapping(value = "/v1/events/{eventId}")
@@ -51,7 +49,7 @@ class EventController {
             notes = "Returns an event as specified by its ID number",
             response = Event.class
     )
-    public Event events(
+    Event events(
             @ApiParam(
                     value = "ID of event to return",
                     required = true
