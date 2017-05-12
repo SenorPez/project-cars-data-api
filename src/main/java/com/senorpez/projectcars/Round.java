@@ -28,9 +28,9 @@ class Round extends ResourceSupport {
         this.track = Application.TRACKS.stream()
                 .filter(foundTrack ->
                         foundTrack.getLocation().equalsIgnoreCase(location)
-                        && foundTrack.getVariation().equalsIgnoreCase(variation))
+                                && foundTrack.getVariation().equalsIgnoreCase(variation))
                 .findFirst()
-                .orElse(null);
+                .orElseThrow(() -> new TrackNotFoundAPIException(location, variation));
 
         Race.resetId();
         this.races = Application.getData(Race.class, races);
@@ -57,7 +57,7 @@ class Round extends ResourceSupport {
                 event -> event.getRounds().stream()
                         .filter(round -> round.getRoundId().equals(roundId))
                         .findAny()
-                        .orElse(null))
-                .orElse(null));
+                        .orElseThrow(() -> new RoundNotFoundAPIException(roundId)))
+                .orElseThrow(() -> new EventNotFoundAPIException(eventId)));
     }
 }

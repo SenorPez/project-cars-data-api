@@ -59,7 +59,7 @@ class EventController {
                 .filter(event -> event.getEventId().equals(eventId))
                 .findAny()
                 .map(this::addLink)
-                .orElse(null);
+                .orElseThrow(() -> new EventNotFoundAPIException(eventId));
     }
 
     private Event addLink(Event event) {

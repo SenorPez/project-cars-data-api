@@ -59,7 +59,7 @@ class TrackController {
                 .filter(track -> track.getTrackId().equals(trackId))
                 .findAny()
                 .map(TrackController::addLink)
-                .orElse(null);
+                .orElseThrow(() -> new TrackNotFoundAPIException(trackId));
     }
 
     static Track addLink(Track track) {

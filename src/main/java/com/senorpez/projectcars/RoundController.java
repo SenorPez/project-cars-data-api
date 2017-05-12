@@ -42,7 +42,7 @@ class RoundController {
     RoundList rounds(@PathVariable Integer eventId) {
         return Event.getEventByID(eventId).map(
                 event -> new RoundList(event.getRounds(), eventId))
-                .orElse(null);
+                .orElseThrow(() -> new EventNotFoundAPIException(eventId));
     }
 
     @RequestMapping(value = "/v1/events/{eventID}/rounds/{roundID}")
@@ -67,8 +67,8 @@ class RoundController {
                         .filter(round -> round.getRoundId().equals(roundID))
                         .findAny()
                         .map(round -> addLink(round, eventID))
-                        .orElse(null))
-                .orElse(null);
+                        .orElseThrow(() -> new RoundNotFoundAPIException(roundID)))
+                .orElseThrow(() -> new EventNotFoundAPIException(eventID));
     }
 
     static Round addLink(Round round, Integer eventId) {

@@ -69,6 +69,6 @@ class Event extends ResourceSupport {
         return Optional.ofNullable(Application.EVENTS.stream()
                 .filter(event -> event.getEventId().equals(eventId))
                 .findAny()
-                .orElse(null));
+                .orElseThrow(() -> new EventNotFoundAPIException(eventId)));
     }
 }

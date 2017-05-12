@@ -66,7 +66,7 @@ class CarController {
                 .filter(car -> car.getCarId().equals(carId))
                 .findAny()
                 .map(this::addLink)
-                .orElse(null);
+                .orElseThrow(() -> new CarNotFoundAPIException(carId));
     }
 
     @RequestMapping(value = "/v1/events/{eventId}/cars")
@@ -79,7 +79,7 @@ class CarController {
     CarList eventCars(@PathVariable Integer eventId) {
         return Event.getEventByID(eventId)
                 .map(event -> new CarList(event.getCars(), eventId))
-                .orElse(null);
+                .orElseThrow(() -> new EventNotFoundAPIException(eventId));
     }
 
     @RequestMapping(value = "/v1/events/{eventId}/cars/{carId}")
@@ -104,8 +104,8 @@ class CarController {
                         .filter(car -> car.getCarId().equals(carId))
                         .findAny()
                         .map(car -> addLink(car, eventId))
-                        .orElse(null))
-                .orElse(null);
+                        .orElseThrow(() -> new CarNotFoundAPIException(carId)))
+                .orElseThrow(() -> new EventNotFoundAPIException(eventId));
     }
 
     private Car addLink(Car car) {

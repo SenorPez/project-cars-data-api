@@ -51,7 +51,7 @@ class RaceController {
             @PathVariable Integer roundID) {
         return Round.getRoundById(eventID, roundID).map(
                 round -> new RaceList(round.getRaces(), eventID, roundID))
-                .orElse(null);
+                .orElseThrow(() -> new RoundNotFoundAPIException(roundID));
     }
 
     @RequestMapping(value = "/v1/events/{eventID}/rounds/{roundID}/races/{raceID}")
@@ -81,8 +81,8 @@ class RaceController {
                         .filter(race -> race.getRaceId().equals(raceID))
                         .findAny()
                         .map(race -> addLink(race, eventID, roundID))
-                        .orElse(null))
-                .orElse(null);
+                        .orElseThrow(() -> new RaceNotFoundAPIException(raceID)))
+                .orElseThrow(() -> new RoundNotFoundAPIException(roundID));
     }
 
     static Race addLink(Race race, Integer eventId, Integer roundId) {

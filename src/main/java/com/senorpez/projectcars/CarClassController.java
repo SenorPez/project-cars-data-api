@@ -59,7 +59,7 @@ class CarClassController {
                 .filter(carClass -> carClass.getCarClassId().equals(carClassId))
                 .findAny()
                 .map(this::addLink)
-                .orElse(null);
+                .orElseThrow(() -> new CarClassNotFoundAPIException(carClassId));
     }
 
     private CarClass addLink(CarClass carClass) {
