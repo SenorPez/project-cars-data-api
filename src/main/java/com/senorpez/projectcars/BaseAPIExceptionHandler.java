@@ -2,6 +2,8 @@ package com.senorpez.projectcars;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -30,22 +32,16 @@ abstract class BaseAPIExceptionHandler {
         return new ErrorResponse(mapping.code, mapping.message);
     }
 
-    @ExceptionHandler(APIException.class)
-    @ResponseBody
-    APIException handleAPIException(final APIException exception, final HttpServletResponse response) {
-        ExceptionMapping mapping = exceptionMappings.getOrDefault(exception.getClass(), DEFAULT_ERROR);
-        response.setStatus(mapping.status.value());
-        return exception;
-    }
-
     void registerMapping(
             final Class<?> clazz,
             final String code,
             final String message,
             final HttpStatus status) {
-        exceptionMappings.put(clazz, new ExceptionMapping(code, message, status));
+        exceptionMappings.put(clazz, new ExceptionMapping(message, code, status));
     }
 
+    @JsonTypeName("error")
+    @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.WRAPPER_OBJECT)
     class ErrorResponse {
         @JsonProperty("code")
         private final String code;
