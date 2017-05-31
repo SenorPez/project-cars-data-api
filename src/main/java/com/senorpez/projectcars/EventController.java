@@ -47,20 +47,18 @@ class EventController {
             response = Event.class
     )
     @RequestMapping(value = "/{eventId}")
-    Resource events(
+    EventResource events(
             @ApiParam(
                     value = "ID of event to return",
                     required = true
             )
             @PathVariable Integer eventId) {
-        IdentifiableResourceAssembler<Event, Resource> assembler = new IdentifiableResourceAssembler<>(EventController.class, Resource.class);
+        EventResourceAssembler assembler = new EventResourceAssembler();
         return assembler.toResource(Application.EVENTS.stream()
                 .filter(event -> event.getId().equals(eventId))
                 .findAny()
                 .orElseThrow(() -> new EventNotFoundAPIException(eventId)));
     }
-
-
 }
 //    class EventList extends ResourceSupport {
 //        @JsonProperty("events")

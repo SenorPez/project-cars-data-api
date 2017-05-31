@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 @Relation(value = "event", collectionRelation = "event")
 class Event implements Identifiable<Integer> {
-    @JsonProperty("eventId")
+    @JsonProperty("id")
     private final Integer id;
     @JsonProperty("name")
     private final String name;
@@ -57,8 +57,16 @@ class Event implements Identifiable<Integer> {
         return id;
     }
 
-    String getName() {
+    public String getName() {
         return name;
+    }
+
+    public Integer getTier() {
+        return tier;
+    }
+
+    public Boolean isVerified() {
+        return verified;
     }
 
     Set<Car> getCars() {
