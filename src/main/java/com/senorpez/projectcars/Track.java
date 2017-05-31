@@ -2,16 +2,15 @@ package com.senorpez.projectcars;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.springframework.hateoas.Link;
-import org.springframework.hateoas.ResourceSupport;
+import org.springframework.hateoas.Identifiable;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-class Track extends ResourceSupport {
+class Track implements Identifiable<Integer> {
     @JsonProperty("id")
-    private final Integer trackId;
+    private final Integer id;
     @JsonProperty("name")
     private final String name;
     @JsonProperty("location")
@@ -39,7 +38,7 @@ class Track extends ResourceSupport {
             @JsonProperty("pitExitX") Float pitExitX,
             @JsonProperty("pitExitZ") Float pitExitZ,
             @JsonProperty("gridSize") Integer gridSize) {
-        this.trackId = trackId;
+        this.id = trackId;
         this.name = name;
         this.location = location;
         this.variation = variation;
@@ -54,12 +53,11 @@ class Track extends ResourceSupport {
                 : Collections.unmodifiableList(Arrays.asList(pitExitX, pitExitZ));
 
         this.gridSize = gridSize;
-
-        this.add(new Link(String.format("/tracks/%s", trackId.toString())).withSelfRel());
     }
 
-    Integer getTrackId() {
-        return trackId;
+    @Override
+    public Integer getId() {
+        return id;
     }
 
     String getLocation() {

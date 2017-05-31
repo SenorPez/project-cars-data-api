@@ -3,15 +3,14 @@ package com.senorpez.projectcars;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
-import org.springframework.hateoas.Link;
-import org.springframework.hateoas.ResourceSupport;
+import org.springframework.hateoas.Identifiable;
 
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
-class Event extends ResourceSupport {
-    @JsonProperty("id")
-    private final Integer eventId;
+class Event implements Identifiable<Integer> {
+    @JsonProperty("eventId")
+    private final Integer id;
     @JsonProperty("name")
     private final String name;
     @JsonProperty("tier")
@@ -23,7 +22,7 @@ class Event extends ResourceSupport {
     @JsonProperty("verified")
     private final Boolean verified;
 
-    private final static AtomicInteger id = new AtomicInteger(0);
+    private final static AtomicInteger eventId = new AtomicInteger(0);
 
     @JsonCreator
     public Event(
@@ -32,7 +31,7 @@ class Event extends ResourceSupport {
             @JsonProperty("rounds") JsonNode rounds,
             @JsonProperty("verified") Boolean verified,
             @JsonProperty("carFilter") JsonNode carFilter) {
-        this.eventId = id.incrementAndGet();
+        this.id = eventId.incrementAndGet();
         this.name = name;
         this.tier = tier;
 
@@ -49,12 +48,11 @@ class Event extends ResourceSupport {
 
         Round.resetId();
         this.rounds = Application.getData(Round.class, rounds);
-
-        this.add(new Link(String.format("/events/%s", eventId.toString())).withSelfRel());
     }
 
-    Integer getEventId() {
-        return eventId;
+    @Override
+    public Integer getId() {
+        return id;
     }
 
     Set<Car> getCars() {
@@ -67,7 +65,7 @@ class Event extends ResourceSupport {
 
     static Optional<Event> getEventByID(Integer eventId) {
         return Optional.ofNullable(Application.EVENTS.stream()
-                .filter(event -> event.getEventId().equals(eventId))
+                .filter(event -> event.getId().equals(eventId))
                 .findAny()
                 .orElseThrow(() -> new EventNotFoundAPIException(eventId)));
     }

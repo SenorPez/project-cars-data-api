@@ -11,7 +11,7 @@ import java.io.InputStream;
 import java.util.*;
 
 @SpringBootApplication
-public class Application {
+class Application {
     static final Set<Car> CARS = Collections.unmodifiableSet(getData(Car.class, "cars"));
     static final Set<CarClass> CAR_CLASSES = Collections.unmodifiableSet(getData(CarClass.class, "classes"));
     static final Set<Track> TRACKS = Collections.unmodifiableSet(getData(Track.class, "tracks"));

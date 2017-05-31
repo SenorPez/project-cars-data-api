@@ -2,12 +2,11 @@ package com.senorpez.projectcars;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.springframework.hateoas.Link;
-import org.springframework.hateoas.ResourceSupport;
+import org.springframework.hateoas.Identifiable;
 
-class CarClass extends ResourceSupport{
+class CarClass implements Identifiable<Integer> {
     @JsonProperty("id")
-    private final Integer carClassId;
+    private final Integer id;
     @JsonProperty("name")
     private final String name;
 
@@ -15,13 +14,12 @@ class CarClass extends ResourceSupport{
     public CarClass(
             @JsonProperty("id") Integer id,
             @JsonProperty("name") String name) {
-        this.carClassId = id;
+        this.id = id;
         this.name = name;
-
-        this.add(new Link(String.format("/classes/%s", carClassId.toString())).withSelfRel());
     }
 
-    Integer getCarClassId() {
-        return carClassId;
+    @Override
+    public Integer getId() {
+        return id;
     }
 }

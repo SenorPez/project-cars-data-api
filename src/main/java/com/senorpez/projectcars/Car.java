@@ -3,12 +3,13 @@ package com.senorpez.projectcars;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
-import org.springframework.hateoas.Link;
-import org.springframework.hateoas.ResourceSupport;
+import org.springframework.hateoas.Identifiable;
+import org.springframework.hateoas.core.Relation;
 
-class Car extends ResourceSupport {
+@Relation(value = "car", collectionRelation = "cars")
+class Car implements Identifiable<Integer> {
     @JsonProperty("id")
-    private final Integer carId;
+    private final Integer id;
     @JsonProperty("manufacturer")
     private final String manufacturer;
     @JsonProperty("model")
@@ -99,7 +100,7 @@ class Car extends ResourceSupport {
 
     @JsonCreator
     public Car(
-            @JsonProperty("id") Integer carId,
+            @JsonProperty("id") Integer id,
             @JsonProperty("manufacturer") String manufacturer,
             @JsonProperty("model") String model,
             @JsonProperty("country") String country,
@@ -120,7 +121,7 @@ class Car extends ResourceSupport {
             @JsonProperty("shifter") Shifter shifter,
             @JsonProperty("gears") Integer gears,
             @JsonProperty("dlc") String dlc) {
-        this.carId = carId;
+        this.id = id;
         this.manufacturer = manufacturer;
         this.model = model;
         this.country = country;
@@ -141,11 +142,18 @@ class Car extends ResourceSupport {
         this.shifter = shifter;
         this.gears = gears;
         this.dlc = dlc;
-
-        this.add(new Link(String.format("/cars/%s", carId.toString())).withSelfRel());
     }
 
-    Integer getCarId() {
-        return carId;
+    @Override
+    public Integer getId() {
+        return id;
+    }
+
+    String getManufacturer() {
+        return manufacturer;
+    }
+
+    String getModel() {
+        return model;
     }
 }
