@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import org.springframework.hateoas.Identifiable;
 import org.springframework.hateoas.core.Relation;
 
-@Relation(value = "car", collectionRelation = "cars")
+@Relation(value = "car", collectionRelation = "car")
 class Car implements Identifiable<Integer> {
     @JsonProperty("id")
     private final Integer id;
