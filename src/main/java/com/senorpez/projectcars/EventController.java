@@ -1,25 +1,67 @@
-//package com.senorpez.projectcars;
-//
-//import com.fasterxml.jackson.annotation.JsonProperty;
-//import io.swagger.annotations.Api;
-//import io.swagger.annotations.ApiOperation;
-//import io.swagger.annotations.ApiParam;
-//import org.springframework.hateoas.ResourceSupport;
-//import org.springframework.web.bind.annotation.PathVariable;
-//import org.springframework.web.bind.annotation.RequestMapping;
-//import org.springframework.web.bind.annotation.RequestMethod;
-//import org.springframework.web.bind.annotation.RestController;
-//
-//import java.util.Set;
-//import java.util.stream.Collectors;
-//
-//import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
-//import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
-//
-//@RestController
-//@Api(tags = {"events"})
-//@RequestMapping(method = {RequestMethod.GET})
-//class EventController {
+package com.senorpez.projectcars;
+
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+import org.springframework.hateoas.Resource;
+import org.springframework.hateoas.Resources;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.stream.Collectors;
+
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
+
+@Api(tags = {"events"})
+@RequestMapping(
+        value = "/events",
+        method = {RequestMethod.GET},
+        produces = {"application/json; charset=UTF-8", "application/vnd.senorpez.pcars.v1+json; charset=UTF-8"}
+)
+@RestController
+class EventController {
+    @ApiOperation(
+            value = "Lists all events available",
+            notes = "Returns a list of all single player events available through the Project CARS Data API",
+            response = EmbeddedEvent.class,
+            responseContainer = "List"
+    )
+
+    @RequestMapping
+    Resources<Resource> events() {
+        IdentifiableResourceAssembler<EmbeddedEvent, Resource> assembler = new IdentifiableResourceAssembler<>(EventController.class, Resource.class);
+        return new Resources<>(
+                Application.EVENTS.stream()
+                        .map(EmbeddedEvent::new)
+                        .map(assembler::toResource)
+                        .collect(Collectors.toList()),
+                linkTo(methodOn(EventController.class).events()).withSelfRel());
+    }
+
+    @ApiOperation(
+            value = "Returns an event",
+            notes = "Returns an event as specified by its ID number",
+            response = Event.class
+    )
+    @RequestMapping(value = "/{eventId}")
+    Resource events(
+            @ApiParam(
+                    value = "ID of event to return",
+                    required = true
+            )
+            @PathVariable Integer eventId) {
+        IdentifiableResourceAssembler<Event, Resource> assembler = new IdentifiableResourceAssembler<>(EventController.class, Resource.class);
+        return assembler.toResource(Application.EVENTS.stream()
+                .filter(event -> event.getId().equals(eventId))
+                .findAny()
+                .orElseThrow(() -> new EventNotFoundAPIException(eventId)));
+    }
+
+
+}
 //    class EventList extends ResourceSupport {
 //        @JsonProperty("events")
 //        private final Set<Event> eventList;

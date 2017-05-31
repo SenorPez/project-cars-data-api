@@ -4,10 +4,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import org.springframework.hateoas.Identifiable;
+import org.springframework.hateoas.core.Relation;
 
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
+@Relation(value = "event", collectionRelation = "event")
 class Event implements Identifiable<Integer> {
     @JsonProperty("eventId")
     private final Integer id;
@@ -53,6 +55,10 @@ class Event implements Identifiable<Integer> {
     @Override
     public Integer getId() {
         return id;
+    }
+
+    String getName() {
+        return name;
     }
 
     Set<Car> getCars() {
