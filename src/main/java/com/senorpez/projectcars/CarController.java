@@ -3,7 +3,6 @@ package com.senorpez.projectcars;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
-import org.springframework.hateoas.Link;
 import org.springframework.hateoas.Resource;
 import org.springframework.hateoas.Resources;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,8 +12,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.stream.Collectors;
 
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
+
 @Api(tags = {"cars"})
-@RequestMapping(value = "/cars", method = {RequestMethod.GET}, produces = "application/json; charset=UTF-8")
+@RequestMapping(
+        value = "/cars",
+        method = {RequestMethod.GET},
+        produces = {"application/json; charset=UTF-8", "application/vnd.senorpez.pcars.v1+json"}
+)
 @RestController
 class CarController {
     @ApiOperation(
@@ -26,10 +32,12 @@ class CarController {
     @RequestMapping
     Resources<Resource> cars() {
         IdentifiableResourceAssembler<EmbeddedCar, Resource> assembler = new IdentifiableResourceAssembler<>(CarController.class, Resource.class);
-        return new Resources<>(Application.CARS.stream()
-                .map(EmbeddedCar::new)
-                .map(assembler::toResource)
-                .collect(Collectors.toList()));
+        return new Resources<>(
+                Application.CARS.stream()
+                        .map(EmbeddedCar::new)
+                        .map(assembler::toResource)
+                        .collect(Collectors.toList()),
+                linkTo(methodOn(CarController.class).cars()).withSelfRel());
     }
 
     @ApiOperation(
