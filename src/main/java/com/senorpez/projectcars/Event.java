@@ -6,7 +6,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 import org.springframework.hateoas.Identifiable;
 import org.springframework.hateoas.core.Relation;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @Relation(value = "event", collectionRelation = "event")
@@ -57,15 +58,15 @@ class Event implements Identifiable<Integer> {
         return id;
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
-    public Integer getTier() {
+    Integer getTier() {
         return tier;
     }
 
-    public Boolean isVerified() {
+    Boolean isVerified() {
         return verified;
     }
 
@@ -75,12 +76,5 @@ class Event implements Identifiable<Integer> {
 
     Set<Round> getRounds() {
         return rounds;
-    }
-
-    static Optional<Event> getEventByID(Integer eventId) {
-        return Optional.ofNullable(Application.EVENTS.stream()
-                .filter(event -> event.getId().equals(eventId))
-                .findAny()
-                .orElseThrow(() -> new EventNotFoundAPIException(eventId)));
     }
 }

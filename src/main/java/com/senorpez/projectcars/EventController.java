@@ -29,7 +29,6 @@ class EventController {
             response = EmbeddedEvent.class,
             responseContainer = "List"
     )
-
     @RequestMapping
     Resources<Resource> events() {
         IdentifiableResourceAssembler<EmbeddedEvent, Resource> assembler = new IdentifiableResourceAssembler<>(EventController.class, Resource.class);
@@ -38,7 +37,8 @@ class EventController {
                         .map(EmbeddedEvent::new)
                         .map(assembler::toResource)
                         .collect(Collectors.toList()),
-                linkTo(methodOn(EventController.class).events()).withSelfRel());
+                linkTo(methodOn(EventController.class).events()).withSelfRel(),
+                linkTo(methodOn(RootController.class).root()).withRel("index"));
     }
 
     @ApiOperation(
@@ -54,60 +54,79 @@ class EventController {
             )
             @PathVariable Integer eventId) {
         EventResourceAssembler assembler = new EventResourceAssembler();
-        return assembler.toResource(Application.EVENTS.stream()
+        EventResource resource = assembler.toResource(Application.EVENTS.stream()
                 .filter(event -> event.getId().equals(eventId))
                 .findAny()
                 .orElseThrow(() -> new EventNotFoundAPIException(eventId)));
+        resource.add(linkTo(methodOn(EventController.class).events()).withRel("events"));
+        resource.add(linkTo(methodOn(EventController.class).eventCars(eventId)).withRel("cars"));
+        resource.add(linkTo(methodOn(RoundController.class).rounds(eventId)).withRel("rounds"));
+        resource.add(linkTo(methodOn(RootController.class).root()).withRel("index"));
+        return resource;
+    }
+
+    @ApiOperation(
+            value = "Lists all cars available for an event",
+            notes = "Returns a list of all cars in a single player event",
+            response = EmbeddedCar.class,
+            responseContainer = "List"
+    )
+    @RequestMapping(value = "/{eventId}/cars")
+    Resources<Resource> eventCars(
+            @ApiParam(
+                    value = "ID of event to return cars",
+                    required = true
+            )
+            @PathVariable Integer eventId) {
+        IdentifiableResourceAssembler<EmbeddedCar, Resource> assembler = new IdentifiableResourceAssembler<>(CarController.class, Resource.class);
+        return new Resources<>(
+                Application.EVENTS.stream()
+                        .filter(event -> event.getId().equals(eventId))
+                        .findAny()
+                        .orElseThrow(() -> new EventNotFoundAPIException(eventId))
+                        .getCars().stream()
+                        .map(EmbeddedCar::new)
+                        .map(assembler::toResource)
+                        .map(car -> {
+                            EmbeddedCar embeddedCar = (EmbeddedCar) car.getContent();
+                            car.add(linkTo(methodOn(EventController.class).eventCars(eventId, embeddedCar.getId())).withSelfRel());
+                            return car;
+                        })
+                        .collect(Collectors.toList()),
+                linkTo(methodOn(EventController.class).eventCars(eventId)).withSelfRel(),
+                linkTo(methodOn(EventController.class).events(eventId)).withRel("event"),
+                linkTo(methodOn(RootController.class).root()).withRel("index"));
+    }
+
+    @ApiOperation(
+            value = "Lists a car available for an event",
+            notes = "Returns a car in a single player event",
+            response = Car.class
+    )
+    @RequestMapping(value = "/{eventId}/cars/{carId}")
+    Resource eventCars(
+            @ApiParam(
+                    value = "ID of event to return cars",
+                    required = true
+            )
+            @PathVariable Integer eventId,
+            @ApiParam(
+                    value = "ID of car to return",
+                    required = true
+            )
+            @PathVariable Integer carId) {
+        IdentifiableResourceAssembler<Car, Resource> assembler = new IdentifiableResourceAssembler<>(CarController.class, Resource.class);
+        Resource resource = assembler.toResource(Application.EVENTS.stream()
+                .filter(event -> event.getId().equals(eventId))
+                .findAny()
+                .orElseThrow(() -> new EventNotFoundAPIException(eventId))
+                .getCars().stream()
+                .filter(car -> car.getId().equals(carId))
+                .findAny()
+                .orElseThrow(() -> new CarNotFoundAPIException(carId)));
+        resource.add(linkTo(methodOn(EventController.class).eventCars(eventId, carId)).withSelfRel());
+        resource.add(linkTo(methodOn(EventController.class).eventCars(eventId)).withRel("cars"));
+        resource.add(linkTo(methodOn(RootController.class).root()).withRel("index"));
+        return resource;
     }
 }
-//    class EventList extends ResourceSupport {
-//        @JsonProperty("events")
-//        private final Set<Event> eventList;
-//
-//        EventList() {
-//            this.eventList = Application.EVENTS.stream()
-//                    .map(EventController.this::addLink)
-//                    .collect(Collectors.toSet());
-//            this.add(linkTo(methodOn(EventController.class).events()).withSelfRel());
-//        }
-//    }
-//
-//    @RequestMapping(value = "/v1/events")
-//    @ApiOperation(
-//            value = "Lists all events available",
-//            notes = "Returns a list of all single player events available through the Project CARS Data API",
-//            response = Event.class,
-//            responseContainer = "List"
-//    )
-//    EventList events() {
-//        return new EventList();
-//    }
-//
-//    @RequestMapping(value = "/v1/events/{eventId}")
-//    @ApiOperation(
-//            value = "Returns an event",
-//            notes = "Returns an event as specified by its ID number",
-//            response = Event.class
-//    )
-//    Event events(
-//            @ApiParam(
-//                    value = "ID of event to return",
-//                    required = true
-//            )
-//            @PathVariable Integer eventId) {
-//        return Application.EVENTS.stream()
-//                .filter(event -> event.getEventId().equals(eventId))
-//                .findAny()
-//                .map(this::addLink)
-//                .orElseThrow(() -> new EventNotFoundAPIException(eventId));
-//    }
-//
-//    private Event addLink(Event event) {
-//        event.removeLinks();
-//        event.add(linkTo(methodOn(EventController.class).events(event.getEventId())).withSelfRel());
-//        event.add(linkTo(methodOn(CarController.class).eventCars(event.getEventId())).withRel("cars"));
-//        event.getCars().forEach(car -> CarController.addLink(car, event.getEventId()));
-//        event.getRounds().forEach(round -> RoundController.addLink(round, event.getEventId()));
-//        return event;
-//    }
-//}

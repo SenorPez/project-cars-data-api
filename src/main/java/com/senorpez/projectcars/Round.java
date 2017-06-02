@@ -4,11 +4,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import org.springframework.hateoas.Identifiable;
+import org.springframework.hateoas.core.Relation;
 
-import java.util.Optional;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 
+@Relation(value = "round", collectionRelation = "round")
 class Round implements Identifiable<Integer> {
     @JsonProperty("eventId")
     private final Integer id;
@@ -51,14 +52,5 @@ class Round implements Identifiable<Integer> {
 
     static void resetId() {
         eventId.set(0);
-    }
-
-    static Optional<Round> getRoundById(Integer eventId, Integer roundId) {
-        return Optional.ofNullable(Event.getEventByID(eventId).map(
-                event -> event.getRounds().stream()
-                        .filter(round -> round.getId().equals(roundId))
-                        .findAny()
-                        .orElseThrow(() -> new RoundNotFoundAPIException(roundId)))
-                .orElseThrow(() -> new EventNotFoundAPIException(eventId)));
     }
 }

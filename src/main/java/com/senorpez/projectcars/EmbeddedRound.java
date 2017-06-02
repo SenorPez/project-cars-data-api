@@ -4,16 +4,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.hateoas.Identifiable;
 import org.springframework.hateoas.core.Relation;
 
-@Relation(value = "track", collectionRelation = "track")
-class EmbeddedTrack implements Identifiable<Integer> {
+@Relation(value = "round", collectionRelation = "round")
+class EmbeddedRound implements Identifiable<Integer> {
     @JsonProperty("id")
     private final Integer id;
-    @JsonProperty("trackName")
-    private final String trackName;
 
-    EmbeddedTrack(Track track) {
-        this.id = track.getId();
-        this.trackName = track.getName();
+    EmbeddedRound(Round round) {
+        this.id = round.getId();
     }
 
     @Override

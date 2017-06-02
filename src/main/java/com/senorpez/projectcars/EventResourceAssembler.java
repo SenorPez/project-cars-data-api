@@ -1,12 +1,9 @@
 package com.senorpez.projectcars;
 
-import org.springframework.hateoas.Link;
 import org.springframework.hateoas.Resource;
-import org.springframework.hateoas.Resources;
-import org.springframework.hateoas.core.EmbeddedWrapper;
-import org.springframework.hateoas.core.EmbeddedWrappers;
 import org.springframework.hateoas.mvc.IdentifiableResourceAssemblerSupport;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -22,23 +19,20 @@ class EventResourceAssembler extends IdentifiableResourceAssemblerSupport<Event,
 
     @Override
     protected EventResource instantiateResource(Event entity) {
-        EmbeddedWrappers wrappers = new EmbeddedWrappers(true);
+        List<Resource> embeds = new ArrayList<>();
+
         IdentifiableResourceAssembler<EmbeddedCar, Resource> carAssembler = new IdentifiableResourceAssembler<>(CarController.class, Resource.class);
-        List<EmbeddedWrapper> cars = entity.getCars().stream()
+        embeds.addAll(entity.getCars().stream()
                 .map(EmbeddedCar::new)
                 .map(carAssembler::toResource)
-                .map(wrappers::wrap)
-                .collect(Collectors.toList());
+                .collect(Collectors.toList()));
 
-        Resources<EmbeddedWrapper> embeddedCars = new Resources<>(cars);
-        return new EventResource(entity, embeddedCars);
+        EmbeddedRoundResourceAssembler roundAssembler = new EmbeddedRoundResourceAssembler(entity.getId());
+        embeds.addAll(entity.getRounds().stream()
+                .map(EmbeddedRound::new)
+                .map(roundAssembler::toResource)
+                .collect(Collectors.toList()));
 
-//            Resources<Resource> cars = new Resources<>(
-//                    entity.getCars().stream()
-//                            .map(EmbeddedCar::new)
-//                            .map(carAssembler::toResource)
-//                            .collect(Collectors.toList()),
-//                    new Link("http://example.org").withRel("test"));
-//            return new EventResource(entity, cars);
+        return new EventResource(entity, embeds);
     }
 }

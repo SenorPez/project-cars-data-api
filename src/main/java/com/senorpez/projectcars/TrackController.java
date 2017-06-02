@@ -37,7 +37,8 @@ class TrackController {
                         .map(EmbeddedTrack::new)
                         .map(assembler::toResource)
                         .collect(Collectors.toList()),
-                linkTo(methodOn(TrackController.class).tracks()).withSelfRel());
+                linkTo(methodOn(TrackController.class).tracks()).withSelfRel(),
+                linkTo(methodOn(RootController.class).root()).withRel("index"));
     }
 
         @ApiOperation(
@@ -53,9 +54,12 @@ class TrackController {
             )
             @PathVariable Integer trackId) {
             IdentifiableResourceAssembler<Track, Resource> assembler = new IdentifiableResourceAssembler<>(TrackController.class, Resource.class);
-            return assembler.toResource(Application.TRACKS.stream()
+            Resource resource = assembler.toResource(Application.TRACKS.stream()
                     .filter(track -> track.getId().equals(trackId))
                     .findAny()
                     .orElseThrow(() -> new TrackNotFoundAPIException(trackId)));
+            resource.add(linkTo(methodOn(TrackController.class).tracks()).withRel("tracks"));
+            resource.add(linkTo(methodOn(RootController.class).root()).withRel("index"));
+            return resource;
     }
 }

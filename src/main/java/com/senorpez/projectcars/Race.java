@@ -3,9 +3,11 @@ package com.senorpez.projectcars;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.hateoas.Identifiable;
+import org.springframework.hateoas.core.Relation;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
+@Relation(value = "race", collectionRelation = "race")
 class Race implements Identifiable<Integer> {
     @JsonProperty("raceId")
     private final Integer id;
