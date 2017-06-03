@@ -7950,7 +7950,7 @@
           "value": "Focus RS"
         }
       ],
-      "verified": false,
+      "verified": true,
       "rounds": [
         {
           "location": "Sonoma Raceway",
@@ -8005,7 +8005,7 @@
           ]
         }
       ],
-      "verified": false,
+      "verified": true,
       "rounds": [
         {
           "location": "Le Mans",
@@ -8961,7 +8961,7 @@
           "value": "Road B"
         }
       ],
-      "verified": false,
+      "verified": true,
       "rounds": [
         {
           "location": "Nordschleife",
@@ -8986,7 +8986,7 @@
           "value": "Road B"
         }
       ],
-      "verified": false,
+      "verified": true,
       "rounds": [
         {
           "location": "Bathurst",
