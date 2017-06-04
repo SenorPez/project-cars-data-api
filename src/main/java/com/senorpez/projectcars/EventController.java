@@ -19,7 +19,7 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 @RequestMapping(
         value = "/events",
         method = {RequestMethod.GET},
-        produces = {"application/json; charset=UTF-8", "application/vnd.senorpez.pcars.v1+json; charset=UTF-8"}
+        produces = {"application/vnd.senorpez.pcars.v1+json; charset=UTF-8", "application/json; charset=UTF-8"}
 )
 @RestController
 class EventController {

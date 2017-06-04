@@ -19,14 +19,14 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 @RequestMapping(
         value = "/classes",
         method = {RequestMethod.GET},
-        produces = {"application/json; charset=UTF-8", "application/vnd.senorpez.pcars.v1+json; charset=UTF-8"}
+        produces = {"application/vnd.senorpez.pcars.v1+json; charset=UTF-8", "application/json; charset=UTF-8"}
 )
 @RestController
 class CarClassController {
     @ApiOperation(
             value = "Lists all car classes available",
             notes = "Returns a list of all car classes available through the Project CARS Data API",
-            response = CarClass.class,
+            response = Event.class,
             responseContainer = "List"
     )
     @RequestMapping
