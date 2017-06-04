@@ -29,11 +29,6 @@ class RoundResourceAssembler extends IdentifiableResourceAssemblerSupport<Round,
         IdentifiableResourceAssembler<EmbeddedTrack, Resource> trackAssembler = new IdentifiableResourceAssembler<>(TrackController.class, Resource.class);
         embeds.add(trackAssembler.toResource(new EmbeddedTrack(entity.getTrack())));
 
-        RaceResourceAssembler raceAssembler = new RaceResourceAssembler(eventId, roundId);
-        embeds.addAll(entity.getRaces().stream()
-                .map(raceAssembler::toResource)
-                .collect(Collectors.toList()));
-
         return new RoundResource(entity, embeds);
     }
 }

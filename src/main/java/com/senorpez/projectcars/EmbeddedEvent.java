@@ -11,7 +11,7 @@ class EmbeddedEvent implements Identifiable<Integer> {
     @JsonProperty("name")
     private final String name;
 
-    public EmbeddedEvent(Event event) {
+    EmbeddedEvent(Event event) {
         this.id = event.getId();
         this.name = event.getName();
     }

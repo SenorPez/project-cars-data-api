@@ -1,11 +1,9 @@
 package com.senorpez.projectcars;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.springframework.hateoas.Link;
-import org.springframework.hateoas.Resource;
-import org.springframework.hateoas.Resources;
+import org.springframework.hateoas.Identifiable;
 
-class EventResource extends Resources<Resource> {
+class ModelEvent implements Identifiable<Integer> {
     @JsonProperty("id")
     private final Integer id;
     @JsonProperty("name")
@@ -15,11 +13,15 @@ class EventResource extends Resources<Resource> {
     @JsonProperty("verified")
     private final Boolean verified;
 
-    EventResource(Event event, Iterable<Resource> content, Link... links) {
-        super(content, links);
+    ModelEvent(Event event) {
         this.id = event.getId();
         this.name = event.getName();
         this.tier = event.getTier();
         this.verified = event.isVerified();
+    }
+
+    @Override
+    public Integer getId() {
+        return id;
     }
 }

@@ -47,16 +47,17 @@ class EventController {
             response = Event.class
     )
     @RequestMapping(value = "/{eventId}")
-    EventResource events(
+    Resource events(
             @ApiParam(
                     value = "ID of event to return",
                     required = true
             )
             @PathVariable Integer eventId) {
-        EventResourceAssembler assembler = new EventResourceAssembler();
-        EventResource resource = assembler.toResource(Application.EVENTS.stream()
+        IdentifiableResourceAssembler<ModelEvent, Resource> assembler = new IdentifiableResourceAssembler<>(EventController.class, Resource.class);
+        Resource resource = assembler.toResource(Application.EVENTS.stream()
                 .filter(event -> event.getId().equals(eventId))
                 .findAny()
+                .map(ModelEvent::new)
                 .orElseThrow(() -> new EventNotFoundAPIException(eventId)));
         resource.add(linkTo(methodOn(EventController.class).events()).withRel("events"));
         resource.add(linkTo(methodOn(EventController.class).eventCars(eventId)).withRel("cars"));
