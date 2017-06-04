@@ -27,11 +27,7 @@ springBoot {
 }
 
 dependencies {
-    compile('org.springframework.boot:spring-boot-starter-hateoas:1.5.2.RELEASE')
-    compile group: 'com.h2database', name: 'h2', version: '1.4.194'
-    compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
-    compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.6.1'
-    compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.6.1'
-    testCompile("org.springframework.boot:spring-boot-starter-test")
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-hateoas', version: '1.5.3.RELEASE'
+    compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.7.0'
+    compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.7.0'
 }
