@@ -42,6 +42,7 @@ public class CarControllerTest {
                 .andExpect(jsonPath("$._embedded.pcars:car", everyItem(hasEntry(is("id"), isA(Integer.class)))))
                 .andExpect(jsonPath("$._embedded.pcars:car", everyItem(hasEntry(is("carName"), isA(String.class)))))
                 .andExpect(jsonPath("$._embedded.pcars:car", everyItem(hasKey("_links"))))
+                // TODO: 6/4/2017 Determine how to test each items "_links" property to make sure they're formed properly. 
                 .andExpect(jsonPath("$._links", allOf(hasKey("self"), hasKey("index"), hasKey("curies"))))
                 .andExpect(jsonPath("$._links.self", hasEntry("href", "http://localhost/cars")))
                 .andExpect(jsonPath("$._links.index", hasEntry("href", "http://localhost/")))
