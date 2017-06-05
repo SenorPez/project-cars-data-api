@@ -156,4 +156,76 @@ class Car implements Identifiable<Integer> {
     String getModel() {
         return model;
     }
+
+    String getCountry() {
+        return country;
+    }
+
+    String getCarClass() {
+        return carClass;
+    }
+
+    Integer getYear() {
+        return year;
+    }
+
+    Drivetrain getDrivetrain() {
+        return drivetrain;
+    }
+
+    EnginePosition getEnginePosition() {
+        return enginePosition;
+    }
+
+    String getEngineType() {
+        return engineType;
+    }
+
+    Integer getTopSpeed() {
+        return topSpeed;
+    }
+
+    Integer getHorsepower() {
+        return horsepower;
+    }
+
+    Float getAcceleration() {
+        return acceleration;
+    }
+
+    Float getBraking() {
+        return braking;
+    }
+
+    Integer getWeight() {
+        return weight;
+    }
+
+    Integer getTorque() {
+        return torque;
+    }
+
+    Integer getWeightBalance() {
+        return weightBalance;
+    }
+
+    Float getWheelbase() {
+        return wheelbase;
+    }
+
+    ShiftPattern getShiftPattern() {
+        return shiftPattern;
+    }
+
+    Shifter getShifter() {
+        return shifter;
+    }
+
+    Integer getGears() {
+        return gears;
+    }
+
+    String getDlc() {
+        return dlc;
+    }
 }
