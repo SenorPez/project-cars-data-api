@@ -101,7 +101,7 @@ public class RaceControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(contentType))
                 .andExpect(content().string(matchesJsonSchema(jsonSchema)))
-                .andExpect(jsonPath("$.id", is(resultRound.getId())))
+                .andExpect(jsonPath("$.id", is(resultRace.getId())))
                 .andExpect(jsonPath("$.laps", is(resultRace.getLaps())))
                 .andExpect(jsonPath("$.time", is(resultRace.getTime())))
                 .andExpect(jsonPath("$.type", is(resultRace.getType())));
@@ -118,7 +118,7 @@ public class RaceControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
                 .andExpect(content().string(matchesJsonSchema(jsonSchema)))
-                .andExpect(jsonPath("$.id", is(resultRound.getId())))
+                .andExpect(jsonPath("$.id", is(resultRace.getId())))
                 .andExpect(jsonPath("$.laps", is(resultRace.getLaps())))
                 .andExpect(jsonPath("$.time", is(resultRace.getTime())))
                 .andExpect(jsonPath("$.type", is(resultRace.getType())));
