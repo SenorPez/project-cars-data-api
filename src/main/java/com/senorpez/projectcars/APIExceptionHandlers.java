@@ -12,5 +12,6 @@ class APIExceptionHandlers extends BaseAPIExceptionHandler {
         registerMapping(RaceNotFoundAPIException.class, "RACE_NOT_FOUND", "Race Not Found.", HttpStatus.NOT_FOUND);
         registerMapping(RoundNotFoundAPIException.class, "ROUND_NOT_FOUND", "Round Not Found.", HttpStatus.NOT_FOUND);
         registerMapping(TrackNotFoundAPIException.class, "TRACK_NOT_FOUND", "Track Not Found.", HttpStatus.NOT_FOUND);
+        registerMapping(PageNotFoundAPIException.class, "ERROR", "ERROR", HttpStatus.NOT_FOUND);
     }
 }
