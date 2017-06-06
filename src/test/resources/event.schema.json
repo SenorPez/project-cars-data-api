@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {},
+  "id": "http://www.projectcars.senorpez.com/",
+  "properties": {
+    "_links": {
+      "id": "/properties/_links",
+      "properties": {
+        "curies": {
+          "id": "/properties/_links/properties/curies",
+          "items": {
+            "id": "/properties/_links/properties/curies/items",
+            "properties": {
+              "href": {
+                "id": "/properties/_links/properties/curies/items/properties/href",
+                "type": "string"
+              },
+              "name": {
+                "id": "/properties/_links/properties/curies/items/properties/name",
+                "type": "string"
+              },
+              "templated": {
+                "id": "/properties/_links/properties/curies/items/properties/templated",
+                "type": "boolean"
+              }
+            },
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "index": {
+          "id": "/properties/_links/properties/index",
+          "properties": {
+            "href": {
+              "id": "/properties/_links/properties/index/properties/href",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "pcars:cars": {
+          "id": "/properties/_links/properties/pcars:cars",
+          "properties": {
+            "href": {
+              "id": "/properties/_links/properties/pcars:cars/properties/href",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "pcars:events": {
+          "id": "/properties/_links/properties/pcars:events",
+          "properties": {
+            "href": {
+              "id": "/properties/_links/properties/pcars:events/properties/href",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "pcars:rounds": {
+          "id": "/properties/_links/properties/pcars:rounds",
+          "properties": {
+            "href": {
+              "id": "/properties/_links/properties/pcars:rounds/properties/href",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "self": {
+          "id": "/properties/_links/properties/self",
+          "properties": {
+            "href": {
+              "id": "/properties/_links/properties/self/properties/href",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "id": {
+      "id": "/properties/id",
+      "type": "integer"
+    },
+    "name": {
+      "id": "/properties/name",
+      "type": "string"
+    },
+    "tier": {
+      "id": "/properties/tier",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "verified": {
+      "id": "/properties/verified",
+      "type": "boolean"
+    }
+  },
+  "type": "object"
+}

@@ -92,6 +92,24 @@ public class TrackControllerTest {
     public void TestGetSingleTrack_Exists() throws Exception {
         Track resultTrack = Application.TRACKS.stream().findAny().orElse(null);
 
+        Matcher pitEntryMatcher;
+        if (resultTrack.getPitEntry() != null) {
+            pitEntryMatcher = contains(
+                    closeTo(Double.valueOf(resultTrack.getPitEntry().get(0)), 0.25),
+                    closeTo(Double.valueOf(resultTrack.getPitEntry().get(1)), 0.25));
+        } else {
+            pitEntryMatcher = nullValue();
+        }
+
+        Matcher pitExitMatcher;
+        if (resultTrack.getPitEntry() != null) {
+            pitExitMatcher = contains(
+                    closeTo(Double.valueOf(resultTrack.getPitExit().get(0)), 0.25),
+                    closeTo(Double.valueOf(resultTrack.getPitExit().get(1)), 0.25));
+        } else {
+            pitExitMatcher = nullValue();
+        }
+
         InputStream jsonSchema = classLoader.getResourceAsStream("track.schema.json");
 
         mockMvc.perform(get("/tracks/{trackId}", resultTrack.getId()).header("accept", "application/vnd.senorpez.pcars.v1+json"))
@@ -104,14 +122,8 @@ public class TrackControllerTest {
                 .andExpect(jsonPath("$.variation", is(resultTrack.getVariation())))
                 .andExpect(jsonPath("$.length", closeTo(Double.valueOf(resultTrack.getLength()), 0.001)))
                 .andExpect(jsonPath("$.gridSize", is(resultTrack.getGridSize())))
-                .andExpect(jsonPath("$.pitEntry", anyOf(contains(
-                        closeTo(Double.valueOf(resultTrack.getPitEntry().get(0)), 0.25),
-                        closeTo(Double.valueOf(resultTrack.getPitEntry().get(1)), 0.25)),
-                        is(resultTrack.getPitEntry()))))
-                .andExpect(jsonPath("$.pitExit", anyOf(contains(
-                        closeTo(Double.valueOf(resultTrack.getPitExit().get(0)), 0.25),
-                        closeTo(Double.valueOf(resultTrack.getPitExit().get(1)), 0.25)),
-                        is(resultTrack.getPitEntry()))))
+                .andExpect(jsonPath("$.pitEntry", pitEntryMatcher))
+                .andExpect(jsonPath("$.pitExit", pitExitMatcher))
                 .andExpect(jsonPath("$._links.self", hasEntry("href", "http://localhost/tracks/" + resultTrack.getId())))
                 .andExpect(jsonPath("$._links.index", hasEntry("href", "http://localhost/")))
                 .andExpect(jsonPath("$._links.pcars:tracks", hasEntry("href", "http://localhost/tracks")))
