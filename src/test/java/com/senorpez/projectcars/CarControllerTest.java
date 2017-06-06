@@ -166,7 +166,7 @@ public class CarControllerTest {
     }
 
     @Test
-    public void TestGetAllCars_Exists_InvalidAcceptHeader() throws Exception {
+    public void TestGetSingleCar_Exists_InvalidAcceptHeader() throws Exception {
         Car resultCar = Application.CARS.stream().findAny().orElse(null);
 
         InputStream jsonSchema = classLoader.getResourceAsStream("error.schema.json");
@@ -190,7 +190,7 @@ public class CarControllerTest {
     }
 
     @Test
-    public void TestGetAllCars_DoesNotExist_InvalidAcceptHeader() throws Exception {
+    public void TestGetSingleCar_DoesNotExist_InvalidAcceptHeader() throws Exception {
        InputStream jsonSchema = classLoader.getResourceAsStream("error.schema.json");
 
         mockMvc.perform(get("/cars/1").header("accept", "application/vnd.senorpez.pcars2.v1+json"))

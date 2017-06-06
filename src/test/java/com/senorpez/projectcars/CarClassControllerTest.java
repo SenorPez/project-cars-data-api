@@ -84,7 +84,7 @@ public class CarClassControllerTest {
     }
 
     @Test
-    public void TestGetSingleClass_Exists() throws Exception {
+    public void TestGetSingleCarClass_Exists() throws Exception {
         CarClass resultClass = Application.CAR_CLASSES.stream().findAny().orElse(null);
 
         InputStream jsonSchema = classLoader.getResourceAsStream("class.schema.json");
@@ -128,7 +128,7 @@ public class CarClassControllerTest {
     }
 
     @Test
-    public void TestGetAllClasses_Exists_InvalidAcceptHeader() throws Exception {
+    public void TestGetSingleCarClass_Exists_InvalidAcceptHeader() throws Exception {
         CarClass resultClass = Application.CAR_CLASSES.stream().findAny().orElse(null);
 
         InputStream jsonSchema = classLoader.getResourceAsStream("error.schema.json");
@@ -142,7 +142,7 @@ public class CarClassControllerTest {
     }
 
     @Test
-    public void TestGetSingleCar_DoesNotExist() throws Exception {
+    public void TestGetSingleCarClass_DoesNotExist() throws Exception {
         InputStream jsonSchema = classLoader.getResourceAsStream("error.schema.json");
 
         mockMvc.perform(get("/classes/1").header("accept", "application/vnd.senorpez.pcars.v1+json"))
@@ -154,7 +154,7 @@ public class CarClassControllerTest {
     }
 
     @Test
-    public void TestGetSingleCar_DoesNotExist_InvalidAcceptHeader() throws Exception {
+    public void TestGetSingleCarClass_DoesNotExist_InvalidAcceptHeader() throws Exception {
         InputStream jsonSchema = classLoader.getResourceAsStream("error.schema.json");
 
         mockMvc.perform(get("/classes/1").header("accept", "application/vnd.senorpez.pcars2.v1+json"))

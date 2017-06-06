@@ -73,4 +73,20 @@ class Track implements Identifiable<Integer> {
     String getVariation() {
         return variation;
     }
+
+    public Float getLength() {
+        return length;
+    }
+
+    public List<Float> getPitEntry() {
+        return pitEntry;
+    }
+
+    public List<Float> getPitExit() {
+        return pitExit;
+    }
+
+    public Integer getGridSize() {
+        return gridSize;
+    }
 }
