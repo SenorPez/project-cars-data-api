@@ -3,7 +3,9 @@ package com.senorpez.projectcars;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.hateoas.Identifiable;
+import org.springframework.hateoas.core.Relation;
 
+@Relation(value = "class", collectionRelation = "class")
 class CarClass implements Identifiable<Integer> {
     @JsonProperty("id")
     private final Integer id;
@@ -21,5 +23,9 @@ class CarClass implements Identifiable<Integer> {
     @Override
     public Integer getId() {
         return id;
+    }
+
+    String getName() {
+        return name;
     }
 }

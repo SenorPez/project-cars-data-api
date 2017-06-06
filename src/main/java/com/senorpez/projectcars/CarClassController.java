@@ -26,7 +26,7 @@ class CarClassController {
     @ApiOperation(
             value = "Lists all car classes available",
             notes = "Returns a list of all car classes available through the Project CARS Data API",
-            response = Event.class,
+            response = CarClass.class,
             responseContainer = "List"
     )
     @RequestMapping
@@ -52,7 +52,7 @@ class CarClassController {
                     required = true
             )
             @PathVariable Integer carClassId) {
-        IdentifiableResourceAssembler<CarClass, Resource> assembler = new IdentifiableResourceAssembler<>(CarClass.class, Resource.class);
+        IdentifiableResourceAssembler<CarClass, Resource> assembler = new IdentifiableResourceAssembler<>(CarClassController.class, Resource.class);
         Resource resource = assembler.toResource(Application.CAR_CLASSES.stream()
                 .filter(carClass -> carClass.getId().equals(carClassId))
                 .findAny()
