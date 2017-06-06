@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {},
+  "id": "http://www.projectcars.senorpez.com",
+  "properties": {
+    "error": {
+      "id": "/properties/error",
+      "properties": {
+        "code": {
+          "id": "/properties/error/properties/code",
+          "type": "string"
+        },
+        "message": {
+          "id": "/properties/error/properties/message",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "type": "object"
+}

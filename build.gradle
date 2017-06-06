@@ -37,11 +37,12 @@ dependencies {
     testCompile group: 'org.springframework', name: 'spring-test', version:'4.3.8.RELEASE'
     testCompile group: 'org.springframework.boot', name: 'spring-boot-test', version:'1.5.3.RELEASE'
     testCompile group: 'com.jayway.jsonpath', name:'json-path-assert', version: '2.2.0'
+    testCompile group: 'com.jayway.restassured', name: 'json-schema-validator', version: '2.9.0'
 }
 
 jacocoTestReport {
     reports {
-        xml.enabled true
-        html.enabled false
+        xml.enabled = true
+        html.enabled = false
     }
 }
