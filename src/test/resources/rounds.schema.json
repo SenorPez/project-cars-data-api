@@ -1,0 +1,35 @@
+{
+  "_embedded" : {
+    "pcars:round" : [ {
+      "id" : 2,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.projectcars.senorpez.com/events/8/rounds/2"
+        }
+      }
+    }, {
+      "id" : 1,
+      "_links" : {
+        "self" : {
+          "href" : "http://www.projectcars.senorpez.com/events/8/rounds/1"
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "http://www.projectcars.senorpez.com/events/8/rounds"
+    },
+    "pcars:event" : {
+      "href" : "http://www.projectcars.senorpez.com/events/8"
+    },
+    "index" : {
+      "href" : "http://www.projectcars.senorpez.com/"
+    },
+    "curies" : [ {
+      "href" : "http://www.projectcars.senorpez.com/{rel}",
+      "name" : "pcars",
+      "templated" : true
+    } ]
+  }
+}
