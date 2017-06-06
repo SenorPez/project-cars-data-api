@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 @Relation(value = "race", collectionRelation = "race")
 class Race implements Identifiable<Integer> {
-    @JsonProperty("raceId")
+    @JsonProperty("id")
     private final Integer id;
     @JsonProperty("laps")
     private final Integer laps;
@@ -38,5 +38,17 @@ class Race implements Identifiable<Integer> {
 
     static void resetId() {
         raceId.set(0);
+    }
+
+    Integer getLaps() {
+        return laps;
+    }
+
+    Integer getTime() {
+        return time;
+    }
+
+    String getType() {
+        return type;
     }
 }
