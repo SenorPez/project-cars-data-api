@@ -3,7 +3,7 @@ package com.senorpez.projectcars;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.hateoas.Identifiable;
 
-class ModelEvent implements Identifiable<Integer> {
+class EventModel implements Identifiable<Integer> {
     @JsonProperty("id")
     private final Integer id;
     @JsonProperty("name")
@@ -13,7 +13,7 @@ class ModelEvent implements Identifiable<Integer> {
     @JsonProperty("verified")
     private final Boolean verified;
 
-    ModelEvent(Event event) {
+    EventModel(Event event) {
         this.id = event.getId();
         this.name = event.getName();
         this.tier = event.getTier();

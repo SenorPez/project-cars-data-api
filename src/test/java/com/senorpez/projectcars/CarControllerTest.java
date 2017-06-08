@@ -113,10 +113,10 @@ public class CarControllerTest {
                 .andExpect(jsonPath("$.shifter", is(resultCar.getShifter().getDisplayString())))
                 .andExpect(jsonPath("$.gears", is(resultCar.getGears())))
                 .andExpect(jsonPath("$.dlc", is(resultCar.getDlc())))
-                .andExpect(jsonPath("$.carClass", is(resultCar.getCarClass())))
                 .andExpect(jsonPath("$._links.self", hasEntry("href", "http://localhost/cars/" + resultCar.getId())))
                 .andExpect(jsonPath("$._links.index", hasEntry("href", "http://localhost/")))
                 .andExpect(jsonPath("$._links.pcars:cars", hasEntry("href", "http://localhost/cars")))
+                .andExpect(jsonPath("$._links.pcars:class", hasEntry("href", "http://localhost/classes/" + resultCar.getCarClass().getId())))
                 .andExpect(jsonPath("$._links.curies", hasSize(1)))
                 .andExpect(jsonPath("$._links.curies[0]", both(allOf(
                         hasEntry("href", "http://localhost/{rel}"),
@@ -154,10 +154,10 @@ public class CarControllerTest {
                 .andExpect(jsonPath("$.shifter", is(resultCar.getShifter().getDisplayString())))
                 .andExpect(jsonPath("$.gears", is(resultCar.getGears())))
                 .andExpect(jsonPath("$.dlc", is(resultCar.getDlc())))
-                .andExpect(jsonPath("$.carClass", is(resultCar.getCarClass())))
                 .andExpect(jsonPath("$._links.self", hasEntry("href", "http://localhost/cars/" + resultCar.getId())))
                 .andExpect(jsonPath("$._links.index", hasEntry("href", "http://localhost/")))
                 .andExpect(jsonPath("$._links.pcars:cars", hasEntry("href", "http://localhost/cars")))
+                .andExpect(jsonPath("$._links.pcars:class", hasEntry("href", "http://localhost/classes/" + resultCar.getCarClass().getId())))
                 .andExpect(jsonPath("$._links.curies", hasSize(1)))
                 .andExpect(jsonPath("$._links.curies[0]", both(allOf(
                         hasEntry("href", "http://localhost/{rel}"),

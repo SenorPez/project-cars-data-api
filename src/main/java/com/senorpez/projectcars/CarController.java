@@ -55,12 +55,14 @@ class CarController {
                     required = true
             )
             @PathVariable Integer carId) {
-        IdentifiableResourceAssembler<Car, Resource> assembler = new IdentifiableResourceAssembler<>(CarController.class, Resource.class);
-        Resource resource = assembler.toResource(Application.CARS.stream()
+        IdentifiableResourceAssembler<CarModel, Resource> assembler = new IdentifiableResourceAssembler<>(CarController.class, Resource.class);
+        Car subjectCar = Application.CARS.stream()
                 .filter(car -> car.getId().equals(carId))
                 .findAny()
-                .orElseThrow(() -> new CarNotFoundAPIException(carId)));
+                .orElseThrow(() -> new CarNotFoundAPIException(carId));
+        Resource resource = assembler.toResource(new CarModel(subjectCar));
         resource.add(linkTo(methodOn(CarController.class).cars()).withRel("cars"));
+        resource.add(linkTo(methodOn(CarClassController.class).carClasses(subjectCar.getCarClass().getId())).withRel("class"));
         resource.add(linkTo(methodOn(RootController.class).root()).withRel("index"));
         return resource;
     }

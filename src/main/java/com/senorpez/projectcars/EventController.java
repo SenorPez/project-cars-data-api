@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
 import java.util.stream.Collectors;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
@@ -53,11 +54,11 @@ class EventController {
                     required = true
             )
             @PathVariable Integer eventId) {
-        IdentifiableResourceAssembler<ModelEvent, Resource> assembler = new IdentifiableResourceAssembler<>(EventController.class, Resource.class);
+        IdentifiableResourceAssembler<EventModel, Resource> assembler = new IdentifiableResourceAssembler<>(EventController.class, Resource.class);
         Resource resource = assembler.toResource(Application.EVENTS.stream()
                 .filter(event -> event.getId().equals(eventId))
                 .findAny()
-                .map(ModelEvent::new)
+                .map(EventModel::new)
                 .orElseThrow(() -> new EventNotFoundAPIException(eventId)));
         resource.add(linkTo(methodOn(EventController.class).events()).withRel("events"));
         resource.add(linkTo(methodOn(EventController.class).eventCars(eventId)).withRel("cars"));
@@ -116,17 +117,19 @@ class EventController {
                     required = true
             )
             @PathVariable Integer carId) {
-        IdentifiableResourceAssembler<Car, Resource> assembler = new IdentifiableResourceAssembler<>(CarController.class, Resource.class);
-        Resource resource = assembler.toResource(Application.EVENTS.stream()
+        IdentifiableResourceAssembler<CarModel, Resource> assembler = new IdentifiableResourceAssembler<>(CarController.class, Resource.class);
+        Car subjectCar = Application.EVENTS.stream()
                 .filter(event -> event.getId().equals(eventId))
                 .findAny()
                 .orElseThrow(() -> new EventNotFoundAPIException(eventId))
                 .getCars().stream()
                 .filter(car -> car.getId().equals(carId))
                 .findAny()
-                .orElseThrow(() -> new CarNotFoundAPIException(carId)));
+                .orElseThrow(() -> new CarNotFoundAPIException(carId));
+        Resource resource = assembler.toResource(new CarModel(subjectCar));
         resource.add(linkTo(methodOn(EventController.class).eventCars(eventId, carId)).withSelfRel());
         resource.add(linkTo(methodOn(EventController.class).eventCars(eventId)).withRel("cars"));
+        resource.add(linkTo(methodOn(CarClassController.class).carClasses(subjectCar.getCarClass().getId())).withRel("class"));
         resource.add(linkTo(methodOn(RootController.class).root()).withRel("index"));
         return resource;
     }

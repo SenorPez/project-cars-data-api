@@ -17,7 +17,7 @@ class Car implements Identifiable<Integer> {
     @JsonProperty("country")
     private final String country;
     @JsonProperty("carClass")
-    private final String carClass;
+    private final CarClass carClass;
     @JsonProperty("year")
     private final Integer year;
     @JsonProperty("drivetrain")
@@ -125,7 +125,7 @@ class Car implements Identifiable<Integer> {
         this.manufacturer = manufacturer;
         this.model = model;
         this.country = country;
-        this.carClass = carClass;
+        this.carClass = Application.CAR_CLASSES.stream().filter(cclass -> cclass.getName().equalsIgnoreCase(carClass)).findAny().orElseThrow(RuntimeException::new);
         this.year = year;
         this.drivetrain = drivetrain;
         this.enginePosition = enginePosition;
@@ -161,7 +161,7 @@ class Car implements Identifiable<Integer> {
         return country;
     }
 
-    String getCarClass() {
+    CarClass getCarClass() {
         return carClass;
     }
 

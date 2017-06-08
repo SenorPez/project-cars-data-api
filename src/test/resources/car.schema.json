@@ -3,6 +3,46 @@
   "definitions": {},
   "id": "http://projectcars.senorpez.com/cars/carId",
   "properties": {
+    "_embedded": {
+      "id": "/properties/_embedded",
+      "properties": {
+        "pcars:class": {
+          "id": "/properties/_embedded/properties/pcars:class",
+          "items": {
+            "id": "/properties/_embedded/properties/pcars:class/items",
+            "properties": {
+              "_links": {
+                "id": "/properties/_embedded/properties/pcars:class/items/properties/_links",
+                "properties": {
+                  "self": {
+                    "id": "/properties/_embedded/properties/pcars:class/items/properties/_links/properties/self",
+                    "properties": {
+                      "href": {
+                        "id": "/properties/_embedded/properties/pcars:class/items/properties/_links/properties/self/properties/href",
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  }
+                },
+                "type": "object"
+              },
+              "id": {
+                "id": "/properties/_embedded/properties/pcars:class/items/properties/id",
+                "type": "integer"
+              },
+              "name": {
+                "id": "/properties/_embedded/properties/pcars:class/items/properties/name",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
     "_links": {
       "id": "/properties/_links",
       "properties": {

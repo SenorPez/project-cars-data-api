@@ -23,8 +23,8 @@ import java.util.Set;
 
 @SpringBootApplication
 public class Application {
-    static final Set<Car> CARS = Collections.unmodifiableSet(getData(Car.class, "cars"));
     static final Set<CarClass> CAR_CLASSES = Collections.unmodifiableSet(getData(CarClass.class, "classes"));
+    static final Set<Car> CARS = Collections.unmodifiableSet(getData(Car.class, "cars"));
     static final Set<Track> TRACKS = Collections.unmodifiableSet(getData(Track.class, "tracks"));
     static final Set<Event> EVENTS = Collections.unmodifiableSet(getData(Event.class, "events"));
 

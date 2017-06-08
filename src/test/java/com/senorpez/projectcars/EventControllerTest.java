@@ -15,7 +15,6 @@ import java.nio.charset.StandardCharsets;
 
 import static com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema;
 import static org.hamcrest.Matchers.*;
-import static org.hamcrest.Matchers.hasEntry;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -254,13 +253,13 @@ public class EventControllerTest {
                 .andExpect(jsonPath("$.shifter", is(resultCar.getShifter().getDisplayString())))
                 .andExpect(jsonPath("$.gears", is(resultCar.getGears())))
                 .andExpect(jsonPath("$.dlc", is(resultCar.getDlc())))
-                .andExpect(jsonPath("$.carClass", is(resultCar.getCarClass())))
                 .andExpect(jsonPath("$._links.self", contains(
                         hasEntry("href", "http://localhost/cars/" + resultCar.getId()),
                         hasEntry("href", "http://localhost/events/" + resultEvent.getId() + "/cars/" + resultCar.getId()))
                 ))
                 .andExpect(jsonPath("$._links.index", hasEntry("href", "http://localhost/")))
                 .andExpect(jsonPath("$._links.pcars:cars", hasEntry("href", "http://localhost/events/" + resultEvent.getId() + "/cars")))
+                .andExpect(jsonPath("$._links.pcars:class", hasEntry("href", "http://localhost/classes/" + resultCar.getCarClass().getId())))
                 .andExpect(jsonPath("$._links.curies", hasSize(1)))
                 .andExpect(jsonPath("$._links.curies[0]", both(allOf(
                         hasEntry("href", "http://localhost/{rel}"),
@@ -299,13 +298,13 @@ public class EventControllerTest {
                 .andExpect(jsonPath("$.shifter", is(resultCar.getShifter().getDisplayString())))
                 .andExpect(jsonPath("$.gears", is(resultCar.getGears())))
                 .andExpect(jsonPath("$.dlc", is(resultCar.getDlc())))
-                .andExpect(jsonPath("$.carClass", is(resultCar.getCarClass())))
                 .andExpect(jsonPath("$._links.self", contains(
                         hasEntry("href", "http://localhost/cars/" + resultCar.getId()),
                         hasEntry("href", "http://localhost/events/" + resultEvent.getId() + "/cars/" + resultCar.getId()))
                 ))
                 .andExpect(jsonPath("$._links.index", hasEntry("href", "http://localhost/")))
                 .andExpect(jsonPath("$._links.pcars:cars", hasEntry("href", "http://localhost/events/" + resultEvent.getId() + "/cars")))
+                .andExpect(jsonPath("$._links.pcars:class", hasEntry("href", "http://localhost/classes/" + resultCar.getCarClass().getId())))
                 .andExpect(jsonPath("$._links.curies", hasSize(1)))
                 .andExpect(jsonPath("$._links.curies[0]", both(allOf(
                         hasEntry("href", "http://localhost/{rel}"),

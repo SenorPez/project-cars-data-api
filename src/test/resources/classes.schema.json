@@ -6,19 +6,19 @@
     "_embedded": {
       "id": "/properties/_embedded",
       "properties": {
-        "pcars:carClassList": {
-          "id": "/properties/_embedded/properties/pcars:carClassList",
+        "pcars:classes": {
+          "id": "/properties/_embedded/properties/pcars:classes",
           "items": {
-            "id": "/properties/_embedded/properties/pcars:carClassList/items",
+            "id": "/properties/_embedded/properties/pcars:classes/items",
             "properties": {
               "_links": {
-                "id": "/properties/_embedded/properties/pcars:carClassList/items/properties/_links",
+                "id": "/properties/_embedded/properties/pcars:classes/items/properties/_links",
                 "properties": {
                   "self": {
-                    "id": "/properties/_embedded/properties/pcars:carClassList/items/properties/_links/properties/self",
+                    "id": "/properties/_embedded/properties/pcars:classes/items/properties/_links/properties/self",
                     "properties": {
                       "href": {
-                        "id": "/properties/_embedded/properties/pcars:carClassList/items/properties/_links/properties/self/properties/href",
+                        "id": "/properties/_embedded/properties/pcars:classes/items/properties/_links/properties/self/properties/href",
                         "type": "string"
                       }
                     },
@@ -28,11 +28,11 @@
                 "type": "object"
               },
               "id": {
-                "id": "/properties/_embedded/properties/pcars:carClassList/items/properties/id",
+                "id": "/properties/_embedded/properties/pcars:classes/items/properties/id",
                 "type": "integer"
               },
               "name": {
-                "id": "/properties/_embedded/properties/pcars:carClassList/items/properties/name",
+                "id": "/properties/_embedded/properties/pcars:classes/items/properties/name",
                 "type": "string"
               }
             },

@@ -5,7 +5,6 @@ import org.springframework.hateoas.mvc.IdentifiableResourceAssemblerSupport;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 class RoundResourceAssembler extends IdentifiableResourceAssemblerSupport<Round, RoundResource> {
     private final Integer eventId;
