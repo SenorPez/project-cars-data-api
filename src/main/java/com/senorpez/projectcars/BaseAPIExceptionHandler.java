@@ -24,14 +24,14 @@ abstract class BaseAPIExceptionHandler {
     BaseAPIExceptionHandler() {
     }
 
-//    @ExceptionHandler(Throwable.class)
-//    @ResponseBody
-//    ErrorResponse handleThrowable(final Throwable exception, final HttpServletResponse response) {
-//        ExceptionMapping mapping = exceptionMappings.getOrDefault(exception.getClass(), DEFAULT_ERROR);
-//        response.setStatus(mapping.status.value());
-//        return new ErrorResponse(mapping.code, mapping.message);
-//    }
-//
+    @ExceptionHandler(Throwable.class)
+    @ResponseBody
+    ErrorResponse handleThrowable(final Throwable exception, final HttpServletResponse response) {
+        ExceptionMapping mapping = exceptionMappings.getOrDefault(exception.getClass(), DEFAULT_ERROR);
+        response.setStatus(mapping.status.value());
+        return new ErrorResponse(mapping.code, mapping.message);
+    }
+
     void registerMapping(
             final Class<?> clazz,
             final String code,
