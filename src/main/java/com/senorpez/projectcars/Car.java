@@ -149,7 +149,7 @@ class Car implements Identifiable<Integer> {
         this.gears = gears;
         this.dlc = dlc;
 
-        this.liveries = Application.getData(Livery.class, liveries);
+        this.liveries = Application.getProjectCarsData(Livery.class, liveries);
     }
 
     @Override

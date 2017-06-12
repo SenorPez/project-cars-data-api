@@ -34,7 +34,7 @@ class Round implements Identifiable<Integer> {
                 .orElseThrow(() -> new TrackNotFoundAPIException(location, variation));
 
         Race.resetId();
-        this.races = Application.getData(Race.class, races);
+        this.races = Application.getProjectCarsData(Race.class, races);
     }
 
     @Override

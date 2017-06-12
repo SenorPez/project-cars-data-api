@@ -1,0 +1,1259 @@
+{
+  "cars": [
+    {
+      "year": 2011,
+      "manufacturer": "BAC",
+      "model": "Mono",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2015,
+      "manufacturer": "Honda",
+      "model": "2&4 Concept Car",
+      "verified": false,
+      "dlc": "Japanese Cars Pack"
+    },
+    {
+      "year": 2012,
+      "manufacturer": "Audi",
+      "model": "A1 quattro",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2016,
+      "manufacturer": "Honda",
+      "model": "Civic Type R (Euro-spec)",
+      "verified": false,
+      "dlc": "Japanese Cars Pack"
+    },
+    {
+      "year": 1999,
+      "manufacturer": "Mitsubishi",
+      "model": "Lancer Evolution IV (Tommi M\u00e4kinen Edition",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2006,
+      "manufacturer": "Mitsubishi",
+      "model": "Lancer Evolution IX FQ-360 GSR",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2006,
+      "manufacturer": "Mitsubishi",
+      "model": "Lancer Evolution X FQ400",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2015,
+      "manufacturer": "Aston Martin",
+      "model": "Vantage GT12",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2015,
+      "manufacturer": "Chevrolet",
+      "model": "Corvette Z06",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2015,
+      "manufacturer": "Ford",
+      "model": "Mustang GT",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2016,
+      "manufacturer": "Jaguar",
+      "model": "F-Type SVR",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2015,
+      "manufacturer": "McLaren",
+      "model": "570S",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2016,
+      "manufacturer": "Mercedes-AMG",
+      "model": "C63 S Coupe",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2017,
+      "manufacturer": "Nissan",
+      "model": "GT-R NISMO (R35)",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2016,
+      "manufacturer": "Acura",
+      "model": "NSX",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2016,
+      "manufacturer": "Aston Martin",
+      "model": "Vantage DB11",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2015,
+      "manufacturer": "Audi",
+      "model": "R8 V10 Plus",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1994,
+      "manufacturer": "Jaguar",
+      "model": "XJ220S TWR",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2017,
+      "manufacturer": "Ford",
+      "model": "GT",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2017,
+      "manufacturer": "McLaren",
+      "model": "720S",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2016,
+      "manufacturer": "Porsche",
+      "model": "911 GT3 RS (991.1)",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2013,
+      "manufacturer": "Porsche",
+      "model": "918 Spyder Weissach Package",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2015,
+      "manufacturer": "Aston Martin",
+      "model": "Vulcan",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2015,
+      "manufacturer": "McLaren",
+      "model": "P1 GTR",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2014,
+      "manufacturer": "Pagani",
+      "model": "Zonda Revoluci\u00f3n",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2015,
+      "manufacturer": "Ford",
+      "model": "F-150 Vaugh Gittin Jr.'s Ultimate Fun-Haver",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2017,
+      "manufacturer": "Nissan",
+      "model": "Skyline GT-R R34 SMS-R",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2015,
+      "manufacturer": "Mazda",
+      "model": "MX-5 26B-TT RADBUL",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2014,
+      "manufacturer": "Mitsubishi",
+      "model": "Lancer Evlution VI SVA Imports",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1970,
+      "manufacturer": "Ford",
+      "model": "Escort RS 1600",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1974,
+      "manufacturer": "Jaguar",
+      "model": "E-Type V12 Group 44",
+      "verified": false,
+      "dlc": "Motorsport Pack"
+    },
+    {
+      "year": 1973,
+      "manufacturer": "Nissan",
+      "model": "Fairlady 240ZG GTS-II",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1991,
+      "manufacturer": "Audi",
+      "model": "V8 quattro DTM",
+      "verified": false,
+      "dlc": "Motorsport Pack"
+    },
+    {
+      "year": 1986,
+      "manufacturer": "Ford",
+      "model": "Sierra Cosworth RS500",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1989,
+      "manufacturer": "Nissan",
+      "model": "Group A R32 Skyline GT-R",
+      "verified": false,
+      "dlc": "Japanese Cars Pack"
+    },
+    {
+      "year": 2014,
+      "manufacturer": "Renault",
+      "model": "Clio Cup",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2011,
+      "manufacturer": "BMW",
+      "model": "320 TC",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2017,
+      "manufacturer": "Mercedes",
+      "model": "A45 TC SMS-R",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2017,
+      "manufacturer": "Renault",
+      "model": "Megane TC SMS-R",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2016,
+      "manufacturer": "Opel",
+      "model": "Astra TCR",
+      "verified": false,
+      "dlc": "Motorsport Pack"
+    },
+    {
+      "year": 0,
+      "manufacturer": "Ford",
+      "model": "Falcon",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1969,
+      "manufacturer": "Chevrolet",
+      "model": "Camaro Z28",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1979,
+      "manufacturer": "BMW",
+      "model": "M1 Procar",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1971,
+      "manufacturer": "Ferrari",
+      "model": "3665 GTB/4 'Daytona' Competizione",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1978,
+      "manufacturer": "BMW",
+      "model": "320 Turbo",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1980,
+      "manufacturer": "Ford",
+      "model": "Zakspeed Capri",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1982,
+      "manufacturer": "Nissan",
+      "model": "Hasemi Motorsport DR30 Skyline",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1979,
+      "manufacturer": "Nissan",
+      "model": "280ZX GTX",
+      "verified": false,
+      "dlc": "Japanese Cars Pack"
+    },
+    {
+      "year": 1977,
+      "manufacturer": "Porsche",
+      "model": "935/77",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1980,
+      "manufacturer": "Porsche",
+      "model": "935/80",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1989,
+      "manufacturer": "Audi",
+      "model": "90 quattro IMSA GTO",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1989,
+      "manufacturer": "Ferrari",
+      "model": "F40 LM",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1994,
+      "manufacturer": "Nissan",
+      "model": "300ZX Twin Turbo (IMSA GTS)",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1997,
+      "manufacturer": "Nissan",
+      "model": "300ZX Twin Turbo (LeMans GTS)",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1998,
+      "manufacturer": "Mercedes-Benz",
+      "model": "CLK LM",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1997,
+      "manufacturer": "McLaren",
+      "model": "F1 GTR 'Long Tail'",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1998,
+      "manufacturer": "Nissan",
+      "model": "R390 GT1 'Long Tail'",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1997,
+      "manufacturer": "Panoz",
+      "model": "Esperante GTR-1",
+      "verified": false,
+      "dlc": "Motorsport Pack"
+    },
+    {
+      "year": 1998,
+      "manufacturer": "Porsche",
+      "model": "911 GT1-98",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1998,
+      "manufacturer": "Toyota",
+      "model": "GT-One",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2013,
+      "manufacturer": "Aston Martin",
+      "model": "V8 Vantage GT4",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2012,
+      "manufacturer": "BMW",
+      "model": "M3 GT4",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2012,
+      "manufacturer": "Ford",
+      "model": "Mustang Boss 302R1",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2017,
+      "manufacturer": "Ford",
+      "model": "Mustang Boss S550 RTR SMS-R",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2015,
+      "manufacturer": "KTM",
+      "model": "X-Bow GT4",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2016,
+      "manufacturer": "Porsche",
+      "model": "Cayman GT4 Clubsport",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2015,
+      "manufacturer": "Toyota",
+      "model": "GT-86 Rocket Bunny GT Edition",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2012,
+      "manufacturer": "Audi",
+      "model": "R8 LMS Ultra",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2010,
+      "manufacturer": "BMW",
+      "model": "Z4 GT3",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2012,
+      "manufacturer": "Mercedes-Benz",
+      "model": "SLS AMG GT3",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2017,
+      "manufacturer": "Acura",
+      "model": "NSX GT3",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2013,
+      "manufacturer": "Aston Martin",
+      "model": "Vantage GT3",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2015,
+      "manufacturer": "Audi",
+      "model": "R8 LMS GT3",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2014,
+      "manufacturer": "Bentley",
+      "model": "Continental GT3",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2016,
+      "manufacturer": "BMW",
+      "model": "M6 GT3",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2016,
+      "manufacturer": "Cadillac",
+      "model": "ATS-V.R GT3",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2016,
+      "manufacturer": "Ferrari",
+      "model": "488 GT3",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2013,
+      "manufacturer": "Ginetta",
+      "model": "G55 GT3",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2015,
+      "manufacturer": "McLaren",
+      "model": "650S GT3",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2015,
+      "manufacturer": "Mercedes-AMG",
+      "model": "GT3",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2017,
+      "manufacturer": "Nissan",
+      "model": "GT-R Nismo GT3",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2016,
+      "manufacturer": "Porsche",
+      "model": "911 GT3 R (991)",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2016,
+      "manufacturer": "Porsche",
+      "model": "911 GT3 R Endurance (991)",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2012,
+      "manufacturer": "Aston Martin",
+      "model": "V8 Vantage GTE",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2016,
+      "manufacturer": "BMW",
+      "model": "M6 GTLM",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2014,
+      "manufacturer": "Chevrolet",
+      "model": "Corvette C7.R",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2016,
+      "manufacturer": "Ford",
+      "model": "GT LM",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2015,
+      "manufacturer": "Renault",
+      "model": "Sport R.S. 01",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1967,
+      "manufacturer": "Ford",
+      "model": "GT40 Mk IV",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1976,
+      "manufacturer": "Porsche",
+      "model": "936 Spyder",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1978,
+      "manufacturer": "Renault",
+      "model": "Alpine A442B",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1988,
+      "manufacturer": "Jaguar",
+      "model": "XJR-9",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1985,
+      "manufacturer": "Nissan",
+      "model": "GTP ZX-Turbo",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1985,
+      "manufacturer": "Porsche",
+      "model": "962C",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1988,
+      "manufacturer": "Porsche",
+      "model": "962 Langheck",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1987,
+      "manufacturer": "Sauber",
+      "model": "Mercedes C9",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2016,
+      "manufacturer": "Ginetta",
+      "model": "G57-P2",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2014,
+      "manufacturer": "Ligier",
+      "model": "JS P2",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2011,
+      "manufacturer": "Oreca",
+      "model": "03",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2014,
+      "manufacturer": "Marek",
+      "model": "RP 339H",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2013,
+      "manufacturer": "RWD",
+      "model": "P30",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1963,
+      "manufacturer": "Lotus",
+      "model": "Type 25 Climax",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1970,
+      "manufacturer": "Lotus",
+      "model": "Type 49C",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1971,
+      "manufacturer": "Lotus",
+      "model": "Type 72D",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1977,
+      "manufacturer": "Lotus",
+      "model": "Type 78",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1977,
+      "manufacturer": "Lotus",
+      "model": "Type 79",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1963,
+      "manufacturer": "Watson/Offenhauser",
+      "model": "#98 Willard Battery Special 'Ol' Calhoun'",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1965,
+      "manufacturer": "Lotus",
+      "model": "38",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1968,
+      "manufacturer": "Lotus",
+      "model": "56",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2016,
+      "manufacturer": "Dallara/Chevrolet",
+      "model": "DW12 (Road Course)",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2016,
+      "manufacturer": "Dallara/Chevrolet",
+      "model": "DW12 (Speedway)",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2016,
+      "manufacturer": "Dallara/Honda",
+      "model": "DW12 (Road Course)",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2016,
+      "manufacturer": "Dallara/Honda",
+      "model": "DW12 (Speedway)",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2012,
+      "manufacturer": "SMS",
+      "model": "Formula Rookie",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2017,
+      "manufacturer": "SMS",
+      "model": "Formula X",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1972,
+      "manufacturer": "Ford",
+      "model": "Escort Mk1 Rallycross",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2013,
+      "manufacturer": "Olsbergs",
+      "model": "MSE Supercars Lites 'Ford Fiesta'",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2016,
+      "manufacturer": "Ford",
+      "model": "Focus RS RX",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2016,
+      "manufacturer": "Honda",
+      "model": "Civic Coupe",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2017,
+      "manufacturer": "Mercedes-Benz",
+      "model": "A45 AMG SMS-RX",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2017,
+      "manufacturer": "Renault",
+      "model": "Megane SMS-RX",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2015,
+      "manufacturer": "Mini",
+      "model": "Countryman RX",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2016,
+      "manufacturer": "Volkswagen",
+      "model": "Polo RX",
+      "verified": false,
+      "dlc": null
+    }
+  ],
+  "tracks": [
+    {
+      "country": "South Africa",
+      "name": "Wildcrest RX",
+      "location": "Wildcrest",
+      "variation": "RX",
+      "verified": false
+    },
+    {
+      "country": "China",
+      "name": "Zhuhai International Circuit",
+      "location": "Zhuhai International Circuit",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "Japan",
+      "name": "Fuji Speedway GP",
+      "location": "Fuji Speedway",
+      "variation": "GP",
+      "verified": false
+    },
+    {
+      "country": "Japan",
+      "name": "Sugo GP",
+      "location": "Sugo",
+      "variation": "GP",
+      "verified": false
+    },
+    {
+      "country": "United Arab Emirates",
+      "name": "Dubai Autodrome",
+      "location": "Dubai Autodrome",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "Australia",
+      "name": "Mount Panorama Circuit",
+      "location": "Mount Panorama Circuit",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "New Zealand",
+      "name": "Mike Pero Motorsport Park (Ruapuna)",
+      "location": "Mike Pero Motorsport Park (Ruapuna)",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "Austria",
+      "name": "Red Bull Ring GP",
+      "location": "Red Bull Ring",
+      "variation": "GP",
+      "verified": false
+    },
+    {
+      "country": "Austria",
+      "name": "Red Bull Ring National",
+      "location": "Red Bull Ring",
+      "variation": "National",
+      "verified": false
+    },
+    {
+      "country": "Austria",
+      "name": "Red Bull Ring Club",
+      "location": "Red Bull Ring",
+      "variation": "Club",
+      "verified": false
+    },
+    {
+      "country": "Belgium",
+      "name": "Circuit de Spa-Francorchamps",
+      "location": "Circuit de Spa-Francorchamps",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "Belgium",
+      "name": "Circuit de Spa-Francorchamps (Greenwood)",
+      "location": "Circuit de Spa-Francorchamps (Greenwood)",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "Belgium",
+      "name": "Circuit Zolder",
+      "location": "Circuit Zolder",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "Czech Republic",
+      "name": "Masaryk Circuit (Brno)",
+      "location": "Masaryk Circuit (Brno)",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "England",
+      "name": "Brands Hatch",
+      "location": "Brands Hatch",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "England",
+      "name": "Cadwell Park",
+      "location": "Cadwell Park",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "England",
+      "name": "Donington Park",
+      "location": "Donington Park",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "Engalnd",
+      "name": "Glencairn",
+      "location": "Glencairn",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "England",
+      "name": "Lydden Hill RX",
+      "location": "Lydden Hill",
+      "variation": "RX",
+      "verified": false
+    },
+    {
+      "country": "England",
+      "name": "Oulton Park",
+      "location": "Oulton Park",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "England",
+      "name": "Silverstone Circuit",
+      "location": "Silverstone Circuit",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "England",
+      "name": "Snetterton Circuit",
+      "location": "Snetterton Circuit",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "France",
+      "name": "Circuit de la Sarthe (Le Mans) Circuit des 24 Heures",
+      "location": "Circuit de la Sarthe (Le Mans)",
+      "variation": "Circuit des 24 Heures",
+      "verified": false
+    },
+    {
+      "country": "France",
+      "name": "C\u00f4te d'Azur (Azure Coast)",
+      "location": "C\u00f4te d'Azur (Azure Coast)",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "France",
+      "name": "Loh\u00e9ac-Bretagna RX",
+      "location": "Loh\u00e9ac-Bretagna",
+      "variation": "RX",
+      "verified": false
+    },
+    {
+      "country": "France",
+      "name": "Rouen-Les-Essarts",
+      "location": "Rouen-Les-Essarts",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "Germany",
+      "name": "Hockenheimring",
+      "location": "Hockenheimring",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "Germany",
+      "name": "N\u00fcrburgring Nordschleife",
+      "location": "N\u00fcrburgring",
+      "variation": "Nordschleife",
+      "verified": false
+    },
+    {
+      "country": "Germany",
+      "name": "N\u00fcrburgring GP",
+      "location": "N\u00fcrburgring",
+      "variation": "GP",
+      "verified": false
+    },
+    {
+      "country": "Germany",
+      "name": "Oschersleben",
+      "location": "Oschersleben",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "Italy",
+      "name": "Autodromo Internazionale Enze e Dino Ferrari",
+      "location": "Autodromo Internazionale Enze e Dino Ferrari",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "Italy",
+      "name": "Autodromo Nazionale Monza",
+      "location": "Autodromo Nazionale Monza",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "Monaco",
+      "name": "Circuit de Monaco (Azure Circuit) GP",
+      "location": "Circuit de Monaco (Azure Circuit)",
+      "variation": "GP",
+      "verified": false
+    },
+    {
+      "country": "Norway",
+      "name": "Hell RX",
+      "location": "Hell",
+      "variation": "RX",
+      "verified": false
+    },
+    {
+      "country": "Portugal",
+      "name": "Aut\u00f3dromo Internacional do Algarve at Portim\u00e3o",
+      "location": "Aut\u00f3dromo Internacional do Algarve at Portim\u00e3o",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "Scotland",
+      "name": "Bannochbrae",
+      "location": "Bannochbrae",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "Scotland",
+      "name": "Knockhill Racing Circuit RX",
+      "location": "Knockhill Racing Circuit",
+      "variation": "RX",
+      "verified": false
+    },
+    {
+      "country": "Spain",
+      "name": "Circuit de Barcelona-Catalunya",
+      "location": "Circuit de Barcelona-Catalunya",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "Sweden",
+      "name": "Mercedes-Benz Onroad Winter Training Combined Circuit",
+      "location": "Mercedes-Benz Onroad Winter Training",
+      "variation": "Combined Circuit",
+      "verified": false
+    },
+    {
+      "country": "Sweden",
+      "name": "Mercedes-Benz Onroad Winter Training Circular Drifting",
+      "location": "Mercedes-Benz Onroad Winter Training",
+      "variation": "Circular Drifting",
+      "verified": false
+    },
+    {
+      "country": "Sweden",
+      "name": "Mercedes-Benz Onroad Winter Training Drift Slalom",
+      "location": "Mercedes-Benz Onroad Winter Training",
+      "variation": "Drift Slalom",
+      "verified": false
+    },
+    {
+      "country": "Sweden",
+      "name": "Mercedes-Benz Onroad Winter Training Layout 4",
+      "location": "Mercedes-Benz Onroad Winter Training",
+      "variation": "Layout 4",
+      "verified": false
+    },
+    {
+      "country": "Sweden",
+      "name": "Mercedes-Benz Onroad Winter Training Layout 5",
+      "location": "Mercedes-Benz Onroad Winter Training",
+      "variation": "Layout 5",
+      "verified": false
+    },
+    {
+      "country": "Sweden",
+      "name": "Mercedes-Benz Onroad Winter Training Layout 6",
+      "location": "Mercedes-Benz Onroad Winter Training",
+      "variation": "Layout 6",
+      "verified": false
+    },
+    {
+      "country": "United States of America",
+      "name": "California Highway",
+      "location": "California Highway",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "United States of America",
+      "name": "Circuit of the Americas",
+      "location": "Circuit of the Americas",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "United States of America",
+      "name": "Daytona International Speedway Red Bull GRC",
+      "location": "Daytona International Speedway",
+      "variation": "Red Bull GRC",
+      "verified": false
+    },
+    {
+      "country": "United States of America",
+      "name": "DirtFish",
+      "location": "DirtFish",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "United States of America",
+      "name": "Indianapolis Motor Speedway",
+      "location": "Indianapolis Motor Speedway",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "United States of America",
+      "name": "Mazda Raceway Laguna Seca",
+      "location": "Mazda Raceway",
+      "variation": "Laguna Seca",
+      "verified": false
+    },
+    {
+      "country": "United States of America",
+      "name": "Mojave Desert",
+      "location": "Mojave Desert",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "United States of America",
+      "name": "Road America",
+      "location": "Road America",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "United States of America",
+      "name": "Texas Motor Speedway",
+      "location": "Texas Motor Speedway",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "United States of America",
+      "name": "Toyota Grand Prix of Long Beach",
+      "location": "Toyota Grand Prix of Long Beach",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "United States of America",
+      "name": "Watkins Glen International",
+      "location": "Watkins Glen International",
+      "variation": "",
+      "verified": false
+    },
+    {
+      "country": "United States of America",
+      "name": "Willow Spring International Motorsports Park",
+      "location": "Willow Spring International Motorsports Park",
+      "variation": "",
+      "verified": false
+    }
+  ]
+}

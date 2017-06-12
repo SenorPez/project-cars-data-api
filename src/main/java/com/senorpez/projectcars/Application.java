@@ -23,10 +23,13 @@ import java.util.Set;
 
 @SpringBootApplication
 public class Application {
-    static final Set<CarClass> CAR_CLASSES = Collections.unmodifiableSet(getData(CarClass.class, "classes"));
-    static final Set<Car> CARS = Collections.unmodifiableSet(getData(Car.class, "cars"));
-    static final Set<Track> TRACKS = Collections.unmodifiableSet(getData(Track.class, "tracks"));
-    static final Set<Event> EVENTS = Collections.unmodifiableSet(getData(Event.class, "events"));
+    static final Set<CarClass> CAR_CLASSES = Collections.unmodifiableSet(getProjectCarsData(CarClass.class, "classes"));
+    static final Set<Car> CARS = Collections.unmodifiableSet(getProjectCarsData(Car.class, "cars"));
+    static final Set<Track> TRACKS = Collections.unmodifiableSet(getProjectCarsData(Track.class, "tracks"));
+    static final Set<Event> EVENTS = Collections.unmodifiableSet(getProjectCarsData(Event.class, "events"));
+
+    static final Set<Car2> CARS2 = Collections.unmodifiableSet(getProjectCars2Data(Car2.class, "cars"));
+    static final Set<Track2> TRACKS2 = Collections.unmodifiableSet(getProjectCars2Data(Track2.class, "tracks"));
 
     private static final String HAL_OBJECT_MAPPER_BEAN_NAME = "_halObjectMapper";
 
@@ -37,11 +40,21 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
-    private static <T> Set<T> getData(Class objectClass, String field) {
+    private static <T> Set<T> getProjectCarsData(Class objectClass, String field) {
+        String resourceFileName = "projectcars.json";
+        return getData(resourceFileName, objectClass, field);
+    }
+
+    private static <T> Set<T> getProjectCars2Data(Class objectClass, String field) {
+        String resourceFileName = "projectcars2.json";
+        return getData(resourceFileName, objectClass, field);
+    }
+
+    private static <T> Set<T> getData(String resourceFileName, Class objectClass, String field) {
         try {
             ObjectMapper mapper = new ObjectMapper();
             ClassLoader classLoader = Application.class.getClassLoader();
-            InputStream inputStream = classLoader.getResourceAsStream("data.json");
+            InputStream inputStream = classLoader.getResourceAsStream(resourceFileName);
             ObjectNode jsonData = mapper.readValue(inputStream, ObjectNode.class);
             return mapper.readValue(jsonData.get(field).toString(), mapper.getTypeFactory().constructCollectionType(Set.class, objectClass));
         } catch (IOException e) {
@@ -50,7 +63,7 @@ public class Application {
         return new HashSet<>();
     }
 
-    static <T> Set<T> getData(Class objectClass, JsonNode jsonData) {
+    static <T> Set<T> getProjectCarsData(Class objectClass, JsonNode jsonData) {
         try {
             ObjectMapper mapper = new ObjectMapper();
             return mapper.readValue(jsonData.toString(), mapper.getTypeFactory().constructCollectionType(Set.class, objectClass));

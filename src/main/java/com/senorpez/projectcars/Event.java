@@ -42,7 +42,7 @@ class Event implements Identifiable<Integer> {
             this.cars = null;
         } else {
             Set<Car> cars = new HashSet<>(Application.CARS);
-            Set<CarFilter> carFilters = Application.getData(CarFilter.class, carFilter);
+            Set<CarFilter> carFilters = Application.getProjectCarsData(CarFilter.class, carFilter);
             carFilters.forEach(filter -> cars.removeIf(filter.getOperation().negate()));
             this.cars = cars;
         }
@@ -50,7 +50,7 @@ class Event implements Identifiable<Integer> {
         this.verified = verified;
 
         Round.resetId();
-        this.rounds = Application.getData(Round.class, rounds);
+        this.rounds = Application.getProjectCarsData(Round.class, rounds);
     }
 
     @Override
