@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {},
+  "id": "http://example.com/example.json",
+  "properties": {
+    "_embedded": {
+      "id": "/properties/_embedded",
+      "properties": {
+        "pcars:livery": {
+          "id": "/properties/_embedded/properties/pcars:livery",
+          "items": {
+            "id": "/properties/_embedded/properties/pcars:livery/items",
+            "properties": {
+              "_links": {
+                "id": "/properties/_embedded/properties/pcars:livery/items/properties/_links",
+                "properties": {
+                  "self": {
+                    "id": "/properties/_embedded/properties/pcars:livery/items/properties/_links/properties/self",
+                    "properties": {
+                      "href": {
+                        "id": "/properties/_embedded/properties/pcars:livery/items/properties/_links/properties/self/properties/href",
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  }
+                },
+                "type": "object"
+              },
+              "id": {
+                "id": "/properties/_embedded/properties/pcars:livery/items/properties/id",
+                "type": "integer"
+              },
+              "name": {
+                "id": "/properties/_embedded/properties/pcars:livery/items/properties/name",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "_links": {
+      "id": "/properties/_links",
+      "properties": {
+        "curies": {
+          "id": "/properties/_links/properties/curies",
+          "items": {
+            "id": "/properties/_links/properties/curies/items",
+            "properties": {
+              "href": {
+                "id": "/properties/_links/properties/curies/items/properties/href",
+                "type": "string"
+              },
+              "name": {
+                "id": "/properties/_links/properties/curies/items/properties/name",
+                "type": "string"
+              },
+              "templated": {
+                "id": "/properties/_links/properties/curies/items/properties/templated",
+                "type": "boolean"
+              }
+            },
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "index": {
+          "id": "/properties/_links/properties/index",
+          "properties": {
+            "href": {
+              "id": "/properties/_links/properties/index/properties/href",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "pcars:car": {
+          "id": "/properties/_links/properties/pcars:car",
+          "properties": {
+            "href": {
+              "id": "/properties/_links/properties/pcars:car/properties/href",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "self": {
+          "id": "/properties/_links/properties/self",
+          "properties": {
+            "href": {
+              "id": "/properties/_links/properties/self/properties/href",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "type": "object"
+}

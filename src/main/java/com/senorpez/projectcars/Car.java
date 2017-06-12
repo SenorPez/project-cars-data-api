@@ -3,8 +3,11 @@ package com.senorpez.projectcars;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.databind.JsonNode;
 import org.springframework.hateoas.Identifiable;
 import org.springframework.hateoas.core.Relation;
+
+import java.util.Set;
 
 @Relation(value = "car", collectionRelation = "car")
 class Car implements Identifiable<Integer> {
@@ -50,6 +53,8 @@ class Car implements Identifiable<Integer> {
     private final Integer gears;
     @JsonProperty("dlc")
     private final String dlc;
+    @JsonProperty("liveries")
+    private final Set<Livery> liveries;
 
     enum Drivetrain {
         FWD,
@@ -120,7 +125,8 @@ class Car implements Identifiable<Integer> {
             @JsonProperty("shiftPattern") ShiftPattern shiftPattern,
             @JsonProperty("shifter") Shifter shifter,
             @JsonProperty("gears") Integer gears,
-            @JsonProperty("dlc") String dlc) {
+            @JsonProperty("dlc") String dlc,
+            @JsonProperty("liveries")JsonNode liveries) {
         this.id = id;
         this.manufacturer = manufacturer;
         this.model = model;
@@ -142,6 +148,8 @@ class Car implements Identifiable<Integer> {
         this.shifter = shifter;
         this.gears = gears;
         this.dlc = dlc;
+
+        this.liveries = Application.getData(Livery.class, liveries);
     }
 
     @Override
@@ -227,5 +235,9 @@ class Car implements Identifiable<Integer> {
 
     String getDlc() {
         return dlc;
+    }
+
+    Set<Livery> getLiveries() {
+        return liveries;
     }
 }

@@ -63,6 +63,7 @@ class CarController {
         Resource resource = assembler.toResource(new CarModel(subjectCar));
         resource.add(linkTo(methodOn(CarController.class).cars()).withRel("cars"));
         resource.add(linkTo(methodOn(CarClassController.class).carClasses(subjectCar.getCarClass().getId())).withRel("class"));
+        resource.add(linkTo(methodOn(LiveryController.class).liveries(carId)).withRel("liveries"));
         resource.add(linkTo(methodOn(RootController.class).root()).withRel("index"));
         return resource;
     }

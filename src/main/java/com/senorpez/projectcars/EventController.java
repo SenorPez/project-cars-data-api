@@ -130,6 +130,7 @@ class EventController {
         resource.add(linkTo(methodOn(EventController.class).eventCars(eventId, carId)).withSelfRel());
         resource.add(linkTo(methodOn(EventController.class).eventCars(eventId)).withRel("cars"));
         resource.add(linkTo(methodOn(CarClassController.class).carClasses(subjectCar.getCarClass().getId())).withRel("class"));
+        resource.add(linkTo(methodOn(LiveryController.class).liveries(carId)).withRel("liveries"));
         resource.add(linkTo(methodOn(RootController.class).root()).withRel("index"));
         return resource;
     }
