@@ -14,10 +14,7 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
 import static com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema;
-import static com.jayway.restassured.module.jsv.JsonSchemaValidator.reset;
 import static org.hamcrest.Matchers.*;
-import static org.hamcrest.Matchers.hasEntry;
-import static org.hamcrest.Matchers.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -83,10 +80,10 @@ public class LiveryControllerTest {
         InputStream jsonSchema = classLoader.getResourceAsStream("liveries.schema.json");
 
         mockMvc.perform(get("/cars/{carId}/liveries", resultCar.getId()).header("accept", "application/vnd.senorpez.pcars2.v1+json"))
-                .andExpect(status().isInternalServerError())
+                .andExpect(status().isNotAcceptable())
                 .andExpect(content().string(matchesJsonSchema(jsonSchema)))
-                .andExpect(jsonPath("$.error.code", is("Internal server error.")))
-                .andExpect(jsonPath("$.error.message", is("SERVER_ERROR")));
+                .andExpect(jsonPath("$.code", is("406")))
+                .andExpect(jsonPath("$.message", is("Accept header incorrect")));
     }
 
     @Test
@@ -124,22 +121,23 @@ public class LiveryControllerTest {
         InputStream jsonSchema = classLoader.getResourceAsStream("livery.schema.json");
 
         mockMvc.perform(get("/cars/{carId}/liveries/{liveryId}", resultCar.getId(), resultLivery.getId()).header("accept", "application/vnd.senorpez.pcars2.v1+json"))
-                .andExpect(status().isInternalServerError())
+                .andExpect(status().isNotAcceptable())
                 .andExpect(content().string(matchesJsonSchema(jsonSchema)))
-                .andExpect(jsonPath("$.error.code", is("Internal server error.")))
-                .andExpect(jsonPath("$.error.message", is("SERVER_ERROR")));
+                .andExpect(jsonPath("$.code", is("406")))
+                .andExpect(jsonPath("$.message", is("Accept header incorrect")));
     }
 
     @Test
     public void TestGetSingleRound_DoesNotExist() throws Exception {
+        Integer badId = 8675309;
         Car resultCar = Application.CARS.stream().findAny().orElse(null);
         InputStream jsonSchema = classLoader.getResourceAsStream("error.schema.json");
 
-        mockMvc.perform(get("/cars/{carId}/liveries/8675309", resultCar.getId()).header("accept", "application/vnd.senorpez.pcars.v1+json"))
+        mockMvc.perform(get("/cars/{carId}/liveries/{liveryId}", resultCar.getId(), badId).header("accept", "application/vnd.senorpez.pcars.v1+json"))
                 .andExpect(status().isNotFound())
                 .andExpect(content().string(matchesJsonSchema(jsonSchema)))
-                .andExpect(jsonPath("$.error.code", is("LIVERY_NOT_FOUND")))
-                .andExpect(jsonPath("$.error.message", is("Livery Not Found.")));
+                .andExpect(jsonPath("$.code", is("404-liveries-" + badId)))
+                .andExpect(jsonPath("$.message", is("Livery with ID of " + badId + " not found")));
     }
 
     @Test
@@ -148,9 +146,9 @@ public class LiveryControllerTest {
         InputStream jsonSchema = classLoader.getResourceAsStream("error.schema.json");
 
         mockMvc.perform(get("/cars/{carId}/liveries/8675309", resultCar.getId()).header("accept", "application/vnd.senorpez.pcars2.v1+json"))
-                .andExpect(status().isInternalServerError())
+                .andExpect(status().isNotAcceptable())
                 .andExpect(content().string(matchesJsonSchema(jsonSchema)))
-                .andExpect(jsonPath("$.error.code", is("Internal server error.")))
-                .andExpect(jsonPath("$.error.message", is("SERVER_ERROR")));
+                .andExpect(jsonPath("$.code", is("406")))
+                .andExpect(jsonPath("$.message", is("Accept header incorrect")));
     }
 }

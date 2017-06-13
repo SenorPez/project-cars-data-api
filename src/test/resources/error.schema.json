@@ -1,22 +1,26 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "definitions": {},
-  "id": "http://www.projectcars.senorpez.com",
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Error Response",
+  "description": "Error response from the Project CARS Static Data API",
+  "type": "object",
   "properties": {
-    "error": {
-      "id": "/properties/error",
-      "properties": {
-        "code": {
-          "id": "/properties/error/properties/code",
-          "type": "string"
-        },
-        "message": {
-          "id": "/properties/error/properties/message",
-          "type": "string"
-        }
-      },
-      "type": "object"
+    "code": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "formats": {
+      "type": "array",
+      "description": "Used in 406 response to provide valid header formats",
+      "items": {
+        "type": "string"
+      }
     }
   },
-  "type": "object"
+  "additionalProperties": false,
+  "required": [
+    "code",
+    "message"
+  ]
 }

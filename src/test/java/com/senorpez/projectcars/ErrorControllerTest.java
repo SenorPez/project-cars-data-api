@@ -42,7 +42,7 @@ public class ErrorControllerTest {
                 .andExpect(status().isNotFound())
                 .andExpect(content().contentType(contentType))
                 .andExpect(content().string(matchesJsonSchema(jsonSchema)))
-                .andExpect(jsonPath("$.error.code", is("ERROR")))
-                .andExpect(jsonPath("$.error.message", is("ERROR")));
+                .andExpect(jsonPath("$.code", is("PAGE_NOT_FOUND")))
+                .andExpect(jsonPath("$.message", is("Page Not Found.")));
     }
 }

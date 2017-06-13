@@ -68,8 +68,8 @@ public class RootControllerTest {
     @Test
     public void TestRoot_InvalidAcceptHeader() throws Exception {
         mockMvc.perform(get("/").header("accept", "application/vnd.senorpez.pcars2.v1+json"))
-                .andExpect(status().isInternalServerError())
-                .andExpect(jsonPath("$.error.code", is("Internal server error.")))
-                .andExpect(jsonPath("$.error.message", is("SERVER_ERROR")));
+                .andExpect(status().isNotAcceptable())
+                .andExpect(jsonPath("$.code", is("406")))
+                .andExpect(jsonPath("$.message", is("Accept header incorrect")));
     }
 }

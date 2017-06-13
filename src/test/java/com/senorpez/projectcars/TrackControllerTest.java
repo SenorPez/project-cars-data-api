@@ -76,10 +76,10 @@ public class TrackControllerTest {
         InputStream jsonSchema = classLoader.getResourceAsStream("error.schema.json");
 
         mockMvc.perform(get("/tracks").header("accept", "application/vnd.senorpez.pcars2.v1+json"))
-                .andExpect(status().isInternalServerError())
+                .andExpect(status().isNotAcceptable())
                 .andExpect(content().string(matchesJsonSchema(jsonSchema)))
-                .andExpect(jsonPath("$.error.code", is("Internal server error.")))
-                .andExpect(jsonPath("$.error.message", is("SERVER_ERROR")));
+                .andExpect(jsonPath("$.code", is("406")))
+                .andExpect(jsonPath("$.message", is("Accept header incorrect")));
     }
 
     @Test
@@ -181,21 +181,22 @@ public class TrackControllerTest {
         InputStream jsonSchema = classLoader.getResourceAsStream("error.schema.json");
 
         mockMvc.perform(get("/tracks/{trackId}", resultTrack.getId()).header("accept", "application/vnd.senorpez.pcars2.v1+json"))
-                .andExpect(status().isInternalServerError())
+                .andExpect(status().isNotAcceptable())
                 .andExpect(content().string(matchesJsonSchema(jsonSchema)))
-                .andExpect(jsonPath("$.error.code", is("Internal server error.")))
-                .andExpect(jsonPath("$.error.message", is("SERVER_ERROR")));
+                .andExpect(jsonPath("$.code", is("406")))
+                .andExpect(jsonPath("$.message", is("Accept header incorrect")));
     }
 
     @Test
     public void TestGetSingleTrack_DoesNotExist() throws Exception {
+        Integer badId = 1;
         InputStream jsonSchema = classLoader.getResourceAsStream("error.schema.json");
 
-        mockMvc.perform(get("/tracks/1").header("accept", "application/vnd.senorpez.pcars.v1+json"))
+        mockMvc.perform(get("/tracks/{trackId}", badId).header("accept", "application/vnd.senorpez.pcars.v1+json"))
                 .andExpect(status().isNotFound())
                 .andExpect(content().string(matchesJsonSchema(jsonSchema)))
-                .andExpect(jsonPath("$.error.code", is("TRACK_NOT_FOUND")))
-                .andExpect(jsonPath("$.error.message", is("Track Not Found.")));
+                .andExpect(jsonPath("$.code", is("404-tracks-" + badId)))
+                .andExpect(jsonPath("$.message", is("Track with ID of " + badId + " not found")));
     }
 
     @Test
@@ -203,9 +204,9 @@ public class TrackControllerTest {
         InputStream jsonSchema = classLoader.getResourceAsStream("error.schema.json");
 
         mockMvc.perform(get("/tracks/1").header("accept", "application/vnd.senorpez.pcars2.v1+json"))
-                .andExpect(status().isInternalServerError())
+                .andExpect(status().isNotAcceptable())
                 .andExpect(content().string(matchesJsonSchema(jsonSchema)))
-                .andExpect(jsonPath("$.error.code", is("Internal server error.")))
-                .andExpect(jsonPath("$.error.message", is("SERVER_ERROR")));
+                .andExpect(jsonPath("$.code", is("406")))
+                .andExpect(jsonPath("$.message", is("Accept header incorrect")));
     }
 }

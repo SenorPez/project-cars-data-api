@@ -83,10 +83,10 @@ public class RaceControllerTest {
         InputStream jsonSchema = classLoader.getResourceAsStream("error.schema.json");
 
         mockMvc.perform(get("/events/{eventId}/rounds/{roundId}/races", resultEvent.getId(), resultRound.getId()).header("accept", "application/vnd.senorpez.pcars2.v1+json"))
-                .andExpect(status().isInternalServerError())
+                .andExpect(status().isNotAcceptable())
                 .andExpect(content().string(matchesJsonSchema(jsonSchema)))
-                .andExpect(jsonPath("$.error.code", is("Internal server error.")))
-                .andExpect(jsonPath("$.error.message", is("SERVER_ERROR")));
+                .andExpect(jsonPath("$.code", is("406")))
+                .andExpect(jsonPath("$.message", is("Accept header incorrect")));
     }
 
     @Test
@@ -131,23 +131,24 @@ public class RaceControllerTest {
         InputStream jsonSchema = classLoader.getResourceAsStream("race.schema.json");
 
         mockMvc.perform(get("/events/{eventId}/rounds/{roundId}/races/{raceId}", resultEvent.getId(), resultRound.getId(), resultRace.getId()).header("accept", "application/vnd.senorpez.pcars2.v1+json"))
-                .andExpect(status().isInternalServerError())
+                .andExpect(status().isNotAcceptable())
                 .andExpect(content().string(matchesJsonSchema(jsonSchema)))
-                .andExpect(jsonPath("$.error.code", is("Internal server error.")))
-                .andExpect(jsonPath("$.error.message", is("SERVER_ERROR")));
+                .andExpect(jsonPath("$.code", is("406")))
+                .andExpect(jsonPath("$.message", is("Accept header incorrect")));
     }
 
     @Test
     public void TestGetSingleRace_DoesNotExist() throws Exception {
+        Integer badId = 8675309;
         Event resultEvent = Application.EVENTS.stream().findAny().orElse(null);
         Round resultRound = resultEvent.getRounds().stream().findAny().orElse(null);
         InputStream jsonSchema = classLoader.getResourceAsStream("race.schema.json");
 
-        mockMvc.perform(get("/events/{eventId}/rounds/{roundId}/races/8675309", resultEvent.getId(), resultRound.getId()).header("accept", "application/vnd.senorpez.pcars.v1+json"))
+        mockMvc.perform(get("/events/{eventId}/rounds/{roundId}/races/{raceId}", resultEvent.getId(), resultRound.getId(), badId).header("accept", "application/vnd.senorpez.pcars.v1+json"))
                 .andExpect(status().isNotFound())
                 .andExpect(content().string(matchesJsonSchema(jsonSchema)))
-                .andExpect(jsonPath("$.error.code", is("RACE_NOT_FOUND")))
-                .andExpect(jsonPath("$.error.message", is("Race Not Found.")));
+                .andExpect(jsonPath("$.code", is("404-races-" + badId)))
+                .andExpect(jsonPath("$.message", is("Race with ID of " + badId + " not found")));
     }
 
     @Test
@@ -157,9 +158,9 @@ public class RaceControllerTest {
         InputStream jsonSchema = classLoader.getResourceAsStream("race.schema.json");
 
         mockMvc.perform(get("/events/{eventId}/rounds/{roundId}/races/8675309", resultEvent.getId(), resultRound.getId()).header("accept", "application/vnd.senorpez.pcars2.v1+json"))
-                .andExpect(status().isInternalServerError())
+                .andExpect(status().isNotAcceptable())
                 .andExpect(content().string(matchesJsonSchema(jsonSchema)))
-                .andExpect(jsonPath("$.error.code", is("Internal server error.")))
-                .andExpect(jsonPath("$.error.message", is("SERVER_ERROR")));
+                .andExpect(jsonPath("$.code", is("406")))
+                .andExpect(jsonPath("$.message", is("Accept header incorrect")));
     }
 }

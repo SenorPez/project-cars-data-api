@@ -9,20 +9,14 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 @Relation(value = "car", collectionRelation = "car")
 class Car2 implements Identifiable<Integer> {
-    @JsonProperty("id")
     private final Integer id;
-    @JsonProperty("year")
     private final Integer year;
-    @JsonProperty("manufacturer")
     private final String manufacturer;
-    @JsonProperty("model")
     private final String model;
-    @JsonProperty("verified")
     private final Boolean verified;
-    @JsonProperty("dlc")
     private final String dlc;
 
-    private static AtomicInteger idCounter = new AtomicInteger(0);
+    private static final AtomicInteger idCounter = new AtomicInteger(0);
 
     @JsonCreator
     public Car2(
@@ -42,5 +36,25 @@ class Car2 implements Identifiable<Integer> {
     @Override
     public Integer getId() {
         return id;
+    }
+
+    public Integer getYear() {
+        return year;
+    }
+
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public Boolean getVerified() {
+        return verified;
+    }
+
+    public String getDlc() {
+        return dlc;
     }
 }

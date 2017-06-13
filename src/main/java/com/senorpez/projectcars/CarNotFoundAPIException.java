@@ -1,17 +1,27 @@
 package com.senorpez.projectcars;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 class CarNotFoundAPIException extends APIException {
-    @JsonProperty("status")
     private final Integer status = 404;
-    @JsonProperty("code")
     private final String code;
-    @JsonProperty("message")
-    private final String messageApi;
+    private final String message;
 
     CarNotFoundAPIException(Integer carId) {
         this.code = status.toString() + "-cars-" + carId.toString();
-        this.messageApi = String.format("Car with ID of %d not found", carId);
+        this.message = String.format("Car with ID of %d not found", carId);
+    }
+
+    @Override
+    public Integer getStatus() {
+        return status;
+    }
+
+    @Override
+    public String getCode() {
+        return code;
+    }
+
+    @Override
+    public String getMessage() {
+        return message;
     }
 }

@@ -22,7 +22,7 @@ class Track2 implements Identifiable<Integer> {
     @JsonProperty("verified")
     private final Boolean verified;
 
-    private static AtomicInteger idCounter = new AtomicInteger(0);
+    private static final AtomicInteger idCounter = new AtomicInteger(0);
 
     @JsonCreator
     public Track2(
