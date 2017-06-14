@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-06/schema#",
   "title": "Project CARS 2 Car",
-  "description": "JSON Representation of a Project CARS 2 car",
+  "description": "JSON Representation of multiple Project CARS 2 cars",
   "definitions": {
     "standardLink": {
       "type": "object",
@@ -15,10 +15,70 @@
       "required": [
         "href"
       ]
+    },
+    "car2": {
+      "type": "object",
+      "properties": {
+        "_links": {
+          "type": "object",
+          "properties": {
+            "self": {
+              "$ref": "#/definitions/standardLink"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "self"
+          ]
+        },
+        "dlc": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "type": "integer"
+        },
+        "manufacturer": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "verified": {
+          "description": "Has car been verified against in-game and telemetry data?",
+          "type": "boolean"
+        },
+        "year": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "_links",
+        "dlc",
+        "id",
+        "manufacturer",
+        "model",
+        "verified",
+        "year"
+      ]
     }
   },
   "type": "object",
   "properties": {
+    "_embedded": {
+      "type": "object",
+      "properties": {
+        "pcars:car": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/car2"
+          }
+        }
+      }
+    },
     "_links": {
       "type": "object",
       "properties": {
@@ -26,9 +86,6 @@
           "$ref": "#/definitions/standardLink"
         },
         "index": {
-          "$ref": "#/definitions/standardLink"
-        },
-        "pcars:cars": {
           "$ref": "#/definitions/standardLink"
         },
         "curies": {
@@ -58,41 +115,13 @@
       "required": [
         "self",
         "index",
-        "pcars:cars",
         "curies"
       ]
-    },
-    "dlc": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "id": {
-      "type": "integer"
-    },
-    "manufacturer": {
-      "type": "string"
-    },
-    "model": {
-      "type": "string"
-    },
-    "verified": {
-      "description": "Has car been verified against in-game and telemetry data?",
-      "type": "boolean"
-    },
-    "year": {
-      "type": "integer"
     }
   },
   "additionalProperties": false,
   "required": [
-    "_links",
-    "dlc",
-    "id",
-    "manufacturer",
-    "model",
-    "verified",
-    "year"
+    "_embedded",
+    "_links"
   ]
 }
