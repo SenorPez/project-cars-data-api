@@ -141,9 +141,23 @@
       "dlc": null
     },
     {
+      "year": 2017,
+      "manufacturer": "Mercedes-AMG",
+      "model": "GT R",
+      "verified": false,
+      "dlc": null
+    },
+    {
       "year": 2016,
       "manufacturer": "Porsche",
       "model": "911 GT3 RS (991.1)",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2013,
+      "manufacturer": "Ferrari",
+      "model": "LaFerrari",
       "verified": false,
       "dlc": null
     },
@@ -178,7 +192,7 @@
     {
       "year": 2015,
       "manufacturer": "Ford",
-      "model": "F-150 Vaugh Gittin Jr.'s Ultimate Fun-Haver",
+      "model": "F-150 Vaughn Gittin Jr.'s Ultimate Fun-Haver",
       "verified": false,
       "dlc": null
     },
@@ -199,7 +213,7 @@
     {
       "year": 2014,
       "manufacturer": "Mitsubishi",
-      "model": "Lancer Evlution VI SVA Imports",
+      "model": "Lancer Evolution VI SVA Imports",
       "verified": false,
       "dlc": null
     },
@@ -379,6 +393,13 @@
       "dlc": null
     },
     {
+      "year": 1996,
+      "manufacturer": "Ferrari",
+      "model": "F50 GT",
+      "verified": false,
+      "dlc": null
+    },
+    {
       "year": 1998,
       "manufacturer": "Mercedes-Benz",
       "model": "CLK LM",
@@ -547,6 +568,13 @@
       "dlc": null
     },
     {
+      "year": 2013,
+      "manufacturer": "Lamborghini",
+      "model": "Hurac\u00e1n",
+      "verified": false,
+      "dlc": null
+    },
+    {
       "year": 2015,
       "manufacturer": "McLaren",
       "model": "650S GT3",
@@ -667,8 +695,8 @@
     },
     {
       "year": 1987,
-      "manufacturer": "Sauber",
-      "model": "Mercedes C9",
+      "manufacturer": "Sauber Mercedes",
+      "model": "C9",
       "verified": false,
       "dlc": null
     },
