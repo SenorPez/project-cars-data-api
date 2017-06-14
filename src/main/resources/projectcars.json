@@ -18727,7 +18727,7 @@
           "value": "Road C1"
         }
       ],
-      "verified": false,
+      "verified": true,
       "rounds": [
         {
           "location": "California Highway",
@@ -19167,7 +19167,7 @@
           "value": "320 Turbo Group 5"
         }
       ],
-      "verified": false,
+      "verified": true,
       "rounds": [
         {
           "location": "Hockenheim",
@@ -20515,7 +20515,7 @@
           "value": "Road B"
         }
       ],
-      "verified": false,
+      "verified": true,
       "rounds": [
         {
           "location": "Brands Hatch",
@@ -20855,7 +20855,7 @@
           "value": "CTR3"
         }
       ],
-      "verified": false,
+      "verified": true,
       "rounds": [
         {
           "location": "Road America",
@@ -21250,7 +21250,7 @@
           "value": "Type 98T Renault Turbo"
         }
       ],
-      "verified": false,
+      "verified": true,
       "rounds": [
         {
           "location": "Donington Park",
@@ -21341,7 +21341,7 @@
           "value": "MkIV"
         }
       ],
-      "verified": false,
+      "verified": true,
       "rounds": [
         {
           "location": "Sonoma Raceway",
