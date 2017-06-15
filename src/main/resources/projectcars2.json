@@ -127,6 +127,13 @@
       "dlc": null
     },
     {
+      "year": 2002,
+      "manufacturer": "Ferrari",
+      "model": "Enzo",
+      "verified": false,
+      "dlc": null
+    },
+    {
       "year": 2017,
       "manufacturer": "Ford",
       "model": "GT",
@@ -230,6 +237,13 @@
       "model": "E-Type V12 Group 44",
       "verified": false,
       "dlc": "Motorsport Pack"
+    },
+    {
+      "year": 1971,
+      "manufacturer": "Mercedes-Benz",
+      "model": "300SEL 6.8 AMG",
+      "verified": false,
+      "dlc": null
     },
     {
       "year": 1973,
@@ -701,6 +715,41 @@
       "dlc": null
     },
     {
+      "year": 2000,
+      "manufacturer": "Audi",
+      "model": "R8",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1999,
+      "manufacturer": "BMW",
+      "model": "V12 LMR",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1994,
+      "manufacturer": "Ferrari",
+      "model": "333 SP",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 1999,
+      "manufacturer": "Toyota",
+      "model": "GT-One",
+      "verified": false,
+      "dlc": null
+    },
+    {
+      "year": 2003,
+      "manufacturer": "Bentley",
+      "model": "Speed 8",
+      "verified": false,
+      "dlc": null
+    },
+    {
       "year": 2016,
       "manufacturer": "Ginetta",
       "model": "G57-P2",
@@ -1075,9 +1124,9 @@
     },
     {
       "country": "Germany",
-      "name": "Hockenheimring",
+      "name": "Hockenheimring RX",
       "location": "Hockenheimring",
-      "variation": "",
+      "variation": "RX",
       "verified": false
     },
     {
@@ -1141,6 +1190,20 @@
       "name": "Bannochbrae",
       "location": "Bannochbrae",
       "variation": "",
+      "verified": false
+    },
+    {
+      "country": "Scotland",
+      "name": "Knockhill Racing Circuit International",
+      "location": "Knockhill Racing Circuit",
+      "variation": "International",
+      "verified": false
+    },
+    {
+      "country": "Scotland",
+      "name": "Knockhill Racing Circuit International Reverse",
+      "location": "Knockhill Racing Circuit",
+      "variation": "International Reverse",
       "verified": false
     },
     {
