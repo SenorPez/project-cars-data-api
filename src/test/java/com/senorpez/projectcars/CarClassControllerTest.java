@@ -1,167 +1,233 @@
 package com.senorpez.projectcars;
 
 import org.junit.Before;
+import org.junit.ClassRule;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.experimental.runners.Enclosed;
 import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameter;
+import org.junit.runners.Parameterized.Parameters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit4.rules.SpringClassRule;
+import org.springframework.test.context.junit4.rules.SpringMethodRule;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.context.WebApplicationContext;
 
 import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
+import java.util.stream.Collectors;
 
 import static com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema;
+import static java.nio.charset.StandardCharsets.UTF_8;
 import static org.hamcrest.Matchers.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.http.MediaType.APPLICATION_JSON_UTF8;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppContextSetup;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
+@RunWith(Enclosed.class)
 public class CarClassControllerTest {
-    private MockMvc mockMvc;
-    private static final MediaType contentType = new MediaType("application", "vnd.senorpez.pcars.v1+json", StandardCharsets.UTF_8);
-    private static final ClassLoader classLoader = CarControllerTest.class.getClassLoader();
+    private static final MediaType MEDIA_TYPE = new MediaType("application", "vnd.senorpez.pcars.v1+json", UTF_8);
+    private static final ClassLoader CLASS_LOADER = CarClassControllerTest.class.getClassLoader();
+    private static final String COLLECTION_SCHEMA = "classes.schema.json";
+    private static final String OBJECT_SCHEMA = "class.schema.json";
+    private static final String ERROR_SCHEMA = "error.schema.json";
 
-    @Autowired
-    private WebApplicationContext webApplicationContext;
+    @RunWith(Parameterized.class)
+    @SpringBootTest
+    public static class CarClassControllerTest_Parameterized {
+        private MockMvc mockMvc;
 
-    @Before
-    public void setup() throws Exception {
-        this.mockMvc = webAppContextSetup(webApplicationContext).build();
+        @Autowired
+        private WebApplicationContext webApplicationContext;
+
+        @Before
+        public void setUp() throws Exception {
+            mockMvc = webAppContextSetup(webApplicationContext).build();
+        }
+
+        @ClassRule
+        public static final SpringClassRule SPRING_CLASS_RULE = new SpringClassRule();
+        @Rule
+        public final SpringMethodRule springMethodRule = new SpringMethodRule();
+
+        @Parameter
+        public Integer carClassId;
+        @Parameter(value = 1)
+        public CarClass resultCarClass;
+
+        @Parameters(name = "carClassId: {0}")
+        public static Iterable<Object[]> parameters() {
+            return Application.CAR_CLASSES.stream()
+                    .map(carClass -> new Object[]{carClass.getId(), carClass})
+                    .collect(Collectors.toList());
+        }
+
+        @Test
+        public void GetAllCarClasses_ValidAcceptHeader() throws Exception {
+            InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(COLLECTION_SCHEMA);
+
+            mockMvc.perform(get("/classes").accept(MEDIA_TYPE))
+                    .andExpect(status().isOk())
+                    .andExpect(content().contentType(MEDIA_TYPE))
+                    .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                    .andExpect(jsonPath("$._embedded.pcars:class", hasItem(hasEntry("id", resultCarClass.getId()))))
+                    .andExpect(jsonPath("$._embedded.pcars:class", hasItem(hasEntry("name", resultCarClass.getName()))))
+                    .andExpect(jsonPath("$._embedded.pcars:class", hasItem(
+                            hasEntry(is("_links"),
+                                    hasEntry(is("self"),
+                                            hasEntry("href", "http://localhost/classes/" + resultCarClass.getId()))))))
+                    .andExpect(jsonPath("$._links.self", hasEntry("href", "http://localhost/classes")))
+                    .andExpect(jsonPath("$._links.index", hasEntry("href", "http://localhost/")))
+                    .andExpect(jsonPath("$._links.curies", everyItem(
+                            allOf(
+                                    hasEntry("href", (Object) "http://localhost/{rel}"),
+                                    hasEntry("name", (Object) "pcars"),
+                                    hasEntry("templated", (Object) true)))));
+        }
+
+        @Test
+        public void GetAllCarClasses_FallbackHeader() throws Exception {
+            InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(COLLECTION_SCHEMA);
+
+            mockMvc.perform(get("/classes").accept(APPLICATION_JSON_UTF8))
+                    .andExpect(status().isOk())
+                    .andExpect(content().contentType(APPLICATION_JSON_UTF8))
+                    .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                    .andExpect(jsonPath("$._embedded.pcars:class", hasItem(hasEntry("id", resultCarClass.getId()))))
+                    .andExpect(jsonPath("$._embedded.pcars:class", hasItem(hasEntry("name", resultCarClass.getName()))))
+                    .andExpect(jsonPath("$._embedded.pcars:class", hasItem(
+                            hasEntry(is("_links"),
+                                    hasEntry(is("self"),
+                                            hasEntry("href", "http://localhost/classes/" + resultCarClass.getId()))))))
+                    .andExpect(jsonPath("$._links.self", hasEntry("href", "http://localhost/classes")))
+                    .andExpect(jsonPath("$._links.index", hasEntry("href", "http://localhost/")))
+                    .andExpect(jsonPath("$._links.curies", everyItem(
+                            allOf(
+                                    hasEntry("href", (Object) "http://localhost/{rel}"),
+                                    hasEntry("name", (Object) "pcars"),
+                                    hasEntry("templated", (Object) true)))));
+        }
+
+        @Test
+        public void GetSingleCarClass_ValidId_ValidAcceptHeader() throws Exception {
+            InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(OBJECT_SCHEMA);
+
+            mockMvc.perform(get("/classes/{carClassId}", resultCarClass.getId()).accept(MEDIA_TYPE))
+                    .andExpect(status().isOk())
+                    .andExpect(content().contentType(MEDIA_TYPE))
+                    .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                    .andExpect(jsonPath("$.id", is(resultCarClass.getId())))
+                    .andExpect(jsonPath("$.name", is(resultCarClass.getName())))
+                    .andExpect(jsonPath("$._links.self", hasEntry("href", "http://localhost/classes/" + resultCarClass.getId())))
+                    .andExpect(jsonPath("$._links.index", hasEntry("href", "http://localhost/")))
+                    .andExpect(jsonPath("$._links.pcars:classes", hasEntry("href", "http://localhost/classes")))
+                    .andExpect(jsonPath("$._links.curies", everyItem(
+                            allOf(
+                                    hasEntry("href", (Object) "http://localhost/{rel}"),
+                                    hasEntry("name", (Object) "pcars"),
+                                    hasEntry("templated", (Object) true)))));
+        }
+
+        @Test
+        public void GetSingleCarClass_ValidId_FallbackHeader() throws Exception {
+            InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(OBJECT_SCHEMA);
+
+            mockMvc.perform(get("/classes/{carClassId}", resultCarClass.getId()).accept(APPLICATION_JSON_UTF8))
+                    .andExpect(status().isOk())
+                    .andExpect(content().contentType(APPLICATION_JSON_UTF8))
+                    .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                    .andExpect(jsonPath("$.id", is(resultCarClass.getId())))
+                    .andExpect(jsonPath("$.name", is(resultCarClass.getName())))
+                    .andExpect(jsonPath("$._links.self", hasEntry("href", "http://localhost/classes/" + resultCarClass.getId())))
+                    .andExpect(jsonPath("$._links.index", hasEntry("href", "http://localhost/")))
+                    .andExpect(jsonPath("$._links.pcars:classes", hasEntry("href", "http://localhost/classes")))
+                    .andExpect(jsonPath("$._links.curies", everyItem(
+                            allOf(
+                                    hasEntry("href", (Object) "http://localhost/{rel}"),
+                                    hasEntry("name", (Object) "pcars"),
+                                    hasEntry("templated", (Object) true)))));
+        }
+
+        @Test
+        public void GetSingleCarClass_ValidId_InvalidAcceptHeader() throws Exception {
+            MediaType contentType = new MediaType("application", "vnd.senorpez.badrequest+json", UTF_8);
+            InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
+
+            mockMvc.perform(get("/classes/{carClassId}", resultCarClass.getId()).accept(contentType))
+                    .andExpect(status().isNotAcceptable())
+                    .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                    .andExpect(jsonPath("$.code", is("406")))
+                    .andExpect(jsonPath("$.message", is("Accept header incorrect")));
+        }
     }
 
-    @Test
-    public void TestGetAllCarClasses() throws Exception {
-        InputStream jsonSchema = classLoader.getResourceAsStream("classes.schema.json");
+    @SpringBootTest
+    public static class CarClassControllerTest_Single {
+        private MockMvc mockMvc;
 
-        mockMvc.perform(get("/classes").header("accept", "application/vnd.senorpez.pcars.v1+json"))
-                .andExpect(status().isOk())
-                .andExpect(content().contentType(contentType))
-                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
-                .andExpect(jsonPath("$._embedded.pcars:class", hasSize(47)))
-                .andExpect(jsonPath("$._links.self", hasEntry("href", "http://localhost/classes")))
-                .andExpect(jsonPath("$._links.index", hasEntry("href", "http://localhost/")))
-                .andExpect(jsonPath("$._links.curies", hasSize(1)))
-                .andExpect(jsonPath("$._links.curies[0]", both(allOf(
-                        hasEntry("href", "http://localhost/{rel}"),
-                        hasEntry("name", "pcars")))
-                        .and(hasEntry("templated", true))));
-    }
+        @Autowired
+        private WebApplicationContext webApplicationContext;
 
-    @Test
-    public void TestGetAllCarClasses_JsonFallback() throws Exception {
-        InputStream jsonSchema = classLoader.getResourceAsStream("classes.schema.json");
+        @Before
+        public void setUp() throws Exception {
+            mockMvc = webAppContextSetup(webApplicationContext).build();
+        }
 
-        mockMvc.perform(get("/classes").header("accept", "application/json"))
-                .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
-                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
-                .andExpect(jsonPath("$._embedded.pcars:class", hasSize(47)))
-                .andExpect(jsonPath("$._links.self", hasEntry("href", "http://localhost/classes")))
-                .andExpect(jsonPath("$._links.index", hasEntry("href", "http://localhost/")))
-                .andExpect(jsonPath("$._links.curies", hasSize(1)))
-                .andExpect(jsonPath("$._links.curies[0]", both(allOf(
-                        hasEntry("href", "http://localhost/{rel}"),
-                        hasEntry("name", "pcars")))
-                        .and(hasEntry("templated", true))));
-    }
+        @ClassRule
+        public static final SpringClassRule SPRING_CLASS_RULE = new SpringClassRule();
+        @Rule
+        public final SpringMethodRule springMethodRule = new SpringMethodRule();
 
-    @Test
-    public void TestGetAllCarClasses_InvalidAcceptHeader() throws Exception {
-        InputStream jsonSchema = classLoader.getResourceAsStream("error.schema.json");
+        @Test
+        public void GetAllCarClasses_InvalidAcceptHeader() throws Exception {
+            MediaType contentType = new MediaType("application", "vnd.senorpez.badrequest+json", UTF_8);
+            InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
 
-        mockMvc.perform(get("/classes").header("accept", "application/vnd.senorpez.pcars2.v1+json"))
-                .andExpect(status().isNotAcceptable())
-                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
-                .andExpect(jsonPath("$.code", is("406")))
-                .andExpect(jsonPath("$.message", is("Accept header incorrect")));
-    }
+            mockMvc.perform(get("/classes").accept(contentType))
+                    .andExpect(status().isNotAcceptable())
+                    .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                    .andExpect(jsonPath("$.code", is("406")))
+                    .andExpect(jsonPath("$.message", is("Accept header incorrect")));
+        }
 
-    @Test
-    public void TestGetSingleCarClass_Exists() throws Exception {
-        CarClass resultClass = Application.CAR_CLASSES.stream().findAny().orElse(null);
+        @Test
+        public void GetSingleCarClass_InvalidId_ValidAcceptHeader() throws Exception {
+            Integer badId = 8675309;
+            InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
 
-        InputStream jsonSchema = classLoader.getResourceAsStream("class.schema.json");
+            mockMvc.perform(get("/classes/{carClassId}", badId).accept(MEDIA_TYPE))
+                    .andExpect(status().isNotFound())
+                    .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                    .andExpect(jsonPath("$.code", is("404-classes-" + badId)))
+                    .andExpect(jsonPath("$.message", is("Car class with ID of " + badId + " not found")));
+        }
 
-        mockMvc.perform(get("/classes/{classId}", resultClass.getId()).header("accept", "application/vnd.senorpez.pcars.v1+json"))
-                .andExpect(status().isOk())
-                .andExpect(content().contentType(contentType))
-                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
-                .andExpect(jsonPath("$.id", is(resultClass.getId())))
-                .andExpect(jsonPath("$.name", is(resultClass.getName())))
-                .andExpect(jsonPath("$._links.self", hasEntry("href", "http://localhost/classes/" + resultClass.getId())))
-                .andExpect(jsonPath("$._links.index", hasEntry("href", "http://localhost/")))
-                .andExpect(jsonPath("$._links.pcars:classes", hasEntry("href", "http://localhost/classes")))
-                .andExpect(jsonPath("$._links.curies", hasSize(1)))
-                .andExpect(jsonPath("$._links.curies[0]", both(allOf(
-                        hasEntry("href", "http://localhost/{rel}"),
-                        hasEntry("name", "pcars")))
-                        .and(hasEntry("templated", true))));
-    }
+        @Test
+        public void GetSingleCarClass_InvalidId_FallbackHeader() throws Exception {
+            Integer badId = 8675309;
+            InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
 
-    @Test
-    public void TestGetSingleClass_Exists_JsonFallback() throws Exception {
-        CarClass resultClass = Application.CAR_CLASSES.stream().findAny().orElse(null);
+            mockMvc.perform(get("/classes/{carClassId}", badId).accept(APPLICATION_JSON_UTF8))
+                    .andExpect(status().isNotFound())
+                    .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                    .andExpect(jsonPath("$.code", is("404-classes-" + badId)))
+                    .andExpect(jsonPath("$.message", is("Car class with ID of " + badId + " not found")));
+        }
 
-        InputStream jsonSchema = classLoader.getResourceAsStream("class.schema.json");
+        @Test
+        public void GetSingleCarClass_InvalidId_InvalidAcceptHeader() throws Exception {
+            MediaType contentType = new MediaType("application", "vnd.senorpez.badrequest+json", UTF_8);
+            InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
 
-        mockMvc.perform(get("/classes/{classId}", resultClass.getId()).header("accept", "application/json"))
-                .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
-                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
-                .andExpect(jsonPath("$.id", is(resultClass.getId())))
-                .andExpect(jsonPath("$.name", is(resultClass.getName())))
-                .andExpect(jsonPath("$._links.self", hasEntry("href", "http://localhost/classes/" + resultClass.getId())))
-                .andExpect(jsonPath("$._links.index", hasEntry("href", "http://localhost/")))
-                .andExpect(jsonPath("$._links.pcars:classes", hasEntry("href", "http://localhost/classes")))
-                .andExpect(jsonPath("$._links.curies", hasSize(1)))
-                .andExpect(jsonPath("$._links.curies[0]", both(allOf(
-                        hasEntry("href", "http://localhost/{rel}"),
-                        hasEntry("name", "pcars")))
-                        .and(hasEntry("templated", true))));
-    }
-
-    @Test
-    public void TestGetSingleCarClass_Exists_InvalidAcceptHeader() throws Exception {
-        CarClass resultClass = Application.CAR_CLASSES.stream().findAny().orElse(null);
-
-        InputStream jsonSchema = classLoader.getResourceAsStream("error.schema.json");
-
-        mockMvc.perform(get("/classes/{classId}", resultClass.getId()).header("accept", "application/vnd.senorpez.pcars2.v1+json"))
-                .andExpect(status().isNotAcceptable())
-                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
-                .andExpect(jsonPath("$.code", is("406")))
-                .andExpect(jsonPath("$.message", is("Accept header incorrect")));
-
-    }
-
-    @Test
-    public void TestGetSingleCarClass_DoesNotExist() throws Exception {
-        InputStream jsonSchema = classLoader.getResourceAsStream("error.schema.json");
-        Integer badId = 1;
-
-        mockMvc.perform(get("/classes/{classId}", badId).header("accept", "application/vnd.senorpez.pcars.v1+json"))
-                .andExpect(status().isNotFound())
-                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
-                .andExpect(jsonPath("$.code", is("404-classes-" + badId)))
-                .andExpect(jsonPath("$.message", is("Car class with ID of " + badId + " not found")));
-
-    }
-
-    @Test
-    public void TestGetSingleCarClass_DoesNotExist_InvalidAcceptHeader() throws Exception {
-        InputStream jsonSchema = classLoader.getResourceAsStream("error.schema.json");
-
-        mockMvc.perform(get("/classes/1").header("accept", "application/vnd.senorpez.pcars2.v1+json"))
-                .andExpect(status().isNotAcceptable())
-                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
-                .andExpect(jsonPath("$.code", is("406")))
-                .andExpect(jsonPath("$.message", is("Accept header incorrect")));
+            mockMvc.perform(get("/classes/8675309").accept(contentType))
+                    .andExpect(status().isNotAcceptable())
+                    .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                    .andExpect(jsonPath("$.code", is("406")))
+                    .andExpect(jsonPath("$.message", is("Accept header incorrect")));
+        }
     }
 }

@@ -7,9 +7,7 @@ import org.springframework.hateoas.core.Relation;
 
 @Relation(value = "class", collectionRelation = "class")
 class CarClass implements Identifiable<Integer> {
-    @JsonProperty("id")
     private final Integer id;
-    @JsonProperty("name")
     private final String name;
 
     @JsonCreator
@@ -25,7 +23,7 @@ class CarClass implements Identifiable<Integer> {
         return id;
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 

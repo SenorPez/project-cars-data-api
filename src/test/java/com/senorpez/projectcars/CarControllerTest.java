@@ -247,6 +247,18 @@ public class CarControllerTest {
         }
 
         @Test
+        public void GetSingleCar_InvalidId_FallbackHeader() throws Exception {
+            Integer badId = 8675309;
+            InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
+
+            mockMvc.perform(get("/cars/{carId}", badId).accept(APPLICATION_JSON_UTF8))
+                    .andExpect(status().isNotFound())
+                    .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                    .andExpect(jsonPath("$.code", is("404-cars-" + badId)))
+                    .andExpect(jsonPath("$.message", is("Car with ID of " + badId + " not found")));
+        }
+
+        @Test
         public void GetSingleCar_InvalidId_InvalidAcceptHeader() throws Exception {
             MediaType contentType = new MediaType("application", "vnd.senorpez.badrequest+json", UTF_8);
             InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
