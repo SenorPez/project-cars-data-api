@@ -50,7 +50,7 @@ class Track2Controller {
                     value = "ID of track to return",
                     required = true)
             @PathVariable final Integer trackId) {
-        IdentifiableResourceAssembler<Track2, Resource> assembler = new IdentifiableResourceAssembler<>(Track2.class, Resource.class);
+        IdentifiableResourceAssembler<Track2, Resource> assembler = new IdentifiableResourceAssembler<>(Track2Controller.class, Resource.class);
         Resource resource = assembler.toResource(Application.TRACKS2.parallelStream()
                 .filter(track -> track.getId().equals(trackId))
                 .findAny()

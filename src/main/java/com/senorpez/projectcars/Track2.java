@@ -9,17 +9,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 @Relation(value = "track", collectionRelation = "track")
 class Track2 implements Identifiable<Integer> {
-    @JsonProperty("id")
     private final Integer id;
-    @JsonProperty("country")
     private final String country;
-    @JsonProperty("name")
     private final String name;
-    @JsonProperty("location")
     private final String location;
-    @JsonProperty("variation")
     private final String variation;
-    @JsonProperty("verified")
     private final Boolean verified;
 
     private static final AtomicInteger idCounter = new AtomicInteger(0);
@@ -42,5 +36,25 @@ class Track2 implements Identifiable<Integer> {
     @Override
     public Integer getId() {
         return id;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public String getVariation() {
+        return variation;
+    }
+
+    public Boolean getVerified() {
+        return verified;
     }
 }
