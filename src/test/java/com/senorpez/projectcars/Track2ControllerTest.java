@@ -1,7 +1,5 @@
 package com.senorpez.projectcars;
 
-import jdk.internal.util.xml.impl.Input;
-import org.hamcrest.Matchers;
 import org.junit.Before;
 import org.junit.ClassRule;
 import org.junit.Rule;
