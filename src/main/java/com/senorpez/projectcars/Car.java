@@ -11,49 +11,27 @@ import java.util.Set;
 
 @Relation(value = "car", collectionRelation = "car")
 class Car implements Identifiable<Integer> {
-    @JsonProperty("id")
     private final Integer id;
-    @JsonProperty("manufacturer")
     private final String manufacturer;
-    @JsonProperty("model")
     private final String model;
-    @JsonProperty("country")
     private final String country;
-    @JsonProperty("carClass")
     private final CarClass carClass;
-    @JsonProperty("year")
     private final Integer year;
-    @JsonProperty("drivetrain")
     private final Drivetrain drivetrain;
-    @JsonProperty("enginePosition")
     private final EnginePosition enginePosition;
-    @JsonProperty("engineType")
     private final String engineType;
-    @JsonProperty("topSpeed")
     private final Integer topSpeed;
-    @JsonProperty("horsepower")
     private final Integer horsepower;
-    @JsonProperty("acceleration")
     private final Float acceleration;
-    @JsonProperty("braking")
     private final Float braking;
-    @JsonProperty("weight")
     private final Integer weight;
-    @JsonProperty("torque")
     private final Integer torque;
-    @JsonProperty("weightBalance")
     private final Integer weightBalance;
-    @JsonProperty("wheelbase")
     private final Float wheelbase;
-    @JsonProperty("shiftPattern")
     private final ShiftPattern shiftPattern;
-    @JsonProperty("shifter")
     private final Shifter shifter;
-    @JsonProperty("gears")
     private final Integer gears;
-    @JsonProperty("dlc")
     private final String dlc;
-    @JsonProperty("liveries")
     private final Set<Livery> liveries;
 
     enum Drivetrain {
@@ -157,87 +135,91 @@ class Car implements Identifiable<Integer> {
         return id;
     }
 
-    String getManufacturer() {
+    public String getManufacturer() {
         return manufacturer;
     }
 
-    String getModel() {
+    public String getModel() {
         return model;
     }
 
-    String getCountry() {
+    public String getCountry() {
         return country;
     }
 
-    CarClass getCarClass() {
+    public CarClass getCarClass() {
         return carClass;
     }
 
-    Integer getYear() {
+    public Integer getYear() {
         return year;
     }
 
-    Drivetrain getDrivetrain() {
+    public Drivetrain getDrivetrain() {
         return drivetrain;
     }
 
-    EnginePosition getEnginePosition() {
+    public EnginePosition getEnginePosition() {
         return enginePosition;
     }
 
-    String getEngineType() {
+    public String getEngineType() {
         return engineType;
     }
 
-    Integer getTopSpeed() {
+    public Integer getTopSpeed() {
         return topSpeed;
     }
 
-    Integer getHorsepower() {
+    public Integer getHorsepower() {
         return horsepower;
     }
 
-    Float getAcceleration() {
+    public Float getAcceleration() {
         return acceleration;
     }
 
-    Float getBraking() {
+    public Float getBraking() {
         return braking;
     }
 
-    Integer getWeight() {
+    public Integer getWeight() {
         return weight;
     }
 
-    Integer getTorque() {
+    public Integer getTorque() {
         return torque;
     }
 
-    Integer getWeightBalance() {
+    public Integer getWeightBalance() {
         return weightBalance;
     }
 
-    Float getWheelbase() {
+    public Float getWheelbase() {
         return wheelbase;
     }
 
-    ShiftPattern getShiftPattern() {
+    public ShiftPattern getShiftPattern() {
         return shiftPattern;
     }
 
-    Shifter getShifter() {
+    public Shifter getShifter() {
         return shifter;
     }
 
-    Integer getGears() {
+    public Integer getGears() {
         return gears;
     }
 
-    String getDlc() {
+    public String getDlc() {
         return dlc;
     }
 
-    Set<Livery> getLiveries() {
+    public Set<Livery> getLiveries() {
         return liveries;
+    }
+
+    public String getName() {
+        return String.join(" ", manufacturer, model);
     }
 }

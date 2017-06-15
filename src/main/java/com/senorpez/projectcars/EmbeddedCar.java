@@ -13,7 +13,7 @@ class EmbeddedCar implements Identifiable<Integer> {
 
     EmbeddedCar(Car car) {
         this.id = car.getId();
-        this.carName = String.join(" ", car.getManufacturer(), car.getModel());
+        this.carName = car.getName();
     }
 
     @Override

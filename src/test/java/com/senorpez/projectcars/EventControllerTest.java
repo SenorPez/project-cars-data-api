@@ -176,7 +176,7 @@ public class EventControllerTest {
     @Test
     public void TestGetAllEventCars() throws Exception {
         Event resultEvent = Application.EVENTS.stream().findAny().orElse(null);
-        InputStream jsonSchema = classLoader.getResourceAsStream("eventcars.schema.json");
+        InputStream jsonSchema = classLoader.getResourceAsStream("cars.schema.json");
 
         mockMvc.perform(get("/events/{eventId}/cars", resultEvent.getId()).header("accept", "application/vnd.senorpez.pcars.v1+json"))
                 .andExpect(status().isOk())
@@ -195,7 +195,7 @@ public class EventControllerTest {
     @Test
     public void TestGetAllEventCars_JsonFallback() throws Exception {
         Event resultEvent = Application.EVENTS.stream().findAny().orElse(null);
-        InputStream jsonSchema = classLoader.getResourceAsStream("eventcars.schema.json");
+        InputStream jsonSchema = classLoader.getResourceAsStream("cars.schema.json");
 
         mockMvc.perform(get("/events/{eventId}/cars", resultEvent.getId()).header("accept", "application/json"))
                 .andExpect(status().isOk())
@@ -228,7 +228,7 @@ public class EventControllerTest {
         Event resultEvent = Application.EVENTS.stream().findAny().orElse(null);
         Car resultCar = resultEvent.getCars().stream().findAny().orElse(null);
 
-        InputStream jsonSchema = classLoader.getResourceAsStream("eventcar.schema.json");
+        InputStream jsonSchema = classLoader.getResourceAsStream("car.schema.json");
 
         mockMvc.perform(get("/events/{eventId}/cars/{carId}", resultEvent.getId(), resultCar.getId()).header("accept", "application/vnd.senorpez.pcars.v1+json"))
                 .andExpect(status().isOk())
@@ -273,7 +273,7 @@ public class EventControllerTest {
         Event resultEvent = Application.EVENTS.stream().findAny().orElse(null);
         Car resultCar = resultEvent.getCars().stream().findAny().orElse(null);
 
-        InputStream jsonSchema = classLoader.getResourceAsStream("eventcar.schema.json");
+        InputStream jsonSchema = classLoader.getResourceAsStream("car.schema.json");
 
         mockMvc.perform(get("/events/{eventId}/cars/{carId}", resultEvent.getId(), resultCar.getId()).header("accept", "application/json"))
                 .andExpect(status().isOk())

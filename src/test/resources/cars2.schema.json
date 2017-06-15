@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "title": "Project CARS 2 Car",
+  "title": "Project CARS 2 Cars",
   "description": "JSON Representation of multiple Project CARS 2 cars",
   "definitions": {
     "standardLink": {

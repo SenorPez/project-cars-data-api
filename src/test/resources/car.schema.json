@@ -1,193 +1,171 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "definitions": {},
-  "id": "http://projectcars.senorpez.com/cars/carId",
-  "properties": {
-    "_embedded": {
-      "id": "/properties/_embedded",
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Project CARS Car",
+  "description": "JSON Representation of a Project CARS car",
+  "definitions": {
+    "standardLink": {
+      "type": "object",
       "properties": {
-        "pcars:class": {
-          "id": "/properties/_embedded/properties/pcars:class",
-          "items": {
-            "id": "/properties/_embedded/properties/pcars:class/items",
-            "properties": {
-              "_links": {
-                "id": "/properties/_embedded/properties/pcars:class/items/properties/_links",
-                "properties": {
-                  "self": {
-                    "id": "/properties/_embedded/properties/pcars:class/items/properties/_links/properties/self",
-                    "properties": {
-                      "href": {
-                        "id": "/properties/_embedded/properties/pcars:class/items/properties/_links/properties/self/properties/href",
-                        "type": "string"
-                      }
-                    },
-                    "type": "object"
-                  }
-                },
-                "type": "object"
-              },
-              "id": {
-                "id": "/properties/_embedded/properties/pcars:class/items/properties/id",
-                "type": "integer"
-              },
-              "name": {
-                "id": "/properties/_embedded/properties/pcars:class/items/properties/name",
-                "type": "string"
-              }
-            },
-            "type": "object"
-          },
-          "type": "array"
+        "href": {
+          "type": "string",
+          "pattern": "^http[s]?://[a-z.]+((/[a-z0-9-]+)+|/)$"
         }
       },
-      "type": "object"
-    },
+      "additionalProperties": false,
+      "required": [
+        "href"
+      ]
+    }
+  },
+  "type": "object",
+  "properties": {
     "_links": {
-      "id": "/properties/_links",
+      "type": "object",
       "properties": {
+        "self": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/standardLink"
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/standardLink"
+              }
+            }
+          ]
+        },
+        "index": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "pcars:cars": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "pcars:class": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "pcars:liveries": {
+          "$ref": "#/definitions/standardLink"
+        },
         "curies": {
-          "id": "/properties/_links/properties/curies",
+          "type": "array",
           "items": {
-            "id": "/properties/_links/properties/curies/items",
             "properties": {
               "href": {
-                "id": "/properties/_links/properties/curies/items/properties/href",
                 "type": "string"
               },
               "name": {
-                "id": "/properties/_links/properties/curies/items/properties/name",
                 "type": "string"
               },
               "templated": {
-                "id": "/properties/_links/properties/curies/items/properties/templated",
                 "type": "boolean"
               }
             },
-            "type": "object"
-          },
-          "type": "array"
-        },
-        "index": {
-          "id": "/properties/_links/properties/index",
-          "properties": {
-            "href": {
-              "id": "/properties/_links/properties/index/properties/href",
-              "type": "string"
-            }
-          },
-          "type": "object"
-        },
-        "pcars:cars": {
-          "id": "/properties/_links/properties/pcars:cars",
-          "properties": {
-            "href": {
-              "id": "/properties/_links/properties/pcars:cars/properties/href",
-              "type": "string"
-            }
-          },
-          "type": "object"
-        },
-        "self": {
-          "id": "/properties/_links/properties/self",
-          "properties": {
-            "href": {
-              "id": "/properties/_links/properties/self/properties/href",
-              "type": "string"
-            }
-          },
-          "type": "object"
+            "additionalProperties": false,
+            "required": [
+              "href",
+              "name",
+              "templated"
+            ]
+          }
         }
       },
-      "type": "object"
+      "additionalProperties": false,
+      "required": [
+        "self",
+        "index",
+        "pcars:cars",
+        "pcars:class",
+        "pcars:liveries",
+        "curies"
+      ]
     },
     "acceleration": {
-      "id": "/properties/acceleration",
       "type": "number"
     },
     "braking": {
-      "id": "/properties/braking",
       "type": "number"
     },
-    "carClass": {
-      "id": "/properties/carClass",
-      "type": "string"
-    },
     "country": {
-      "id": "/properties/country",
       "type": "string"
     },
     "dlc": {
-      "id": "/properties/dlc",
       "type": [
         "string",
         "null"
       ]
     },
     "drivetrain": {
-      "id": "/properties/drivetrain",
       "type": "string"
     },
     "enginePosition": {
-      "id": "/properties/enginePosition",
       "type": "string"
     },
     "engineType": {
-      "id": "/properties/engineType",
       "type": "string"
     },
     "gears": {
-      "id": "/properties/gears",
       "type": "integer"
     },
     "horsepower": {
-      "id": "/properties/horsepower",
       "type": "integer"
     },
     "id": {
-      "id": "/properties/id",
       "type": "integer"
     },
     "manufacturer": {
-      "id": "/properties/manufacturer",
       "type": "string"
     },
     "model": {
-      "id": "/properties/model",
-      "type": "string"
-    },
-    "shiftPattern": {
-      "id": "/properties/shiftPattern",
       "type": "string"
     },
     "shifter": {
-      "id": "/properties/shifter",
+      "type": "string"
+    },
+    "shiftPattern": {
       "type": "string"
     },
     "topSpeed": {
-      "id": "/properties/topSpeed",
       "type": "integer"
     },
     "torque": {
-      "id": "/properties/torque",
       "type": "integer"
     },
     "weight": {
-      "id": "/properties/weight",
       "type": "integer"
     },
     "weightBalance": {
-      "id": "/properties/weightBalance",
       "type": "integer"
     },
     "wheelbase": {
-      "id": "/properties/wheelbase",
       "type": "number"
     },
     "year": {
-      "id": "/properties/year",
       "type": "integer"
     }
   },
-  "type": "object"
+  "additionalProperties": false,
+  "required": [
+    "_links",
+    "acceleration",
+    "braking",
+    "country",
+    "dlc",
+    "drivetrain",
+    "enginePosition",
+    "engineType",
+    "gears",
+    "horsepower",
+    "id",
+    "manufacturer",
+    "model",
+    "shifter",
+    "shiftPattern",
+    "topSpeed",
+    "torque",
+    "weight",
+    "weightBalance",
+    "wheelbase",
+    "year"
+  ]
 }
