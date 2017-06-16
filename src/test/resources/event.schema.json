@@ -1,105 +1,97 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "definitions": {},
-  "id": "http://www.projectcars.senorpez.com/",
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Project CARS Event",
+  "description": "JSON Representation of a Project CARS single player event",
+  "definitions": {
+    "standardLink": {
+      "type": "object",
+      "properties": {
+        "href": {
+          "type": "string",
+          "pattern": "^http[s]?://[a-z.]+((/[a-z0-9-]+)+|/)$"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "href"
+      ]
+    }
+  },
+  "type": "object",
   "properties": {
     "_links": {
-      "id": "/properties/_links",
+      "type": "object",
       "properties": {
+        "self": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "index": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "pcars:cars": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "pcars:events": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "pcars:rounds": {
+          "$ref": "#/definitions/standardLink"
+        },
         "curies": {
-          "id": "/properties/_links/properties/curies",
+          "type": "array",
           "items": {
-            "id": "/properties/_links/properties/curies/items",
             "properties": {
               "href": {
-                "id": "/properties/_links/properties/curies/items/properties/href",
                 "type": "string"
               },
               "name": {
-                "id": "/properties/_links/properties/curies/items/properties/name",
                 "type": "string"
               },
               "templated": {
-                "id": "/properties/_links/properties/curies/items/properties/templated",
                 "type": "boolean"
               }
             },
-            "type": "object"
-          },
-          "type": "array"
-        },
-        "index": {
-          "id": "/properties/_links/properties/index",
-          "properties": {
-            "href": {
-              "id": "/properties/_links/properties/index/properties/href",
-              "type": "string"
-            }
-          },
-          "type": "object"
-        },
-        "pcars:cars": {
-          "id": "/properties/_links/properties/pcars:cars",
-          "properties": {
-            "href": {
-              "id": "/properties/_links/properties/pcars:cars/properties/href",
-              "type": "string"
-            }
-          },
-          "type": "object"
-        },
-        "pcars:events": {
-          "id": "/properties/_links/properties/pcars:events",
-          "properties": {
-            "href": {
-              "id": "/properties/_links/properties/pcars:events/properties/href",
-              "type": "string"
-            }
-          },
-          "type": "object"
-        },
-        "pcars:rounds": {
-          "id": "/properties/_links/properties/pcars:rounds",
-          "properties": {
-            "href": {
-              "id": "/properties/_links/properties/pcars:rounds/properties/href",
-              "type": "string"
-            }
-          },
-          "type": "object"
-        },
-        "self": {
-          "id": "/properties/_links/properties/self",
-          "properties": {
-            "href": {
-              "id": "/properties/_links/properties/self/properties/href",
-              "type": "string"
-            }
-          },
-          "type": "object"
+            "additionalProperties": false,
+            "required": [
+              "href",
+              "name",
+              "templated"
+            ]
+          }
         }
       },
-      "type": "object"
+      "additionalProperties": false,
+      "required": [
+        "self",
+        "index",
+        "pcars:cars",
+        "pcars:events",
+        "pcars:rounds",
+        "curies"
+      ]
     },
     "id": {
-      "id": "/properties/id",
       "type": "integer"
     },
     "name": {
-      "id": "/properties/name",
       "type": "string"
     },
     "tier": {
-      "id": "/properties/tier",
       "type": [
         "integer",
         "null"
       ]
     },
     "verified": {
-      "id": "/properties/verified",
       "type": "boolean"
     }
   },
-  "type": "object"
+  "additionalProperties": false,
+  "required": [
+    "_links",
+    "id",
+    "name",
+    "tier",
+    "verified"
+  ]
 }

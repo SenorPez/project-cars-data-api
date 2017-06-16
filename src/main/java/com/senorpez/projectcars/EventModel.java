@@ -17,7 +17,7 @@ class EventModel implements Identifiable<Integer> {
         this.id = event.getId();
         this.name = event.getName();
         this.tier = event.getTier();
-        this.verified = event.isVerified();
+        this.verified = event.getVerified();
     }
 
     @Override

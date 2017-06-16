@@ -12,17 +12,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 @Relation(value = "event", collectionRelation = "event")
 class Event implements Identifiable<Integer> {
-    @JsonProperty("id")
     private final Integer id;
-    @JsonProperty("name")
     private final String name;
-    @JsonProperty("tier")
     private final Integer tier;
-    @JsonProperty("cars")
     private final Set<Car> cars;
-    @JsonProperty("rounds")
     private final Set<Round> rounds;
-    @JsonProperty("verified")
     private final Boolean verified;
 
     private final static AtomicInteger eventId = new AtomicInteger(0);
@@ -58,23 +52,23 @@ class Event implements Identifiable<Integer> {
         return id;
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
-    Integer getTier() {
+    public Integer getTier() {
         return tier;
     }
 
-    Boolean isVerified() {
-        return verified;
-    }
-
-    Set<Car> getCars() {
+    public Set<Car> getCars() {
         return cars;
     }
 
-    Set<Round> getRounds() {
+    public Set<Round> getRounds() {
         return rounds;
+    }
+
+    public Boolean getVerified() {
+        return verified;
     }
 }
