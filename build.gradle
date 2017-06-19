@@ -49,4 +49,8 @@ jacocoTestReport {
 
 test {
     maxParallelForks = Runtime.runtime.availableProcessors().intdiv(2) ?: 1
+    testLogging {
+        events "started", "failed"
+        exceptionFormat "short"
+    }
 }
