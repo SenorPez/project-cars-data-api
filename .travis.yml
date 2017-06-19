@@ -19,4 +19,4 @@ after_success:
   - bash <(curl -s https://codecov.io/bash)
 
 script:
-  /usr/bin/time -v ./gradlew build --info
+  ./gradlew build --console=plain
