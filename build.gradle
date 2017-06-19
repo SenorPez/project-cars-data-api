@@ -48,10 +48,11 @@ jacocoTestReport {
 }
 
 test {
-    maxParallelForks = 2
     testLogging {
         displayGranularity 0
         events "started", "failed"
         exceptionFormat "short"
+        maxGranularity 2
+        minGranularity 2
     }
 }
