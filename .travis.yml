@@ -17,3 +17,6 @@ before_install:
 after_success:
   - if [ -e ./gradlew ]; then ./gradlew jacocoTestReport;else gradle jacocoTestReport;fi
   - bash <(curl -s https://codecov.io/bash)
+
+script:
+  /usr/bin/time -v ./gradlew build --info
