@@ -19,4 +19,4 @@ after_success:
   - bash <(curl -s https://codecov.io/bash)
 
 script:
-  ./gradlew build --console=plain
+  ./gradlew check --console=plain --stacktrace

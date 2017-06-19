@@ -46,3 +46,7 @@ jacocoTestReport {
         html.enabled = false
     }
 }
+
+test {
+    maxParallelForks = Runtime.runtime.availableProcessors().intdiv(2) ?: 1
+}
