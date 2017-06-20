@@ -15576,7 +15576,7 @@
           "value": "Clio Cup"
         }
       ],
-      "verified": false,
+      "verified": true,
       "rounds": [
         {
           "location": "Donington Park",
@@ -15585,12 +15585,12 @@
             {
               "laps": 16,
               "time": null,
-              "type": "Sprint Race"
+              "type": "Race 1"
             },
             {
               "laps": 16,
               "time": null,
-              "type": "Main Race"
+              "type": "Race 2"
             }
           ]
         },
@@ -15601,12 +15601,12 @@
             {
               "laps": 15,
               "time": null,
-              "type": "Sprint Race"
+              "type": "Race 1"
             },
             {
               "laps": 15,
               "time": null,
-              "type": "Main Race"
+              "type": "Race 2"
             }
           ]
         },
@@ -15617,12 +15617,12 @@
             {
               "laps": 14,
               "time": null,
-              "type": "Sprint Race"
+              "type": "Race 1"
             },
             {
               "laps": 14,
               "time": null,
-              "type": "Main Race"
+              "type": "Race 2"
             }
           ]
         },
@@ -15633,12 +15633,12 @@
             {
               "laps": 15,
               "time": null,
-              "type": "Sprint Race"
+              "type": "Race 1"
             },
             {
               "laps": 15,
               "time": null,
-              "type": "Main Race"
+              "type": "Race 2"
             }
           ]
         },
@@ -15649,12 +15649,12 @@
             {
               "laps": 12,
               "time": null,
-              "type": "Sprint Race"
+              "type": "Race 1"
             },
             {
               "laps": 12,
               "time": null,
-              "type": "Main Race"
+              "type": "Race 2"
             }
           ]
         }
@@ -18569,7 +18569,7 @@
           "value": "Audi"
         }
       ],
-      "verified": false,
+      "verified": true,
       "rounds": [
         {
           "location": "Ruapuna Park",
@@ -20252,7 +20252,7 @@
           "value": "Road A"
         }
       ],
-      "verified": false,
+      "verified": true,
       "rounds": [
         {
           "location": "Autodromo Nazionale Monza",
@@ -21504,7 +21504,7 @@
           "value": "Road B"
         }
       ],
-      "verified": false,
+      "verified": true,
       "rounds": [
         {
           "location": "Zolder",
