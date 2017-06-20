@@ -1,120 +1,115 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "definitions": {},
-  "id": "http://www.projectcars.senorpez.com/",
-  "properties": {
-    "_embedded": {
-      "id": "/properties/_embedded",
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Project CARS Round",
+  "description": "JSON Representation of a Project CARS single-player event round",
+  "definitions": {
+    "standardLink": {
+      "type": "object",
       "properties": {
-        "pcars:track": {
-          "id": "/properties/_embedded/properties/pcars:track",
-          "items": {
-            "id": "/properties/_embedded/properties/pcars:track/items",
-            "properties": {
-              "_links": {
-                "id": "/properties/_embedded/properties/pcars:track/items/properties/_links",
-                "properties": {
-                  "self": {
-                    "id": "/properties/_embedded/properties/pcars:track/items/properties/_links/properties/self",
-                    "properties": {
-                      "href": {
-                        "id": "/properties/_embedded/properties/pcars:track/items/properties/_links/properties/self/properties/href",
-                        "type": "string"
-                      }
-                    },
-                    "type": "object"
-                  }
-                },
-                "type": "object"
-              },
-              "id": {
-                "id": "/properties/_embedded/properties/pcars:track/items/properties/id",
-                "type": "integer"
-              },
-              "trackName": {
-                "id": "/properties/_embedded/properties/pcars:track/items/properties/trackName",
-                "type": "string"
-              }
-            },
-            "type": "object"
-          },
-          "type": "array"
+        "href": {
+          "type": "string",
+          "pattern": "^http[s]?://[a-z.]+((/[a-z0-9-]+)+|/)$"
         }
       },
-      "type": "object"
+      "additionalProperties": false,
+      "required": [
+        "href"
+      ]
+    },
+    "track": {
+      "type": "object",
+      "properties": {
+        "_links": {
+          "type": "object",
+          "properties": {
+            "self": {
+              "$ref": "#/definitions/standardLink"
+            }
+          }
+        },
+        "id": {
+          "type": "integer"
+        },
+        "trackName": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "_links",
+        "id",
+        "trackName"
+      ]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "_embedded": {
+      "type": "object",
+      "properties": {
+        "pcars:track": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/track"
+          }
+        }
+      }
     },
     "_links": {
-      "id": "/properties/_links",
+      "type": "object",
       "properties": {
+        "self": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "index": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "pcars:races": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "pcars:rounds": {
+          "$ref": "#/definitions/standardLink"
+        },
         "curies": {
-          "id": "/properties/_links/properties/curies",
+          "type": "array",
           "items": {
-            "id": "/properties/_links/properties/curies/items",
             "properties": {
               "href": {
-                "id": "/properties/_links/properties/curies/items/properties/href",
                 "type": "string"
               },
               "name": {
-                "id": "/properties/_links/properties/curies/items/properties/name",
                 "type": "string"
               },
               "templated": {
-                "id": "/properties/_links/properties/curies/items/properties/templated",
                 "type": "boolean"
               }
             },
-            "type": "object"
-          },
-          "type": "array"
-        },
-        "index": {
-          "id": "/properties/_links/properties/index",
-          "properties": {
-            "href": {
-              "id": "/properties/_links/properties/index/properties/href",
-              "type": "string"
-            }
-          },
-          "type": "object"
-        },
-        "pcars:races": {
-          "id": "/properties/_links/properties/pcars:races",
-          "properties": {
-            "href": {
-              "id": "/properties/_links/properties/pcars:races/properties/href",
-              "type": "string"
-            }
-          },
-          "type": "object"
-        },
-        "pcars:rounds": {
-          "id": "/properties/_links/properties/pcars:rounds",
-          "properties": {
-            "href": {
-              "id": "/properties/_links/properties/pcars:rounds/properties/href",
-              "type": "string"
-            }
-          },
-          "type": "object"
-        },
-        "self": {
-          "id": "/properties/_links/properties/self",
-          "properties": {
-            "href": {
-              "id": "/properties/_links/properties/self/properties/href",
-              "type": "string"
-            }
-          },
-          "type": "object"
+            "additionalProperties": false,
+            "required": [
+              "href",
+              "name",
+              "templated"
+            ]
+          }
         }
       },
-      "type": "object"
+      "additionalProperties": false,
+      "required": [
+        "self",
+        "index",
+        "pcars:races",
+        "pcars:rounds",
+        "curies"
+      ]
     },
     "id": {
-      "id": "/properties/id",
       "type": "integer"
     }
   },
-  "type": "object"
+  "additionalProperties": false,
+  "required": [
+    "_embedded",
+    "_links",
+    "id"
+  ]
 }
