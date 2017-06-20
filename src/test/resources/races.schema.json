@@ -1,123 +1,128 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "definitions": {},
-  "id": "http://www.projectcars.senorpez.com/",
-  "properties": {
-    "_embedded": {
-      "id": "/properties/_embedded",
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Project CARS Races",
+  "description": "JSON Representation of multiple Project CARS single-player event round races",
+  "definitions": {
+    "standardLink": {
+      "type": "object",
       "properties": {
-        "pcars:race": {
-          "id": "/properties/_embedded/properties/pcars:race",
-          "items": {
-            "id": "/properties/_embedded/properties/pcars:race/items",
-            "properties": {
-              "_links": {
-                "id": "/properties/_embedded/properties/pcars:race/items/properties/_links",
-                "properties": {
-                  "self": {
-                    "id": "/properties/_embedded/properties/pcars:race/items/properties/_links/properties/self",
-                    "properties": {
-                      "href": {
-                        "id": "/properties/_embedded/properties/pcars:race/items/properties/_links/properties/self/properties/href",
-                        "type": "string"
-                      }
-                    },
-                    "type": "object"
-                  }
-                },
-                "type": "object"
-              },
-              "laps": {
-                "id": "/properties/_embedded/properties/pcars:race/items/properties/laps",
-                "type": [
-                  "integer",
-                  "null"
-                ]
-              },
-              "raceId": {
-                "id": "/properties/_embedded/properties/pcars:race/items/properties/raceId",
-                "type": "integer"
-              },
-              "time": {
-                "id": "/properties/_embedded/properties/pcars:race/items/properties/time",
-                "type": [
-                  "integer",
-                  "null"
-                ]
-              },
-              "type": {
-                "id": "/properties/_embedded/properties/pcars:race/items/properties/type",
-                "type": [
-                  "string",
-                  "null"
-                ]
-              }
-            },
-            "type": "object"
-          },
-          "type": "array"
+        "href": {
+          "type": "string",
+          "pattern": "^http[s]?://[a-z.]+((/[a-z0-9-]+)+|/)$"
         }
       },
-      "type": "object"
+      "additionalProperties": false,
+      "required": [
+        "href"
+      ]
+    },
+    "race": {
+      "type": "object",
+      "properties": {
+        "_links": {
+          "type": "object",
+          "properties": {
+            "self": {
+              "$ref": "#/definitions/standardLink"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "self"
+          ]
+        },
+        "id": {
+          "type": "integer"
+        },
+        "laps": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "time": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "_links",
+        "id",
+        "laps",
+        "time",
+        "type"
+      ]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "_embedded": {
+      "type": "object",
+      "properties": {
+        "pcars:car": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/race"
+          }
+        }
+      }
     },
     "_links": {
-      "id": "/properties/_links",
+      "type": "object",
       "properties": {
+        "self": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "index": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "pcars:round": {
+          "$ref": "#/definitions/standardLink"
+        },
         "curies": {
-          "id": "/properties/_links/properties/curies",
+          "type": "array",
           "items": {
-            "id": "/properties/_links/properties/curies/items",
             "properties": {
               "href": {
-                "id": "/properties/_links/properties/curies/items/properties/href",
                 "type": "string"
               },
               "name": {
-                "id": "/properties/_links/properties/curies/items/properties/name",
                 "type": "string"
               },
               "templated": {
-                "id": "/properties/_links/properties/curies/items/properties/templated",
                 "type": "boolean"
               }
             },
-            "type": "object"
-          },
-          "type": "array"
-        },
-        "index": {
-          "id": "/properties/_links/properties/index",
-          "properties": {
-            "href": {
-              "id": "/properties/_links/properties/index/properties/href",
-              "type": "string"
-            }
-          },
-          "type": "object"
-        },
-        "pcars:round": {
-          "id": "/properties/_links/properties/pcars:round",
-          "properties": {
-            "href": {
-              "id": "/properties/_links/properties/pcars:round/properties/href",
-              "type": "string"
-            }
-          },
-          "type": "object"
-        },
-        "self": {
-          "id": "/properties/_links/properties/self",
-          "properties": {
-            "href": {
-              "id": "/properties/_links/properties/self/properties/href",
-              "type": "string"
-            }
-          },
-          "type": "object"
+            "additionalProperties": false,
+            "required": [
+              "href",
+              "name",
+              "templated"
+            ]
+          }
         }
       },
-      "type": "object"
+      "additionalProperties": false,
+      "required": [
+        "self",
+        "index",
+        "pcars:round",
+        "curies"
+      ]
     }
   },
-  "type": "object"
+  "additionalProperties": false,
+  "required": [
+    "_embedded",
+    "_links"
+  ]
 }
