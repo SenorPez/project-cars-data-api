@@ -1,104 +1,122 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "definitions": {},
-  "id": "http://www.projectcars.senorpez.com/",
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Project CARS Track",
+  "description": "JSON Representation of a Project CARS track",
+  "definitions": {
+    "standardLink": {
+      "type": "object",
+      "properties": {
+        "href": {
+          "type": "string",
+          "pattern": "^http[s]?://[a-z.]+((/[a-z0-9-]+)+|/)$"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "href"
+      ]
+    }
+  },
+  "type": "object",
   "properties": {
     "_links": {
-      "id": "/properties/_links",
+      "type": "object",
       "properties": {
+        "self": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "index": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "pcars:tracks": {
+          "$ref": "#/definitions/standardLink"
+        },
         "curies": {
-          "id": "/properties/_links/properties/curies",
+          "type": "array",
           "items": {
-            "id": "/properties/_links/properties/curies/items",
             "properties": {
               "href": {
-                "id": "/properties/_links/properties/curies/items/properties/href",
                 "type": "string"
               },
               "name": {
-                "id": "/properties/_links/properties/curies/items/properties/name",
                 "type": "string"
               },
               "templated": {
-                "id": "/properties/_links/properties/curies/items/properties/templated",
                 "type": "boolean"
               }
             },
-            "type": "object"
-          },
-          "type": "array"
-        },
-        "index": {
-          "id": "/properties/_links/properties/index",
-          "properties": {
-            "href": {
-              "id": "/properties/_links/properties/index/properties/href",
-              "type": "string"
-            }
-          },
-          "type": "object"
-        },
-        "pcars:tracks": {
-          "id": "/properties/_links/properties/pcars:tracks",
-          "properties": {
-            "href": {
-              "id": "/properties/_links/properties/pcars:tracks/properties/href",
-              "type": "string"
-            }
-          },
-          "type": "object"
-        },
-        "self": {
-          "id": "/properties/_links/properties/self",
-          "properties": {
-            "href": {
-              "id": "/properties/_links/properties/self/properties/href",
-              "type": "string"
-            }
-          },
-          "type": "object"
+            "additionalProperties": false,
+            "required": [
+              "href",
+              "name",
+              "templated"
+            ]
+          }
         }
       },
-      "type": "object"
+      "additionalProperties": false,
+      "required": [
+        "self",
+        "index",
+        "pcars:tracks",
+        "curies"
+      ]
     },
     "gridSize": {
-      "id": "/properties/gridSize",
       "type": "integer"
     },
     "id": {
-      "id": "/properties/id",
       "type": "integer"
     },
     "length": {
-      "id": "/properties/length",
       "type": "number"
     },
     "location": {
-      "id": "/properties/location",
       "type": "string"
     },
     "name": {
-      "id": "/properties/name",
       "type": "string"
     },
     "pitEntry": {
-      "id": "/properties/pitEntry",
-      "type": [
-        "null",
-        "array"
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        {
+          "type": "null"
+        }
       ]
     },
     "pitExit": {
-      "id": "/properties/pitExit",
-      "type": [
-        "null",
-        "array"
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        {
+          "type": "null"
+        }
       ]
     },
     "variation": {
-      "id": "/properties/variation",
       "type": "string"
     }
   },
-  "type": "object"
+  "additionalProperties": false,
+  "required": [
+    "_links",
+    "gridSize",
+    "id",
+    "length",
+    "location",
+    "name",
+    "pitEntry",
+    "pitExit",
+    "variation"
+  ]
 }

@@ -11,21 +11,13 @@ import java.util.List;
 
 @Relation(value = "track", collectionRelation = "track")
 class Track implements Identifiable<Integer> {
-    @JsonProperty("id")
     private final Integer id;
-    @JsonProperty("name")
     private final String name;
-    @JsonProperty("location")
     private final String location;
-    @JsonProperty("variation")
     private final String variation;
-    @JsonProperty("length")
     private final Float length;
-    @JsonProperty("pitEntry")
     private final List<Float> pitEntry;
-    @JsonProperty("pitExit")
     private final List<Float> pitExit;
-    @JsonProperty("gridSize")
     private final Integer gridSize;
 
     @JsonCreator
@@ -62,15 +54,15 @@ class Track implements Identifiable<Integer> {
         return id;
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
-    String getLocation() {
+    public String getLocation() {
         return location;
     }
 
-    String getVariation() {
+    public String getVariation() {
         return variation;
     }
 
