@@ -34,14 +34,14 @@
         "id": {
           "type": "integer"
         },
-        "trackName": {
+        "name": {
           "type": "string"
         }
       },
       "additionalProperties": false,
       "required": [
         "_links",
-        "trackName",
+        "name",
         "id"
       ]
     }

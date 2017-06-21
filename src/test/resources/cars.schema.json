@@ -41,7 +41,7 @@
             "self"
           ]
         },
-        "carName": {
+        "name": {
           "type": "string"
         },
         "id": {
@@ -51,7 +51,7 @@
       "additionalProperties": false,
       "required": [
         "_links",
-        "carName",
+        "name",
         "id"
       ]
     }

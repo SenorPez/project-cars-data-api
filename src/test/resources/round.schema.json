@@ -30,7 +30,7 @@
         "id": {
           "type": "integer"
         },
-        "trackName": {
+        "name": {
           "type": "string"
         }
       },
@@ -38,7 +38,7 @@
       "required": [
         "_links",
         "id",
-        "trackName"
+        "name"
       ]
     }
   },

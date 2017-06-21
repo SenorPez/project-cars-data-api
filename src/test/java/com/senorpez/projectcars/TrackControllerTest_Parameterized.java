@@ -69,7 +69,7 @@ public class TrackControllerTest_Parameterized {
                 .andExpect(content().contentType(MEDIA_TYPE))
                 .andExpect(content().string(matchesJsonSchema(jsonSchema)))
                 .andExpect(jsonPath("$._embedded.pcars:track", hasItem(hasEntry("id", resultTrack.getId()))))
-                .andExpect(jsonPath("$._embedded.pcars:track", hasItem(hasEntry("trackName", resultTrack.getName()))))
+                .andExpect(jsonPath("$._embedded.pcars:track", hasItem(hasEntry("name", resultTrack.getName()))))
                 .andExpect(jsonPath("$._embedded.pcars:track", hasItem(
                         hasEntry(is("_links"),
                                 hasEntry(is("self"),
@@ -92,7 +92,7 @@ public class TrackControllerTest_Parameterized {
                 .andExpect(content().contentType(APPLICATION_JSON_UTF8))
                 .andExpect(content().string(matchesJsonSchema(jsonSchema)))
                 .andExpect(jsonPath("$._embedded.pcars:track", hasItem(hasEntry("id", resultTrack.getId()))))
-                .andExpect(jsonPath("$._embedded.pcars:track", hasItem(hasEntry("trackName", resultTrack.getName()))))
+                .andExpect(jsonPath("$._embedded.pcars:track", hasItem(hasEntry("name", resultTrack.getName()))))
                 .andExpect(jsonPath("$._embedded.pcars:track", hasItem(
                         hasEntry(is("_links"),
                                 hasEntry(is("self"),

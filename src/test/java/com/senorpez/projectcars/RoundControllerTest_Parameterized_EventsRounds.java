@@ -119,7 +119,7 @@ public class RoundControllerTest_Parameterized_EventsRounds {
                 .andExpect(content().string(matchesJsonSchema(jsonSchema)))
                 .andExpect(jsonPath("$.id", is(resultRound.getId())))
                 .andExpect(jsonPath("$._embedded.pcars:track", hasItem(hasEntry("id", resultTrack.getId()))))
-                .andExpect(jsonPath("$._embedded.pcars:track", hasItem(hasEntry("trackName", resultTrack.getName()))))
+                .andExpect(jsonPath("$._embedded.pcars:track", hasItem(hasEntry("name", resultTrack.getName()))))
                 .andExpect(jsonPath("$._embedded.pcars:track", hasItem(
                         hasEntry(is("_links"),
                                 hasEntry(is("self"),
@@ -147,7 +147,7 @@ public class RoundControllerTest_Parameterized_EventsRounds {
                 .andExpect(content().string(matchesJsonSchema(jsonSchema)))
                 .andExpect(jsonPath("$.id", is(resultRound.getId())))
                 .andExpect(jsonPath("$._embedded.pcars:track", hasItem(hasEntry("id", resultTrack.getId()))))
-                .andExpect(jsonPath("$._embedded.pcars:track", hasItem(hasEntry("trackName", resultTrack.getName()))))
+                .andExpect(jsonPath("$._embedded.pcars:track", hasItem(hasEntry("name", resultTrack.getName()))))
                 .andExpect(jsonPath("$._embedded.pcars:track", hasItem(
                         hasEntry(is("_links"),
                                 hasEntry(is("self"),

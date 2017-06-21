@@ -8,12 +8,12 @@ import org.springframework.hateoas.core.Relation;
 class EmbeddedTrack implements Identifiable<Integer> {
     @JsonProperty("id")
     private final Integer id;
-    @JsonProperty("trackName")
-    private final String trackName;
+    @JsonProperty("name")
+    private final String name;
 
     EmbeddedTrack(Track track) {
         this.id = track.getId();
-        this.trackName = track.getName();
+        this.name = track.getName();
     }
 
     @Override

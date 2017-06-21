@@ -8,12 +8,12 @@ import org.springframework.hateoas.core.Relation;
 class EmbeddedCar implements Identifiable<Integer> {
     @JsonProperty("id")
     private final Integer id;
-    @JsonProperty("carName")
-    private final String carName;
+    @JsonProperty("name")
+    private final String name;
 
     EmbeddedCar(Car car) {
         this.id = car.getId();
-        this.carName = car.getName();
+        this.name = car.getName();
     }
 
     @Override

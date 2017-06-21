@@ -70,7 +70,7 @@ public class EventControllerTest_Parameterized_EventsCars {
                 .andExpect(content().contentType(MEDIA_TYPE))
                 .andExpect(content().string(matchesJsonSchema(jsonSchema)))
                 .andExpect(jsonPath("$._embedded.pcars:car", hasItem(hasEntry("id", resultCar.getId()))))
-                .andExpect(jsonPath("$._embedded.pcars:car", hasItem(hasEntry("carName", resultCar.getName()))))
+                .andExpect(jsonPath("$._embedded.pcars:car", hasItem(hasEntry("name", resultCar.getName()))))
                 .andExpect(jsonPath("$._embedded.pcars:car", hasItem(
                         hasEntry(is("_links"),
                                 hasEntry(is("self"), containsInAnyOrder(
@@ -95,7 +95,7 @@ public class EventControllerTest_Parameterized_EventsCars {
                 .andExpect(content().contentType(APPLICATION_JSON_UTF8))
                 .andExpect(content().string(matchesJsonSchema(jsonSchema)))
                 .andExpect(jsonPath("$._embedded.pcars:car", hasItem(hasEntry("id", resultCar.getId()))))
-                .andExpect(jsonPath("$._embedded.pcars:car", hasItem(hasEntry("carName", resultCar.getName()))))
+                .andExpect(jsonPath("$._embedded.pcars:car", hasItem(hasEntry("name", resultCar.getName()))))
                 .andExpect(jsonPath("$._embedded.pcars:car", hasItem(
                         hasEntry(is("_links"),
                                 hasEntry(is("self"), containsInAnyOrder(
