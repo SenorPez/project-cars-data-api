@@ -87,4 +87,40 @@ public class CarControllerTest_Single {
                 .andExpect(jsonPath("$.code", is("406")))
                 .andExpect(jsonPath("$.message", is("Accept header incorrect")));
     }
+
+    @Test
+    public void GetSingleCarClass_InvalidId_ValidAcceptHeader() throws Exception {
+        Integer badId = 8675309;
+        InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
+
+        mockMvc.perform(get("/cars/{carId}/class", badId).accept(MEDIA_TYPE))
+                .andExpect(status().isNotFound())
+                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                .andExpect(jsonPath("$.code", is("404-cars-" + badId)))
+                .andExpect(jsonPath("$.message", is("Car with ID of " + badId + " not found")));
+    }
+
+    @Test
+    public void GetSingleCarClass_InvalidId_FallbackHeader() throws Exception {
+        Integer badId = 8675309;
+        InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
+
+        mockMvc.perform(get("/cars/{carId}/class", badId).accept(APPLICATION_JSON_UTF8))
+                .andExpect(status().isNotFound())
+                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                .andExpect(jsonPath("$.code", is("404-cars-" + badId)))
+                .andExpect(jsonPath("$.message", is("Car with ID of " + badId + " not found")));
+    }
+
+    @Test
+    public void GetSingleCarClass_InvalidId_InvalidAcceptHeader() throws Exception {
+        MediaType contentType = new MediaType("application", "vnd.senorpez.badrequest+json", UTF_8);
+        InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
+
+        mockMvc.perform(get("/cars/8675309/class").accept(contentType))
+                .andExpect(status().isNotAcceptable())
+                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                .andExpect(jsonPath("$.code", is("406")))
+                .andExpect(jsonPath("$.message", is("Accept header incorrect")));
+    }
 }

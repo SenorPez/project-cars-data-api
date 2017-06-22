@@ -12,4 +12,5 @@ class EventControllerTest {
     static final String OBJECT_SCHEMA = "event.schema.json";
     static final String CAR_OBJECT_SCHEMA = "car.schema.json";
     static final String ERROR_SCHEMA = "error.schema.json";
+    static final String CAR_CLASS_OBJECT_SCHEMA = "class.schema.json";
 }

@@ -63,7 +63,34 @@ class CarController {
         Resource resource = assembler.toResource(new CarModel(subjectCar));
         resource.add(linkTo(methodOn(CarController.class).cars()).withRel("cars"));
         resource.add(linkTo(methodOn(CarClassController.class).carClasses(subjectCar.getCarClass().getId())).withRel("class"));
+        resource.add(linkTo(methodOn(CarController.class).carClass(carId)).withRel("class"));
         resource.add(linkTo(methodOn(LiveryController.class).liveries(carId)).withRel("liveries"));
+        resource.add(linkTo(methodOn(RootController.class).root()).withRel("index"));
+        return resource;
+    }
+
+    @ApiOperation(
+            value = "Returns the car class for a car",
+            notes = "Returns the car class for a car as specified by its ID number",
+            response = CarClass.class
+    )
+    @RequestMapping(value = "/{carId}/class")
+    Resource carClass(
+            @ApiParam(
+                    value = "ID of car to return car class",
+                    required = true
+            )
+            @PathVariable Integer carId) {
+        IdentifiableResourceAssembler<CarClass, Resource> assembler = new IdentifiableResourceAssembler<>(CarClassController.class, Resource.class);
+        CarClass subjectCarClass = Application.CARS.stream()
+                .filter(car -> car.getId().equals(carId))
+                .findAny()
+                .orElseThrow(() -> new CarNotFoundAPIException(carId))
+                .getCarClass();
+        Resource resource = assembler.toResource(subjectCarClass);
+        resource.add(linkTo(methodOn(CarController.class).carClass(carId)).withSelfRel());
+        resource.add(linkTo(methodOn(CarController.class).cars(carId)).withRel("car"));
+        resource.add(linkTo(methodOn(CarClassController.class).carClasses()).withRel("classes"));
         resource.add(linkTo(methodOn(RootController.class).root()).withRel("index"));
         return resource;
     }

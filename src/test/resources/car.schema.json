@@ -42,7 +42,10 @@
           "$ref": "#/definitions/standardLink"
         },
         "pcars:class": {
-          "$ref": "#/definitions/standardLink"
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/standardLink"
+          }
         },
         "pcars:liveries": {
           "$ref": "#/definitions/standardLink"

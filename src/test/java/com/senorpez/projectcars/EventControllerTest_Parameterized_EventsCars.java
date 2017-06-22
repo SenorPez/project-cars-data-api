@@ -156,7 +156,9 @@ public class EventControllerTest_Parameterized_EventsCars {
                         hasEntry("href", "http://localhost/events/" + resultEvent.getId() + "/cars/" + resultCar.getId()))))
                 .andExpect(jsonPath("$._links.index", hasEntry("href", "http://localhost/")))
                 .andExpect(jsonPath("$._links.pcars:cars", hasEntry("href", "http://localhost/events/" + resultEvent.getId() + "/cars")))
-                .andExpect(jsonPath("$._links.pcars:class", hasEntry("href", "http://localhost/classes/" + resultCar.getCarClass().getId())))
+                .andExpect(jsonPath("$._links.pcars:class", containsInAnyOrder(
+                        hasEntry("href", "http://localhost/classes/" + resultCar.getCarClass().getId()),
+                        hasEntry("href", "http://localhost/events/" + resultEvent.getId() + "/cars/" + resultCar.getId() + "/class"))))
                 .andExpect(jsonPath("$._links.pcars:liveries", hasEntry("href", "http://localhost/cars/" + resultCar.getId() + "/liveries")))
                 .andExpect(jsonPath("$._links.curies", everyItem(
                         allOf(
@@ -198,7 +200,9 @@ public class EventControllerTest_Parameterized_EventsCars {
                         hasEntry("href", "http://localhost/events/" + resultEvent.getId() + "/cars/" + resultCar.getId()))))
                 .andExpect(jsonPath("$._links.index", hasEntry("href", "http://localhost/")))
                 .andExpect(jsonPath("$._links.pcars:cars", hasEntry("href", "http://localhost/events/" + resultEvent.getId() + "/cars")))
-                .andExpect(jsonPath("$._links.pcars:class", hasEntry("href", "http://localhost/classes/" + resultCar.getCarClass().getId())))
+                .andExpect(jsonPath("$._links.pcars:class", containsInAnyOrder(
+                        hasEntry("href", "http://localhost/classes/" + resultCar.getCarClass().getId()),
+                        hasEntry("href", "http://localhost/events/" + resultEvent.getId() + "/cars/" + resultCar.getId() + "/class"))))
                 .andExpect(jsonPath("$._links.pcars:liveries", hasEntry("href", "http://localhost/cars/" + resultCar.getId() + "/liveries")))
                 .andExpect(jsonPath("$._links.curies", everyItem(
                         allOf(
@@ -213,6 +217,70 @@ public class EventControllerTest_Parameterized_EventsCars {
         InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
 
         mockMvc.perform(get("/events/{eventId}/cars/{carId}", resultEvent.getId(), resultCar.getId()).accept(contentType))
+                .andExpect(status().isNotAcceptable())
+                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                .andExpect(jsonPath("$.code", is("406")))
+                .andExpect(jsonPath("$.message", is("Accept header incorrect")));
+    }
+
+    @Test
+    public void GetSingleEventSingleCarClass_ValidEventId_ValidCarId_ValidAcceptHeader() throws Exception {
+        InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(CAR_CLASS_OBJECT_SCHEMA);
+
+        mockMvc.perform(get("/events/{eventId}/cars/{carId}/class", resultEvent.getId(), resultCar.getId()).accept(MEDIA_TYPE))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MEDIA_TYPE))
+                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                .andExpect(jsonPath("$.id", is(resultCar.getCarClass().getId())))
+                .andExpect(jsonPath("$.name", is(resultCar.getCarClass().getName())))
+                .andExpect(jsonPath("$._links.self", containsInAnyOrder(
+                        hasEntry("href", "http://localhost/classes/" + resultCar.getCarClass().getId()),
+                        hasEntry("href", "http://localhost/cars/" + resultCar.getId() + "/class"),
+                        hasEntry("href", "http://localhost/events/" + resultEvent.getId() + "/cars/" + resultCar.getId() + "/class"))))
+                .andExpect(jsonPath("$._links.index", hasEntry("href", "http://localhost/")))
+                .andExpect(jsonPath("$._links.pcars:classes", hasEntry("href", "http://localhost/classes")))
+                .andExpect(jsonPath("$._links.pcars:car", containsInAnyOrder(
+                        hasEntry("href", "http://localhost/cars/" + resultCar.getId()),
+                        hasEntry("href", "http://localhost/events/" + resultEvent.getId() + "/cars/" + resultCar.getId()))))
+                .andExpect(jsonPath("$._links.curies", everyItem(
+                        allOf(
+                                hasEntry("href", (Object) "http://localhost/{rel}"),
+                                hasEntry("name", (Object) "pcars"),
+                                hasEntry("templated", (Object) true)))));
+    }
+
+    @Test
+    public void GetSingleEventSingleCarClass_ValidEventId_ValidCarId_FallbackHeader() throws Exception {
+        InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(CAR_CLASS_OBJECT_SCHEMA);
+
+        mockMvc.perform(get("/events/{eventId}/cars/{carId}/class", resultEvent.getId(), resultCar.getId()).accept(APPLICATION_JSON_UTF8))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(APPLICATION_JSON_UTF8))
+                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                .andExpect(jsonPath("$.id", is(resultCar.getCarClass().getId())))
+                .andExpect(jsonPath("$.name", is(resultCar.getCarClass().getName())))
+                .andExpect(jsonPath("$._links.self", containsInAnyOrder(
+                        hasEntry("href", "http://localhost/classes/" + resultCar.getCarClass().getId()),
+                        hasEntry("href", "http://localhost/cars/" + resultCar.getId() + "/class"),
+                        hasEntry("href", "http://localhost/events/" + resultEvent.getId() + "/cars/" + resultCar.getId() + "/class"))))
+                .andExpect(jsonPath("$._links.index", hasEntry("href", "http://localhost/")))
+                .andExpect(jsonPath("$._links.pcars:classes", hasEntry("href", "http://localhost/classes")))
+                .andExpect(jsonPath("$._links.pcars:car", containsInAnyOrder(
+                        hasEntry("href", "http://localhost/cars/" + resultCar.getId()),
+                        hasEntry("href", "http://localhost/events/" + resultEvent.getId() + "/cars/" + resultCar.getId()))))
+                .andExpect(jsonPath("$._links.curies", everyItem(
+                        allOf(
+                                hasEntry("href", (Object) "http://localhost/{rel}"),
+                                hasEntry("name", (Object) "pcars"),
+                                hasEntry("templated", (Object) true)))));
+    }
+
+    @Test
+    public void GetSingleEventSingleCarClass_ValidEventId_ValidCarId_InvalidAcceptHeader() throws Exception {
+        MediaType contentType = new MediaType("application", "vnd.senorpez.badrequest+json", UTF_8);
+        InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
+
+        mockMvc.perform(get("/events/{eventId}/cars/{carId}/class", resultEvent.getId(), resultCar.getId()).accept(contentType))
                 .andExpect(status().isNotAcceptable())
                 .andExpect(content().string(matchesJsonSchema(jsonSchema)))
                 .andExpect(jsonPath("$.code", is("406")))

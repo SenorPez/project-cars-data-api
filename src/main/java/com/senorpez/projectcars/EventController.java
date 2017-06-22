@@ -129,8 +129,47 @@ class EventController {
         resource.add(linkTo(methodOn(EventController.class).eventCars(eventId, carId)).withSelfRel());
         resource.add(linkTo(methodOn(EventController.class).eventCars(eventId)).withRel("cars"));
         resource.add(linkTo(methodOn(CarClassController.class).carClasses(subjectCar.getCarClass().getId())).withRel("class"));
+        resource.add(linkTo(methodOn(EventController.class).carClass(eventId, carId)).withRel("class"));
         resource.add(linkTo(methodOn(LiveryController.class).liveries(carId)).withRel("liveries"));
         resource.add(linkTo(methodOn(RootController.class).root()).withRel("index"));
         return resource;
     }
+
+    @ApiOperation(
+            value = "Returns the car class for an event car",
+            notes = "Returns the car class for a single-player event car as specified by its ID number",
+            response = CarClass.class
+    )
+    @RequestMapping(value = "/{eventId}/cars/{carId}/class")
+    Resource carClass(
+            @ApiParam(
+                    value = "ID of event to return cars",
+                    required = true
+            )
+            @PathVariable Integer eventId,
+            @ApiParam(
+                    value = "ID of car to return",
+                    required = true
+            )
+            @PathVariable Integer carId) {
+        IdentifiableResourceAssembler<CarClass, Resource> assembler = new IdentifiableResourceAssembler<>(CarClassController.class, Resource.class);
+        CarClass subjectCarClass = Application.EVENTS.stream()
+                .filter(event -> event.getId().equals(eventId))
+                .findAny()
+                .orElseThrow(() -> new EventNotFoundAPIException(eventId))
+                .getCars().stream()
+                .filter(car -> car.getId().equals(carId))
+                .findAny()
+                .orElseThrow(() -> new CarNotFoundAPIException(carId))
+                .getCarClass();
+        Resource resource = assembler.toResource(subjectCarClass);
+        resource.add(linkTo(methodOn(EventController.class).carClass(eventId, carId)).withSelfRel());
+        resource.add(linkTo(methodOn(CarController.class).carClass(carId)).withSelfRel());
+        resource.add(linkTo(methodOn(CarController.class).cars(carId)).withRel("car"));
+        resource.add(linkTo(methodOn(EventController.class).eventCars(eventId, carId)).withRel("car"));
+        resource.add(linkTo(methodOn(CarClassController.class).carClasses()).withRel("classes"));
+        resource.add(linkTo(methodOn(RootController.class).root()).withRel("index"));
+        return resource;
+    }
+
 }

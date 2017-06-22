@@ -91,4 +91,40 @@ public class EventControllerTest_Parameterized_Cars {
                 .andExpect(jsonPath("$.code", is("406")))
                 .andExpect(jsonPath("$.message", is("Accept header incorrect")));
     }
+
+    @Test
+    public void GetSingleEventSingleCarClass_InvalidEventId_ValidCarId_ValidAcceptHeader() throws Exception {
+        Integer badId = 8675309;
+        InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
+
+        mockMvc.perform(get("/events/{eventId}/cars/{carId}/class", badId, resultCar.getId()).accept(MEDIA_TYPE))
+                .andExpect(status().isNotFound())
+                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                .andExpect(jsonPath("$.code", is("404-events-" + badId)))
+                .andExpect(jsonPath("$.message", is("Event with ID of " + badId + " not found")));
+    }
+
+    @Test
+    public void GetSingleEventSingleCarClass_InvalidEventId_ValidCarId_FallbackHeader() throws Exception {
+        Integer badId = 86753029;
+        InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
+
+        mockMvc.perform(get("/events/{eventId}/cars/{carId}/class", badId, resultCar.getId()).accept(APPLICATION_JSON_UTF8))
+                .andExpect(status().isNotFound())
+                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                .andExpect(jsonPath("$.code", is("404-events-" + badId)))
+                .andExpect(jsonPath("$.message", is("Event with ID of " + badId + " not found")));
+    }
+
+    @Test
+    public void GetSingleEventSingleCarClass_InvalidEventId_ValidCarId_InvalidAcceptHeader() throws Exception {
+        MediaType contentType = new MediaType("application", "vnd.senorpez.badrequest+json", UTF_8);
+        InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
+
+        mockMvc.perform(get("/events/86753029/cars/{carId}/class", resultCar.getId()).accept(contentType))
+                .andExpect(status().isNotAcceptable())
+                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                .andExpect(jsonPath("$.code", is("406")))
+                .andExpect(jsonPath("$.message", is("Accept header incorrect")));
+    }
 }
