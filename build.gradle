@@ -27,6 +27,13 @@ springBoot {
     executable = true
 }
 
+sourceSets {
+    fullDataTest {
+        java.srcDir file('src/full-data-test/java')
+        resources.srcDir file('src/test/resources')
+    }
+}
+
 dependencies {
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-hateoas', version: '1.5.3.RELEASE'
     compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.7.0'
@@ -38,6 +45,8 @@ dependencies {
     testCompile group: 'org.springframework.boot', name: 'spring-boot-test', version:'1.5.3.RELEASE'
     testCompile group: 'com.jayway.jsonpath', name:'json-path-assert', version: '2.2.0'
     testCompile group: 'com.jayway.restassured', name: 'json-schema-validator', version: '2.9.0'
+    fullDataTestCompile sourceSets.main.output
+    fullDataTestCompile configurations.testCompile
 }
 
 jacocoTestReport {
@@ -57,3 +66,22 @@ test {
         minGranularity 2
     }
 }
+
+task fullDataTest(type: Test, dependsOn: jar) {
+    group 'Verification'
+    description 'Runs a full data integrity test.'
+    testClassesDirs = sourceSets.fullDataTest.output.classesDirs
+    classpath = sourceSets.fullDataTest.runtimeClasspath
+    systemProperties['jar.path'] = jar.archivePath
+
+    maxParallelForks 2
+    testLogging {
+        displayGranularity 0
+        events "started", "failed"
+        exceptionFormat "short"
+        maxGranularity 2
+        minGranularity 2
+    }
+}
+
+check.dependsOn fullDataTest

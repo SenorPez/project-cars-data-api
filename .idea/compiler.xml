@@ -2,6 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="data-api_fullDataTest" target="1.8" />
+      <module name="data-api_integrationTest" target="1.8" />
       <module name="data-api_main" target="1.8" />
       <module name="data-api_test" target="1.8" />
       <module name="Downloads-data-api_main" target="1.8" />
