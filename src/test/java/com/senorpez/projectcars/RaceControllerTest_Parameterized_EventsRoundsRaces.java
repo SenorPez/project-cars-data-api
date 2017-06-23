@@ -62,8 +62,11 @@ public class RaceControllerTest_Parameterized_EventsRoundsRaces {
     @Parameters(name = "eventId: {0}, roundId: {2}, raceId: {4}")
     public static Iterable<Object[]> parameters() {
         return Application.EVENTS.stream()
+                .limit(10)
                 .flatMap(event -> event.getRounds().stream()
+                        .limit(10)
                         .flatMap(round -> round.getRaces().stream()
+                                .limit(10)
                                 .map(race -> new Object[]{event.getId(), event, round.getId(), round, race.getId(), race})))
                 .collect(Collectors.toList());
     }

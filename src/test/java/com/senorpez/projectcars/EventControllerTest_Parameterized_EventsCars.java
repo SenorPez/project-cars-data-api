@@ -6,6 +6,8 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameter;
+import org.junit.runners.Parameterized.Parameters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
@@ -44,19 +46,21 @@ public class EventControllerTest_Parameterized_EventsCars {
     @Rule
     public final SpringMethodRule springMethodRule = new SpringMethodRule();
 
-    @Parameterized.Parameter
+    @Parameter
     public Integer eventId;
-    @Parameterized.Parameter(value = 1)
+    @Parameter(value = 1)
     public Event resultEvent;
-    @Parameterized.Parameter(value = 2)
+    @Parameter(value = 2)
     public Integer carId;
-    @Parameterized.Parameter(value = 3)
+    @Parameter(value = 3)
     public Car resultCar;
 
-    @Parameterized.Parameters(name = "eventId: {0}, carId: {2}")
+    @Parameters(name = "eventId: {0}, carId: {2}")
     public static Iterable<Object[]> parameters() {
         return Application.EVENTS.stream()
+                .limit(10)
                 .flatMap(event -> event.getCars().stream()
+                        .limit(10)
                         .map(car -> new Object[]{event.getId(), event, car.getId(), car}))
                 .collect(Collectors.toList());
     }
@@ -159,7 +163,9 @@ public class EventControllerTest_Parameterized_EventsCars {
                 .andExpect(jsonPath("$._links.pcars:class", containsInAnyOrder(
                         hasEntry("href", "http://localhost/classes/" + resultCar.getCarClass().getId()),
                         hasEntry("href", "http://localhost/events/" + resultEvent.getId() + "/cars/" + resultCar.getId() + "/class"))))
-                .andExpect(jsonPath("$._links.pcars:liveries", hasEntry("href", "http://localhost/cars/" + resultCar.getId() + "/liveries")))
+                .andExpect(jsonPath("$._links.pcars:liveries", containsInAnyOrder(
+                        hasEntry("href", "http://localhost/cars/" + resultCar.getId() + "/liveries"),
+                        hasEntry("href", "http://localhost/events/" + resultEvent.getId() + "/cars/" + resultCar.getId() + "/liveries"))))
                 .andExpect(jsonPath("$._links.curies", everyItem(
                         allOf(
                                 hasEntry("href", (Object) "http://localhost/{rel}"),
@@ -203,7 +209,9 @@ public class EventControllerTest_Parameterized_EventsCars {
                 .andExpect(jsonPath("$._links.pcars:class", containsInAnyOrder(
                         hasEntry("href", "http://localhost/classes/" + resultCar.getCarClass().getId()),
                         hasEntry("href", "http://localhost/events/" + resultEvent.getId() + "/cars/" + resultCar.getId() + "/class"))))
-                .andExpect(jsonPath("$._links.pcars:liveries", hasEntry("href", "http://localhost/cars/" + resultCar.getId() + "/liveries")))
+                .andExpect(jsonPath("$._links.pcars:liveries", containsInAnyOrder(
+                        hasEntry("href", "http://localhost/cars/" + resultCar.getId() + "/liveries"),
+                        hasEntry("href", "http://localhost/events/" + resultEvent.getId() + "/cars/" + resultCar.getId() + "/liveries"))))
                 .andExpect(jsonPath("$._links.curies", everyItem(
                         allOf(
                                 hasEntry("href", (Object) "http://localhost/{rel}"),
@@ -281,6 +289,54 @@ public class EventControllerTest_Parameterized_EventsCars {
         InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
 
         mockMvc.perform(get("/events/{eventId}/cars/{carId}/class", resultEvent.getId(), resultCar.getId()).accept(contentType))
+                .andExpect(status().isNotAcceptable())
+                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                .andExpect(jsonPath("$.code", is("406")))
+                .andExpect(jsonPath("$.message", is("Accept header incorrect")));
+    }
+
+    @Test
+    public void GetSingleEventSingleCarAllLiveries_ValidEventId_ValidCarId_InvalidAcceptHeader() throws Exception {
+        MediaType contentType = new MediaType("application", "vnd.senorpez.badrequest+json", UTF_8);
+        InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
+
+        mockMvc.perform(get("/events/{eventId}/cars/{carId}/liveries", resultEvent.getId(), resultCar.getId()).accept(contentType))
+                .andExpect(status().isNotAcceptable())
+                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                .andExpect(jsonPath("$.code", is("406")))
+                .andExpect(jsonPath("$.message", is("Accept header incorrect")));
+    }
+
+    @Test
+    public void GetSingleEventSingleCarSingleLivery_ValidEventId_ValidCarId_InvalidLiveryId_ValidAcceptHeader() throws Exception {
+        Integer badId = 8675309;
+        InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
+
+        mockMvc.perform(get("/events/{eventId}/cars/{carId}/liveries/{liveryId}", resultEvent.getId(), resultCar.getId(), badId).accept(MEDIA_TYPE))
+                .andExpect(status().isNotFound())
+                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                .andExpect(jsonPath("$.code", is("404-liveries-" + badId)))
+                .andExpect(jsonPath("$.message", is("Livery with ID of " + badId + " not found")));
+    }
+
+    @Test
+    public void GetSingleEventSingleCarSingleLivery_ValidEventId_ValidCarId_InvalidLiveryId_FallbackHeader() throws Exception {
+        Integer badId = 8675309;
+        InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
+
+        mockMvc.perform(get("/events/{eventId}/cars/{carId}/liveries/{liveryId}", resultEvent.getId(), resultCar.getId(), badId).accept(APPLICATION_JSON_UTF8))
+                .andExpect(status().isNotFound())
+                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                .andExpect(jsonPath("$.code", is("404-liveries-" + badId)))
+                .andExpect(jsonPath("$.message", is("Livery with ID of " + badId + " not found")));
+    }
+
+    @Test
+    public void GetSingleEventSingleCarSingleLivery_ValidEventId_ValidCarId_InvalidLiveryId_InvalidAcceptHeader() throws Exception {
+        MediaType contentType = new MediaType("application", "vnd.senorpez.badrequest+json", UTF_8);
+        InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
+
+        mockMvc.perform(get("/events/{eventId}/cars/{carId}/liveries/8675309", resultEvent.getId(), resultCar.getId()).accept(contentType))
                 .andExpect(status().isNotAcceptable())
                 .andExpect(content().string(matchesJsonSchema(jsonSchema)))
                 .andExpect(jsonPath("$.code", is("406")))

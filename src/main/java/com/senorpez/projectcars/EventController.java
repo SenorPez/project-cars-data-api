@@ -131,6 +131,7 @@ class EventController {
         resource.add(linkTo(methodOn(CarClassController.class).carClasses(subjectCar.getCarClass().getId())).withRel("class"));
         resource.add(linkTo(methodOn(EventController.class).carClass(eventId, carId)).withRel("class"));
         resource.add(linkTo(methodOn(LiveryController.class).liveries(carId)).withRel("liveries"));
+        resource.add(linkTo(methodOn(EventController.class).carLiveries(eventId, carId)).withRel("liveries"));
         resource.add(linkTo(methodOn(RootController.class).root()).withRel("index"));
         return resource;
     }
@@ -172,4 +173,88 @@ class EventController {
         return resource;
     }
 
+    @ApiOperation(
+            value = "Returns the car liveries for an event car",
+            notes = "Returns the car liveries for a single-player event car as specified by its ID number",
+            response = CarClass.class
+    )
+    @RequestMapping(value = "/{eventId}/cars/{carId}/liveries")
+    Resources<Resource> carLiveries(
+            @ApiParam(
+                    value = "ID of event to return cars",
+                    required = true
+            )
+            @PathVariable Integer eventId,
+            @ApiParam(
+                    value = "ID of car to return liveries",
+                    required = true
+            )
+            @PathVariable Integer carId) {
+        LiveryResourceAssembler assembler = new LiveryResourceAssembler(carId);
+        return new Resources<>(
+                Application.EVENTS.stream()
+                        .filter(event -> event.getId().equals(eventId))
+                        .findAny()
+                        .orElseThrow(() -> new EventNotFoundAPIException(eventId))
+                        .getCars().stream()
+                        .filter(car -> car.getId().equals(carId))
+                        .findAny()
+                        .orElseThrow(() -> new CarNotFoundAPIException(carId))
+                        .getLiveries().stream()
+                        .map(assembler::toResource)
+                        .map(resource -> {
+                            Livery livery = (Livery) resource.getContent();
+                            resource.add(linkTo(methodOn(EventController.class).carLiveries(eventId, carId, livery.getId())).withSelfRel());
+                            return resource;
+                        })
+                        .collect(Collectors.toList()),
+                linkTo(methodOn(LiveryController.class).liveries(carId)).withSelfRel(),
+                linkTo(methodOn(EventController.class).carLiveries(eventId, carId)).withSelfRel(),
+                linkTo(methodOn(RootController.class).root()).withRel("index"),
+                linkTo(methodOn(CarController.class).cars(carId)).withRel("car"),
+                linkTo(methodOn(EventController.class).eventCars(eventId, carId)).withRel("car")
+        );
+    }
+
+    @ApiOperation(
+            value = "Lists a livery available for a car",
+            notes = "Returns a livery for a car",
+            response = Livery.class
+    )
+    @RequestMapping(value = "/{eventId}/cars/{carId}/liveries/{liveryId}")
+    Resource carLiveries(
+            @ApiParam(
+                    value = "ID of event to return cars",
+                    required = true
+            )
+            @PathVariable Integer eventId,
+            @ApiParam(
+                    value = "ID of car to return a livery from",
+                    required = true
+            )
+            @PathVariable Integer carId,
+            @ApiParam(
+                    value = "ID of livery to return",
+                    required = true
+            )
+            @PathVariable Integer liveryId) {
+        LiveryResourceAssembler assembler = new LiveryResourceAssembler(carId);
+        Resource resource = assembler.toResource(Application.EVENTS.stream()
+                .filter(event -> event.getId().equals(eventId))
+                .findAny()
+                .orElseThrow(() -> new EventNotFoundAPIException(eventId))
+                .getCars().stream()
+                .filter(car -> car.getId().equals(carId))
+                .findAny()
+                .orElseThrow(() -> new CarNotFoundAPIException(carId))
+                .getLiveries().stream()
+                .filter(livery -> livery.getId().equals(liveryId))
+                .findAny()
+                .orElseThrow(() -> new LiveryNotFoundAPIException(liveryId)));
+        resource.add(linkTo(methodOn(EventController.class).carLiveries(eventId, carId, liveryId)).withSelfRel());
+        resource.add(linkTo(methodOn(RootController.class).root()).withRel("index"));
+        resource.add(linkTo(methodOn(LiveryController.class).liveries(carId)).withRel("liveries"));
+        resource.add(linkTo(methodOn(EventController.class).carLiveries(eventId, carId)).withRel("liveries"));
+        return resource;
+    }
 }

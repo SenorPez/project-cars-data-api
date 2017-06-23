@@ -6,6 +6,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
@@ -49,9 +50,10 @@ public class CarClassControllerTest_Parameterized {
     @Parameterized.Parameter(value = 1)
     public CarClass resultCarClass;
 
-    @Parameterized.Parameters(name = "carClassId: {0}")
+    @Parameters(name = "carClassId: {0}")
     public static Iterable<Object[]> parameters() {
         return Application.CAR_CLASSES.stream()
+                .limit(10)
                 .map(carClass -> new Object[]{carClass.getId(), carClass})
                 .collect(Collectors.toList());
     }

@@ -200,4 +200,82 @@ public class EventControllerTest_Single {
                 .andExpect(jsonPath("$.code", is("406")))
                 .andExpect(jsonPath("$.message", is("Accept header incorrect")));
     }
+
+    @Test
+    public void GetSingleEventSingleCarAllLiveries_InvalidEventId_InvalidCarId_ValidAcceptHeader() throws Exception {
+        Integer badEventId = 8675309;
+        Integer badCarId = 1;
+        InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
+
+        mockMvc.perform(get("/events/{eventId}/cars/{carId}/liveries", badEventId, badCarId).accept(MEDIA_TYPE))
+                .andExpect(status().isNotFound())
+                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                .andExpect(jsonPath("$.code", is("404-events-" + badEventId)))
+                .andExpect(jsonPath("$.message", is("Event with ID of " + badEventId + " not found")));
+    }
+
+    @Test
+    public void GetSingleEventSingleCarAllLiveries_InvalidEventId_InvalidCarId_FallbackHeader() throws Exception {
+        Integer badEventId = 8675309;
+        Integer badCarId = 1;
+        InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
+
+        mockMvc.perform(get("/events/{eventId}/cars/{carId}/liveries", badEventId, badCarId).accept(APPLICATION_JSON_UTF8))
+                .andExpect(status().isNotFound())
+                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                .andExpect(jsonPath("$.code", is("404-events-" + badEventId)))
+                .andExpect(jsonPath("$.message", is("Event with ID of " + badEventId + " not found")));
+    }
+
+    @Test
+    public void GetSingleEventSingleCarAllLiveries_InvalidEventId_InvalidCarId_InvalidAcceptHeader() throws Exception {
+        MediaType contentType = new MediaType("application", "vnd.senorpez.badrequest+json", UTF_8);
+        InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
+
+        mockMvc.perform(get("/events/86753029/cars/1/liveries").accept(contentType))
+                .andExpect(status().isNotAcceptable())
+                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                .andExpect(jsonPath("$.code", is("406")))
+                .andExpect(jsonPath("$.message", is("Accept header incorrect")));
+    }
+
+    @Test
+    public void GetSingleEventSingleCarSingleLivery_InvalidEventId_InvalidCarId_XXXLiveryId_ValidAcceptHeader() throws Exception {
+        Integer badEventId = 8675309;
+        Integer badCarId = 1;
+        Integer inconsequentialLiveryId = new Double(Math.random()).intValue();
+        InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
+
+        mockMvc.perform(get("/events/{eventId}/cars/{carId}/liveries/{liveryId}", badEventId, badCarId, inconsequentialLiveryId).accept(MEDIA_TYPE))
+                .andExpect(status().isNotFound())
+                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                .andExpect(jsonPath("$.code", is("404-events-" + badEventId)))
+                .andExpect(jsonPath("$.message", is("Event with ID of " + badEventId + " not found")));
+    }
+
+    @Test
+    public void GetSingleEventSingleCarSingleLivery_InvalidEventId_InvalidCarId_XXXLiveryId_FallbackHeader() throws Exception {
+        Integer badEventId = 8675309;
+        Integer badCarId = 1;
+        Integer inconsequentialLiveryId = new Double(Math.random()).intValue();
+        InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
+
+        mockMvc.perform(get("/events/{eventId}/cars/{carId}/liveries/{liveryId}", badEventId, badCarId, inconsequentialLiveryId).accept(APPLICATION_JSON_UTF8))
+                .andExpect(status().isNotFound())
+                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                .andExpect(jsonPath("$.code", is("404-events-" + badEventId)))
+                .andExpect(jsonPath("$.message", is("Event with ID of " + badEventId + " not found")));
+    }
+
+    @Test
+    public void GetSingleEventSingleCarSingleLivery_InvalidEventId_InvalidCarId_XXXLiveryId_InvalidAcceptHeader() throws Exception {
+        MediaType contentType = new MediaType("application", "vnd.senorpez.badrequest+json", UTF_8);
+        InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
+
+        mockMvc.perform(get("/events/86753029/cars/1/liveries/8675309").accept(contentType))
+                .andExpect(status().isNotAcceptable())
+                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                .andExpect(jsonPath("$.code", is("406")))
+                .andExpect(jsonPath("$.message", is("Accept header incorrect")));
+    }
 }

@@ -56,6 +56,7 @@ public class TrackControllerTest_Parameterized {
     @Parameters(name = "trackId: {0}")
     public static Iterable<Object[]> parameters() {
         return Application.TRACKS.stream()
+                .limit(10)
                 .map(track -> new Object[]{track.getId(), track})
                 .collect(Collectors.toList());
     }

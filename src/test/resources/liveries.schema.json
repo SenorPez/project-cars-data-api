@@ -23,7 +23,17 @@
           "type": "object",
           "properties": {
             "self": {
-              "$ref": "#/definitions/standardLink"
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/standardLink"
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/standardLink"
+                  }
+                }
+              ]
             }
           },
           "additionalProperties": false,
@@ -63,13 +73,33 @@
       "type": "object",
       "properties": {
         "self": {
-          "$ref": "#/definitions/standardLink"
+          "oneOf": [
+            {
+              "$ref": "#/definitions/standardLink"
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/standardLink"
+              }
+            }
+          ]
         },
         "index": {
           "$ref": "#/definitions/standardLink"
         },
         "pcars:car": {
-          "$ref": "#/definitions/standardLink"
+          "oneOf": [
+            {
+              "$ref": "#/definitions/standardLink"
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/standardLink"
+              }
+            }
+          ]
         },
         "curies": {
           "type": "array",

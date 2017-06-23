@@ -54,6 +54,7 @@ public class RoundControllerTest_Parameterized_Events {
     @Parameters(name = "eventId: {0}")
     public static Iterable<Object[]> parameters() {
         return Application.EVENTS.stream()
+                .limit(10)
                 .map(event -> new Object[]{event.getId(), event})
                 .collect(Collectors.toList());
     }

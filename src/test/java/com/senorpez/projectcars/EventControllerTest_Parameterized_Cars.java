@@ -6,6 +6,8 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameter;
+import org.junit.runners.Parameterized.Parameters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
@@ -44,14 +46,15 @@ public class EventControllerTest_Parameterized_Cars {
     @Rule
     public final SpringMethodRule springMethodRule = new SpringMethodRule();
 
-    @Parameterized.Parameter
+    @Parameter
     public Integer carId;
-    @Parameterized.Parameter(value = 1)
+    @Parameter(value = 1)
     public Car resultCar;
 
-    @Parameterized.Parameters(name = "carId: {0}")
+    @Parameters(name = "carId: {0}")
     public static Iterable<Object[]> parameters() {
         return Application.CARS.stream()
+                .limit(10)
                 .map(car -> new Object[]{car.getId(), car})
                 .collect(Collectors.toList());
     }
@@ -122,6 +125,41 @@ public class EventControllerTest_Parameterized_Cars {
         InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
 
         mockMvc.perform(get("/events/86753029/cars/{carId}/class", resultCar.getId()).accept(contentType))
+                .andExpect(status().isNotAcceptable())
+                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                .andExpect(jsonPath("$.code", is("406")))
+                .andExpect(jsonPath("$.message", is("Accept header incorrect")));
+    }
+
+    @Test
+    public void GetSingleEventSingleCarAllLiveries_InvalidEventId_ValidCarId_ValidAcceptHeader() throws Exception {
+        Integer badId = 8675309;
+        InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
+
+        mockMvc.perform(get("/events/{eventId}/cars/{carId}/liveries", badId, resultCar.getId()).accept(MEDIA_TYPE))
+                .andExpect(status().isNotFound())
+                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                .andExpect(jsonPath("$.code", is("404-events-" + badId)))
+                .andExpect(jsonPath("$.message", is("Event with ID of " + badId + " not found")));
+    }
+
+    @Test
+    public void GetSingleEventSingleCarAllLiveries_InvalidEventId_ValidCarId_FallbackHeader() throws Exception {
+        Integer badId = 8675309;
+        InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
+
+        mockMvc.perform(get("/events/{eventId}/cars/{carId}/liveries", badId, resultCar.getId()).accept(APPLICATION_JSON_UTF8))
+                .andExpect(status().isNotFound())
+                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                .andExpect(jsonPath("$.code", is("404-events-" + badId)))
+                .andExpect(jsonPath("$.message", is("Event with ID of " + badId + " not found")));
+    }
+    @Test
+    public void GetSingleEventSingleCarAllLiveries_InvalidEventId_ValidCarId_InvalidAcceptHeader() throws Exception {
+        MediaType contentType = new MediaType("application", "vnd.senorpez.badrequest+json", UTF_8);
+        InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
+
+        mockMvc.perform(get("/events/86753029/cars/{carId}/liveries", resultCar.getId()).accept(contentType))
                 .andExpect(status().isNotAcceptable())
                 .andExpect(content().string(matchesJsonSchema(jsonSchema)))
                 .andExpect(jsonPath("$.code", is("406")))

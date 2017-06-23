@@ -48,7 +48,17 @@
           }
         },
         "pcars:liveries": {
-          "$ref": "#/definitions/standardLink"
+          "oneOf": [
+            {
+              "$ref": "#/definitions/standardLink"
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/standardLink"
+              }
+            }
+          ]
         },
         "curies": {
           "type": "array",
