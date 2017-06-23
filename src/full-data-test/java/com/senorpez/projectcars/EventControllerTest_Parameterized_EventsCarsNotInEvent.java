@@ -66,6 +66,7 @@ public class EventControllerTest_Parameterized_EventsCarsNotInEvent {
                             .collect(Collectors.toSet());
                     Set<Car> cars = Application.CARS.stream()
                             .filter(car -> !carIds.contains(car.getId()))
+                            .limit(10)
                             .collect(Collectors.toSet());
                     return cars.stream()
                             .map(car -> new Object[]{event.getId(), event, car.getId(), car});

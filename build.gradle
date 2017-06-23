@@ -74,7 +74,7 @@ task fullDataTest(type: Test, dependsOn: jar) {
     classpath = sourceSets.fullDataTest.runtimeClasspath
     systemProperties['jar.path'] = jar.archivePath
 
-    maxParallelForks 2
+    maxParallelForks 4
     testLogging {
         displayGranularity 0
         events "started", "failed"
