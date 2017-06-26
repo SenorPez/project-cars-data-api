@@ -1,0 +1,87 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.3.RELEASE")
+    }
+}
+
+plugins {
+    id 'java'
+    id 'jacoco'
+    id 'idea'
+    id 'org.springframework.boot' version '1.5.3.RELEASE'
+}
+
+group 'com.senorpez.projectcars'
+version '0.1-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+springBoot {
+    executable = true
+}
+
+sourceSets {
+    fullDataTest {
+        java.srcDir file('src/full-data-test/java')
+        resources.srcDir file('src/full-data-test/resources')
+    }
+}
+
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-hateoas', version: '1.5.3.RELEASE'
+    compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.7.0'
+    compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.7.0'
+    testCompile group: 'org.hamcrest', name: 'hamcrest-all', version: '1.3'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'org.mockito', name: 'mockito-core', version:'2.8.9'
+    testCompile group: 'org.springframework', name: 'spring-test', version:'4.3.8.RELEASE'
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-test', version:'1.5.3.RELEASE'
+    testCompile group: 'com.jayway.jsonpath', name:'json-path-assert', version: '2.2.0'
+    testCompile group: 'com.jayway.restassured', name: 'json-schema-validator', version: '2.9.0'
+    fullDataTestCompile sourceSets.main.output
+    fullDataTestCompile configurations.testCompile
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled = true
+        html.enabled = false
+    }
+}
+
+test {
+    maxParallelForks 4
+    testLogging {
+        displayGranularity 0
+        events "started", "failed"
+        exceptionFormat "short"
+        maxGranularity 2
+        minGranularity 2
+    }
+}
+
+task fullDataTest(type: Test, dependsOn: jar) {
+    group 'Verification'
+    description 'Runs a full data integrity test.'
+    testClassesDirs = sourceSets.fullDataTest.output.classesDirs
+    classpath = sourceSets.fullDataTest.runtimeClasspath
+    systemProperties['jar.path'] = jar.archivePath
+
+    maxParallelForks 4
+    testLogging {
+        displayGranularity 0
+        events "started", "failed"
+        exceptionFormat "short"
+        maxGranularity 2
+        minGranularity 2
+        showExceptions true
+        showStackTraces true
+    }
+}

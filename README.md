@@ -1,2 +1,5 @@
-# project-cars-data-api
-REST API for Project CARS data
+# Project CARS Data API
+
+A REST API for Project CARS data.
+
+Tilting at windmills.

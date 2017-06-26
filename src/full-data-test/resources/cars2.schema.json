@@ -1,0 +1,127 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Project CARS 2 Cars",
+  "description": "JSON Representation of multiple Project CARS 2 cars",
+  "definitions": {
+    "standardLink": {
+      "type": "object",
+      "properties": {
+        "href": {
+          "type": "string",
+          "pattern": "^http[s]?://[a-z.]+((/[a-z0-9]+)+|/)$"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "href"
+      ]
+    },
+    "car2": {
+      "type": "object",
+      "properties": {
+        "_links": {
+          "type": "object",
+          "properties": {
+            "self": {
+              "$ref": "#/definitions/standardLink"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "self"
+          ]
+        },
+        "dlc": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "type": "integer"
+        },
+        "manufacturer": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "verified": {
+          "description": "Has car been verified against in-game and telemetry data?",
+          "type": "boolean"
+        },
+        "year": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "_links",
+        "dlc",
+        "id",
+        "manufacturer",
+        "model",
+        "verified",
+        "year"
+      ]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "_embedded": {
+      "type": "object",
+      "properties": {
+        "pcars:car": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/car2"
+          }
+        }
+      }
+    },
+    "_links": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "index": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "curies": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "href": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "templated": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "href",
+              "name",
+              "templated"
+            ]
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "self",
+        "index",
+        "curies"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "_embedded",
+    "_links"
+  ]
+}

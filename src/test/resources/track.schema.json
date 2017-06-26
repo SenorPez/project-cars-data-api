@@ -1,0 +1,135 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Project CARS Track",
+  "description": "JSON Representation of a Project CARS track",
+  "definitions": {
+    "standardLink": {
+      "type": "object",
+      "properties": {
+        "href": {
+          "type": "string",
+          "pattern": "^http[s]?://[a-z.]+((/[a-z0-9-]+)+|/)$"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "href"
+      ]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "_links": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/standardLink"
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/standardLink"
+              }
+            }
+          ]
+        },
+        "index": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "pcars:round": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "pcars:tracks": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "curies": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "href": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "templated": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "href",
+              "name",
+              "templated"
+            ]
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "self",
+        "index",
+        "pcars:tracks",
+        "curies"
+      ]
+    },
+    "gridSize": {
+      "type": "integer"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "length": {
+      "type": "number"
+    },
+    "location": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "pitEntry": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "pitExit": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "variation": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "_links",
+    "gridSize",
+    "id",
+    "length",
+    "location",
+    "name",
+    "pitEntry",
+    "pitExit",
+    "variation"
+  ]
+}

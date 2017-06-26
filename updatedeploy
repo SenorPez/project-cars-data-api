@@ -1,0 +1,10 @@
+svn up &&
+./gradlew build &&
+sudo chattr -i ~pcars-data-api/data-api-0.1-SNAPSHOT.jar &&
+sudo rm ~pcars-data-api/data-api-0.1-SNAPSHOT.jar &&
+sudo chown pcars-data-api:pcars-data-api build/libs/data-api-0.1-SNAPSHOT.jar &&
+sudo chmod 500 build/libs/data-api-0.1-SNAPSHOT.jar &&
+sudo mv build/libs/data-api-0.1-SNAPSHOT.jar ~pcars-data-api/ &&
+sudo chattr +i ~pcars-data-api/data-api-0.1-SNAPSHOT.jar &&
+sudo rm /var/log/pcars-data-api.log
+sudo service pcars-data-api restart
