@@ -85,5 +85,3 @@ task fullDataTest(type: Test, dependsOn: jar) {
         showStackTraces true
     }
 }
-
-check.dependsOn fullDataTest
