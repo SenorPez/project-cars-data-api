@@ -77,4 +77,38 @@ class RoundController {
         resource.add(linkTo(methodOn(RootController.class).root()).withRel("index"));
         return resource;
     }
+
+    @ApiOperation(
+            value = "Return a track for round",
+            notes = "Returns a track for a round as specified by event ID and round number",
+            response = Track.class
+    )
+    @RequestMapping(value = "/{roundId}/track")
+    Resource roundTrack(
+            @ApiParam(
+                    value = "ID of event",
+                    required =  true
+            )
+            @PathVariable Integer eventId,
+            @ApiParam(
+                    value = "Round number",
+                    required = true
+            )
+            @PathVariable Integer roundId) {
+        IdentifiableResourceAssembler<Track, Resource> assembler = new IdentifiableResourceAssembler<>(TrackController.class, Resource.class);
+        Resource resource = assembler.toResource(Application.EVENTS.stream()
+                .filter(event -> event.getId().equals(eventId))
+                .findAny()
+                .orElseThrow(() -> new EventNotFoundAPIException(eventId))
+                .getRounds().stream()
+                .filter(round -> round.getId().equals(roundId))
+                .findAny()
+                .orElseThrow(() -> new RoundNotFoundAPIException(roundId))
+                .getTrack());
+        resource.add(linkTo(methodOn(RoundController.class).roundTrack(eventId, roundId)).withSelfRel());
+        resource.add(linkTo(methodOn(RoundController.class).rounds(eventId, roundId)).withRel("round"));
+        resource.add(linkTo(methodOn(TrackController.class).tracks()).withRel("tracks"));
+        resource.add(linkTo(methodOn(RootController.class).root()).withRel("index"));
+        return resource;
+    }
 }

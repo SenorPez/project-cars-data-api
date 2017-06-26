@@ -23,9 +23,22 @@
       "type": "object",
       "properties": {
         "self": {
-          "$ref": "#/definitions/standardLink"
+          "oneOf": [
+            {
+              "$ref": "#/definitions/standardLink"
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/standardLink"
+              }
+            }
+          ]
         },
         "index": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "pcars:round": {
           "$ref": "#/definitions/standardLink"
         },
         "pcars:tracks": {

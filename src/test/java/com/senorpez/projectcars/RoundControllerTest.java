@@ -10,4 +10,5 @@ class RoundControllerTest {
     static final String COLLECTION_SCHEMA = "rounds.schema.json";
     static final String OBJECT_SCHEMA = "round.schema.json";
     static final String ERROR_SCHEMA = "error.schema.json";
+    static final String TRACK_OBJECT_SCHEMA = "track.schema.json";
 }

@@ -115,4 +115,43 @@ public class RoundControllerTest_Single {
                 .andExpect(jsonPath("$.code", is("406")))
                 .andExpect(jsonPath("$.message", is("Accept header incorrect")));
     }
+
+    @Test
+    public void GetSingleRoundTrack_InvalidEventId_XXXRoundId_ValidAcceptHeader() throws Exception {
+        Integer badId = 8675309;
+        Integer inconsequentialRoundId = new Double(Math.random()).intValue();
+        InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
+
+        mockMvc.perform(get("/events/{eventId}/rounds/{roundId}/track", badId, inconsequentialRoundId).accept(MEDIA_TYPE))
+                .andExpect(status().isNotFound())
+                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                .andExpect(jsonPath("$.code", is("404-events-" + badId)))
+                .andExpect(jsonPath("$.message", is("Event with ID of " + badId + " not found")));
+    }
+
+    @Test
+    public void GetSingleRoundTrack_InvalidEventId_XXXRoundId_FallbackHeader() throws Exception {
+        Integer badId = 8675309;
+        Integer inconsequentialRoundId = new Double(Math.random()).intValue();
+        InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
+
+        mockMvc.perform(get("/events/{eventId}/rounds/{roundId}/track", badId, inconsequentialRoundId).accept(APPLICATION_JSON_UTF8))
+                .andExpect(status().isNotFound())
+                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                .andExpect(jsonPath("$.code", is("404-events-" + badId)))
+                .andExpect(jsonPath("$.message", is("Event with ID of " + badId + " not found")));
+    }
+
+    @Test
+    public void GetSingleRoundTrack_InvalidEventId_XXXRoundId_InvalidAcceptHeader() throws Exception {
+        MediaType contentType = new MediaType("application", "vnd.senorpez.badrequest+json", UTF_8);
+        Integer inconsequentialRoundId = new Double(Math.random()).intValue();
+        InputStream jsonSchema = CLASS_LOADER.getResourceAsStream(ERROR_SCHEMA);
+
+        mockMvc.perform(get("/events/8675309/rounds/{roundId}/track", inconsequentialRoundId).accept(contentType))
+                .andExpect(status().isNotAcceptable())
+                .andExpect(content().string(matchesJsonSchema(jsonSchema)))
+                .andExpect(jsonPath("$.code", is("406")))
+                .andExpect(jsonPath("$.message", is("Accept header incorrect")));
+    }
 }
