@@ -82,7 +82,7 @@ task fullDataTest(type: Test, dependsOn: jar) {
         maxGranularity 2
         minGranularity 2
         showExceptions true
-        showStackTracks true
+        showStackTraces true
     }
 }
 
