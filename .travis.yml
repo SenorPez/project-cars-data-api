@@ -1,6 +1,5 @@
 dist: trusty
 sudo: required
-group: edge
 language: java
 
 jdk:
@@ -24,3 +23,6 @@ before_cache:
 after_success:
   - if [ -e ./gradlew ]; then ./gradlew jacocoTestReport;else gradle jacocoTestReport;fi
   - bash <(curl -s https://codecov.io/bash)
+
+after_failure:
+  - cat /home/travis/build/SenorPez/project-cars-data-api/build/reports/tests/fullDataTest/classes/*
