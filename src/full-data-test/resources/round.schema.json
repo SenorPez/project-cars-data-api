@@ -1,0 +1,118 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Project CARS Round",
+  "description": "JSON Representation of a Project CARS single-player event round",
+  "definitions": {
+    "standardLink": {
+      "type": "object",
+      "properties": {
+        "href": {
+          "type": "string",
+          "pattern": "^http[s]?://[a-z.]+((/[a-z0-9-]+)+|/)$"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "href"
+      ]
+    },
+    "track": {
+      "type": "object",
+      "properties": {
+        "_links": {
+          "type": "object",
+          "properties": {
+            "self": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/standardLink"
+              }
+            }
+          }
+        },
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "_links",
+        "id",
+        "name"
+      ]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "_embedded": {
+      "type": "object",
+      "properties": {
+        "pcars:track": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/track"
+          }
+        }
+      }
+    },
+    "_links": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "index": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "pcars:races": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "pcars:rounds": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "curies": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "href": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "templated": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "href",
+              "name",
+              "templated"
+            ]
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "self",
+        "index",
+        "pcars:races",
+        "pcars:rounds",
+        "curies"
+      ]
+    },
+    "id": {
+      "type": "integer"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "_embedded",
+    "_links",
+    "id"
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Project CARS Rounds",
+  "description": "JSON Representation of multiple Project CARS single-player event rounds",
+  "definitions": {
+    "standardLink": {
+      "type": "object",
+      "properties": {
+        "href": {
+          "type": "string",
+          "pattern": "^http[s]?://[a-z.]+((/[a-z0-9-]+)+|/)$"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "href"
+      ]
+    },
+    "round": {
+      "type": "object",
+      "properties": {
+        "_links": {
+          "type": "object",
+          "properties": {
+            "self": {
+              "$ref": "#/definitions/standardLink"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "self"
+          ]
+        },
+        "id": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "_links",
+        "id"
+      ]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "_embedded": {
+      "type": "object",
+      "properties": {
+        "pcars:car": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/round"
+          }
+        }
+      }
+    },
+    "_links": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "index": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "pcars:event": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "curies": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "href": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "templated": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "href",
+              "name",
+              "templated"
+            ]
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "self",
+        "index",
+        "pcars:event",
+        "curies"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "_embedded",
+    "_links"
+  ]
+}

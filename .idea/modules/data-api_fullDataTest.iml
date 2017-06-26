@@ -4,7 +4,8 @@
     <output url="file://$MODULE_DIR$/../../build/classes/java/fullDataTest" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../src/full-data-test">
-      <sourceFolder url="file://$MODULE_DIR$/../../src/full-data-test/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../src/full-data-test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../src/full-data-test/resources" type="java-test-resource" />
     </content>
     <content url="file://$MODULE_DIR$/../../src/fullDataTest">
       <sourceFolder url="file://$MODULE_DIR$/../../src/fullDataTest/java" isTestSource="false" />

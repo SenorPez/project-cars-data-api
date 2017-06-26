@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Error Response",
+  "description": "Error response from the Project CARS Static Data API",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "formats": {
+      "type": "array",
+      "description": "Used in 406 response to provide valid header formats",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "code",
+    "message"
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Project CARS Races",
+  "description": "JSON Representation of multiple Project CARS single-player event round races",
+  "definitions": {
+    "standardLink": {
+      "type": "object",
+      "properties": {
+        "href": {
+          "type": "string",
+          "pattern": "^http[s]?://[a-z.]+((/[a-z0-9-]+)+|/)$"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "href"
+      ]
+    },
+    "race": {
+      "type": "object",
+      "properties": {
+        "_links": {
+          "type": "object",
+          "properties": {
+            "self": {
+              "$ref": "#/definitions/standardLink"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "self"
+          ]
+        },
+        "id": {
+          "type": "integer"
+        },
+        "laps": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "time": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "_links",
+        "id",
+        "laps",
+        "time",
+        "type"
+      ]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "_embedded": {
+      "type": "object",
+      "properties": {
+        "pcars:car": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/race"
+          }
+        }
+      }
+    },
+    "_links": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "index": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "pcars:round": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "curies": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "href": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "templated": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "href",
+              "name",
+              "templated"
+            ]
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "self",
+        "index",
+        "pcars:round",
+        "curies"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "_embedded",
+    "_links"
+  ]
+}

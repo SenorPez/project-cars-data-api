@@ -30,7 +30,7 @@ springBoot {
 sourceSets {
     fullDataTest {
         java.srcDir file('src/full-data-test/java')
-        resources.srcDir file('src/test/resources')
+        resources.srcDir file('src/full-data-test/resources')
     }
 }
 

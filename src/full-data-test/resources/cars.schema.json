@@ -1,0 +1,120 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Project CARS Cars",
+  "description": "JSON Representation of multiple Project CARS cars",
+  "definitions": {
+    "standardLink": {
+      "type": "object",
+      "properties": {
+        "href": {
+          "type": "string",
+          "pattern": "^http[s]?://[a-z.]+((/[a-z0-9-]+)+|/)$"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "href"
+      ]
+    },
+    "embeddedCar": {
+      "type": "object",
+      "properties": {
+        "_links": {
+          "type": "object",
+          "properties": {
+            "self": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/standardLink"
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/standardLink"
+                  }
+                }
+              ]
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "self"
+          ]
+        },
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "_links",
+        "name",
+        "id"
+      ]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "_embedded": {
+      "type": "object",
+      "properties": {
+        "pcars:car": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/embeddedCar"
+          }
+        }
+      }
+    },
+    "_links": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "index": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "pcars:event": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "curies": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "href": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "templated": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "href",
+              "name",
+              "templated"
+            ]
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "self",
+        "index",
+        "curies"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "_embedded",
+    "_links"
+  ]
+}

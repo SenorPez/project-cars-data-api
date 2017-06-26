@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Project CARS Car Class",
+  "description": "JSON Representation of a Project CARS car class",
+  "definitions": {
+    "standardLink": {
+      "type": "object",
+      "properties": {
+        "href": {
+          "type": "string",
+          "pattern": "^http[s]?://[a-z.]+((/[a-z0-9-]+)+|/)$"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "href"
+      ]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "_links": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/standardLink"
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/standardLink"
+              }
+            }
+          ]
+        },
+        "index": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "pcars:car": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/standardLink"
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/standardLink"
+              }
+            }
+          ]
+        },
+        "pcars:classes": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "pcars:liveries": {
+          "$ref": "#/definitions/standardLink"
+        },
+        "curies": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "href": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "templated": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "href",
+              "name",
+              "templated"
+            ]
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "self",
+        "index",
+        "pcars:classes",
+        "curies"
+      ]
+    },
+    "id": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name"
+  ]
+}
