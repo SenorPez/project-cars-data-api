@@ -81,6 +81,8 @@ task fullDataTest(type: Test, dependsOn: jar) {
         exceptionFormat "short"
         maxGranularity 2
         minGranularity 2
+        showExceptions true
+        showStackTracks true
     }
 }
 
